@@ -1,0 +1,75 @@
+(TeX-add-style-hook
+ "Bachelor"
+ (lambda ()
+   (TeX-add-to-alist 'LaTeX-provided-package-options
+                     '(("inputenc" "utf8") ("fontenc" "T1") ("csquotes" "autostyle" "german=guillemets" "english=british") ("babel" "danish" "english") ("enumitem" "shortlabels") ("biblatex" "citestyle=alphabetic" "bibstyle=alphabetic" "uniquename=init" "autolang=hyphen" "backend=biber" "sorting=ynt") ("ntheorem" "thmmarks" "amsmath") ("hyperref" "hidelinks") ("cleveref" "nameinlink") ("mathalfa" "scr=boondoxo")))
+   (TeX-run-style-hooks
+    "inputenc"
+    "fontenc"
+    "csquotes"
+    "babel"
+    ""
+    "amsmath"
+    "amssymb"
+    "graphicx"
+    "mathtools"
+    "etoolbox"
+    "microtype"
+    "bm"
+    "todonotes"
+    "enumitem"
+    "biblatex"
+    "ntheorem"
+    "varioref"
+    "hyperref"
+    "cleveref"
+    "tikz"
+    "mathalfa")
+   (TeX-add-symbols
+    '("SetSymbol" ["argument"] 0)
+    '("Lie" 1)
+    "N"
+    "Z"
+    "Q"
+    "R"
+    "C"
+    "F"
+    "given"
+    "Span"
+    "Mat"
+    "Ker"
+    "supp"
+    "id"
+    "ord"
+    "GL"
+    "SL"
+    "ad"
+    "Char"
+    "diag"
+    "tr"
+    "M"
+    "End"
+    "Der")
+   (LaTeX-add-environments
+    "theorem"
+    "definition"
+    "corollary"
+    "proposition"
+    "lemma"
+    "remark"
+    "example"
+    "proof"
+    "proofof"
+    "theorembreak"
+    "definitionbreak"
+    "corollarybreak"
+    "propositionbreak"
+    "lemmabreak"
+    "remarkbreak"
+    "examplebreak"
+    "proofbreak"
+    "proofofbreak")
+   (LaTeX-add-bibliographies
+    "ref"))
+ :latex)
+

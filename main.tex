@@ -1,0 +1,48 @@
+\documentclass[]{./Bachelor}
+
+% \title{Titel}
+% \date{\today}
+% \author{Daniel Kongsgaard}
+
+\usepackage{kantlipsum}
+
+\begin{document}
+
+\frontmatter
+\input{sections/titlepage.tex}
+
+\input{sections/abstract.tex}
+
+\tableofcontents*
+
+\mainmatter
+\clearpage
+\pagestyle{ruled}
+
+\chapter{First}\nocite{*}
+\label{cha:first}
+
+\input{sections/sec1-0.tex}
+
+\kant
+
+\chapter{Second}
+\label{cha:second}
+
+%bibliography
+\medskip
+
+\printbibliography
+
+
+\appendix
+
+\chapter{Appendix}
+
+\kant
+
+\end{document}
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: t
+%%% End:
