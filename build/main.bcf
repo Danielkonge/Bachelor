@@ -2232,6 +2232,12 @@
   </bcf:bibdata>
   <bcf:section number="0">
     <bcf:citekey order="0">*</bcf:citekey>
+    <bcf:citekey order="1">jantzen</bcf:citekey>
+    <bcf:citekey order="2">humphrey</bcf:citekey>
+    <bcf:citekey order="3">indecompReprOfLorGr</bcf:citekey>
+    <bcf:citekey order="4">classifOfIndec</bcf:citekey>
+    <bcf:citekey order="4">catOfHarChaMod</bcf:citekey>
+    <bcf:citekey order="4">indecompReprOfLorGr</bcf:citekey>
   </bcf:section>
   <bcf:sortlist section="0" name="ynt" type="entry" sortscheme="ynt">
   <bcf:sorting>

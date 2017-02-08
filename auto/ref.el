@@ -5,6 +5,7 @@
     "classifOfIndec"
     "catOfHarChaMod"
     "indecompReprOfLorGr"
-    "humphrey"))
+    "humphrey"
+    "jantzen"))
  :bibtex)
 

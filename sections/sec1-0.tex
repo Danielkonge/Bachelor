@@ -1,6 +1,81 @@
-Some text
+Let $G$ be a semisimple Lie group and let $G_k$ be its maximal compact subgroup. Denote by $L$ the semisimple Lie algebra of $G$ and denote by $L_k$ the Lie subalgebra corresponding to $G_k$.
 
+\begin{definition}
+  An $L$-module $M$ is a Harish-Chandra module if, regarded as an $L_k$-module, it can be written as a sum
+  \begin{align*}
+    M &= \bigoplus_{i} M_i
+  \end{align*}
+  of finite dimensional irreducible $L_k$-submodules $M_i$, where for each $M_{i_0}$ only finitely many $L_k$-submodules equivalent to $M_{i_0}$ occur in the decomposition of $M$.
+
+  A Harish-Chandra module $M$ is indecomposable if it cannot be decomposed into the direct sum of $L$-submodules.
+\end{definition}
+
+Our goal is to classify all indecomposable Harish-Chandra modules over $\Lie{sl}(2,\C)\times \Lie{sl}(2,\C)$, where we by $\Lie{sl}(2,\C)\times \Lie{sl}(2,\C)$ mean the following:
+
+For $L,L'$ Lie algebras over $F$, we consider $L\times L'=L\oplus L'$ as a Lie algebra over $F$ with pointwise addition, multiplication given by $\alpha(a,b)=(\alpha a,\alpha b)$ for $\alpha\in F,a\in L,b\in L'$, and with Lie bracket $[(a_1,b_1),(a_2,b_2)]=([a_1,a_2],[b_1,b_2])$ for $a_1,a_2\in L,b_1,b_2\in L'$.
+
+\begin{remark}
+  Note that $L\times 0$ and $0\times L'$ are ideals in $L\times L'$ as given above. Thus we see that $\Lie{sl}(2,\C)\times 0$ and $0\times \Lie{sl}(2,\C)$ are ideals in $\Lie{sl}(2,\C)\times \Lie{sl}(2,\C)$ with
+  \begin{align*}
+    (\slc\times 0) \oplus (0\times\slc) &= \slpr,
+  \end{align*}
+  so $\Lie{sl}(2,\C)\times \Lie{sl}(2,\C)$ is semisimple. Hence it makes sense to talk about Harish-Chandra modules over $\Lie{sl}(2,\C)\times \Lie{sl}(2,\C)$.
+\end{remark}
+
+We fix the following as a standard basis for $\Lie{sl}(2,F)$:
+\begin{align*}
+  x&=
+     \begin{pmatrix}
+       0 & 1 \\ 0 & 0
+     \end{pmatrix}, \qquad h =
+                    \begin{pmatrix}
+                      1 & 0 \\ 0 & -1
+                    \end{pmatrix}, \qquad y =
+                                   \begin{pmatrix}
+                                     0 & 0 \\ 1 & 0
+                                   \end{pmatrix}.
+\end{align*}
+Giving us the relations:
+\begin{align*}
+  [x,y]&=h, \qquad [h,x]=2x, \qquad [h,y]=-2y,
+\end{align*}
+cf. \cite[35]{jantzen} or \cite[6]{humphrey}.
+
+We claim now that
+\begin{align*}
+  (x,x),& \quad (y,y), \quad \tfrac{1}{2}(h,h), \quad (ix,-ix), \quad (iy,-iy), \quad \tfrac{1}{2}(ih,-ih)
+\end{align*}
+is a basis of $\slpr$. This is clearly the case since $\dim_\C \slc = 3$, so $\dim_\C \slpr = 6$, and we see that the above elements span $\slpr$; we have $\tfrac{1}{2}(x,x)-\tfrac{i}{2}(ix,-ix)=(x,0)$ and $\tfrac{1}{2}(x,x)+\tfrac{i}{2}(ix,-ix)=(0,x)$ and likewise with $h$ and $y$. 
+
+Putting
+\begin{align*}
+  h_+&=(x,x), \qquad h_-=(y,y), \qquad h_3=\tfrac{1}{2}(h,h), \\
+  f_+&=(ix,-ix), \qquad f_-=(iy,-iy), \qquad f_3=\tfrac{1}{2}(ih,-ih)
+\end{align*}
+we get the following commutation relations between these basis elements:
+\begin{align*}
+  [h_+,h_3] &= \tfrac{1}{2}([x,h],[x,h]) = \tfrac{1}{2}(-2x,-2x) = -(x,x) = -h_+, \\
+  [h_-,h_3] &= \tfrac{1}{2}([y,h],[y,h]) = \tfrac{1}{2}(2y,2y) = (y,y) = h_-, \\
+  [h_+,h_-] &= ([x,y],[x,y]) = (h,h) = 2h_3, \\
+  [h_+,f_+] &= ([x,ix],[x,-ix]) = 0, \\
+  [h_-,f_-] &= ([y,iy],[y,-iy]) = 0, \\
+  [h_3,f_3] &= \tfrac{1}{4}([h,ih],[h,-ih]) = 0, \\
+  [h_+,f_3] &= \tfrac{1}{2}([x,ih],[x,-ih]) = \tfrac{1}{2}(-2ix,2ix) = -(ix,-ix) = -f_+, \\
+  [h_-,f_3] &= \tfrac{1}{2}([y,ih],[y,-ih]) = \tfrac{1}{2}(2iy,-2iy) = (iy,-iy) = f_-, \\
+  [h_+,f_-] &= ([x,iy],[x,-iy]) = (ih,-ih) = 2f_3, \\
+  [h_3,f_-] &= \tfrac{1}{2}([h,iy],[h,-iy]) = \tfrac{1}{2}(-2iy,2iy) = -(iy,-iy) = -f_-, \\
+  [h_-,f_+] &= ([y,ix],[y,-ix]) = (-ih,ih) = -(ih,-ih) = -2f_3, \\
+  [h_3,f_+] &= \tfrac{1}{2}([h,ix],[h,-ix]) = \tfrac{1}{2}(2ix,-2ix) = (ix,-ix) = f_+, \\
+  [f_+,f_3] &= \tfrac{1}{2}([ix,ih],[-ix,-ih]) = \tfrac{1}{2}(2x,2x) = (x,x) = h_+, \\
+  [f_-,f_3] &= \tfrac{1}{2}([iy,ih],[-iy,-ih]) = \tfrac{1}{2}(-2y,-2y) = -(y,y) = -h_-, \\
+  [f_+,f_-] &= ([ix,iy],[-ix,-iy]) = (-h,-h) = -(h,h) = -2h_3.
+\end{align*}
+
+\begin{remark}
+  Note that these are the same relations as for the complexification of the Lie algebra $L$ of the proper Lorentz group in \cite[5]{indecompReprOfLorGr}, so $L$ is isomorphic to $\slpr$. This explains the equivalence of the work in this paper and the work in \cite{classifOfIndec,catOfHarChaMod,indecompReprOfLorGr}.
+\end{remark}
 %%% Local Variables:
 %%% mode: latex
 %%% TeX-master: "../main"
+%%% reftex-default-bibliography: "../ref.bib"
 %%% End:

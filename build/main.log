@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.10.28)  30 JAN 2017 02:28
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.10.28)  8 FEB 2017 21:04
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1904,6 +1904,15 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 (/usr/local/texlive/2015/texmf-dist/tex/latex/microtype/mt-msb.cfg
 File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
 )
+LaTeX Font Info:    Try loading font information for U+euf on input line 7.
+
+(/usr/local/texlive/2015/texmf-dist/tex/latex/amsfonts/ueuf.fd
+File: ueuf.fd 2013/01/14 v3.01 Euler Fraktur
+)
+(/usr/local/texlive/2015/texmf-dist/tex/latex/microtype/mt-euf.cfg
+File: mt-euf.cfg 2006/07/03 v1.1 microtype config. file: AMS Euler Fraktur (RS)
+
+)
 Overfull \hbox (2.13835pt too wide) detected at line 13
  \T1/cmr/bx/n/10 A.1
  []
@@ -1913,19 +1922,33 @@ s been already used, duplicate ignored
 <to be read again> 
                    \relax 
 l.19 \clearpage
-                [2] (./sections/sec1-0.tex)
-Underfull \vbox (badness 2073) has occurred while \output is active []
+                [2]
 
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 22.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\times' on input line 22.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 22.
+
+(./sections/sec1-0.tex
+Package hyperref Info: bookmark level for unknown definition defaults to 0 on i
+nput line 4.
+Package hyperref Info: bookmark level for unknown remark defaults to 0 on input
+ line 18.
  [1
 
 
 
-]
-[2] [3] [4
+]) [2] [3
+
+] [4
 
 ] [5] [6
-
-] [7] [8
 
 ]
 Underfull \vbox (badness 4927) has occurred while \output is active []
@@ -1942,41 +1965,55 @@ Underfull \vbox (badness 4927) has occurred while \output is active []
 \tf@toc=\write8
 \openout8 = `main.toc'.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 44.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 44.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 42.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 42.
  (build/main.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 44.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 44.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 42.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 42.
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 73802B95B3B55E8690FAF5791329414F;217.
+(rerunfilecheck)             Checksum: D9B146536A27AA59DE84550DFE422C8D;268.
 Package logreq Info: Writing requests to 'main.run.xml'.
 \openout1 = `main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 40489 strings out of 493054
- 776787 string characters out of 6134759
- 1548007 words of memory out of 5000000
- 43359 multiletter control sequences out of 15000+600000
- 19526 words of font info for 83 fonts, out of 8000000 for 9000
+ 40611 strings out of 493054
+ 778942 string characters out of 6134759
+ 1554752 words of memory out of 5000000
+ 43452 multiletter control sequences out of 15000+600000
+ 28838 words of font info for 123 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 75i,12n,86p,10384b,1667s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 75i,13n,86p,10384b,1671s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2015/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}
-</usr/local/texlive/2015/texmf-dist/fonts/type1/public/cm-super/sfbx0900.pfb></
-usr/local/texlive/2015/texmf-dist/fonts/type1/public/cm-super/sfbx1000.pfb></us
-r/local/texlive/2015/texmf-dist/fonts/type1/public/cm-super/sfbx1728.pfb></usr/
-local/texlive/2015/texmf-dist/fonts/type1/public/cm-super/sfbx2074.pfb></usr/lo
-cal/texlive/2015/texmf-dist/fonts/type1/public/cm-super/sfcc1000.pfb></usr/loca
-l/texlive/2015/texmf-dist/fonts/type1/public/cm-super/sfrm0900.pfb></usr/local/
-texlive/2015/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb></usr/local/te
-xlive/2015/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb></usr/local/texl
-ive/2015/texmf-dist/fonts/type1/public/cm-super/sfrm1728.pfb></usr/local/texliv
-e/2015/texmf-dist/fonts/type1/public/cm-super/sfrm2074.pfb></usr/local/texlive/
-2015/texmf-dist/fonts/type1/public/cm-super/sfti1000.pfb>
-Output written on build/main.pdf (15 pages, 183781 bytes).
+</usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb><
+/usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></
+usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx7.pfb></us
+r/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr
+/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/
+local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/l
+ocal/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/loc
+al/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local
+/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/local/t
+exlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/local/texl
+ive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive
+/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/
+2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/20
+15/texmf-dist/fonts/type1/public/amsfonts/euler/eufm10.pfb></usr/local/texlive/
+2015/texmf-dist/fonts/type1/public/cm-super/sfbx0900.pfb></usr/local/texlive/20
+15/texmf-dist/fonts/type1/public/cm-super/sfbx1000.pfb></usr/local/texlive/2015
+/texmf-dist/fonts/type1/public/cm-super/sfbx1728.pfb></usr/local/texlive/2015/t
+exmf-dist/fonts/type1/public/cm-super/sfbx2074.pfb></usr/local/texlive/2015/tex
+mf-dist/fonts/type1/public/cm-super/sfcc1000.pfb></usr/local/texlive/2015/texmf
+-dist/fonts/type1/public/cm-super/sfrm0900.pfb></usr/local/texlive/2015/texmf-d
+ist/fonts/type1/public/cm-super/sfrm1000.pfb></usr/local/texlive/2015/texmf-dis
+t/fonts/type1/public/cm-super/sfrm1200.pfb></usr/local/texlive/2015/texmf-dist/
+fonts/type1/public/cm-super/sfrm1728.pfb></usr/local/texlive/2015/texmf-dist/fo
+nts/type1/public/cm-super/sfrm2074.pfb></usr/local/texlive/2015/texmf-dist/font
+s/type1/public/cm-super/sfti1000.pfb>
+Output written on build/main.pdf (13 pages, 293810 bytes).
 PDF statistics:
- 154 PDF objects out of 1000 (max. 8388607)
- 124 compressed objects within 2 object streams
- 24 named destinations out of 1000 (max. 500000)
- 16437 words of extra memory for PDF output out of 17280 (max. 10000000)
+ 213 PDF objects out of 1000 (max. 8388607)
+ 171 compressed objects within 2 object streams
+ 26 named destinations out of 1000 (max. 500000)
+ 19509 words of extra memory for PDF output out of 20736 (max. 10000000)
 

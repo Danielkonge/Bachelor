@@ -77,7 +77,7 @@
 %blive ændret snarest). Det kan oftest lade sig gøre at ændre
 %indstililngerne i editoren, så Biber bruges som standard.
 \usepackage[citestyle=alphabetic,bibstyle=alphabetic,
-uniquename=init,autolang=hyphen,backend=biber,
+uniquename=init,autolang=hyphen,backend=biber,sortcites,
 sorting=ynt]{biblatex}
 \addbibresource{ref.bib} %filen, hvor referencerne ligger
 
@@ -299,11 +299,15 @@ sorting=ynt]{biblatex}
 \newcommand\M{\mathscr{M}} %Standardmatrixrepresentation
 
 \newcommand{\Lie}[1]{\mathfrak{#1}}
+
 \DeclareMathOperator{\End}{End}
 \DeclareMathOperator{\Der}{Der}
 
 \renewcommand\Re{\operatorname{Re}} %Reel del af komplekst tal
 \renewcommand\Im{\operatorname{Im}} %Imaginær del af komplekst tal}
+
+\newcommand\slpr{\Lie{sl}(2,\C)\times \Lie{sl}(2,\C)}
+\newcommand\slc{\Lie{sl}(2,\C)}
 
 %Vi har følgende særlige kommandoer:
 %\Span, \Mat, \open, \lopen, \ropen, \closed, \Set (\given i \Set), \abs, \norm, \inner, \lrangle, \Lie, 

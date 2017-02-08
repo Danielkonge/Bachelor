@@ -4,10 +4,10 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {chapter}{Abstract}{i}{section*.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\chapternumberline {1}First}{1}{chapter.1}
+\contentsline {chapter}{\chapternumberline {1}Harish-Chandra modules over $\mathfrak {sl}(2,\mathbf {C})\times \mathfrak {sl}(2,\mathbf {C})$}{1}{chapter.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\chapternumberline {2}Second}{5}{chapter.2}
+\contentsline {chapter}{\chapternumberline {2}Linear relations}{3}{chapter.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{Bibliography}{7}{section*.3}
+\contentsline {chapter}{Bibliography}{5}{section*.3}
 \defcounter {refsection}{0}\relax 
 \contentsline {appendix}{\chapternumberline {A}Appendix}{A.1}{appendix.A}

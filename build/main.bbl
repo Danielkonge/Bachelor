@@ -102,6 +102,21 @@
       \field{volume}{9}
       \field{year}{1972}
     \endentry
+    \entry{jantzen}{booklet}{}
+      \name{author}{1}{}{%
+        {{uniquename=0,hash=9c60ee86194519d188b8087aab69602e}{Jantzen}{J\bibinitperiod}{Jens\bibnamedelima Carsten}{J\bibinitperiod\bibinitdelim C\bibinitperiod}{}{}{}{}}%
+      }
+      \strng{namehash}{9c60ee86194519d188b8087aab69602e}
+      \strng{fullhash}{9c60ee86194519d188b8087aab69602e}
+      \field{labelalpha}{Jan16}
+      \field{sortinit}{2}
+      \field{sortinithash}{8343b463aacf48517c044b4d2c9c45ed}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Lecture notes from the Lie algebra course}
+      \field{title}{Lie Algebras}
+      \field{year}{2016}
+    \endentry
   \endsortlist
 \endrefsection
 \endinput
