@@ -1,0 +1,103 @@
+\section{Representations of \texorpdfstring{$L_k$}{L\_k}}
+
+Let $V$ be a $\C$ vector space and $\rho\colon L_k \to \Lie{gl}(V)$ a representation of $L_k$. We will use the notation $\rho(a)=A$ for $a\in L_k$ switching to upper case letters when we talk about the representation corresponding to a given element. Note that we will switch freely between the language of representations of $L_k$ and the language of $L_k$-modules.
+
+We will start out by describing the finite dimensional simple\footnote{In \cite{indecompReprOfLorGr} the word irreducible is used instead of simple, but we will only use irreducible when talking about representations in this paper.} $L_k$-modules. Recall cf.\ \cite[36]{jantzen} that we know from $\slc$-theory that for integers $n\geq 0$ there exists a unique simple $\slc$-module $V(n)_\C$ of dimension $n+1$, and $V(n)_\C$ has a basis $(v_0,v_1,\dotsc,v_n)$ such that for all $i$, $0\leq i\leq n$
+\begin{align*}
+  h.v_i &= (n-2i)v_i, \\
+  x.v_i &=
+          \begin{dcases*}
+            (n-i+1)v_{i-1} & if $i>0$, \\
+            0 & if $i=0$,
+          \end{dcases*} \\
+  y.v_i &=
+          \begin{dcases*}
+            (i+1)v_{i+1} & if $i<n$, \\
+            0 & if $i=n$.
+          \end{dcases*}
+\end{align*}
+
+Now using the isomorphism from \cref{eq:sl2iso} we see that for integers $n\geq 0$ there exists a unique simple $L_k$-module $M(n)$ of dimension $n+1$, and $M(n)$ has a basis $(v_0,v_1,\dotsc,v_n)$ such that for all $i$, $0\leq i\leq n$
+\begin{align*}
+  H_3v_i &= (\tfrac{1}{2}n-i)v_i, \\
+  H_+v_i &=
+          \begin{dcases*}
+            (n-i+1)v_{i-1} & if $i>0$, \\
+            0 & if $i=0$,
+          \end{dcases*} \\
+  H_-v_i &=
+          \begin{dcases*}
+            (i+1)v_{i+1} & if $i<n$, \\
+            0 & if $i=n$.
+          \end{dcases*}
+\end{align*}
+From this we build a new basis by taking
+\begin{align*}
+  w_i &= \dfrac{1}{\sqrt{\binom{n}{i}}}v_i,
+\end{align*}
+Note that
+\begin{align*}
+  H_3w_i &= \dfrac{1}{\sqrt{\binom{n}{i}}}H_3v_i = \dfrac{1}{\sqrt{\binom{n}{i}}}(\tfrac{1}{2}n-i)v_i = (\tfrac{1}{2}n-i)w_i
+\end{align*}
+for all $i$, $0\leq i\leq n$, and clearly still
+\begin{align*}
+  H_+w_0 &= 0, \\
+  H_-w_n &= 0.
+\end{align*}
+But for $i$, $0<i\leq n$
+\begin{align*}
+  H_+w_i &= \dfrac{1}{\sqrt{\binom{n}{i}}}H_+v_i = \dfrac{1}{\sqrt{\binom{n}{i}}}(n-i+1)v_{i-1} \\
+         &= \sqrt{\dfrac{\binom{n}{i-1}}{\binom{n}{i}}}(n-i+1)\dfrac{1}{\sqrt{\binom{n}{i-1}}}v_{i-1} \\
+  &= \sqrt{\dfrac{i}{n-i+1}}(n-i+1)w_{i-1} = \sqrt{(n-i+1)i}w_{i-1},
+\end{align*}
+and for $i$, $0\leq i<n$
+\begin{align*}
+  H_-w_i &= \dfrac{1}{\sqrt{\binom{n}{i}}}H_-v_i = \dfrac{1}{\sqrt{\binom{n}{i}}}(i+1)v_{i+1} \\
+         &= \sqrt{\dfrac{\binom{n}{i+1}}{\binom{n}{i}}}(i+1)\dfrac{1}{\sqrt{\binom{n}{i+1}}}v_{i+1} \\
+  &= \sqrt{\dfrac{n-i}{i+1}}(i+1)w_{i+1} = \sqrt{(n-i)(i+1)}w_{i+1}.
+\end{align*}
+
+Finally we will re-index with $m=\tfrac{1}{2}n-i$ by setting
+\begin{align*}
+  e_m &= w_{\tfrac{1}{2}n-m}
+\end{align*}
+for $m\in\Set{-\tfrac{1}{2}n,-\tfrac{1}{2}n+1,\dotsc,\tfrac{1}{2}n-1,\tfrac{1}{2}n}$. Thus we get
+\begin{align*}
+  H_3e_m &= H_3w_{\tfrac{1}{2}n-m} = (\tfrac{1}{2}n-(\tfrac{1}{2}n-m))w_{\tfrac{1}{2}n-m} = me_m,
+\end{align*}
+and since $e_{\tfrac{1}{2}n} = w_0$ and $e_{-\tfrac{1}{2}n} = w_n$ also
+\begin{align*}
+  H_+e_{\tfrac{1}{2}n} &= 0,\\
+  H_-e_{-\tfrac{1}{2}n} &= 0.
+\end{align*}
+And for $m\in\Set{-\tfrac{1}{2}n,-\tfrac{1}{2}n+1,\dotsc,\tfrac{1}{2}n-2,\tfrac{1}{2}n-1}$ we get
+\begin{align*}
+  H_+e_m &= H_+w_{\tfrac{1}{2}n-m} = \sqrt{(n-(\tfrac{1}{2}n-m)+1)(\tfrac{1}{2}n-m)}w_{\tfrac{1}{2}n-m-1} \\
+  &= \sqrt{(\tfrac{1}{2}n+m+1)(\tfrac{1}{2}n-m)}e_{m+1},
+\end{align*}
+while for $m\in\Set{-\tfrac{1}{2}n+1,-\tfrac{1}{2}n+2,\dotsc,\tfrac{1}{2}n-1,\tfrac{1}{2}n}$ we get
+\begin{align*}
+  H_-e_m &= H_-w_{\tfrac{1}{2}n-m} = \sqrt{(n-(\tfrac{1}{2}n-m))(\tfrac{1}{2}n-m+1)}w_{\tfrac{1}{2}n-m+1} \\
+  &= \sqrt{(\tfrac{1}{2}n+m)(\tfrac{1}{2}n-m+1)}e_{m-1}.
+\end{align*}
+Thus altogether we have for $m\in\Set{-\tfrac{1}{2}n,-\tfrac{1}{2}n+1,\dotsc,\tfrac{1}{2}n-1,\tfrac{1}{2}n}$
+\begin{align}
+  \begin{split}
+    H_3e_m &= me_m,\label{eq:modulerels} \\
+    H_+e_m &=
+    \begin{dcases*}
+      \sqrt{(\tfrac{1}{2}n+m+1)(\tfrac{1}{2}n-m)}e_{m+1} & if $m\neq \tfrac{1}{2}n$, \\
+      0 & if $m=\tfrac{1}{2}n$,
+    \end{dcases*} \\
+    H_-e_m &=
+    \begin{dcases*}
+      \sqrt{(\tfrac{1}{2}n+m)(\tfrac{1}{2}n-m+1)}e_{m-1} & if $m\neq -\tfrac{1}{2}n$, \\
+      0 & if $m=-\tfrac{1}{2}n$.
+    \end{dcases*}
+  \end{split}
+\end{align}
+
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: "../main"
+%%% End:
