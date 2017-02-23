@@ -13,7 +13,7 @@
 	twoside,        %til printing på en side af papiret - twoside til dobbeltsidet
         %onecolumn,
 	%article, 	%god til afleveringer; kan fjernes i større ogpaver.
-	danish,english	%det sidst hentede sprog bliver hovedsproget i dokumentet,
+	%danish,english	%det sidst hentede sprog bliver hovedsproget i dokumentet,
 	11pt, %skriftstørrelsen
 	]{memoir}	%den absolut bedste dokumentklasse; bør altid anvendes.
 				%Ændr det ikke uden en MEGET god grund.
@@ -89,7 +89,7 @@ sorting=ynt]{biblatex}
 \usepackage{varioref}
 
 %En pakke til at indsætte links ved referencer:
-\usepackage[hidelinks]{hyperref}
+\usepackage[hidelinks,pdfpagelabels]{hyperref}
 
 
 %====================================================================

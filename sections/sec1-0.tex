@@ -36,10 +36,10 @@ We fix the following as a standard basis for $\Lie{sl}(2,F)$:
                                    \end{pmatrix}.
 \end{align*}
 Giving us the relations:
-\begin{align*}
-  [x,y]&=h, \qquad [h,x]=2x, \qquad [h,y]=-2y,
-\end{align*}
-cf. \cite[35]{jantzen} or \cite[6]{humphrey}.
+\begin{align}
+  [x,y]&=h, & [h,x]&=2x, & [h,y]&=-2y, \label{eq:sl2rels}
+\end{align}
+cf.\ \cite[35]{jantzen} or \cite[6]{humphrey}.
 
 We claim now that
 \begin{align*}
@@ -49,33 +49,50 @@ is a basis of $\slpr$. This is clearly the case since $\dim_\C \slc = 3$, so $\d
 
 Putting
 \begin{align*}
-  h_+&=(x,x), \qquad h_-=(y,y), \qquad h_3=\tfrac{1}{2}(h,h), \\
-  f_+&=(ix,-ix), \qquad f_-=(iy,-iy), \qquad f_3=\tfrac{1}{2}(ih,-ih)
+  h_+&=(x,x), & h_-&=(y,y), & h_3&=\tfrac{1}{2}(h,h), \\
+  f_+&=(ix,-ix), & f_-&=(iy,-iy),&  f_3&=\tfrac{1}{2}(ih,-ih)
 \end{align*}
 we get the following commutation relations between these basis elements:
-\begin{align*}
-  [h_+,h_3] &= \tfrac{1}{2}([x,h],[x,h]) = \tfrac{1}{2}(-2x,-2x) = -(x,x) = -h_+, \\
-  [h_-,h_3] &= \tfrac{1}{2}([y,h],[y,h]) = \tfrac{1}{2}(2y,2y) = (y,y) = h_-, \\
-  [h_+,h_-] &= ([x,y],[x,y]) = (h,h) = 2h_3, \\
-  [h_+,f_+] &= ([x,ix],[x,-ix]) = 0, \\
-  [h_-,f_-] &= ([y,iy],[y,-iy]) = 0, \\
-  [h_3,f_3] &= \tfrac{1}{4}([h,ih],[h,-ih]) = 0, \\
-  [h_+,f_3] &= \tfrac{1}{2}([x,ih],[x,-ih]) = \tfrac{1}{2}(-2ix,2ix) = -(ix,-ix) = -f_+, \\
-  [h_-,f_3] &= \tfrac{1}{2}([y,ih],[y,-ih]) = \tfrac{1}{2}(2iy,-2iy) = (iy,-iy) = f_-, \\
-  [h_+,f_-] &= ([x,iy],[x,-iy]) = (ih,-ih) = 2f_3, \\
-  [h_3,f_-] &= \tfrac{1}{2}([h,iy],[h,-iy]) = \tfrac{1}{2}(-2iy,2iy) = -(iy,-iy) = -f_-, \\
-  [h_-,f_+] &= ([y,ix],[y,-ix]) = (-ih,ih) = -(ih,-ih) = -2f_3, \\
-  [h_3,f_+] &= \tfrac{1}{2}([h,ix],[h,-ix]) = \tfrac{1}{2}(2ix,-2ix) = (ix,-ix) = f_+, \\
-  [f_+,f_3] &= \tfrac{1}{2}([ix,ih],[-ix,-ih]) = \tfrac{1}{2}(2x,2x) = (x,x) = h_+, \\
-  [f_-,f_3] &= \tfrac{1}{2}([iy,ih],[-iy,-ih]) = \tfrac{1}{2}(-2y,-2y) = -(y,y) = -h_-, \\
-  [f_+,f_-] &= ([ix,iy],[-ix,-iy]) = (-h,-h) = -(h,h) = -2h_3.
-\end{align*}
+\begin{align}
+  \begin{split}
+    [h_+,h_3] &= \tfrac{1}{2}([x,h],[x,h]) = \tfrac{1}{2}(-2x,-2x) = -(x,x) = -h_+, \label{eq:lierels} \\
+    [h_-,h_3] &= \tfrac{1}{2}([y,h],[y,h]) = \tfrac{1}{2}(2y,2y) = (y,y) = h_-, \\
+    [h_+,h_-] &= ([x,y],[x,y]) = (h,h) = 2h_3, \\
+    [h_+,f_+] &= ([x,ix],[x,-ix]) = 0, \\
+    [h_-,f_-] &= ([y,iy],[y,-iy]) = 0, \\
+    [h_3,f_3] &= \tfrac{1}{4}([h,ih],[h,-ih]) = 0, \\
+    [h_+,f_3] &= \tfrac{1}{2}([x,ih],[x,-ih]) = \tfrac{1}{2}(-2ix,2ix) = -(ix,-ix) = -f_+, \\
+    [h_-,f_3] &= \tfrac{1}{2}([y,ih],[y,-ih]) = \tfrac{1}{2}(2iy,-2iy) = (iy,-iy) = f_-, \\
+    [h_+,f_-] &= ([x,iy],[x,-iy]) = (ih,-ih) = 2f_3, \\
+    [h_3,f_-] &= \tfrac{1}{2}([h,iy],[h,-iy]) = \tfrac{1}{2}(-2iy,2iy) = -(iy,-iy) = -f_-, \\
+    [h_-,f_+] &= ([y,ix],[y,-ix]) = (-ih,ih) = -(ih,-ih) = -2f_3, \\
+    [h_3,f_+] &= \tfrac{1}{2}([h,ix],[h,-ix]) = \tfrac{1}{2}(2ix,-2ix) = (ix,-ix) = f_+, \\
+    [f_+,f_3] &= \tfrac{1}{2}([ix,ih],[-ix,-ih]) = \tfrac{1}{2}(2x,2x) = (x,x) = h_+, \\
+    [f_-,f_3] &= \tfrac{1}{2}([iy,ih],[-iy,-ih]) = \tfrac{1}{2}(-2y,-2y) = -(y,y) = -h_-, \\
+    [f_+,f_-] &= ([ix,iy],[-ix,-iy]) = (-h,-h) = -(h,h) = -2h_3.
+  \end{split}
+\end{align}
 
 \begin{remark}
   Note that these are the same relations as for the complexification of the Lie algebra $L$ of the proper Lorentz group in \cite[5]{indecompReprOfLorGr}, so $L$ is isomorphic to $\slpr$. This explains the equivalence of the work in this paper and the work in \cite{classifOfIndec,catOfHarChaMod,indecompReprOfLorGr}.
 \end{remark}
+
+Now denote by $L_k$ the Lie subalgebra of $L$ with basis $h_+,h_-,h_3$. Note that the above commutation relations gives us that \todo{Why is $L_k$ maximal compact}
+\begin{align*}
+  [h_+,h_-] &= 2h_3, & [2h_3,h_+] &= 2h_+, & [2h_3,h_-] &= -2h_-
+\end{align*}
+Comparing with \cref{eq:sl2rels} we see that we have an isomorphism
+\begin{align}
+  \begin{split}
+    L_k &\to \slc \\ \label{eq:sl2iso}
+    h_+ &\mapsto x  \\
+    h_- &\mapsto y \\
+    2h_3 &\mapsto h,
+  \end{split}
+\end{align}
+so we can use $\slc$-theory when we want to describe $L_k$-modules.
+
 %%% Local Variables:
 %%% mode: latex
 %%% TeX-master: "../main"
-%%% reftex-default-bibliography: "../ref.bib"
 %%% End:

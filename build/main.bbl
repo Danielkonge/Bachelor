@@ -1,5 +1,5 @@
 % $ biblatex auxiliary file $
-% $ biblatex bbl format version 2.5 $
+% $ biblatex bbl format version 2.6 $
 % Do not modify the above lines!
 %
 % This is an auxiliary file used by the 'biblatex' package.
@@ -18,14 +18,26 @@
 
 
 \refsection{0}
-  \sortlist{ynt}{ynt}
+  \sortlist[entry]{ynt/global}
     \entry{classifOfIndec}{article}{}
       \name{author}{2}{}{%
-        {{uniquename=0,hash=1d724a7b9da0d3364d92dfe3d4c1e556}{Gel'Fand}{G\bibinitperiod}{I.\bibnamedelimi M.}{I\bibinitperiod\bibinitdelim M\bibinitperiod}{}{}{}{}}%
-        {{uniquename=0,hash=eee006358d1326c71d14b6d4786e4a8a}{Ponomarev}{P\bibinitperiod}{V.\bibnamedelimi A.}{V\bibinitperiod\bibinitdelim A\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=1d724a7b9da0d3364d92dfe3d4c1e556}{%
+           family={Gel'Fand},
+           family_i={G\bibinitperiod},
+           given={I.\bibnamedelimi M.},
+           given_i={I\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
+        {{uniquename=0,hash=eee006358d1326c71d14b6d4786e4a8a}{%
+           family={Ponomarev},
+           family_i={P\bibinitperiod},
+           given={V.\bibnamedelimi A.},
+           given_i={V\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
       }
       \name{translator}{1}{}{%
-        {{hash=c6dce70553f698ff803b6ce5b00a442a}{Ceder}{C\bibinitperiod}{Jack}{J\bibinitperiod}{}{}{}{}}%
+        {{hash=c6dce70553f698ff803b6ce5b00a442a}{%
+           family={Ceder},
+           family_i={C\bibinitperiod},
+           given={Jack},
+           given_i={J\bibinitperiod}}}%
       }
       \strng{namehash}{b02f40a3ab9c27a5facc1757400e2674}
       \strng{fullhash}{b02f40a3ab9c27a5facc1757400e2674}
@@ -43,11 +55,23 @@
     \endentry
     \entry{indecompReprOfLorGr}{book}{}
       \name{author}{2}{}{%
-        {{uniquename=0,hash=1d724a7b9da0d3364d92dfe3d4c1e556}{Gel'Fand}{G\bibinitperiod}{I.\bibnamedelimi M.}{I\bibinitperiod\bibinitdelim M\bibinitperiod}{}{}{}{}}%
-        {{uniquename=0,hash=eee006358d1326c71d14b6d4786e4a8a}{Ponomarev}{P\bibinitperiod}{V.\bibnamedelimi A.}{V\bibinitperiod\bibinitdelim A\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=1d724a7b9da0d3364d92dfe3d4c1e556}{%
+           family={Gel'Fand},
+           family_i={G\bibinitperiod},
+           given={I.\bibnamedelimi M.},
+           given_i={I\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
+        {{uniquename=0,hash=eee006358d1326c71d14b6d4786e4a8a}{%
+           family={Ponomarev},
+           family_i={P\bibinitperiod},
+           given={V.\bibnamedelimi A.},
+           given_i={V\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
       }
       \name{translator}{1}{}{%
-        {{hash=722b246b51467b1f6031336e25ed2ba0}{Hartley}{H\bibinitperiod}{B.}{B\bibinitperiod}{}{}{}{}}%
+        {{hash=722b246b51467b1f6031336e25ed2ba0}{%
+           family={Hartley},
+           family_i={H\bibinitperiod},
+           given={B.},
+           given_i={B\bibinitperiod}}}%
       }
       \strng{namehash}{b02f40a3ab9c27a5facc1757400e2674}
       \strng{fullhash}{b02f40a3ab9c27a5facc1757400e2674}
@@ -62,11 +86,23 @@
     \endentry
     \entry{catOfHarChaMod}{article}{}
       \name{author}{2}{}{%
-        {{uniquename=0,hash=1d724a7b9da0d3364d92dfe3d4c1e556}{Gel'Fand}{G\bibinitperiod}{I.\bibnamedelimi M.}{I\bibinitperiod\bibinitdelim M\bibinitperiod}{}{}{}{}}%
-        {{uniquename=0,hash=eee006358d1326c71d14b6d4786e4a8a}{Ponomarev}{P\bibinitperiod}{V.\bibnamedelimi A.}{V\bibinitperiod\bibinitdelim A\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=1d724a7b9da0d3364d92dfe3d4c1e556}{%
+           family={Gel'Fand},
+           family_i={G\bibinitperiod},
+           given={I.\bibnamedelimi M.},
+           given_i={I\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
+        {{uniquename=0,hash=eee006358d1326c71d14b6d4786e4a8a}{%
+           family={Ponomarev},
+           family_i={P\bibinitperiod},
+           given={V.\bibnamedelimi A.},
+           given_i={V\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
       }
       \name{translator}{1}{}{%
-        {{hash=4809fde4f618a2bca7a2ccae0e5e37c2}{Scott}{S\bibinitperiod}{A.\bibnamedelimi M.}{A\bibinitperiod\bibinitdelim M\bibinitperiod}{}{}{}{}}%
+        {{hash=4809fde4f618a2bca7a2ccae0e5e37c2}{%
+           family={Scott},
+           family_i={S\bibinitperiod},
+           given={A.\bibnamedelimi M.},
+           given_i={A\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
       }
       \strng{namehash}{b02f40a3ab9c27a5facc1757400e2674}
       \strng{fullhash}{b02f40a3ab9c27a5facc1757400e2674}
@@ -84,7 +120,11 @@
     \endentry
     \entry{humphrey}{book}{}
       \name{author}{1}{}{%
-        {{uniquename=0,hash=d9d64506895836506105a2c8aefc4ef4}{Humphreys}{H\bibinitperiod}{James\bibnamedelima E.}{J\bibinitperiod\bibinitdelim E\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=d9d64506895836506105a2c8aefc4ef4}{%
+           family={Humphreys},
+           family_i={H\bibinitperiod},
+           given={James\bibnamedelima E.},
+           given_i={J\bibinitperiod\bibinitdelim E\bibinitperiod}}}%
       }
       \list{publisher}{1}{%
         {Springer}%
@@ -97,14 +137,18 @@
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{edition}{1}
-      \field{isbn}{9780387900537}
+      \field{isbn}{978-0-387-90053-7}
       \field{title}{Introduction to Lie Algebras and Representation Theory}
       \field{volume}{9}
       \field{year}{1972}
     \endentry
     \entry{jantzen}{booklet}{}
       \name{author}{1}{}{%
-        {{uniquename=0,hash=9c60ee86194519d188b8087aab69602e}{Jantzen}{J\bibinitperiod}{Jens\bibnamedelima Carsten}{J\bibinitperiod\bibinitdelim C\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=9c60ee86194519d188b8087aab69602e}{%
+           family={Jantzen},
+           family_i={J\bibinitperiod},
+           given={Jens\bibnamedelima Carsten},
+           given_i={J\bibinitperiod\bibinitdelim C\bibinitperiod}}}%
       }
       \strng{namehash}{9c60ee86194519d188b8087aab69602e}
       \strng{fullhash}{9c60ee86194519d188b8087aab69602e}
