@@ -2,6 +2,9 @@
  "sec1-1"
  (lambda ()
    (LaTeX-add-labels
-    "eq:modulerels"))
+    "lem:modulebasis"
+    "eq:modulerels"
+    "eq:H+H-"
+    "eq:E+andE-"))
  :latex)
 

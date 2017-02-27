@@ -57,45 +57,103 @@ and for $i$, $0\leq i<n$
   &= \sqrt{\dfrac{n-i}{i+1}}(i+1)w_{i+1} = \sqrt{(n-i)(i+1)}w_{i+1}.
 \end{align*}
 
-Finally we will re-index with $m=\tfrac{1}{2}n-i$ by setting
+Finally write $\ell = \tfrac{1}{2}n$. We will re-index with $m=\tfrac{1}{2}n-i=\ell-i$ by setting
 \begin{align*}
-  e_m &= w_{\tfrac{1}{2}n-m}
+  e_m &= w_{\ell-m}
 \end{align*}
-for $m\in\Set{-\tfrac{1}{2}n,-\tfrac{1}{2}n+1,\dotsc,\tfrac{1}{2}n-1,\tfrac{1}{2}n}$. Thus we get
+for $m\in\Set{-\ell,-\ell+1,\dotsc,\ell-1,\ell}$. Thus we get
 \begin{align*}
-  H_3e_m &= H_3w_{\tfrac{1}{2}n-m} = (\tfrac{1}{2}n-(\tfrac{1}{2}n-m))w_{\tfrac{1}{2}n-m} = me_m,
+  H_3e_m &= H_3w_{\ell-m} = (\ell-(\ell-m))w_{\ell-m} = me_m,
 \end{align*}
-and since $e_{\tfrac{1}{2}n} = w_0$ and $e_{-\tfrac{1}{2}n} = w_n$ also
+and since $e_{\ell} = w_0$ and $e_{-\ell} = w_n$ also
 \begin{align*}
-  H_+e_{\tfrac{1}{2}n} &= 0,\\
-  H_-e_{-\tfrac{1}{2}n} &= 0.
+  H_+e_{\ell} &= 0,\\
+  H_-e_{-\ell} &= 0.
 \end{align*}
-And for $m\in\Set{-\tfrac{1}{2}n,-\tfrac{1}{2}n+1,\dotsc,\tfrac{1}{2}n-2,\tfrac{1}{2}n-1}$ we get
+And for $m\in\Set{-\ell,-\ell+1,\dotsc,\ell-2,\ell-1}$ we get
 \begin{align*}
-  H_+e_m &= H_+w_{\tfrac{1}{2}n-m} = \sqrt{(n-(\tfrac{1}{2}n-m)+1)(\tfrac{1}{2}n-m)}w_{\tfrac{1}{2}n-m-1} \\
-  &= \sqrt{(\tfrac{1}{2}n+m+1)(\tfrac{1}{2}n-m)}e_{m+1},
+  H_+e_m &= H_+w_{\ell-m} = \sqrt{(n-(\ell-m)+1)(\ell-m)}w_{\ell-m-1} \\
+  &= \sqrt{(\ell+m+1)(\ell-m)}e_{m+1},
 \end{align*}
-while for $m\in\Set{-\tfrac{1}{2}n+1,-\tfrac{1}{2}n+2,\dotsc,\tfrac{1}{2}n-1,\tfrac{1}{2}n}$ we get
+while for $m\in\Set{-\ell+1,-\ell+2,\dotsc,\ell-1,\ell}$ we get
 \begin{align*}
-  H_-e_m &= H_-w_{\tfrac{1}{2}n-m} = \sqrt{(n-(\tfrac{1}{2}n-m))(\tfrac{1}{2}n-m+1)}w_{\tfrac{1}{2}n-m+1} \\
-  &= \sqrt{(\tfrac{1}{2}n+m)(\tfrac{1}{2}n-m+1)}e_{m-1}.
+  H_-e_m &= H_-w_{\ell-m} = \sqrt{(n-(\ell-m))(\ell-m+1)}w_{\ell-m+1} \\
+  &= \sqrt{(\ell+m)(\ell-m+1)}e_{m-1}.
 \end{align*}
-Thus altogether we have for $m\in\Set{-\tfrac{1}{2}n,-\tfrac{1}{2}n+1,\dotsc,\tfrac{1}{2}n-1,\tfrac{1}{2}n}$
+
+Thus we get the following Lemma:
+\begin{lemma}\label{lem:modulebasis}
+  Every simple finite dimensional $L_k$-module is uniquely given by a number $\ell\in\tfrac{1}{2}\Z_{\geq 0}$. For such $\ell$ the unique simple $L_k$-module $M(2\ell)$ has dimension $2\ell+1$, and $M(2\ell)$ has a basis $(e_{-\ell},e_{-\ell+1},\dotsc,e_{\ell-1},e_\ell)$ such that for all $m\in\Set{-\ell,-\ell+1,\dotsc,\ell-1,\ell}$ we have
+  \begin{align}
+    \begin{split}
+      H_3e_m &= me_m,\label{eq:modulerels} \\
+      H_+e_m &=
+      \begin{dcases*}
+        \sqrt{(\ell+m+1)(\ell-m)}e_{m+1} & if $m\neq \ell$, \\
+        0 & if $m=\ell$,
+      \end{dcases*} \\
+      H_-e_m &=
+      \begin{dcases*}
+        \sqrt{(\ell+m)(\ell-m+1)}e_{m-1} & if $m\neq -\ell$, \\
+        0 & if $m=-\ell$.
+      \end{dcases*}
+    \end{split}
+  \end{align}
+\end{lemma}
+
+\subsection{Formulae for the operators \texorpdfstring{$H_+,H_-,H_3,F_+,F_-,F_3$}{H\_+,H\_-,H\_3,F\_+,F\_-,F\_3}}
+
+Let $M$ be a Harish-Chandra $L$-module. Then we have linear operators $H_+,H_-,H_3,F_+,F_-,F_3\colon M\to M$ satisfying commutation relations as in \cref{eq:lierels}, and we want to give expressions for these in terms of other linear operators $E_+,E_-,D_+,D_-,D_0\colon M\to M$. 
+
+We will denote by $R_\ell$ a finite dimensional $L$-module which is a (finite) direct sum of $L_k$-modules $M(2\ell+1)$ for the same number $\ell\in\tfrac{1}{2}\Z_{\geq 0}$. Then $M$ is a direct sum of the subspaces $R_\ell$ since $M$ is Harish-Chandra, and from \cref{lem:modulebasis} we know that $R_\ell$ can be written as the direct sum of subspaces $R_{\ell,m}$, where $R_{\ell,m}$ are eigenspaces for $H_3$ such that
+\begin{align*}
+  H_3\xi &= m\xi
+\end{align*}
+for $m\in\Set{-\ell,-\ell+1,\dotsc,\ell-1,\ell}$ and $\xi\in R_{l,m}$. We will use the decomposition
+\begin{align*}
+  M &= \bigoplus_{\substack{\ell\in\tfrac{1}{2}\Z_{\geq 0} \\ m\in\Set{-\ell,-\ell+1,\dotsc,\ell-1,\ell}}} \!\!\!\!\!\!\!\!\!\!\!\! R_{\ell,m} = \bigoplus_{\ell,m} R_{\ell,m}
+\end{align*}
+throughout this paper.
+
+By \cref{lem:modulebasis} we also have that $H_+$ and $H_-$ maps the $R_{\ell,m}$ into each other as follows:
+\begin{align*}
+  H_+\colon R_{\ell,m} &\to R_{\ell,m+1} && \mbox{if }-\ell\leq m<\ell, & H_+&\colon R_{\ell,\ell} \to 0, \\
+  H_-\colon R_{\ell,m} &\to R_{\ell,m-1} && \mbox{if }-\ell< m\leq \ell, & H_-&\colon R_{\ell,-\ell} \to 0.
+\end{align*}
+Hence we have linear operators $H_+H_-,H_-H_+\colon R_{\ell,m}\to R_{\ell,m}$, and by \cref{eq:modulerels} we see that
 \begin{align}
-  \begin{split}
-    H_3e_m &= me_m,\label{eq:modulerels} \\
-    H_+e_m &=
+  \begin{split} \label{eq:H+H-}
+    H_+H_-\xi &= \sqrt{(\ell+(m-1)+1)(\ell-(m-1))}\sqrt{(\ell+m)(\ell-m+1)} \xi \\
+    &= (\ell+m)(\ell-m+1)\xi, \\
+    H_-H_+\xi &= \sqrt{(\ell+(m+1))(\ell-(m+1)+1)}\sqrt{(\ell+m+1)(\ell-m)} \xi \\
+    &= (\ell+m+1)(\ell-m)\xi.
+  \end{split}
+\end{align}
+Note that this also covers the cases $m=\ell$ and $m=-\ell$. 
+
+Now we define $E_+ \colon R_{\ell,m}\to R_{\ell,m+1}$ and $E_- \colon R_{\ell,m}\to R_{\ell,m-1}$ to be the linear maps satisfying
+\begin{align}
+  \begin{split} \label{eq:E+andE-}
+    H_+ \xi &=
     \begin{dcases*}
-      \sqrt{(\tfrac{1}{2}n+m+1)(\tfrac{1}{2}n-m)}e_{m+1} & if $m\neq \tfrac{1}{2}n$, \\
-      0 & if $m=\tfrac{1}{2}n$,
+      \sqrt{(\ell+m+1)(\ell-m)}E_+\xi & if $m\neq \ell$ \\
+      0 & if $m=\ell$,
     \end{dcases*} \\
-    H_-e_m &=
+    H_- \xi &=
     \begin{dcases*}
-      \sqrt{(\tfrac{1}{2}n+m)(\tfrac{1}{2}n-m+1)}e_{m-1} & if $m\neq -\tfrac{1}{2}n$, \\
-      0 & if $m=-\tfrac{1}{2}n$.
+      \sqrt{(\ell+m)(\ell-m+1)}E_-\xi & if $m\neq -\ell$ \\
+      0 & if $m=\ell$
     \end{dcases*}
   \end{split}
 \end{align}
+for $\xi\in R_{\ell,m}$. Comparing \cref{eq:E+andE-} and \cref{eq:H+H-} we see that
+\begin{align*}
+  E_+E_-\xi &= \xi && \mbox{if }m\neq-\ell \\
+  E_-E_+\xi &= \xi && \mbox{if }m\neq\ell.
+\end{align*}
+Thus $E_+\colon R_{\ell,m}\to R_{\ell,m+1}$ and $E_-\colon R_{\ell,m+1}\to R_{\ell,m}$ are isomorphisms for $m\neq\ell$ and they are each others inverse. 
+
+
 
 %%% Local Variables:
 %%% mode: latex

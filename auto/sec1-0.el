@@ -2,6 +2,7 @@
  "sec1-0"
  (lambda ()
    (LaTeX-add-labels
+    "def:HarishChandra"
     "eq:sl2rels"
     "eq:lierels"
     "eq:sl2iso"))
