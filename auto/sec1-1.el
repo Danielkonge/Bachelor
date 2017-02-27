@@ -4,6 +4,7 @@
    (LaTeX-add-labels
     "lem:modulebasis"
     "eq:modulerels"
+    "eq:H3eigen"
     "eq:H+H-"
     "eq:E+andE-"))
  :latex)

@@ -2,7 +2,7 @@
 
 Let $V$ be a $\C$ vector space and $\rho\colon L_k \to \Lie{gl}(V)$ a representation of $L_k$. We will use the notation $\rho(a)=A$ for $a\in L_k$ switching to upper case letters when we talk about the representation corresponding to a given element. Note that we will switch freely between the language of representations of $L_k$ and the language of $L_k$-modules.
 
-We will start out by describing the finite dimensional simple\footnote{In \cite{indecompReprOfLorGr} the word irreducible is used instead of simple, but we will only use irreducible when talking about representations in this paper.} $L_k$-modules. Recall cf.\ \cite[36]{jantzen} that we know from $\slc$-theory that for integers $n\geq 0$ there exists a unique simple $\slc$-module $V(n)_\C$ of dimension $n+1$, and $V(n)_\C$ has a basis $(v_0,v_1,\dotsc,v_n)$ such that for all $i$, $0\leq i\leq n$
+We will start out by describing the finite dimensional simple\footnote{In \cite{indecompReprOfLorGr} the word irreducible is used instead of simple, but we will only use irreducible when talking about representations in this paper.} $L_k$-modules. Recall cf.\ \cite[36]{jantzen} that we know from $\slc$-theory that for integers $n\geq 0$ there exists a unique simple $\slc$-module $V(n)$ of dimension $n+1$, and $V(n)$ has a basis $(v_0,v_1,\dotsc,v_n)$ such that for all $i$, $0\leq i\leq n$
 \begin{align*}
   h.v_i &= (n-2i)v_i, \\
   x.v_i &=
@@ -106,9 +106,9 @@ Thus we get the following Lemma:
 Let $M$ be a Harish-Chandra $L$-module. Then we have linear operators $H_+,H_-,H_3,F_+,F_-,F_3\colon M\to M$ satisfying commutation relations as in \cref{eq:lierels}, and we want to give expressions for these in terms of other linear operators $E_+,E_-,D_+,D_-,D_0\colon M\to M$. 
 
 We will denote by $R_\ell$ a finite dimensional $L$-module which is a (finite) direct sum of $L_k$-modules $M(2\ell+1)$ for the same number $\ell\in\tfrac{1}{2}\Z_{\geq 0}$. Then $M$ is a direct sum of the subspaces $R_\ell$ since $M$ is Harish-Chandra, and from \cref{lem:modulebasis} we know that $R_\ell$ can be written as the direct sum of subspaces $R_{\ell,m}$, where $R_{\ell,m}$ are eigenspaces for $H_3$ such that
-\begin{align*}
+\begin{align} \label{eq:H3eigen}
   H_3\xi &= m\xi
-\end{align*}
+\end{align}
 for $m\in\Set{-\ell,-\ell+1,\dotsc,\ell-1,\ell}$ and $\xi\in R_{l,m}$. We will use the decomposition
 \begin{align*}
   M &= \bigoplus_{\substack{\ell\in\tfrac{1}{2}\Z_{\geq 0} \\ m\in\Set{-\ell,-\ell+1,\dotsc,\ell-1,\ell}}} \!\!\!\!\!\!\!\!\!\!\!\! R_{\ell,m} = \bigoplus_{\ell,m} R_{\ell,m}
@@ -153,6 +153,69 @@ for $\xi\in R_{\ell,m}$. Comparing \cref{eq:E+andE-} and \cref{eq:H+H-} we see t
 \end{align*}
 Thus $E_+\colon R_{\ell,m}\to R_{\ell,m+1}$ and $E_-\colon R_{\ell,m+1}\to R_{\ell,m}$ are isomorphisms for $m\neq\ell$ and they are each others inverse. 
 
+Now note that $H_+$, $H_-$, and $H_3$ are completely determined by \cref{eq:H3eigen} and \cref{eq:E+andE-}, so we just need to find maps to determine $F_+$, $F_-$, and $F_3$ now, while making sure that we get commutation relations as in \cref{eq:lierels}.
+
+Consider maps $D_0$ and $D_+$ defined on $M=\bigoplus_{\ell,m} R_{\ell,m}$ and $D_-$ defined on the direct sum without the summands $R_{\ell,\ell}$ and $R_{\ell,-\ell}$ such that $D_0 R_{\ell,m}\subset R_{\ell,m}$, $D_+ R_{\ell,m} \subset R_{\ell+1,m}$, and $D_- R_{\ell,m} \subset R_{\ell-1,m}$ and the diagrams
+\begin{center}
+  \begin{tikzcd}
+    R_{\ell-1,m+1} & R_{\ell,m+1} \ar[l,"D_-",swap] & R_{\ell,m+1} \ar[r,"D_0"] & R_{\ell,m+1}  \\
+    R_{\ell-1,m} \ar[u,"E_+"] & R_{\ell,m} \ar[l,"D_-"] \ar[u,"E_+",swap] & R_{\ell,m} \ar[r,"D_0",swap] \ar[u,"E_+"] & R_{\ell,m} \ar[u,"E_+",swap] \\
+    & R_{\ell,m+1} \ar[r,"D_+"] & R_{\ell+1,m+1} \\
+    & R_{\ell,m} \ar[u,"E_+"] \ar[r,"D_+",swap] & R_{\ell+1,m+1} \ar[u,"E_+",swap]
+  \end{tikzcd}
+\end{center}
+commute, when $-\ell+1\leq m < \ell-1$ in the top left diagram, $-\ell\leq m<\ell$ in the other two diagrams. We need quite a lot of work to find a way to describe $F_+$, $F_-$, and $F_3$ from these maps.
+
+We already have that $L_k=\Span_\C(h_+,h_-,h_3)$, but now we will also consider $L_p=\Span_\C(f_+,f_-,f_3)$. \Cref{eq:lierels} gives us that $[L_k,L_p]\subset L_p$, so by the adjoint representation we can see $L_p$ as an $L_k$-module, and again by \cref{eq:lierels} we see that $L_p$ is a simple $L_k$-module: If $V$ is an $L_k$-submodule and we have a non-zero element $f=af_++bf_-+cf_3\in V$ for some $a,b,c\in\C$ not all zero. Then
+\begin{align*}
+  [h_+,af_++bf_-+cf_3] &= 2bf_3-cf_+, \\
+  [h_-,af_++bf_-+cf_3] &= -2af_3+cf_-, \\
+  [h_3,af_++bf_-+cf_3] &= af_+-bf_-.
+\end{align*}
+If $c\neq0$, we get that
+\begin{align*}
+  [h_3,[h_+,f]] &= [h_3,2bf_3-cf_+] = -cf_+, \\
+  [h_3,[h_-,f]] &= [h_3,-2af_3+cf_-] = -cf_-,
+\end{align*}
+so we see that $f_+,f_-\in V$, and thus also $[h_+,\tfrac{1}{2}f_-]=f_3\in V$, so $V=L_p$. If on the other hand $c=0$, then
+\begin{align*}
+  [h_-,f] &= -2af_3, \\
+  [h_+,f] &= 2bf_3,
+\end{align*}
+so since either $a\neq 0$ or $b\neq 0$, we see that $f_3\in V$, and thus also $[h_+,-f_3]=f_+\in V$ and $[h_-,f_3]=f_-\in V$, so $V=L_p$. Hence $L_p$ is indeed a simple $L_k$-module. Now since $L_p$ is a simple finite dimensional $L_k$-module of dimension 3, we have that $L_p\simeq M(2)$ as $L_k$-modules.
+
+In general given two $L$-modules $V$ and $W$, we consider the tensor product $V\otimes W$ over $\C$ of the underlying vector spaces as an $L$-module via the action
+\begin{align*}
+  x.(v\otimes w) &= x.v\otimes w + v\otimes x.w,
+\end{align*}
+cf.\ \cite[26]{humphrey}.
+
+Now we are interested in the $L_k$-module $L_p\otimes M$, where $M$ is a Harish-Chandra $L$-module as before. Specifically we will show that
+\begin{align*}
+  \psi \colon L_p\otimes M &\to M \\
+  x\otimes v &\mapsto x.v
+\end{align*}
+is a homomorphism of $L_k$-modules. It is clear that $\psi$ is linear, and for $y\in L_k$ we see that
+\begin{align*}
+  y.(x\otimes v) &= y.x\otimes v + x\otimes y.v = [y,x]\otimes v + x\otimes y.v,
+\end{align*}
+for $x\otimes v\in L_p\otimes M$, since the action in $L_p$ is by the adjoint representation. So
+\begin{align*}
+  \psi(y.(x\otimes v)) &= \psi([y,x]\otimes v) + \psi(x\otimes y.v) = [y,x].v + x.(y.v) \\
+  &= y.(x.v)-x.(y.v)+x.(y.v) = y.(x.v) = y.\psi(x\otimes v),
+\end{align*}
+i.e.\ $\psi$ is indeed a homomorphism of $L_k$-modules.
+
+Now we note that $M=\bigoplus_{\ell} R_\ell$, so 
+\begin{align*}
+  L_p\otimes M &= L_p\otimes \bigl( \bigoplus_{\ell} R_\ell \bigr) \simeq \bigoplus_{\ell} (L_p\otimes R_\ell),
+\end{align*}
+and since also $R_\ell$ is direct sum of finitely many copies of $M(2\ell)$, we see that
+\begin{align*}
+  L_p\otimes R_\ell &= L_p\otimes \bigl( M(2\ell)^1 \oplus M(2\ell)^2 \oplus \dotsb \oplus M(2\ell)^r \bigr) \\
+  &= (L_p\otimes M(2\ell)^1) \oplus (L_p\otimes M(2\ell)^2) \oplus \dotsb \oplus (L_p\otimes M(2\ell)),
+\end{align*}
+where the superscripts are just indices for the different $M(2\ell)$.
 
 
 %%% Local Variables:
