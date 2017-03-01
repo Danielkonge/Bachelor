@@ -275,11 +275,11 @@ and
 so indeed $V(2)\otimes V(1)\simeq V(3)\oplus V(1)$ and $V(2)\otimes V(0)\simeq V(2)$. 
 
 Now consider $(w_0,w_1,w_2)$ a basis for $V(2)$ and $(v_i \mid 0\leq i\leq n)$ a basis for $V(n)$ such that both satisfies the conditions from \cref{eq:sl2modbasis}. Then for $w_i\otimes v_j \in V(2)\otimes V(n)$ with $i\in\Set{0,1,2}$ and $j\in\Set{0,1,\dotsc,n}$ we see that
-\begin{align*}
-  h.(w_i\otimes v_j) &= h.w_i\otimes v_j + w_i\otimes h.v_j = (2-2i)w_i\otimes v_j + (n-2j)w_i\otimes v_j \\
-  &= (n-2(i+j-1))w_i\otimes v_j.
-\end{align*}
-Hence $v_0\otimes w_0$ is up to scalar multiple the only vector of weight $n+2$ in $V(2)\otimes V(n)$, so it is necessarily a highest weight vector generating the direct summand isomorphic to $V(n+2)$. By $\slc$-theory, cf.\ \cite[36]{jantzen}, we know that this summand has a basis $(s_k\mid 0\leq k\leq n+2)$, where
+\begin{align}
+  h.(w_i\otimes v_j) &= h.w_i\otimes v_j + w_i\otimes h.v_j = (2-2i)w_i\otimes v_j + (n-2j)w_i\otimes v_j \nonumber \\
+  &= (n-2(i+j-1))w_i\otimes v_j.\label{eq:hontensor}
+\end{align}
+Hence $v_0\otimes w_0$ is up to scalar multiple the only vector of weight $n+2$ in $V(2)\otimes V(n)$, so it is necessarily a highest weight vector generating the direct summand isomorphic to $V(n+2)$. By $\slc$-theory, cf.\ \cite[36]{jantzen}, we know that this summand has a basis $(s_k\mid 0\leq k\leq n+2)$ satisfying equations as in \cref{eq:sl2modbasis}, where
 \begin{align*}
   s_k &\coloneqq \dfrac{1}{k!} y^k.(w_0\otimes v_0).
 \end{align*}
@@ -299,7 +299,7 @@ Inductively we see that
 \begin{align*}
   s_k &= w_2\otimes v_{k-2} + w_1\otimes v_{k-1} + w_0\otimes v_k
 \end{align*}
-for $k\leq n$, since
+for $k\leq n$, since the base case holds and given the equality for $k$ we get
 \begin{align*}
   s_{k+1} &= \tfrac{1}{k+1}y.s_k \\
           &= w_2\otimes\tfrac{1}{k+1}y.v_{k-2} + \tfrac{1}{k+1}y.w_1\otimes v_{k-1} + w_1\otimes\tfrac{1}{k+1}y.v_{k-1} + \tfrac{1}{k+1}y.w_0\otimes v_k \\
@@ -308,12 +308,67 @@ for $k\leq n$, since
           &\phantom{{}={}}{} + w_0\otimes v_{k+1} \\
   &= w_2\otimes v_{k-1} + w_1\otimes v_k + w_0\otimes v_{k+1}.
 \end{align*}
-We likewise see that for $k=n+1$ the last term vanishes, so we have $s_{k+1}=w_2\otimes v_{n-1}+ w_1\otimes v_n$, and for $k=n+2$ the two last terms vanish, so we get $s_{k+2}=w_2\otimes v_n$.
+We likewise see that for $k=n+1$ the last term vanishes, so we have $s_{k+1}=w_2\otimes v_{n-1}+ w_1\otimes v_n$, and for $k=n+2$ the two last terms vanish, so we get $s_{k+2}=w_2\otimes v_n$. Thus altogether we have that
+\begin{align}
+  \begin{aligned}
+    s_0 &= w_0\otimes v_0, \\
+    s_1 &= w_1\otimes v_0 + w_0\otimes v_1 \\
+    s_k &= w_2\otimes v_{k-2} + w_1\otimes v_{k-1} + w_0\otimes v_k \\
+    s_{n+1} &= w_2\otimes v_{n-1} + w_1\otimes v_n \\
+    s_{n+2} &= w_2\otimes v_n.
+  \end{aligned} &&
+                   \begin{aligned}
+                     &\phantom{a}\\ &\mbox{if }n>0, \\ &\mbox{for }2\leq k\leq n, \\ &\mbox{if }n>0,\\ &\phantom{a}
+                   \end{aligned}
+\end{align}
 
-In case $n=0$ we see that $s_1=w_1\otimes v_0$ and $s_2=w_2\otimes v_0$.
+In case $n=0$ we see that $s_1=w_1\otimes v_0$ and $s_2=w_2\otimes v_0$, and we note that $(s_0,s_1,s_2)$ is a basis for $V(2)\otimes V(0)\simeq V(2)$.
 
-
-
+Suppose now that $n\geq 1$. By \cref{eq:hontensor} the only vectors of weight $n$ are $w_0\otimes v_1$ and $w_1\otimes v_0$, so the vector of highest weight $n$ generating the summand corresponding to $V(n)$ must be of the form $aw_0\otimes v_1 + bw_1\otimes v_0$ for some $a,b\in \C$. Furthermore we know that for this vector generating the summand corresponding to $V(n)$, we must have that
+\begin{align*}
+  0 &= x.(aw_0\otimes v_1 + bw_1\otimes v_0) \\
+    &= ax.w_0 \otimes v_1 + aw_0\otimes x.v_1 + bx.w_1\otimes v_0 + bw_1\otimes x.v_0 \\
+    &= 0 + a(n-1+1)w_0\otimes v_0 + b(2-1+1)w_0\otimes v_0 + 0 \\
+  &= (an+2b)w_0\otimes v_0, 
+\end{align*}
+i.e. $an+2b=0$ so
+\begin{align*}
+  b &= -\dfrac{n}{2}a.
+\end{align*}
+This determines the vector generating the summand corresponding $V(n)$ up to a scalar, so taking $a=1$, we see that we can take
+\begin{align*}
+  t_0 &\coloneqq w_0\otimes v_1 - \dfrac{n}{2}w_1\otimes v_0
+\end{align*}
+as our vector generating the summand corresponding to $V(n)$. As before $\slc$-theory now yields that this summand has a basis $(t_k \mid 0\leq k\leq n)$ satisfying equations as in \cref{eq:sl2modbasis}, where
+\begin{align*}
+  t_k \coloneqq \dfrac{1}{k!}y^k.t_0.
+\end{align*}
+We see that
+\begin{align*}
+  t_1 &= y.\bigl(w_0\otimes v_1 - \dfrac{n}{2}w_1\otimes v_0\bigr) \\
+      &= y.w_0\otimes v_1 + w_0\otimes y.v_1 - \dfrac{n}{2}y.w_1\otimes v_0 + \dfrac{n}{2}w_1\otimes y.v_0 \\
+      &= w_1\otimes v_1 + 2w_0\otimes v_2 - nw_2\otimes v_0 - \dfrac{n}{2}w_1\otimes v_1 \\
+  &= 2w_0\otimes v_2 -\dfrac{n-2}{2}w_1\otimes v_1 - nw_2\otimes v_0,
+\end{align*}
+and inductively we get that
+\begin{align*}
+  t_k &= (k+1)w_0\otimes v_{k+1} - \dfrac{n-2k}{2}w_1\otimes v_k + (k-1-n)w_2\otimes v_{k-1}
+\end{align*}
+for $1\leq k\leq n-1$, since the base case holds and given the equality for $k$ we get
+\begin{align*}
+  t_{k+1} &= \dfrac{1}{k+1}y.t_k \\
+         &= y.w_0\otimes v_{k+1} + w_0\otimes y.v_{k+1} - \dfrac{n-2k}{2(k+1)}y.w_1\otimes v_k \\
+          &\phantom{{}={}}{} - \dfrac{n-2k}{2(k+1)}w_1\otimes y.v_k + \dfrac{k-1-n}{k+1}w_2\otimes y.v_{k-1} \\
+          &= w_1\otimes v_{k+1} + (k+2)w_0\otimes v_{k+2} - \dfrac{n-2k}{k+1}w_2\otimes v_k \\
+          &\phantom{{}={}}{} - \dfrac{n-2k}{2}w_1\otimes v_{k+1} + \dfrac{(k-1-n)k}{k+1}w_2\otimes v_k \\
+          &= (k+2)w_0\otimes v_{k+2} - \dfrac{n-2(k+1)}{2}w_1\otimes v_{k+1} \\
+          &\phantom{{}={}}{} + \biggl( \dfrac{k^2-k-nk-n+2k}{k+1} \biggr) w_2\otimes v_k \\
+  &= (k+2)w_0\otimes v_{k+2} - \dfrac{n-2(k+1)}{2}w_1\otimes v_{k+1} + (k-n)w_2\otimes v_k,
+\end{align*}
+where we in the last equality use that $(k+1)(k-n)=k^2-nk+k-n = k^2-k-nk-n+2k$. We likewise see that for $k=n$ the first term vanishes so
+\begin{align*}
+  t_n &= \dfrac{n}{2}w_1\otimes v_n - w_2\otimes v_{n-1}.
+\end{align*}
 %%% Local Variables:
 %%% mode: latex
 %%% TeX-master: "../main"

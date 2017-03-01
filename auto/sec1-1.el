@@ -8,6 +8,7 @@
     "eq:H3eigen"
     "eq:H+H-"
     "eq:E+andE-"
-    "eq:psi"))
+    "eq:psi"
+    "eq:hontensor"))
  :latex)
 
