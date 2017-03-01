@@ -295,6 +295,7 @@ sorting=ynt]{biblatex}
 \DeclareMathOperator{\Char}{char}
 \DeclareMathOperator{\diag}{diag}
 \DeclareMathOperator{\tr}{tr}
+\DeclareMathOperator{\ch}{ch}
 
 \newcommand\M{\mathscr{M}} %Standardmatrixrepresentation
 

@@ -3,19 +3,21 @@
 Let $V$ be a $\C$ vector space and $\rho\colon L_k \to \Lie{gl}(V)$ a representation of $L_k$. We will use the notation $\rho(a)=A$ for $a\in L_k$ switching to upper case letters when we talk about the representation corresponding to a given element. Note that we will switch freely between the language of representations of $L_k$ and the language of $L_k$-modules.
 
 We will start out by describing the finite dimensional simple\footnote{In \cite{indecompReprOfLorGr} the word irreducible is used instead of simple, but we will only use irreducible when talking about representations in this paper.} $L_k$-modules. Recall cf.\ \cite[36]{jantzen} that we know from $\slc$-theory that for integers $n\geq 0$ there exists a unique simple $\slc$-module $V(n)$ of dimension $n+1$, and $V(n)$ has a basis $(v_0,v_1,\dotsc,v_n)$ such that for all $i$, $0\leq i\leq n$
-\begin{align*}
-  h.v_i &= (n-2i)v_i, \\
-  x.v_i &=
-          \begin{dcases*}
-            (n-i+1)v_{i-1} & if $i>0$, \\
-            0 & if $i=0$,
-          \end{dcases*} \\
-  y.v_i &=
-          \begin{dcases*}
-            (i+1)v_{i+1} & if $i<n$, \\
-            0 & if $i=n$.
-          \end{dcases*}
-\end{align*}
+\begin{align}
+  \begin{split}\label{eq:sl2modbasis}
+    h.v_i &= (n-2i)v_i, \\
+    x.v_i &=
+    \begin{dcases*}
+      (n-i+1)v_{i-1} & if $i>0$, \\
+      0 & if $i=0$,
+    \end{dcases*} \\
+    y.v_i &=
+    \begin{dcases*}
+      (i+1)v_{i+1} & if $i<n$, \\
+      0 & if $i=n$.
+    \end{dcases*}
+  \end{split}
+\end{align}
 
 Now using the isomorphism from \cref{eq:sl2iso} we see that for integers $n\geq 0$ there exists a unique simple $L_k$-module $M(n)$ of dimension $n+1$, and $M(n)$ has a basis $(v_0,v_1,\dotsc,v_n)$ such that for all $i$, $0\leq i\leq n$
 \begin{align*}
@@ -191,10 +193,12 @@ In general given two $L$-modules $V$ and $W$, we consider the tensor product $V\
 cf.\ \cite[26]{humphrey}.
 
 Now we are interested in the $L_k$-module $L_p\otimes M$, where $M$ is a Harish-Chandra $L$-module as before. Specifically we will show that
-\begin{align*}
-  \psi \colon L_p\otimes M &\to M \\
-  x\otimes v &\mapsto x.v
-\end{align*}
+\begin{align}
+  \begin{split} \label{eq:psi}
+    \psi \colon L_p\otimes M &\to M \\
+    x\otimes v &\mapsto x.v
+  \end{split}
+\end{align}
 is a homomorphism of $L_k$-modules. It is clear that $\psi$ is linear, and for $y\in L_k$ we see that
 \begin{align*}
   y.(x\otimes v) &= y.x\otimes v + x\otimes y.v = [y,x]\otimes v + x\otimes y.v,
@@ -210,12 +214,104 @@ Now we note that $M=\bigoplus_{\ell} R_\ell$, so
 \begin{align*}
   L_p\otimes M &= L_p\otimes \bigl( \bigoplus_{\ell} R_\ell \bigr) \simeq \bigoplus_{\ell} (L_p\otimes R_\ell),
 \end{align*}
-and since also $R_\ell$ is direct sum of finitely many copies of $M(2\ell)$, we see that
+as $L_k$-modules, and since also $R_\ell$ is direct sum of finitely many copies of $M(2\ell)$, we see that
 \begin{align*}
-  L_p\otimes R_\ell &= L_p\otimes \bigl( M(2\ell)^1 \oplus M(2\ell)^2 \oplus \dotsb \oplus M(2\ell)^r \bigr) \\
-  &= (L_p\otimes M(2\ell)^1) \oplus (L_p\otimes M(2\ell)^2) \oplus \dotsb \oplus (L_p\otimes M(2\ell)),
+  L_p\otimes R_\ell &\simeq M(2)\otimes \bigl( M(2\ell)^1 \oplus M(2\ell)^2 \oplus \dotsb \oplus M(2\ell)^r \bigr) \\
+  &\simeq (L_p\otimes M(2\ell)^1) \oplus (L_p\otimes M(2\ell)^2) \oplus \dotsb \oplus (L_p\otimes M(2\ell)^r),
 \end{align*}
-where the superscripts are just indices for the different $M(2\ell)$.
+as $L_k$-modules, since $L_p\simeq M(2)$. Here the superscripts are just indices for the different $M(2\ell)$. Thus we want to describe the $L_k$-modules $M(2)\otimes M(2\ell)$, which we will do by first describing the $\slc$-modules $V(2)\otimes V(2\ell)$ and then translating back to a solution to our problem by the isomorphism of \cref{eq:sl2iso}.
+
+Let $2\ell=n\in\N$. We want to show that
+\begin{align*}
+  V(2)\otimes V(n) &=
+                     \begin{dcases*}
+                       V(n-2) \oplus V(n) \oplus V(n+2) & if $n\geq 2$,\\
+                       V(3)\oplus V(1) & if $n=1$, \\
+                       V(2) & if $n=0$.
+                     \end{dcases*}
+\end{align*}
+Note that in all cases there is a summand $V(n+2)$. We can show the above by considerations using formal characters. We will use the notation of \cite[Chapter~8]{jantzen}, specifically we will do calculations with the functions $e(\lambda)\colon H^*\to \Z$ for $\lambda\in H^*$. Firstly note that in general
+\begin{align*}
+  \ch_V &= \sum_{\lambda\in H^*} (\dim V_\lambda) e(\lambda),
+\end{align*}
+and use the notation $V(n)_k$ for $V(\lambda)_\mu$ and $e(n)$ for $e(\lambda)$ with $\lambda,\mu\in H^*$ such that $\lambda(h)=n$ and $\mu(h)=k$. We get that
+\begin{align*}
+  \ch_{V(2)} &= e(-2) + e(0) + e(2)
+\end{align*}
+and 
+\begin{align*}
+  \ch_{V(n)} &= \sum_{i=0}^n e(n-2i),
+\end{align*}
+since
+\begin{align*}
+  \dim V(n)_k &=
+                \begin{dcases*}
+                  1 & if $k=n-2i$ for some $i\in\Set{0,1,\dotsc,n}$, \\
+                  0 & otherwise.
+                \end{dcases*}
+\end{align*}
+Now since $e(\lambda)*e(\mu)=e(\lambda+\mu)$ in general cf.\ \cite[93]{jantzen}, we see that for $n\geq 2$
+\begin{align*}
+  \ch_{V(2)\otimes V(n)} &= \ch_{V(2)} * \ch_{V(n)} = e(-2)*\ch_{V(n)} + e(0)*\ch_{V(n)} + e(2)*\ch_{V(n)} \\
+                         &= \sum_{i=0}^n e(n-2-2i) + \ch_{V(n)} + \sum_{i=0}^n e(n+2-2i) \\
+                         &= e(-n-2)+e(-n) + \sum_{i=0}^{n-2} e(n-2i) + \ch_{V(n)} + \sum_{i=0}^n e(n+2-2i) \\
+                         &= \ch_{V(n-2)} + \ch_{V(n)} + \sum_{i=0}^{n+2} e(n+2-2i) \\
+  &= \ch_{V(n-2)} + \ch_{V(n)} + \ch_{V(n+2)} = \ch_{V(n-2)\oplus V(n)\oplus V(n+2)},
+\end{align*}
+where the first equality follows from the fact that $\ch_{V\otimes W}=\ch_V * \ch_W$ in general, cf.\ \cite[125]{humphrey}. Thus since two $L$-modules $V$ and $V'$ are isomorphic if and only if $\ch_V=\ch_{V'}$, cf.\ \cite[90]{jantzen}, we see that $V(2)\otimes V(n) \simeq V(n-2)\oplus V(n)\oplus V(n+2)$ if $n\geq 2$.
+
+Likewise we see that
+\begin{align*}
+  \ch_{V(2)\otimes V(1)} &= \ch_{V(2)}*\ch_{V(1)} \\
+  &= (e(-2)+e(0)+e(2))*e(-1) + (e(-2)+e(0)+e(2))*e(1) \\
+                         &= e(-3)+e(-1)+e(1)+e(-1)+e(1)+e(3) \\
+                         &= \bigl(e(-3)+e(-1)+e(1)+e(3)\bigr) + \bigl(e(-1)+e(1)\bigr) \\
+  &= \ch_{V(3)} + \ch_{V(1)} = \ch_{V(3)\oplus V(1)}
+\end{align*}
+and
+\begin{align*}
+  \ch_{V(2)\otimes V(0)} &= \ch_{V(2)}*\ch_{V(0)} = \ch_{V(2)}*e(0) = \ch_{V(2)},
+\end{align*}
+so indeed $V(2)\otimes V(1)\simeq V(3)\oplus V(1)$ and $V(2)\otimes V(0)\simeq V(2)$. 
+
+Now consider $(w_0,w_1,w_2)$ a basis for $V(2)$ and $(v_i \mid 0\leq i\leq n)$ a basis for $V(n)$ such that both satisfies the conditions from \cref{eq:sl2modbasis}. Then for $w_i\otimes v_j \in V(2)\otimes V(n)$ with $i\in\Set{0,1,2}$ and $j\in\Set{0,1,\dotsc,n}$ we see that
+\begin{align*}
+  h.(w_i\otimes v_j) &= h.w_i\otimes v_j + w_i\otimes h.v_j = (2-2i)w_i\otimes v_j + (n-2j)w_i\otimes v_j \\
+  &= (n-2(i+j-1))w_i\otimes v_j.
+\end{align*}
+Hence $v_0\otimes w_0$ is up to scalar multiple the only vector of weight $n+2$ in $V(2)\otimes V(n)$, so it is necessarily a highest weight vector generating the direct summand isomorphic to $V(n+2)$. By $\slc$-theory, cf.\ \cite[36]{jantzen}, we know that this summand has a basis $(s_k\mid 0\leq k\leq n+2)$, where
+\begin{align*}
+  s_k &\coloneqq \dfrac{1}{k!} y^k.(w_0\otimes v_0).
+\end{align*}
+We want to describe the $s_k$'s more explicitly. First note that if $n>0$
+\begin{align*}
+  s_1 &= y.(w_0\otimes v_0) = y.w_0\otimes v_0 + w_0\otimes y.v_0 \\
+  &= w_1\otimes v_0 + w_0\otimes v_1
+\end{align*}
+and
+\begin{align*}
+  s_2 &= \tfrac{1}{2}y.s_1 \\
+      &= \tfrac{1}{2}y.w_1\otimes v_0 + \tfrac{1}{2}w_1\otimes y.v_0 + \tfrac{1}{2}y.w_0\otimes v_1 + w_0\otimes \tfrac{1}{2}y.v_1 \\
+      &= w_2\otimes v_0 + \tfrac{1}{2}w_1\otimes v_1 + \tfrac{1}{2}w_1\otimes v_1 + w_0\otimes v_2 \\
+  &= w_2\otimes v_0 + w_1\otimes v_1 + w_0\otimes v_2.
+\end{align*}
+Inductively we see that
+\begin{align*}
+  s_k &= w_2\otimes v_{k-2} + w_1\otimes v_{k-1} + w_0\otimes v_k
+\end{align*}
+for $k\leq n$, since
+\begin{align*}
+  s_{k+1} &= \tfrac{1}{k+1}y.s_k \\
+          &= w_2\otimes\tfrac{1}{k+1}y.v_{k-2} + \tfrac{1}{k+1}y.w_1\otimes v_{k-1} + w_1\otimes\tfrac{1}{k+1}y.v_{k-1} + \tfrac{1}{k+1}y.w_0\otimes v_k \\
+  &\phantom{{}={}}{} + w_0\otimes \tfrac{1}{k+1}y.v_k \\
+          &= \tfrac{k-1}{k+1}w_2\otimes v_{k-1} + \tfrac{2}{k+1}w_2\otimes v_{k-1} + \tfrac{k}{k+1}w_1\otimes v_k + \tfrac{1}{k+1}w_1\otimes v_k \\
+          &\phantom{{}={}}{} + w_0\otimes v_{k+1} \\
+  &= w_2\otimes v_{k-1} + w_1\otimes v_k + w_0\otimes v_{k+1}.
+\end{align*}
+We likewise see that for $k=n+1$ the last term vanishes, so we have $s_{k+1}=w_2\otimes v_{n-1}+ w_1\otimes v_n$, and for $k=n+2$ the two last terms vanish, so we get $s_{k+2}=w_2\otimes v_n$.
+
+In case $n=0$ we see that $s_1=w_1\otimes v_0$ and $s_2=w_2\otimes v_0$.
+
 
 
 %%% Local Variables:
