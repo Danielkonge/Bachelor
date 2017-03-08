@@ -10,8 +10,8 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{Formulae for the operators $H_+,H_-,H_3,F_+,F_-,F_3$}{5}{section*.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\chapternumberline {2}Linear relations}{13}{chapter.2}
+\contentsline {chapter}{\chapternumberline {2}Linear relations}{17}{chapter.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{Bibliography}{15}{section*.4}
+\contentsline {chapter}{Bibliography}{19}{section*.7}
 \defcounter {refsection}{0}\relax 
 \contentsline {appendix}{\chapternumberline {A}Appendix}{A.1}{appendix.A}

@@ -222,14 +222,14 @@ as $L_k$-modules, and since also $R_\ell$ is direct sum of finitely many copies 
 as $L_k$-modules, since $L_p\simeq M(2)$. Here the superscripts are just indices for the different $M(2\ell)$. Thus we want to describe the $L_k$-modules $M(2)\otimes M(2\ell)$, which we will do by first describing the $\slc$-modules $V(2)\otimes V(2\ell)$ and then translating back to a solution to our problem by the isomorphism of \cref{eq:sl2iso}.
 
 Let $2\ell=n\in\N$. We want to show that
-\begin{align*}
+\begin{align}\label{eq:V(2)tensorV(n)}
   V(2)\otimes V(n) &=
                      \begin{dcases*}
                        V(n-2) \oplus V(n) \oplus V(n+2) & if $n\geq 2$,\\
                        V(3)\oplus V(1) & if $n=1$, \\
                        V(2) & if $n=0$.
                      \end{dcases*}
-\end{align*}
+\end{align}
 Note that in all cases there is a summand $V(n+2)$. We can show the above by considerations using formal characters. We will use the notation of \cite[Chapter~8]{jantzen}, specifically we will do calculations with the functions $e(\lambda)\colon H^*\to \Z$ for $\lambda\in H^*$. Firstly note that in general
 \begin{align*}
   \ch_V &= \sum_{\lambda\in H^*} (\dim V_\lambda) e(\lambda),
@@ -279,11 +279,11 @@ Now consider $(w_0,w_1,w_2)$ a basis for $V(2)$ and $(v_i \mid 0\leq i\leq n)$ a
   h.(w_i\otimes v_j) &= h.w_i\otimes v_j + w_i\otimes h.v_j = (2-2i)w_i\otimes v_j + (n-2j)w_i\otimes v_j \nonumber \\
   &= (n-2(i+j-1))w_i\otimes v_j.\label{eq:hontensor}
 \end{align}
-Hence $v_0\otimes w_0$ is up to scalar multiple the only vector of weight $n+2$ in $V(2)\otimes V(n)$, so it is necessarily a highest weight vector generating the direct summand isomorphic to $V(n+2)$. By $\slc$-theory, cf.\ \cite[36]{jantzen}, we know that this summand has a basis $(s_k\mid 0\leq k\leq n+2)$ satisfying equations as in \cref{eq:sl2modbasis}, where
+Hence $v_0\otimes w_0$ is up to scalar multiple the only vector of weight $n+2$ in $V(2)\otimes V(n)$, so it is necessarily a highest weight vector generating the direct summand isomorphic to $V(n+2)$. Note that by \cref{eq:V(2)tensorV(n)} we indeed have a direct summand isomorphic to $V(n+2)$ for all $n\in\N$. By $\slc$-theory, cf.\ \cite[36]{jantzen}, we know that this summand has a basis $(s_k\mid 0\leq k\leq n+2)$ satisfying equations as in \cref{eq:sl2modbasis}, where
 \begin{align*}
   s_k &\coloneqq \dfrac{1}{k!} y^k.(w_0\otimes v_0).
 \end{align*}
-We want to describe the $s_k$'s more explicitly. First note that if $n>0$
+We want to describe the $s_k$'s more explicitly. First note that if $n>0$\todo{Maybe I will move some calculations of $s_k$, $t_k$, and $u_k$ to an appendix}
 \begin{align*}
   s_1 &= y.(w_0\otimes v_0) = y.w_0\otimes v_0 + w_0\otimes y.v_0 \\
   &= w_1\otimes v_0 + w_0\otimes v_1
@@ -299,12 +299,12 @@ Inductively we see that
 \begin{align*}
   s_k &= w_2\otimes v_{k-2} + w_1\otimes v_{k-1} + w_0\otimes v_k
 \end{align*}
-for $k\leq n$, since the base case holds and given the equality for $k$ we get
+for $k\leq n$, since the base case holds and given the equality for $k<n$ we get
 \begin{align*}
-  s_{k+1} &= \tfrac{1}{k+1}y.s_k \\
-          &= w_2\otimes\tfrac{1}{k+1}y.v_{k-2} + \tfrac{1}{k+1}y.w_1\otimes v_{k-1} + w_1\otimes\tfrac{1}{k+1}y.v_{k-1} + \tfrac{1}{k+1}y.w_0\otimes v_k \\
-  &\phantom{{}={}}{} + w_0\otimes \tfrac{1}{k+1}y.v_k \\
-          &= \tfrac{k-1}{k+1}w_2\otimes v_{k-1} + \tfrac{2}{k+1}w_2\otimes v_{k-1} + \tfrac{k}{k+1}w_1\otimes v_k + \tfrac{1}{k+1}w_1\otimes v_k \\
+  s_{k+1} &= \dfrac{1}{k+1}y.s_k \\
+          &= w_2\otimes\dfrac{1}{k+1}y.v_{k-2} + \dfrac{1}{k+1}y.w_1\otimes v_{k-1} + w_1\otimes\dfrac{1}{k+1}y.v_{k-1} \\
+  &\phantom{{}={}}{} + \dfrac{1}{k+1}y.w_0\otimes v_k + w_0\otimes \dfrac{1}{k+1}y.v_k \\
+          &= \dfrac{k-1}{k+1}w_2\otimes v_{k-1} + \dfrac{2}{k+1}w_2\otimes v_{k-1} + \dfrac{k}{k+1}w_1\otimes v_k + \dfrac{1}{k+1}w_1\otimes v_k \\
           &\phantom{{}={}}{} + w_0\otimes v_{k+1} \\
   &= w_2\otimes v_{k-1} + w_1\otimes v_k + w_0\otimes v_{k+1}.
 \end{align*}
@@ -324,18 +324,14 @@ We likewise see that for $k=n+1$ the last term vanishes, so we have $s_{k+1}=w_2
 
 In case $n=0$ we see that $s_1=w_1\otimes v_0$ and $s_2=w_2\otimes v_0$, and we note that $(s_0,s_1,s_2)$ is a basis for $V(2)\otimes V(0)\simeq V(2)$.
 
-Suppose now that $n\geq 1$. By \cref{eq:hontensor} the only vectors of weight $n$ are $w_0\otimes v_1$ and $w_1\otimes v_0$, so the vector of highest weight $n$ generating the summand corresponding to $V(n)$ must be of the form $aw_0\otimes v_1 + bw_1\otimes v_0$ for some $a,b\in \C$. Furthermore we know that for this vector generating the summand corresponding to $V(n)$, we must have that
+Suppose now that $n\geq 1$. Note that by \cref{eq:V(2)tensorV(n)} we have a direct summand isomorphic to $V(n)$, and by \cref{eq:hontensor} this weight space of weight $n$ are spanned by $w_0\otimes v_1$ and $w_1\otimes v_0$, so the vector of highest weight $n$ generating this summand must be of the form $aw_0\otimes v_1 + bw_1\otimes v_0$ for some $a,b\in \C$. Furthermore we know that for this vector generating the summand corresponding to $V(n)$, we must have that
 \begin{align*}
   0 &= x.(aw_0\otimes v_1 + bw_1\otimes v_0) \\
     &= ax.w_0 \otimes v_1 + aw_0\otimes x.v_1 + bx.w_1\otimes v_0 + bw_1\otimes x.v_0 \\
     &= 0 + a(n-1+1)w_0\otimes v_0 + b(2-1+1)w_0\otimes v_0 + 0 \\
   &= (an+2b)w_0\otimes v_0, 
 \end{align*}
-i.e. $an+2b=0$ so
-\begin{align*}
-  b &= -\dfrac{n}{2}a.
-\end{align*}
-This determines the vector generating the summand corresponding $V(n)$ up to a scalar, so taking $a=1$, we see that we can take
+i.e. $an+2b=0$ so $b = -\tfrac{n}{2}a$. This determines the vector generating the summand corresponding to $V(n)$ up to a scalar, so taking $a=1$, we see that we can take
 \begin{align*}
   t_0 &\coloneqq w_0\otimes v_1 - \dfrac{n}{2}w_1\otimes v_0
 \end{align*}
@@ -354,7 +350,7 @@ and inductively we get that
 \begin{align*}
   t_k &= (k+1)w_0\otimes v_{k+1} - \dfrac{n-2k}{2}w_1\otimes v_k + (k-1-n)w_2\otimes v_{k-1}
 \end{align*}
-for $1\leq k\leq n-1$, since the base case holds and given the equality for $k$ we get
+for $1\leq k\leq n-1$, since the base case holds and given the equality for $k<n-1$ we get
 \begin{align*}
   t_{k+1} &= \dfrac{1}{k+1}y.t_k \\
          &= y.w_0\otimes v_{k+1} + w_0\otimes y.v_{k+1} - \dfrac{n-2k}{2(k+1)}y.w_1\otimes v_k \\
@@ -367,8 +363,115 @@ for $1\leq k\leq n-1$, since the base case holds and given the equality for $k$ 
 \end{align*}
 where we in the last equality use that $(k+1)(k-n)=k^2-nk+k-n = k^2-k-nk-n+2k$. We likewise see that for $k=n$ the first term vanishes so
 \begin{align*}
-  t_n &= \dfrac{n}{2}w_1\otimes v_n - w_2\otimes v_{n-1}.
+  t_n = \dfrac{n}{2}w_1\otimes v_n - w_2\otimes v_{n-1}.
 \end{align*}
+
+Suppose now that $n\geq 2$. By \cref{eq:V(2)tensorV(n)} we have a direct summand isomorphic to $V(n-2)$, and by \cref{eq:hontensor} this weight space of weight $n-2$ is spanned by $w_0\otimes v_2$, $w_1\otimes v_1$, and $w_2\otimes v_0$, so the vector of highest weight $n-2$ generating this summand must be of the form $aw_0\otimes v_2 + bw_1\otimes v_1 + cw_2\otimes v_0$ for some $a,b,c\in\C$. Furthermore we know that for this vector generating the summand corresponding to $V(n-2)$, we must have
+\begin{align*}
+  0 &= x.(aw_0\otimes v_2 + bw_1\otimes v_1 + cw_2\otimes v_0) \\
+    &= aw_0\otimes x.v_2 + bx.w_1\otimes v_1 + bw_1\otimes x.v_1 + cx.w_2\otimes v_0 \\
+    &= a(n-2+1)w_0\otimes v_1 + b(2-1+1)w_0\otimes v_1 + b(n-1+1)w_1\otimes v_0 \\
+  &\phantom{{}={}}{} + c(2-2+1)w_1\otimes v_0 \\
+    &= \bigl((n-1)a + 2b\bigr)w_0\otimes v_1 + \bigl(bn + c\bigr)w_1\otimes v_0,
+\end{align*}
+i.e. $a(n-1)+2b=0$ and $bn+c=0$. Giving us $c=-bn$ and $b=-\tfrac{n-1}{2}a$, so
+\begin{align*}
+  c=\dfrac{n(n-1)}{2}a.
+\end{align*}
+This determines the vector generating the summand generating the summand corresponding to $V(n-2)$ up to a scalar, so taking $a=1$, we see that we can take
+\begin{align*}
+  u_0 \coloneqq w_0\otimes v_2 - \dfrac{n-1}{2}w_1\otimes v_1 + \dfrac{n(n-1)}{2}w_2\otimes v_0
+\end{align*}
+as our vector generating the summand corresponding to $V(n-2)$. Again $\slc$-theory now yields that this summand has a basis $(u_k \mid 0\leq k\leq n-2)$ satisfying equations as in \cref{eq:sl2modbasis}, where 
+\begin{align*}
+  u_k \coloneqq \dfrac{1}{k!}y^k.u_0.
+\end{align*}
+% We see that
+% \begin{align*}
+%   u_1 &= y.\bigl( w_0\otimes v_2 - \dfrac{n-1}{2}w_1\otimes v_1 + \dfrac{n(n-1)}{2}w_2\otimes v_0 \bigr) \\
+%       &= y.w_0\otimes v_2 + w_0\otimes y.v_2 - \dfrac{n-1}{2}y.w_1\otimes v_1 - \dfrac{n-1}{2}w_1\otimes y.v_1 \\
+%       &\phantom{{}={}}{} + \dfrac{n(n-1)}{2}w_2\otimes y.v_0 \\
+%       &= w_1\otimes v_2 + 3w_0\otimes v_3 - (n-1)w_2\otimes v_1 - (n-1)w_1\otimes v_2 \\
+%       &\phantom{{}={}}{} + \dfrac{n(n-1)}{2}w_2\otimes v_1 \\
+%       &= 3w_0\otimes v_3 - \bigl((n-1)-1\bigr)w_1\otimes v_2 + \dfrac{n(n-1)-2(n-1)}{2}w_2\otimes v_1 \\
+%   &= 3w_0\otimes v_3 - (n-2)w_1\otimes v_2 + \dfrac{(n-1)(n-2)}{2}w_2\otimes v_1,
+% \end{align*}
+Inductively we get that
+\begin{align*}
+  u_k &= \dfrac{(k+1)(k+2)}{2}w_0\otimes v_{k+2} - \dfrac{(k+1)(n-k-1)}{2}w_1\otimes v_{k+1} \\
+  &\phantom{{}={}}{} + \dfrac{(n-k)(n-k-1)}{2}w_2\otimes v_k
+\end{align*}
+for $0\leq k\leq n-2$, since the base case holds and given the equality for $k<n-2$ we get
+\begin{align*}
+  u_{k+1} &= \dfrac{1}{k+1}y.u_k \\
+          &= \dfrac{k+2}{2}y.w_0\otimes v_{k+2} + \dfrac{k+2}{2}w_0\otimes y.v_{k+2} \\*
+          &\phantom{{}={}}{} - \dfrac{n-k-1}{2}y.w_1\otimes v_{k+1} - \dfrac{n-k-1}{2}w_1\otimes y.v_{k+1} \\*
+          &\phantom{{}={}}{} + \dfrac{(n-k)(n-k-1)}{2(k+1)}w_2\otimes y.v_k \\
+          &= \dfrac{k+2}{2}w_1\otimes v_{k+2} + \dfrac{(k+2)(k+3)}{2}w_0\otimes v_{k+3} \\*
+          &\phantom{{}={}}{} - (n-k-1)w_2\otimes v_{k+1} - \dfrac{(n-k-1)(k+2)}{2}w_1\otimes v_{k+2} \\
+          &\phantom{{}={}}{} + \dfrac{(n-k)(n-k-1)}{2}w_2\otimes v_{k+1} \\
+          &= \dfrac{(k+2)(k+3)}{2}w_0\otimes v_{k+3} \\*
+          &\phantom{{}={}}{} - \dfrac{(n-k-1)(k+2)-(k+2)}{2}w_1\otimes v_{k+2} \\*
+          &\phantom{{}={}}{} + \dfrac{(n-k)(n-k-1)-2(n-k-1)}{2}w_2\otimes v_{k+1} \\
+          &= \dfrac{(k+2)(k+3)}{2}w_0\otimes v_{k+3} \\*
+          &\phantom{{}={}}{} - \dfrac{(k+2)(n-k-2)}{2}w_1\otimes v_{k+2} \\*
+          &\phantom{{}={}}{} + \dfrac{(n-k-1)(n-k-2)}{2}w_2\otimes v_{k+1}.
+\end{align*}
+
+Now we want to express $w_1\otimes v_k$ for $0\leq k\leq n$ in terms of the bases $(s_k \mid 0\leq k\leq n+2)$, $(t_k \mid 0\leq k\leq n)$, and $(u_k \mid 0\leq k\leq n-2)$. We see that for $0<k<n$\todo{This should probably be in an appendix}
+\begin{align*}
+  &\dfrac{2(k+1)(n+1-k)}{(n+1)(n+2)}s_{k+1} - \dfrac{2(n-2k)}{n(n+2)}t_k - \dfrac{4}{n(n+1)}u_{k-1}\\
+                                   &= \dfrac{2(k+1)(n+1-k)}{(n+1)(n+2)}\Bigl( w_0\otimes v_{k+1} + w_1\otimes v_{k} + w_2\otimes v_{k-1} \Bigr) \\*
+                                   &\phantom{{}={}}{} - \dfrac{2(n-2k)}{n(n+2)}\Bigl( (k+1)w_0\otimes v_{k+1} - \dfrac{n-2k}{2}w_1\otimes v_k \\*
+                                   &\phantom{{}={}-{}}{} + (k-1-n)w_2\otimes v_{k-1} \Bigr) \\*
+                                   &\phantom{{}={}}{} - \dfrac{4}{n(n+1)}\Bigl( \dfrac{k(k+1)}{2}w_0\otimes v_{k+1} - \dfrac{k(n-k)}{2}w_1\otimes v_k \\*
+                                   &\phantom{{}={}+{}}{}+ \dfrac{(n-k+1)(n-k)}{2}w_2\otimes v_{k-1} \Bigr) \\
+  &= \dfrac{
+    \biggl(\splitfrac{2(k+1)(n+1-k)n-2(n-2k)(k+1)(n+1)}{{}-2k(k+1)(n+2)}\biggr)
+    }{n(n+1)(n+2)}w_0\otimes v_{k+1} \\*
+  &\phantom{{}={}}{} + \dfrac{
+    \biggl(\splitfrac{2(k+1)(n+1-k)n+(n-2k)(n-2k)(n+1)}{{}+2k(n-k)(n+2)}\biggr)
+    }
+    {n(n+1)(n+2)}w_1\otimes v_k \\*
+  &\phantom{{}={}}{} + \dfrac{
+    \biggl(\splitfrac{2(k+1)(n+1-k)n-2(n-2k)(k-1-n)(n+1)}{{}-2(n-k+1)(n-k)(n+2)}\biggr)
+    }
+    {n(n+1)(n+2)}w_2\otimes v_{k-1} \\
+  &= 2(k+1)\dfrac{
+    (n+1-k)n-(n-2k)(n+1)-k(n+2)
+    }
+    {n(n+1)(n+2)}w_0\otimes v_{k+1} \\*
+  &\phantom{{}={}}{} + \dfrac{
+    \biggl(\splitfrac{2(k+1)(n+1-k)n+(n-2k)(n-2k)(n+1)}{{}+2k(n-k)(n+2)}\biggr)
+    }
+    {n(n+1)(n+2)}w_1\otimes v_k \\*
+  &\phantom{{}={}}{} + 2(n+1-k)\dfrac{
+    (k+1)n + (n-2k)(n+1) - (n-k)(n+2)
+    }
+    {n(n+1)(n+2)}w_2\otimes v_{k-1}.
+\end{align*}
+Now we note that
+\begin{align*}
+  (n+1-k)n&-(n-2k)(n+1)-k(n+2) \\
+          &= n\bigl( (n+1-k)-(n-2k)-k \bigr)-(n-2k)-2k \\
+          &= n-(n-2k)-2k = 0,
+\end{align*}
+and
+\begin{align*}
+  (k+1)n&+(n-2k)(n+1)-(n-k)(n+2) \\
+        &= n\bigl( (k+1)+(n-2k) - (n-k) \bigr) + (n-2k) - 2(n-k)\\
+  &= n + n-2k -2n+2k = 0,
+\end{align*}
+while
+\begin{align*}
+  2(k+1)(n+1-k)n& + (n-2k)(n-2k)(n+1)+2k(n-k)(n+2) \\
+                &= n(n+1)\bigl( 2(k+1) (n-2k) + 2k \bigr) - 2(k+1)kn \\
+                &\phantom{{}={}}{} - 2k(n-2k)(n+1) + 2k(n-k)(n+1)+2k(n-k) \\
+                &= n(n+1)\bigl(2k(n-2k)+(n-2k)+2k) \\
+                &\phantom{{}={}}{} - 2k(n-2k)(n+1)-2k^2(n+1)+2k(n-k) \\
+  &= ... = n(n+1)(n+2)
+\end{align*}\todo{Finish this}
+
 %%% Local Variables:
 %%% mode: latex
 %%% TeX-master: "../main"
