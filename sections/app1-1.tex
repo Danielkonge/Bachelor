@@ -1,0 +1,88 @@
+\section{\texorpdfstring{Bases of $V(2)\otimes V(n)$}{Bases for V(2) tensor V(n)}}\label{sec:basesofV(2)tensorV(n)}
+
+We want to describe the $s_k$'s of \cref{eq:s_kbasis} more explicitly. We have that $s_0=w_0\otimes v_0$ and $s_k=\tfrac{1}{k!}y^k . s_0$, and we note that if $n>0$ then
+\begin{align*}
+  s_1 &= y.(w_0\otimes v_0) = y.w_0\otimes v_0 + w_0\otimes y.v_0 \\
+  &= w_1\otimes v_0 + w_0\otimes v_1
+\end{align*}
+and
+\begin{align*}
+  s_2 &= \tfrac{1}{2}y.s_1 \\
+      &= \tfrac{1}{2}y.w_1\otimes v_0 + \tfrac{1}{2}w_1\otimes y.v_0 + \tfrac{1}{2}y.w_0\otimes v_1 + w_0\otimes \tfrac{1}{2}y.v_1 \\
+      &= w_2\otimes v_0 + \tfrac{1}{2}w_1\otimes v_1 + \tfrac{1}{2}w_1\otimes v_1 + w_0\otimes v_2 \\
+  &= w_2\otimes v_0 + w_1\otimes v_1 + w_0\otimes v_2.
+\end{align*}
+Inductively we see that
+\begin{align*}
+  s_k &= w_2\otimes v_{k-2} + w_1\otimes v_{k-1} + w_0\otimes v_k
+\end{align*}
+for $k\leq n$, since the base case holds and given the equality for $k<n$ we get
+\begin{align*}
+  s_{k+1} &= \dfrac{1}{k+1}y.s_k \\
+          &= w_2\otimes\dfrac{1}{k+1}y.v_{k-2} + \dfrac{1}{k+1}y.w_1\otimes v_{k-1} + w_1\otimes\dfrac{1}{k+1}y.v_{k-1} \\
+  &\phantom{{}={}}{} + \dfrac{1}{k+1}y.w_0\otimes v_k + w_0\otimes \dfrac{1}{k+1}y.v_k \\
+          &= \dfrac{k-1}{k+1}w_2\otimes v_{k-1} + \dfrac{2}{k+1}w_2\otimes v_{k-1} + \dfrac{k}{k+1}w_1\otimes v_k + \dfrac{1}{k+1}w_1\otimes v_k \\
+          &\phantom{{}={}}{} + w_0\otimes v_{k+1} \\
+  &= w_2\otimes v_{k-1} + w_1\otimes v_k + w_0\otimes v_{k+1}.
+\end{align*}
+We likewise see that for $k=n+1$ the last term vanishes, so we have $s_{k+1}=w_2\otimes v_{n-1}+ w_1\otimes v_n$, and for $k=n+2$ the two last terms vanish, so we get $s_{k+2}=w_2\otimes v_n$. Thus altogether we get the description in \cref{eq:s_kbasisres}.
+
+Suppose now that $n\geq 1$. We want to describe the $t_k$'s of \cref{eq:t_kbasisdef} more explicitly. We have that $t_0=w_0\otimes v_1 - \tfrac{n}{2}w_1\otimes v_0$ and $t_k=\tfrac{1}{k!}y^k . t_0$. We see that
+\begin{align*}
+  t_1 &= y.\bigl(w_0\otimes v_1 - \dfrac{n}{2}w_1\otimes v_0\bigr) \\
+      &= y.w_0\otimes v_1 + w_0\otimes y.v_1 - \dfrac{n}{2}y.w_1\otimes v_0 + \dfrac{n}{2}w_1\otimes y.v_0 \\
+      &= w_1\otimes v_1 + 2w_0\otimes v_2 - nw_2\otimes v_0 - \dfrac{n}{2}w_1\otimes v_1 \\
+  &= 2w_0\otimes v_2 -\dfrac{n-2}{2}w_1\otimes v_1 - nw_2\otimes v_0,
+\end{align*}
+and inductively we get that
+\begin{align*}
+  t_k &= (k+1)w_0\otimes v_{k+1} - \dfrac{n-2k}{2}w_1\otimes v_k + (k-1-n)w_2\otimes v_{k-1}
+\end{align*}
+for $1\leq k\leq n-1$, since the base case holds and given the equality for $k<n-1$ we get
+\begin{align*}
+  t_{k+1} &= \dfrac{1}{k+1}y.t_k \\
+         &= y.w_0\otimes v_{k+1} + w_0\otimes y.v_{k+1} - \dfrac{n-2k}{2(k+1)}y.w_1\otimes v_k \\
+          &\phantom{{}={}}{} - \dfrac{n-2k}{2(k+1)}w_1\otimes y.v_k + \dfrac{k-1-n}{k+1}w_2\otimes y.v_{k-1} \\
+          &= w_1\otimes v_{k+1} + (k+2)w_0\otimes v_{k+2} - \dfrac{n-2k}{k+1}w_2\otimes v_k \\
+          &\phantom{{}={}}{} - \dfrac{n-2k}{2}w_1\otimes v_{k+1} + \dfrac{(k-1-n)k}{k+1}w_2\otimes v_k \\
+          &= (k+2)w_0\otimes v_{k+2} - \dfrac{n-2(k+1)}{2}w_1\otimes v_{k+1} \\
+          &\phantom{{}={}}{} + \biggl( \dfrac{k^2-k-nk-n+2k}{k+1} \biggr) w_2\otimes v_k \\
+  &= (k+2)w_0\otimes v_{k+2} - \dfrac{n-2(k+1)}{2}w_1\otimes v_{k+1} + (k-n)w_2\otimes v_k,
+\end{align*}
+where we in the last equality use that $(k+1)(k-n)=k^2-nk+k-n = k^2-k-nk-n+2k$. We likewise see that for $k=n$ the first term vanishes so
+\begin{align*}
+  t_n = \dfrac{n}{2}w_1\otimes v_n - w_2\otimes v_{n-1}.
+\end{align*}
+Thus we altogether get the description in \cref{eq:t_kbasisres}.
+
+Suppose now that $n\geq 2$. We want to describe the $u_k$'s of \cref{eq:u_kbasisdef} more explicitely. We have that
+\begin{align*}
+  u_0 \coloneqq w_0\otimes v_2 - \dfrac{n-1}{2}w_1\otimes v_1 + \dfrac{n(n-1)}{2}w_2\otimes v_0
+\end{align*}
+and $u_k=\tfrac{1}{k!}y^k . u_0$. We see inductively that
+\begin{align*}
+  u_k &= \dfrac{(k+1)(k+2)}{2}w_0\otimes v_{k+2} - \dfrac{(k+1)(n-k-1)}{2}w_1\otimes v_{k+1} \\
+  &\phantom{{}={}}{} + \dfrac{(n-k)(n-k-1)}{2}w_2\otimes v_k
+\end{align*}
+for $0\leq k\leq n-2$, since the base case holds and given the equality for $k<n-2$ we get
+\begin{align*}
+  u_{k+1} &= \dfrac{1}{k+1}y.u_k \\
+          &= \dfrac{k+2}{2}y.w_0\otimes v_{k+2} + \dfrac{k+2}{2}w_0\otimes y.v_{k+2} \\*
+          &\phantom{{}={}}{} - \dfrac{n-k-1}{2}y.w_1\otimes v_{k+1} - \dfrac{n-k-1}{2}w_1\otimes y.v_{k+1} \\*
+          &\phantom{{}={}}{} + \dfrac{(n-k)(n-k-1)}{2(k+1)}w_2\otimes y.v_k \\
+          &= \dfrac{k+2}{2}w_1\otimes v_{k+2} + \dfrac{(k+2)(k+3)}{2}w_0\otimes v_{k+3} \\*
+          &\phantom{{}={}}{} - (n-k-1)w_2\otimes v_{k+1} - \dfrac{(n-k-1)(k+2)}{2}w_1\otimes v_{k+2} \\
+          &\phantom{{}={}}{} + \dfrac{(n-k)(n-k-1)}{2}w_2\otimes v_{k+1} \\
+          &= \dfrac{(k+2)(k+3)}{2}w_0\otimes v_{k+3} \\*
+          &\phantom{{}={}}{} - \dfrac{(n-k-1)(k+2)-(k+2)}{2}w_1\otimes v_{k+2} \\*
+          &\phantom{{}={}}{} + \dfrac{(n-k)(n-k-1)-2(n-k-1)}{2}w_2\otimes v_{k+1} \\
+          &= \dfrac{(k+2)(k+3)}{2}w_0\otimes v_{k+3} \\*
+          &\phantom{{}={}}{} - \dfrac{(k+2)(n-k-2)}{2}w_1\otimes v_{k+2} \\*
+          &\phantom{{}={}}{} + \dfrac{(n-k-1)(n-k-2)}{2}w_2\otimes v_{k+1}.
+\end{align*}
+Thus we altogether get the description in \cref{eq:u_kbasisres}.
+
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: "../main"
+%%% End:

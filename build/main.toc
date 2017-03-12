@@ -1,3 +1,4 @@
+\changetocdepth {2}
 \boolfalse {citerequest}\boolfalse {citetracker}\boolfalse {pagetracker}\boolfalse {backtracker}\relax 
 \defcounter {refsection}{0}\relax 
 \select@language {english}
@@ -8,10 +9,16 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {1.1}Representations of $L_k$}{3}{section.1.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{Formulae for the operators $H_+,H_-,H_3,F_+,F_-,F_3$}{5}{section*.2}
+\contentsline {subsection}{\numberline {1.1.1}Formulae for the operators $H_+,H_-,H_3,F_+,F_-,F_3$}{5}{subsection.1.1.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\chapternumberline {2}Linear relations}{17}{chapter.2}
+\contentsline {subsection}{\numberline {1.1.2}Describing $V(2)\otimes V(n)$}{8}{subsection.1.1.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{Bibliography}{19}{section*.7}
+\contentsline {chapter}{\chapternumberline {2}Linear relations}{13}{chapter.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {appendix}{\chapternumberline {A}Appendix}{A.1}{appendix.A}
+\contentsline {chapter}{Bibliography}{15}{section*.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {appendix}{\chapternumberline {A}Calculations}{A.1}{appendix.A}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {A.1}Bases of $V(2)\otimes V(n)$}{A.1}{section.A.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {A.2}Finding $w_1\otimes v_k$}{A.4}{section.A.2}
