@@ -9,6 +9,7 @@
     "sections/app1-0"
     "sections/app1-1"
     "sections/app1-2"
+    "sections/app1-3"
     "kantlipsum")
    (LaTeX-add-labels
     "cha:first"

@@ -18,6 +18,9 @@
     "eq:u_kbasisdef"
     "eq:u_kbasisres"
     "eq:w_1tensorv_k"
-    "eq:special_cases_w_1tensorv_k"))
+    "eq:special_cases_w_1tensorv_k"
+    "eq:inproddef1"
+    "eq:inproddef2"
+    "eq:inprodres"))
  :latex)
 

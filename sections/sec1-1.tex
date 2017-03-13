@@ -105,7 +105,7 @@ Thus we get the following Lemma:
 
 \subsection{Formulae for the operators \texorpdfstring{$H_+,H_-,H_3,F_+,F_-,F_3$}{H\_+,H\_-,H\_3,F\_+,F\_-,F\_3}}
 
-Let $M$ be a Harish-Chandra $L$-module. Then we have linear operators $H_+,H_-,H_3,F_+,F_-,F_3\colon M\to M$ satisfying commutation relations as in \cref{eq:lierels}, and we want to give expressions for these in terms of other linear operators $E_+,E_-,D_+,D_-,D_0\colon M\to M$. 
+Let $M$ be a Harish-Chandra $L$-module. Then we have linear operators $H_+, H_-, H_3, F_+, F_-, F_3\colon M\to M$ satisfying commutation relations as in \cref{eq:lierels}, and we want to give expressions for these in terms of other linear operators $E_+,E_-,D_+,D_-,D_0\colon M\to M$. 
 
 We will denote by $R_\ell$ a finite dimensional $L$-module which is a (finite) direct sum of $L_k$-modules $M(2\ell+1)$ for the same number $\ell\in\tfrac{1}{2}\Z_{\geq 0}$. Then $M$ is a direct sum of the subspaces $R_\ell$ since $M$ is Harish-Chandra, and from \cref{lem:modulebasis} we know that $R_\ell$ can be written as the direct sum of subspaces $R_{\ell,m}$, where $R_{\ell,m}$ are eigenspaces for $H_3$ such that
 \begin{align} \label{eq:H3eigen}
@@ -192,14 +192,14 @@ In general given two $L$-modules $V$ and $W$, we consider the tensor product $V\
 \end{align*}
 cf.\ \cite[26]{humphrey}.
 
-Now we are interested in the $L_k$-module $L_p\otimes M$, where $M$ is a Harish-Chandra $L$-module as before. Specifically we will show that
+Now we are interested in the $L_k$-module $L_p\otimes M$, where $M$ is a Harish-Chandra $L$-module as before. Specifically we will show that the linear map
 \begin{align}
   \begin{split} \label{eq:psi}
     \psi \colon L_p\otimes M &\to M \\
     x\otimes v &\mapsto x.v
   \end{split}
 \end{align}
-is a homomorphism of $L_k$-modules. It is clear that $\psi$ is linear, and for $y\in L_k$ we see that
+is a homomorphism of $L_k$-modules. For $y\in L_k$ we see that
 \begin{align*}
   y.(x\otimes v) &= y.x\otimes v + x\otimes y.v = [y,x]\otimes v + x\otimes y.v,
 \end{align*}
@@ -219,7 +219,7 @@ as $L_k$-modules, and since also $R_\ell$ is direct sum of finitely many copies 
   L_p\otimes R_\ell &\simeq M(2)\otimes \bigl( M(2\ell)^1 \oplus M(2\ell)^2 \oplus \dotsb \oplus M(2\ell)^r \bigr) \\
   &\simeq (M(2)\otimes M(2\ell)^1) \oplus (M(2)\otimes M(2\ell)^2) \oplus \dotsb \oplus (M(2)\otimes M(2\ell)^r),
 \end{align*}
-as $L_k$-modules, since $L_p\simeq M(2)$. Here the superscripts are just indices for the different $M(2\ell)$. Thus we want to describe the $L_k$-modules $M(2)\otimes M(2\ell)$, which we will do by first describing the $\slc$-modules $V(2)\otimes V(2\ell)$ and then translating back to a solution to our problem by the isomorphism of \cref{eq:sl2iso}. 
+as $L_k$-modules, since $L_p\simeq M(2)$. Here the superscripts are just indices for the different $M(2\ell)$. Thus we want to describe the $L_k$-modules $M(2)\otimes M(2\ell)$, which we will do by first describing the $\slc$-modules $V(2)\otimes V(2\ell)$ and then translating back to a solution to our problem.
 
 \subsection{\texorpdfstring{Describing $V(2)\otimes V(n)$}{Describing V(2) tensor product V(n)}}
 Let $2\ell=n\in\N$. We want to show that
@@ -316,7 +316,7 @@ as our vector generating the summand corresponding to $V(n)$. As before $\slc$-t
 \begin{align}\label{eq:t_kbasisdef}
   t_k \coloneqq \dfrac{1}{k!}y^k.t_0.
 \end{align}
-By straightforward calculations, cf.\ \cref{sec:basesofV(2)tensorV(n)}, we get that
+By straightforward calculations, cf.\ \Cref{sec:basesofV(2)tensorV(n)}, we get that
 \begin{align}\label{eq:t_kbasisres}
   \begin{aligned}
     t_0 &= w_0\otimes v_1 - \dfrac{n}{2}w_1\otimes v_0, \\
@@ -346,7 +346,7 @@ as our vector generating the summand corresponding to $V(n-2)$. Again $\slc$-the
 \begin{align}\label{eq:u_kbasisdef}
   u_k \coloneqq \dfrac{1}{k!}y^k.u_0.
 \end{align}
-By straightforward calculations, cf.\ \cref{sec:basesofV(2)tensorV(n)}, we get that
+By straightforward calculations, cf.\ \Cref{sec:basesofV(2)tensorV(n)}, we get that
 \begin{align}\label{eq:u_kbasisres}
   \begin{aligned}
     u_k &= \dfrac{(k+1)(k+2)}{2}w_0\otimes v_{k+2} - \dfrac{(k+1)(n-k-1)}{2}w_1\otimes v_{k+1} \\
@@ -363,7 +363,50 @@ for $0<k<n$, while
 \begin{align}\label{eq:special_cases_w_1tensorv_k}
   w_1\otimes v_0 = \dfrac{2}{n+2}(s_1-t_0) \qquad \mbox{and} \qquad w_1\otimes v_n = \dfrac{2}{n+2}(s_{n+1}+t_n)
 \end{align}
-if $n\geq 1$. If $n=0$ we have already seen (just after \cref{eq:s_kbasisres}) that $w_1\otimes v_0 = s_1$.
+if $n\geq 1$. If $n=0$ we have already seen (just after \cref{eq:s_kbasisres}) that $w_1\otimes v_0 = s_1$. Note that \cref{eq:special_cases_w_1tensorv_k} is a special case of \cref{eq:w_1tensorv_k} if we set $u_{-1}=u_{n-1}=0$.
+
+Now consider $V(2)$ and $V(n)$ as inner product spaces over $\C$ with inner products given by
+\begin{align}\label{eq:inproddef1}
+  \inner{w_k}{w_j} = \delta_{jk} \binom{2}{k} \qquad \mbox{and} \qquad \inner{v_k}{v_j} = \delta_{jk}\binom{n}{k}.
+\end{align}
+Then we can also consider $V(2)\otimes V(n)$ an inner product space with inner product given by
+\begin{align}\label{eq:inproddef2}
+  \inner{w\otimes v}{w'\otimes v'} = \inner{w}{w'}\cdot\inner{v}{v'}
+\end{align}\todo{Maybe write about why this is an inner product}
+for $w,w'\in V(2)$ and $v,v'\in V(n)$. Now by straightforward calculations, cf.\ \Cref{sec:innerproductscalc}, we get that
+\begin{align}\label{eq:inprodres}
+  \inner{s_0}{s_0} = 1, \qquad \inner{t_0}{t_0} = \dfrac{n(n+2)}{2}, \qquad \inner{u_0}{u_0} = \dfrac{n^2(n+1)(n-1)}{4}.
+\end{align}
+
+Now set $\overline w_k = w_k/\norm{w_k}$, $\overline v_k = v_k/\norm{v_k}$, $\overline s_k = s_k/\norm{s_k}$, $\overline t_k = t_k/\norm{t_k}$, and $\overline s_k = s_k/\norm{s_k}$ for all possible $k$, where $\norm{}$ is given by $\norm{v}=\sqrt{\inner{v}{v}}$ for $v\in V(2)\otimes V(n)$ as usually in an inner product space. Note that \todo{Show the following equations --- I can show these by long calculations, but I think there is an easier way}
+\begin{align*}
+  \inner{w_k}{w_k} &= \binom{2}{k} \\
+  \inner{v_k}{v_k} &= \binom{n}{k} \\
+  \inner{s_k}{s_k} &= \inner{s_0}{s_0}\binom{n+2}{k} = \binom{n+2}{k} \\
+  \inner{t_k}{t_k} &= \inner{t_0}{t_0}\binom{n}{k} = \dfrac{n(n+2)}{2}\binom{n}{k} \\
+  \inner{u_k}{u_k} &= \inner{u_0}{u_0}\binom{n-2}{k} = \dfrac{n^2(n+1)(n-1)}{4}\binom{n-2}{k}
+\end{align*}
+for $k$ where it makes sense, so we see that
+\begin{align*}
+  w_k &= \sqrt{\binom{2}{k}}\overline w_k, & v_k &= \sqrt{\binom{n}{k}}\overline v_k, & s_k &= \sqrt{\binom{n+2}{k}}\overline s_k,
+\end{align*}
+and
+\begin{align*}
+  t_k &= \sqrt{\dfrac{n(n+2)}{2}\binom{n}{k}}\overline t_k, & u_k &= \sqrt{\dfrac{n^2(n+1)(n-1)}{4}\binom{n-2}{k}}\overline u_k.
+\end{align*}
+
+\begin{remark}
+  Since
+  \begin{align*}
+    \overline v_k = \dfrac{1}{\sqrt{\binom{n}{k}}} v_k
+  \end{align*}
+  and likewise
+  \begin{align*}
+    \overline w_k = \dfrac{1}{\sqrt{\binom{2}{k}}} w_k,
+  \end{align*}
+  we note that we just need to change indices to go to the basis $(e_m)$ from the basis of $(v_k)$ as in the work leading to \Cref{lem:modulebasis}.
+\end{remark}
+
 
 %%% Local Variables:
 %%% mode: latex

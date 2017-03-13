@@ -494,6 +494,8 @@ INPUT sections/app1-1.tex
 INPUT sections/app1-1.tex
 INPUT sections/app1-2.tex
 INPUT sections/app1-2.tex
+INPUT sections/app1-3.tex
+INPUT sections/app1-3.tex
 OUTPUT build/main.thm
 OUTPUT build/main.toc
 INPUT build/main.aux
