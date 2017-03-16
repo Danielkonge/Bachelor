@@ -28,3 +28,5 @@
 \contentsline {section}{\numberline {A.4}Finding $\overline w_1\otimes \overline v_k$}{A.7}{section.A.4}
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {A.5}$F_3,F_+,F_-$ in terms of $E_+,E_-,D_0,D_+,D_-$}{A.8}{section.A.5}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {A.6}Relations for $D_0$, $D_+$, $D_-$}{A.11}{section.A.6}

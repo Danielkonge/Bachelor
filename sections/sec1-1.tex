@@ -437,7 +437,7 @@ we see that
     &= \sqrt{\ell^2-m^2}\widetilde D_-(\overline v_k) - m\widetilde D_0(\overline v_k) - \sqrt{(\ell+1)^2-m^2}\widetilde D_+(\overline v_k).
   \end{aligned}
 \end{align}
-Note that for $m\in\Set{\pm\ell}$, where the $\widetilde D_-$ term vanishes.\fancybreak{* \quad * \quad * \quad * \quad *}
+Note that for $m\in\Set{\pm\ell}$ the $\widetilde D_-$ term vanishes, so the formula works here although $D_-$ is not well-defined in these edge cases.\fancybreak{* \quad * \quad * \quad * \quad *}
 
 Getting back to the problem at the end of \Cref{sec:formulae}, we want to give the maps $D_0$, $D_+$, and $D_-$ such that $D_0R_{\ell,m}\subset R_{\ell,m}$, $D_+R_{\ell,m}\subset R_{\ell+1,m}$, and $D_-R_{\ell,m}\subset R_{\ell-1,m}$, the diagrams of \cref{eq:Ddiagrams} commute, and we can describe $F_3$, $F_+$, $F_-$ by the maps $D_0$, $D_+$, $D_-$, $E_+$, and $E_-$. Now consider the $\slc$-modules $V(n)$ as $L_k$-modules $M(n)$ via the isomorphism of \cref{eq:sl2iso}, and note that since
 \begin{align*}
@@ -475,13 +475,24 @@ since $\psi$ is an $L_k$-module homomorphism and by \Cref{rem:baseswithindexchan
 Now simple calculations, cf.\ \Cref{sec:Factions}, gives us that
 \begin{align}\label{eq:Factions}
   \begin{aligned}
-    F_3 \xi &= \sqrt{\ell^2-m^2}\psi \widetilde D_-(e_m) - m\psi \widetilde D_0(e_m) - \sqrt{(\ell+1)^2-m^2}\psi \widetilde D_+(e_m), \\
+    F_3 \xi &= \sqrt{\ell^2-m^2} D_-\xi - m D_0\xi - \sqrt{(\ell+1)^2-m^2}D_+\xi, \\
     F_+ \xi &= \sqrt{(\ell-m)(\ell-m-1)}D_-E_+\xi - \sqrt{(\ell-m)((\ell+m+1))}D_0E_+\xi \\*
     &\phantom{{}={}}{} + \sqrt{(\ell+m+1)(\ell+m+2)}E_+D_+\xi, \\
     F_- \xi &= -\sqrt{(\ell+m)(\ell+m-1)}D_-E_-\xi - \sqrt{(\ell+m)(\ell-m+1)}D_0E_-\xi \\*
-    &\phantom{{}={}}{} - \sqrt{(\ell-m+1)(\ell-m+2)}E_-D_+\xi.
+    &\phantom{{}={}}{} - \sqrt{(\ell-m+1)(\ell-m+2)}E_-D_+\xi
   \end{aligned}
 \end{align}
+for $\xi\in R_{\ell,m}$. Note here that although $D_-$ is not defined on $R_{\ell,\ell}$ and $R_{\ell,-\ell}$ the above still makes sense since in these cases the terms with $D_-$ vanish, either by the coefficient being zero or by $E_+$ or $E_-$ mapping to zero.
+
+We claim now that the formulae \cref{eq:Factions} for the linear operators $F_+$, $F_-$, and $F_3$ together with the formulae \cref{eq:H3eigen,eq:E+andE-} for $H_+$, $H_-$, and $H_3$ define a representation of $L$, i.e. they satisfy the commutation relations of \cref{eq:lierels}, if and only if $D_0$, $D_+$, and $D_-$ satisfy
+\begin{align}\label{eq:Drels}
+  \begin{aligned}
+    \ell D_+D_0 \xi &= (\ell+2)D_0 D_+ \xi, \\
+    (\ell+1)D_-D_0 \xi &= (\ell-1)D_0D_-\xi, \\
+    \xi &= (2\ell-1)D_+D_- \xi - (2\ell+3)D_-D_+\xi - D_0^2\xi
+  \end{aligned}
+\end{align}
+for $\xi\in R_{\ell,m}$.
 
 %%% Local Variables:
 %%% mode: latex

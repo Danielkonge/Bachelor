@@ -1,0 +1,34 @@
+\section{\texorpdfstring{Relations for $D_0$, $D_+$, $D_-$}{Relations for D\_0,D\_+,D\_-}}
+
+We want to show that the formulae \cref{eq:Factions} for the linear operators $F_+$, $F_-$, and $F_3$ together with the formulae \cref{eq:H3eigen,eq:E+andE-} for $H_+$, $H_-$, and $H_3$ define a representation of $L$, i.e. they satisfy the commutation relations of \cref{eq:lierels}, if and only if $D_0$, $D_+$, and $D_-$ satisfy \cref{eq:Drels}.
+By \cref{eq:lierels,eq:E+andE-}
+\begin{align*}
+  2F_3 \xi &= [H_+,F_-]\xi = H_+F_- \xi - F_-H_+ \xi \\
+           &= -\sqrt{(\ell+m)(\ell+m-1)} H_+D_-E_- \xi - \sqrt{(\ell+m)(\ell-m+1)} H_+D_0E_- \xi \\*
+           &\phantom{{}={}}{} - \sqrt{(\ell-m+1)(\ell-m+2)} H_+D_+E_- \xi \\*
+           &\phantom{{}={}}{} - \sqrt{(\ell+m+1)(\ell-m)}F_-E_+\xi \\
+           &= -\sqrt{(\ell+m)(\ell+m-1)}\sqrt{((\ell-1)+(m-1)+1)((\ell-1)-(m-1))} E_+D_-E_- \xi \\*
+           &\phantom{{}={}}{} - \sqrt{(\ell+m)(\ell-m+1)} \sqrt{(\ell+(m-1)+1)(\ell-(m-1))} E_+D_0E_- \xi \\*
+           &\phantom{{}={}}{} - \sqrt{(\ell-m+1)(\ell-m+2)}\sqrt{((\ell+1)+(m-1)+1)((\ell+1)-(m-1))} E_+D_+E_- \xi \\*
+           &\phantom{{}={}}{} + \sqrt{(\ell+m+1)(\ell-m)} \Bigl( \sqrt{(\ell+(m+1))(\ell+(m+1)-1)}D_-E_-E_+\xi \\*
+           &\phantom{{}={}()}{} + \sqrt{(\ell+(m+1))(\ell-(m+1)+1)}D_0E_-E_+\xi \\*
+           &\phantom{{}={}()}{} + \sqrt{(\ell-(m+1)+1)(\ell-(m+1)+2)} E_-D_+E_+ \xi \Bigr) \\
+           &= -\sqrt{(\ell+m)(\ell+m-1)}\sqrt{(\ell+m-1)(\ell-m)} E_+E_-D_- \xi \\*
+           &\phantom{{}={}}{} - \sqrt{(\ell+m)(\ell-m+1)} \sqrt{(\ell+m)(\ell-m+1)} E_+E_-D_0 \xi \\*
+           &\phantom{{}={}}{} - \sqrt{(\ell-m+1)(\ell-m+2)}\sqrt{(\ell+m+1)(\ell-m+2)} E_+E_-D_+ \xi \\*
+           &\phantom{{}={}}{} + \sqrt{(\ell+m+1)(\ell-m)} \Bigl( \sqrt{(\ell+m+1)(\ell+m)}D_-E_-E_+\xi \\*
+           &\phantom{{}={}()}{} + \sqrt{(\ell+m+1)(\ell-m)}D_0E_-E_+\xi \\*
+           &\phantom{{}={}()}{} + \sqrt{(\ell-m)(\ell-m+1)} E_-E_+D_+ \xi \Bigr) \\
+           &= -(\ell+m-1)\sqrt{\ell^2-m^2} D_- \xi \\*
+           &\phantom{{}={}}{} - (\ell+m)(\ell-m+1) D_0 \xi \\*
+           &\phantom{{}={}}{} - (\ell-m+2)\sqrt{(\ell+1)^2-m^2} D_+ \xi \\*
+           &\phantom{{}={}}{} + (\ell+m+1)\sqrt{\ell^2-m^2}D_-\xi \\*
+           &\phantom{{}={}}{} + (\ell+m+1)(\ell-m)D_0\xi \\*
+           &\phantom{{}={}}{} + (\ell-m)\sqrt{(\ell+1)^2-m^2} D_+ \xi \\
+           &= 2\sqrt{\ell^2-m^2}D_-\xi - 2m D_0\xi -2\sqrt{(\ell+1)^2-m^2}D_+\xi
+\end{align*}\todo{Remove this, do it with F relations only instead.}
+
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: "../main"
+%%% End:
