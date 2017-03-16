@@ -20,19 +20,21 @@ We will start out by describing the finite dimensional simple\footnote{In \cite{
 \end{align}
 
 Now using the isomorphism from \cref{eq:sl2iso} we see that for integers $n\geq 0$ there exists a unique simple $L_k$-module $M(n)$ of dimension $n+1$, and $M(n)$ has a basis $(v_0,v_1,\dotsc,v_n)$ such that for all $i$, $0\leq i\leq n$
-\begin{align*}
-  H_3v_i &= (\tfrac{1}{2}n-i)v_i, \\
-  H_+v_i &=
-          \begin{dcases*}
-            (n-i+1)v_{i-1} & if $i>0$, \\
-            0 & if $i=0$,
-          \end{dcases*} \\
-  H_-v_i &=
-          \begin{dcases*}
-            (i+1)v_{i+1} & if $i<n$, \\
-            0 & if $i=n$.
-          \end{dcases*}
-\end{align*}
+\begin{align}\label{eq:L_kbasis1}
+  \begin{aligned}
+    H_3v_i &= (\tfrac{1}{2}n-i)v_i, \\
+    H_+v_i &=
+    \begin{dcases*}
+      (n-i+1)v_{i-1} & if $i>0$, \\
+      0 & if $i=0$,
+    \end{dcases*} \\
+    H_-v_i &=
+    \begin{dcases*}
+      (i+1)v_{i+1} & if $i<n$, \\
+      0 & if $i=n$.
+    \end{dcases*}
+  \end{aligned}
+\end{align}
 From this we build a new basis by taking
 \begin{align*}
   w_i &= \dfrac{1}{\sqrt{\binom{n}{i}}}v_i,
@@ -59,7 +61,7 @@ and for $i$, $0\leq i<n$
   &= \sqrt{\dfrac{n-i}{i+1}}(i+1)w_{i+1} = \sqrt{(n-i)(i+1)}w_{i+1}.
 \end{align*}
 
-Finally write $\ell = \tfrac{1}{2}n$. We will re-index with $m=\tfrac{1}{2}n-i=\ell-i$ by setting
+Finally write $\ell = \tfrac{1}{2}n$. We will re-index with $m=\tfrac{1}{2}(n-2i)=\ell-i$ by setting
 \begin{align*}
   e_m &= w_{\ell-m}
 \end{align*}
@@ -103,11 +105,11 @@ Thus we get the following Lemma:
   \end{align}
 \end{lemma}
 
-\subsection{Formulae for the operators \texorpdfstring{$H_+,H_-,H_3,F_+,F_-,F_3$}{H\_+,H\_-,H\_3,F\_+,F\_-,F\_3}}
+\subsection{Formulae for the operators \texorpdfstring{$H_+,H_-,H_3,F_+,F_-,F_3$}{H\_+,H\_-,H\_3,F\_+,F\_-,F\_3}}\label{sec:formulae}
 
 Let $M$ be a Harish-Chandra $L$-module. Then we have linear operators $H_+, H_-, H_3, F_+, F_-, F_3\colon M\to M$ satisfying commutation relations as in \cref{eq:lierels}, and we want to give expressions for these in terms of other linear operators $E_+,E_-,D_+,D_-,D_0\colon M\to M$. 
 
-We will denote by $R_\ell$ a finite dimensional $L$-module which is a (finite) direct sum of $L_k$-modules $M(2\ell+1)$ for the same number $\ell\in\tfrac{1}{2}\Z_{\geq 0}$. Then $M$ is a direct sum of the subspaces $R_\ell$ since $M$ is Harish-Chandra, and from \cref{lem:modulebasis} we know that $R_\ell$ can be written as the direct sum of subspaces $R_{\ell,m}$, where $R_{\ell,m}$ are eigenspaces for $H_3$ such that
+We will denote by $R_\ell$ a finite dimensional $L$-module which is a (finite) direct sum of $L_k$-modules $M(2\ell+1)$ for the same number $\ell\in\tfrac{1}{2}\Z_{\geq 0}$. Then $M$ is a direct sum of the subspaces $R_\ell$ since $M$ is Harish-Chandra, and from \Cref{lem:modulebasis} we know that $R_\ell$ can be written as the direct sum of subspaces $R_{\ell,m}$, where $R_{\ell,m}$ are eigenspaces for $H_3$ such that
 \begin{align} \label{eq:H3eigen}
   H_3\xi &= m\xi
 \end{align}
@@ -117,7 +119,7 @@ for $m\in\Set{-\ell,-\ell+1,\dotsc,\ell-1,\ell}$ and $\xi\in R_{l,m}$. We will u
 \end{align*}
 throughout this paper.
 
-By \cref{lem:modulebasis} we also have that $H_+$ and $H_-$ maps the $R_{\ell,m}$ into each other as follows:
+By \Cref{lem:modulebasis} we also have that $H_+$ and $H_-$ maps the $R_{\ell,m}$ into each other as follows:
 \begin{align*}
   H_+\colon R_{\ell,m} &\to R_{\ell,m+1} && \mbox{if }-\ell\leq m<\ell, & H_+&\colon R_{\ell,\ell} \to 0, \\
   H_-\colon R_{\ell,m} &\to R_{\ell,m-1} && \mbox{if }-\ell< m\leq \ell, & H_-&\colon R_{\ell,-\ell} \to 0.
@@ -159,12 +161,14 @@ Now note that $H_+$, $H_-$, and $H_3$ are completely determined by \cref{eq:H3ei
 
 Consider maps $D_0$ and $D_+$ defined on $M=\bigoplus_{\ell,m} R_{\ell,m}$ and $D_-$ defined on the direct sum without the summands $R_{\ell,\ell}$ and $R_{\ell,-\ell}$ such that $D_0 R_{\ell,m}\subset R_{\ell,m}$, $D_+ R_{\ell,m} \subset R_{\ell+1,m}$, and $D_- R_{\ell,m} \subset R_{\ell-1,m}$ and the diagrams
 \begin{center}
-  \begin{tikzcd}
-    R_{\ell-1,m+1} & R_{\ell,m+1} \ar[l,"D_-",swap] & R_{\ell,m+1} \ar[r,"D_0"] & R_{\ell,m+1}  \\
-    R_{\ell-1,m} \ar[u,"E_+"] & R_{\ell,m} \ar[l,"D_-"] \ar[u,"E_+",swap] & R_{\ell,m} \ar[r,"D_0",swap] \ar[u,"E_+"] & R_{\ell,m} \ar[u,"E_+",swap] \\
-    & R_{\ell,m+1} \ar[r,"D_+"] & R_{\ell+1,m+1} \\
-    & R_{\ell,m} \ar[u,"E_+"] \ar[r,"D_+",swap] & R_{\ell+1,m+1} \ar[u,"E_+",swap]
-  \end{tikzcd}
+  \begin{equation}\label{eq:Ddiagrams}
+    \begin{tikzcd}[baseline=(current bounding box.center)]
+      R_{\ell-1,m+1} & R_{\ell,m+1} \ar[l,"D_-",swap] & R_{\ell,m+1} \ar[r,"D_0"] & R_{\ell,m+1}  \\
+      R_{\ell-1,m} \ar[u,"E_+"] & R_{\ell,m} \ar[l,"D_-"] \ar[u,"E_+",swap] & R_{\ell,m} \ar[r,"D_0",swap] \ar[u,"E_+"] & R_{\ell,m} \ar[u,"E_+",swap] \\
+      & R_{\ell,m+1} \ar[r,"D_+"] & R_{\ell+1,m+1} \\
+      & R_{\ell,m} \ar[u,"E_+"] \ar[r,"D_+",swap] & R_{\ell+1,m+1} \ar[u,"E_+",swap]
+    \end{tikzcd}
+  \end{equation}
 \end{center}
 commute, when $-\ell+1\leq m < \ell-1$ in the top left diagram, $-\ell\leq m<\ell$ in the other two diagrams. We need quite a lot of work to find a way to describe $F_+$, $F_-$, and $F_3$ from these maps.
 
@@ -387,26 +391,97 @@ Now set $\overline w_k = w_k/\norm{w_k}$, $\overline v_k = v_k/\norm{v_k}$, $\ov
   \inner{u_k}{u_k} &= \inner{u_0}{u_0}\binom{n-2}{k} = \dfrac{n^2(n+1)(n-1)}{4}\binom{n-2}{k}
 \end{align*}
 for $k$ where it makes sense, so we see that
-\begin{align*}
+\begin{align}\label{eq:normedbases1}
   w_k &= \sqrt{\binom{2}{k}}\overline w_k, & v_k &= \sqrt{\binom{n}{k}}\overline v_k, & s_k &= \sqrt{\binom{n+2}{k}}\overline s_k,
-\end{align*}
+\end{align}
 and
-\begin{align*}
+\begin{align}\label{eq:normedbases2}
   t_k &= \sqrt{\dfrac{n(n+2)}{2}\binom{n}{k}}\overline t_k, & u_k &= \sqrt{\dfrac{n^2(n+1)(n-1)}{4}\binom{n-2}{k}}\overline u_k.
-\end{align*}
+\end{align}
 
-\begin{remark}
+\begin{remark}\label{rem:changeindex}
   Since
   \begin{align*}
-    \overline v_k = \dfrac{1}{\sqrt{\binom{n}{k}}} v_k
-  \end{align*}
-  and likewise
-  \begin{align*}
-    \overline w_k = \dfrac{1}{\sqrt{\binom{2}{k}}} w_k,
+    \overline v_k = \dfrac{1}{\sqrt{\binom{n}{k}}} v_k,
   \end{align*}
   we note that we just need to change indices to go to the basis $(e_m)$ from the basis of $(v_k)$ as in the work leading to \Cref{lem:modulebasis}.
 \end{remark}
 
+By a simple calculation, cf.\ \Cref{sec:barw_1tensorbarv_k}, we get that
+\begin{align}\label{eq:barw_1tensorbarv_k}
+  \begin{aligned}
+    \overline w_1 \otimes \overline v_k &= \sqrt{\dfrac{2(k+1)(n+1-k)}{(n+1)(n+2)}}\overline s_{k+1} - \dfrac{(n-2k)}{\sqrt{n(n+2)}}\overline t_k \\*
+    &\phantom{{}={}}{} - \sqrt{\dfrac{2k(n-k)}{n(n+1)}}\overline u_{k-1}.
+  \end{aligned}
+\end{align}
+for $0\leq k\leq n$. Now changing indices as mentioned in \Cref{rem:changeindex} to $\ell = \tfrac{1}{2}n$ and $m=\tfrac{1}{2}(n-2k)=\ell-k$ as we did to get to \Cref{lem:modulebasis}, i.e.\ $n=2\ell$ and $k=\ell-m$, we get that
+\begin{align*}
+  \begin{aligned}
+    \overline w_1\otimes e_m &= \overline w_1\otimes\overline v_k \\
+    &= \sqrt{\dfrac{2(\ell-m+1)(2\ell+1)-(\ell-m)}{(2\ell+1)(2\ell+2)}}\overline s_{k+1} - \dfrac{(2\ell-2(\ell-m))}{\sqrt{2\ell(2\ell+2)}}\overline t_{k} \\*
+    &\phantom{{}={}}{} - \sqrt{\dfrac{2(\ell-m)(2\ell-(\ell-m))}{2\ell(2\ell+1)}}\overline u_{k-1} \\
+    &= \sqrt{\dfrac{(\ell-m+1)(\ell+1+m)}{(2\ell+1)(\ell+1)}}\overline s_{k+1} - \dfrac{m}{\sqrt{\ell(\ell+1)}}\overline t_{k} \\*
+    &\phantom{{}={}}{} - \sqrt{\dfrac{(\ell-m)(\ell+m)}{\ell(2\ell+1)}}\overline u_{k-1},
+  \end{aligned}
+\end{align*}
+where $e_m$ is as in the work we did to get \Cref{lem:modulebasis} except for the fact that we consider $\slc$-modules still. Now setting
+\begin{align*}
+  \widetilde D_+(\overline v_k) &= -\dfrac{\overline s_{k+1}}{\sqrt{(\ell+1)(2\ell+1)}}, & \widetilde D_0(\overline v_k) &= \dfrac{\overline t_k}{\sqrt{\ell(\ell+1)}}, & \widetilde D_-(\overline v_k) &= -\dfrac{\overline u_{k-1}}{\sqrt{\ell(2\ell+1)}},
+\end{align*}
+we see that
+\begin{align}\label{eq:Drels}
+  \begin{aligned}
+    \overline w_1 \otimes e_m &= \overline w_1\otimes\overline v_k \\
+    &=\sqrt{(\ell+1)^2-m^2}\dfrac{\overline s_{k+1}}{\sqrt{(\ell+1)(2\ell+1)}} - m\dfrac{\overline t_k}{\sqrt{\ell(\ell+1)}} \\*
+    &\phantom{{}={}}{} - \sqrt{\ell^2-m^2}\dfrac{\overline u_{k-1}}{\ell(2\ell+1)} \\
+    &= \sqrt{\ell^2-m^2}\widetilde D_-(\overline v_k) - m\widetilde D_0(\overline v_k) - \sqrt{(\ell+1)^2-m^2}\widetilde D_+(\overline v_k).
+  \end{aligned}
+\end{align}
+Note that for $m\in\Set{\pm\ell}$, where the $\widetilde D_-$ term vanishes.\fancybreak{* \quad * \quad * \quad * \quad *}
+
+Getting back to the problem at the end of \Cref{sec:formulae}, we want to give the maps $D_0$, $D_+$, and $D_-$ such that $D_0R_{\ell,m}\subset R_{\ell,m}$, $D_+R_{\ell,m}\subset R_{\ell+1,m}$, and $D_-R_{\ell,m}\subset R_{\ell-1,m}$, the diagrams of \cref{eq:Ddiagrams} commute, and we can describe $F_3$, $F_+$, $F_-$ by the maps $D_0$, $D_+$, $D_-$, $E_+$, and $E_-$. Now consider the $\slc$-modules $V(n)$ as $L_k$-modules $M(n)$ via the isomorphism of \cref{eq:sl2iso}, and note that since
+\begin{align*}
+  R_\ell = M(2\ell)^1 \oplus M(2\ell)^2 \oplus \dotsb \oplus M(2\ell)^r
+\end{align*}
+and each $M(2\ell)^{i}$ has a basis $(e_{-\ell}^{i},e_{-\ell+1}^{i},\dotsc,e_{\ell-1}^{i},e_{\ell}^{i})$ with $H_3e_m^{i} = m e_m^{i}$ for all $m$, we have that $R_{\ell,m}$ has basis $(e_m^1,e_m^2,\dotsc,e_m^r)$ by definition. So when describing the maps $D_0$, $D_+$, and $D_-$, we just need to describe what the maps should do to each $e_m^{i}$. To get the commutative diagrams of \cref{eq:Ddiagrams} we will consider maps such that $D_*M(2\ell)^{i} \subset M(2\ell)^{i}$, i.e.\ we will just describe what each map does to $M(2\ell)$ in general and stop writing superscripts.
+
+Since we want to describe the maps $F_3$, $F_+$, and $F_-$, we are actually interested in the actions of $L_p$, so by using $\psi$ of \cref{eq:psi} and the considerations at the end of \Cref{sec:formulae}, we can start out by describing $M(2)\otimes M(2\ell)$, i.e.\ we can use the description of $V(2)\otimes V(n)$ from above. Note that we have already seen that $L_p\simeq M(2)$ as $L_k$-modules, but we would like to better understand how the basis $(f_+,f_3,f_-)$ of $L_p$ corresponds to the basis $(w_0,w_1,w_2)$ of $M(2)$ as in \cref{eq:L_kbasis1}. In the basis $(w_0,w_1,w_2)$ we have that $h_+ . w_0 = 0$ (since this is what corresponds to $x.w_0=0$ in $V(2)$ by \cref{eq:sl2iso}), so by checking \cref{eq:lierels} we see that $w_0$ must correspond to a multiple $f_3$, but the basis is chosen up to scalar, so we can take $w_0$ to be $-\tfrac{\sqrt{2}}{2}f_3$. Now we get $w_1$ by taking $h_- . w_0$ (corresponding to $y.w_0$ in $V(2)$ by \cref{eq:sl2iso}), thus we get that
+\begin{align*}
+  w_1 = h_-.w_0 = -\tfrac{\sqrt{2}}{2}h_- . f_+ = -\tfrac{\sqrt{2}}{2}[h_-,f_+] = \sqrt{2}f_3.
+\end{align*}
+Likewise we get that $w_2=[h_-,\sqrt{2}f_3]=\sqrt{2}f_-$, so we can take our basis to be $(w_0,w_1,w_2)=(-\tfrac{\sqrt{2}}{2}f_+,\sqrt{2}f_3,\sqrt{2}f_-)$ when thinking of $L_p$ as the $L_k$-module $M(2)$. Normalizing as in \cref{eq:normedbases1}, we get that $(\overline w_0,\overline w_1,\overline w_2)=(-\tfrac{\sqrt{2}}{2}f_+,f_3,\sqrt{2}f_-)$. So by \cref{eq:Drels}, we see that in $L_p\otimes M(2\ell)$
+\begin{align*}
+  f_3 \otimes e_m &= \sqrt{\ell^2-m^2}\widetilde D_-(e_m) - m\widetilde D_0(e_m) - \sqrt{(\ell+1)^2-m^2}\widetilde D_+(e_m),
+\end{align*}
+where $e_m=\overline v_k$ for $k=\ell-m$ and $f_3 = \overline w_1$.
+\begin{remark}\label{rem:baseswithindexchange}
+  Note that if we have bases $(e_{-\ell-1}^{(2\ell+2)},e_{-\ell}^{(2\ell+2)},\dotsc,e_{\ell}^{(2\ell+2)},e_{\ell+1}^{(2\ell+2)})$ for $M(2\ell+2)$, $(e_{-\ell}^{(2\ell)},e_{-\ell+1}^{(2\ell)},\dotsc,e_{\ell-1}^{(2\ell)},e_{\ell}^{(2\ell)})$ for $M(2\ell)$, and $(e_{-\ell+1}^{(2\ell-2)},e_{-\ell+2}^{(2\ell-2)},\dotsc,\\ e_{\ell-2}^{(2\ell-2)},e_{\ell-1}^{(2\ell-2)})$ for $M(2\ell-2)$ (if $\ell\geq 1$) as in \Cref{lem:modulebasis}, then as above changing indices with $k=\ell+1-m$ we see that $e_m^{(2\ell+2)}$ corresponds to $\overline s_k$. Likewise changing indices with $k=\ell-m$ we see that $e_m^{(2\ell)}$ corresponds to $\overline t_k$, and with $k=\ell-1-m$ we see that $e_m^{(2\ell-2)}$ corresponds to $\overline u_k$. 
+\end{remark}
+
+Now using $\psi$ from \cref{eq:psi}, we see that
+\begin{align}\label{eq:F_3action}
+  \begin{aligned}
+    F_3e_m &= f_3 . e_m = \psi(f_3\otimes e_m) \\
+    &= \sqrt{\ell^2-m^2}\psi \widetilde D_-(e_m) - m\psi \widetilde D_0(e_m) - \sqrt{(\ell+1)^2-m^2}\psi \widetilde D_+(e_m).
+  \end{aligned}
+\end{align}
+So we can take $D_0=\psi\widetilde D_0$, $D_+ = \psi\widetilde D_+$, and $D_- = \psi\widetilde D_-$ to get three linear maps with which we can describe the map $F_3$. So far this is just maps on $M(2\ell)$, but we can expand to maps on $R_\ell$ by using the maps on each summand of $R_\ell=M(2\ell)^1 \oplus \dotsb \oplus M(2\ell)^r$, and likewise we can expand further to maps on $M=\bigoplus_\ell R_\ell$ by using the maps on each summand. Also indeed $D_0R_{\ell,m}\subset R_{\ell,m}$, $D_+R_{\ell,m}\subset R_{\ell+1,m}$, and $D_-R_{\ell,m}\subset R_{\ell-1,m}$, since for $\xi\in R_{\ell,m}$ we have that
+\begin{align*}
+  H_3D_0(\xi) &= h_3 . \psi\widetilde D_0(\xi) = \psi h_3 . \widetilde D_0(\xi) = \psi H_3 \widetilde D_0(\xi) = m\psi \widetilde D_0(\xi) \\
+  &= m D_0(\xi),
+\end{align*}
+since $\psi$ is an $L_k$-module homomorphism and by \Cref{rem:baseswithindexchange} we see that $\widetilde D_0(e_m)$ is a scalar multiple of $\overline t_k = \overline t_{\ell-m} = e_m^{(2\ell)}$, and indeed $H_3e_m^{(2\ell)}=me_m^{(2\ell)}$. The same reasoning with $\overline s_{k+1}$ for $D_+$ and $\overline u_{k-1}$ for $D_-$ yields the other two inclusions. Also note that the diagrams of \cref{eq:Ddiagrams} commute by the defintion of $D_0$, $D_+$, and $D_-$, since the maps independent of $m$ and $E_+$ and $E_-$ are isomorphisms. \todo{Write this a little more clearly}
+
+Now simple calculations, cf.\ \Cref{sec:Factions}, gives us that
+\begin{align}\label{eq:Factions}
+  \begin{aligned}
+    F_3 \xi &= \sqrt{\ell^2-m^2}\psi \widetilde D_-(e_m) - m\psi \widetilde D_0(e_m) - \sqrt{(\ell+1)^2-m^2}\psi \widetilde D_+(e_m), \\
+    F_+ \xi &= \sqrt{(\ell-m)(\ell-m-1)}D_-E_+\xi - \sqrt{(\ell-m)((\ell+m+1))}D_0E_+\xi \\*
+    &\phantom{{}={}}{} + \sqrt{(\ell+m+1)(\ell+m+2)}E_+D_+\xi, \\
+    F_- \xi &= -\sqrt{(\ell+m)(\ell+m-1)}D_-E_-\xi - \sqrt{(\ell+m)(\ell-m+1)}D_0E_-\xi \\*
+    &\phantom{{}={}}{} - \sqrt{(\ell-m+1)(\ell-m+2)}E_-D_+\xi.
+  \end{aligned}
+\end{align}
 
 %%% Local Variables:
 %%% mode: latex

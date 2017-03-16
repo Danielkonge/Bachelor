@@ -1,4 +1,4 @@
-\section{\texorpdfstring{Finding $\inner{s_0}{s_0}$, $\inner{t_0}{t_0}$, and $\inner{u_0}{u_0}$}{Finding inner products in V(2) tensor V(n)}}\label{sec:innerproductscalc}
+\section{\texorpdfstring{Inner products in $V(2)\otimes V(n)$}{Inner products in V(2) tensor V(n)}}\label{sec:innerproductscalc}
 
 Given $s_0=w_0\otimes v_0$, $t_0=w_0\otimes v_1 - \tfrac{n}{2}w_1\otimes v_0$, and $u_0=w_0\otimes v_2 - \tfrac{n-1}{2}w_1\otimes v_1 + \tfrac{n(n-1)}{2}w_2\otimes v_0$ from \cref{eq:s_kbasisres}, \cref{eq:t_kbasisres}, and \cref{eq:u_kbasisres}, we want to find $\inner{s_0}{s_0}$, $\inner{t_0}{t_0}$, and $\inner{u_0}{u_0}$ using the inner products of \cref{eq:inproddef1} and \cref{eq:inproddef2}. We see that
 \begin{align*}
@@ -28,7 +28,7 @@ and noting that as above all terms with $\inner{w_i\otimes v_j}{w_k\otimes v_\el
                    &= n(n-1)\dfrac{2+2(n-1)+n(n-1)}{4} \\
                    &= n(n-1)\dfrac{n^2 + n}{4} = \dfrac{n^2(n+1)(n-1)}{4}.
 \end{align*}
-Thus we get exactly the results of \cref{eq:inprodres}. 
+Thus we get exactly the results of \cref{eq:inprodres}. \todo{Need to show $\inner{s_k}{s_k}=\inner{s_0}{s_0}\binom{n+2}{k}$ and more}
 %%% Local Variables:
 %%% mode: latex
 %%% TeX-master: "../main"

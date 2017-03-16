@@ -1,0 +1,33 @@
+\section{\texorpdfstring{Finding $\overline w_1\otimes\overline v_k$}{Finding the normed version of w\_1 tensor v\_1}}\label{sec:barw_1tensorbarv_k}
+
+We want to find $\overline w_1\otimes\overline v_k$ in terms of $\overline s_k$, $\overline t_k$, and $\overline u_k$ from \cref{eq:normedbases1,eq:normedbases2}. First we note that for $0<k<n$
+\begin{align*}
+  \sqrt{2\binom{n}{k}}\overline w_1\otimes\overline v_k &= \sqrt{\binom{2}{1}}\overline w_1\otimes \sqrt{\binom{n}{k}}\overline v_k \\
+                                                        &= w_1\otimes v_k \\
+                                                        &= \dfrac{2(k+1)(n+1-k)}{(n+1)(n+2)}s_{k+1} - \dfrac{2(n-2k)}{n(n+2)}t_k - \dfrac{4}{n(n+1)}u_{k-1} \\
+                                                        &= \dfrac{2(k+1)(n+1-k)}{(n+1)(n+2)}\sqrt{\binom{n+2}{k+1}}\overline s_{k+1}\\*
+  &\phantom{{}={}}{}- \dfrac{2(n-2k)}{n(n+2)}\sqrt{\dfrac{n(n+2)}{2}\binom{n}{k}}\overline t_k \\*
+                                                        &\phantom{{}={}}{} - \dfrac{4}{n(n+1)}\sqrt{\dfrac{n^2(n+1)(n-1)}{4}\binom{n-2}{k-1}}\overline u_{k-1} \\
+                                                        &= \dfrac{2(k+1)(n+1-k)}{(n+1)(n+2)}\sqrt{\binom{n+2}{k+1}}\overline s_{k+1} \\*
+  &\phantom{{}={}}{} - \dfrac{\sqrt{2}(n-2k)}{\sqrt{n(n+2)}}\sqrt{\binom{n}{k}}\overline t_k \\*
+  &\phantom{{}={}}{} - \dfrac{2\sqrt{(n-1)}}{\sqrt{(n+1)}}\sqrt{\binom{n-2}{k-1}}\overline u_{k-1}.                                                
+\end{align*}
+Now since
+\begin{align*}
+  \dfrac{\binom{n+2}{k+1}}{\binom{n}{k}} &= \dfrac{(n+2)(n+1)}{(k+1)(n+1-k)}, & \dfrac{\binom{n-2}{k-1}}{\binom{n}{k}} &= \dfrac{k(n-k)}{n(n-1)},
+\end{align*}
+we see that
+\begin{align*}
+  \overline w_1\otimes\overline v_k &= \dfrac{\sqrt{2}(k+1)(n+1-k)}{(n+1)(n+2)}\sqrt{\dfrac{(n+2)(n+1)}{(k+1)(n+1-k)}}\overline s_{k+1} \\*
+  &\phantom{{}={}}{} - \dfrac{(n-2k)}{\sqrt{n(n+2)}}\overline t_k \\*
+                                    &\phantom{{}={}}{} - \dfrac{\sqrt{2(n-1)}}{\sqrt{(n+1)}}\sqrt{\dfrac{k(n-k)}{n(n-1)}}\overline u_{k-1} \\
+  &= \sqrt{\dfrac{2(k+1)(n+1-k)}{(n+1)(n+2)}}\overline s_{k+1} - \dfrac{(n-2k)}{\sqrt{n(n+2)}}\overline t_k \\*
+  &\phantom{{}={}}{} - \sqrt{\dfrac{2k(n-k)}{n(n+1)}}\overline u_{k-1}.
+\end{align*}
+Also since \cref{eq:special_cases_w_1tensorv_k} is a special case of \cref{eq:w_1tensorv_k} the above formula also holds for $k\in\Set{0,n}$ if we take the coefficient in front of $\overline u_{k-1}$ to be $0$. Thus we indeed get \cref{eq:barw_1tensorbarv_k}
+
+
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: "../main"
+%%% End:

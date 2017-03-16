@@ -13,9 +13,9 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {1.1.2}Describing $V(2)\otimes V(n)$}{8}{subsection.1.1.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\chapternumberline {2}Linear relations}{15}{chapter.2}
+\contentsline {chapter}{\chapternumberline {2}Linear relations}{17}{chapter.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{Bibliography}{17}{section*.5}
+\contentsline {chapter}{Bibliography}{19}{section*.6}
 \defcounter {refsection}{0}\relax 
 \contentsline {appendix}{\chapternumberline {A}Calculations}{A.1}{appendix.A}
 \defcounter {refsection}{0}\relax 
@@ -23,4 +23,8 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {A.2}Finding $w_1\otimes v_k$}{A.4}{section.A.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {A.3}Finding $\inner {s_0}{s_0}$, $\inner {t_0}{t_0}$, and $\inner {u_0}{u_0}$}{A.6}{section.A.3}
+\contentsline {section}{\numberline {A.3}Inner products in $V(2)\otimes V(n)$}{A.6}{section.A.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {A.4}Finding $\overline w_1\otimes \overline v_k$}{A.7}{section.A.4}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {A.5}$F_3,F_+,F_-$ in terms of $E_+,E_-,D_0,D_+,D_-$}{A.8}{section.A.5}
