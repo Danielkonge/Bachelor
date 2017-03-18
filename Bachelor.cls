@@ -297,6 +297,8 @@ sorting=ynt]{biblatex}
 \DeclareMathOperator{\tr}{tr}
 \DeclareMathOperator{\ch}{ch}
 
+\newcommand\dd[2]{d_{#1}^{\,#2}}
+
 \newcommand\M{\mathscr{M}} %Standardmatrixrepresentation
 
 \newcommand{\Lie}[1]{\mathfrak{#1}}

@@ -32,6 +32,8 @@
     "eq:Drels"
     "rem:baseswithindexchange"
     "eq:F_3action"
-    "eq:Factions"))
+    "eq:Factions"
+    "eq:EandDnewbasis"
+    "eq:dl0"))
  :latex)
 

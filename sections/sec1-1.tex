@@ -109,7 +109,7 @@ Thus we get the following Lemma:
 
 Let $M$ be a Harish-Chandra $L$-module. Then we have linear operators $H_+, H_-, H_3, F_+, F_-, F_3\colon M\to M$ satisfying commutation relations as in \cref{eq:lierels}, and we want to give expressions for these in terms of other linear operators $E_+,E_-,D_+,D_-,D_0\colon M\to M$. 
 
-We will denote by $R_\ell$ a finite dimensional $L$-module which is a (finite) direct sum of $L_k$-modules $M(2\ell+1)$ for the same number $\ell\in\tfrac{1}{2}\Z_{\geq 0}$. Then $M$ is a direct sum of the subspaces $R_\ell$ since $M$ is Harish-Chandra, and from \Cref{lem:modulebasis} we know that $R_\ell$ can be written as the direct sum of subspaces $R_{\ell,m}$, where $R_{\ell,m}$ are eigenspaces for $H_3$ such that
+We will denote by $R_\ell$ a finite dimensional $L$-module which is a (finite) direct sum of $L_k$-modules $M(2\ell)$ for the same number $\ell\in\tfrac{1}{2}\Z_{\geq 0}$. Then $M$ is a direct sum of the subspaces $R_\ell$ since $M$ is Harish-Chandra, and from \Cref{lem:modulebasis} we know that $R_\ell$ can be written as the direct sum of subspaces $R_{\ell,m}$, where $R_{\ell,m}$ are eigenspaces for $H_3$ such that
 \begin{align} \label{eq:H3eigen}
   H_3\xi &= m\xi
 \end{align}
@@ -170,7 +170,7 @@ Consider maps $D_0$ and $D_+$ defined on $M=\bigoplus_{\ell,m} R_{\ell,m}$ and $
     \end{tikzcd}
   \end{equation}
 \end{center}
-commute, when $-\ell+1\leq m < \ell-1$ in the top left diagram, $-\ell\leq m<\ell$ in the other two diagrams. We need quite a lot of work to find a way to describe $F_+$, $F_-$, and $F_3$ from these maps.
+commute, when $-\ell+1\leq m < \ell-1$ in the top left diagram, $-\ell\leq m<\ell$ in the other two diagrams. Also similar diagrams with $E_-$ replacing $E_+$ commute since $E_-\colon R_{\ell,m}\to R_{\ell,m-1}$ for $m\neq -\ell$ is inverse to $E_+\colon R_{\ell,m-1}\to R_{\ell,m}$. Now we need quite a lot of work to find a way to describe $F_+$, $F_-$, and $F_3$ from such maps.
 
 We already have that $L_k=\Span_\C(h_+,h_-,h_3)$, but now we will also consider $L_p=\Span_\C(f_+,f_-,f_3)$. \Cref{eq:lierels} gives us that $[L_k,L_p]\subset L_p$, so by the adjoint representation we can see $L_p$ as an $L_k$-module, and again by \cref{eq:lierels} we see that $L_p$ is a simple $L_k$-module: If $V$ is an $L_k$-submodule and we have a non-zero element $f=af_++bf_-+cf_3\in V$ for some $a,b,c\in\C$ not all zero. Then
 \begin{align*}
@@ -492,7 +492,76 @@ We claim now that the formulae \cref{eq:Factions} for the linear operators $F_+$
     \xi &= (2\ell-1)D_+D_- \xi - (2\ell+3)D_-D_+\xi - D_0^2\xi
   \end{aligned}
 \end{align}
-for $\xi\in R_{\ell,m}$.
+for $\xi\in R_{\ell,m}$. \todo{I haven't shown this properly yet --- I guess it should follow from looking at the relations but the calculations are very long, so I skipped it for now}
+
+\subsection{\texorpdfstring{Simple Harish-Chandra modules over $L$}{Simple Harish-Chandra modules over L}}
+
+We want to classify the simple Harish-Chandra modules over $L$ for later use. Before most of the work we need some basic results.
+
+Let $M$ be an simple Harish-Chandra module over $L$ and suppose that each non-trivial subspace $R_{\ell,m}$ in $M=\bigoplus_{\ell,m} R_{\ell,m}$ is one dimensional. In this case each $L_k$-module $R_\ell\simeq M(2\ell)$ is simple. We will later show that actually all simple Harish-Chandra modules are of this kind, so we indeed get a classification of the simple Harish-Chandra modules in the following.
+
+Denote by $\ell_0$ the minimal index $\ell$ in the decomposition $M=\bigoplus_\ell R_\ell$. Note that
+\begin{align*}
+  M' = \bigoplus_{\ell'\in\Set{\ell_0,\ell_0+1,\dotsc}} R_{\ell'}
+\end{align*}
+is invariant under $E_+$, $E_-$, $D_0$, $D_+$, and $D_-$, so by the formulae \cref{eq:Factions} for $F_+$, $F_-$, and $F_3$, we see that $M'$ is a submodule since we already know that it is an $L_k$-submodule, because $R_{\ell'}$ all are $L_k$-submodules. Thus $M'=M$ since $M$ is simple and hence the index $\ell$ in $M=\bigoplus_\ell R_\ell$ range over only integral values or only half-integral values.
+
+Additionally we want to show that the kernel of the map $D_-\colon M\to M$ is $R_{\ell_0}$. To do this assume for contradiction that $D_-R_{\ell',m_0}=0$ for some index $\ell'>\ell_0$ and $m_0\in\Set{-\ell_0,-\ell_0+1,\dotsc,\ell_0-1,\ell_0}$. Then by the commutative diagram in \cref{eq:Ddiagrams} with $D_-$, i.e.\ $D_-E_+=E_+D_-$, and the fact that $E_+\colon R_{\ell',m}\to R_{\ell',m+1}$ is an isomorphism for $m<\ell'$, we see that $D_-R_{\ell',m}=0$ for all $m\in\Set{-\ell',-\ell'+1,\dotsc,\ell'-1,\ell'}$. But then
+\begin{align*}
+  M'' = \bigoplus_{\ell''\in\Set{\ell',\ell'+1,\dotsc}} R_{\ell''}
+\end{align*}
+is a proper $L$-submodule of $M$, which contradicts the simplicity of $M$. Thus indeed $\ker D_- = R_{\ell_0}$.
+
+Likewise we see that if $M$ is infinite dimensional, then $D_+\colon M\to M$ has trivial kernel since if $D_+R_{\ell'}=0$, then $M=\bigoplus_{\ell\in\Set{\ell_0,\ell_0+1,\dotsc}} R_{\ell}$ is finite dimensional. This is the case since all terms with $\ell>\ell'$ must be trivial since otherwise
+\begin{align*}
+  M'' = \bigoplus_{\ell''\in\Set{\ell_0,\ell_0+1,\dotsc,\ell'}} R_{\ell''}
+\end{align*}
+is a proper $L$-submodule of $M$, which contradicts the simplicity of $M$.
+
+\subsubsection{Infinite dimensional simple modules}
+
+Assume that $M$ as above is infinite dimensional. Because all $R_{\ell,m}$ are one dimensional, the diagram with $E_+$ and $D_+$ in \cref{eq:Ddiagrams} commute, i.e.\ $D_+E_+=E_+D_+$, and $D_+$ has trivial kernel, while $E_+$ is an isomorphism for $m\neq \ell$, we see that we can choose a basis $\Set{\xi_{\ell,m}}$ of $M$ such that $\xi_{\ell,m}\in R_{\ell,m}$ and
+\begin{align*}
+  E_+ \xi_{\ell,m} &= \xi_{\ell,m+1} && \mbox{for }-\ell\leq m<\ell,\\
+  D_+ \xi_{\ell,m} &= \xi_{\ell+1,m} && \mbox{for }\ell\in\Set{\ell_0,\ell_0+1,\dotsc}.
+\end{align*}
+In this basis we get that
+\begin{align}\label{eq:EandDnewbasis}
+  \begin{aligned}
+    E_- \xi_{\ell,m} &= \xi_{\ell,m-1} && \mbox{for }-\ell<m\leq \ell, \\
+    D_0 \xi_{\ell,m} &= d_\ell^0 \xi_{\ell,m} && \mbox{for }\ell\in\Set{\ell_0,\ell_0+1,\dotsc},\\
+    D_- \xi_{\ell,m} &= d_\ell^- \xi_{\ell-1,m} && \mbox{for }\ell\in\Set{\ell_0+1,\ell_0+2,\dotsc},\\
+    D_- \xi_{\ell_0,m} &= 0,
+  \end{aligned}
+\end{align}
+where the first equation comes from the fact that $E_-\colon R_{\ell,m}\to R_{\ell,m-1}$ for $m\neq -\ell$ is the inverse of $E_+\colon R_{\ell,m-1}\to R_{\ell,m}$, while the independence of $m$ in the other equations comes from the commutativity of the diagrams of \cref{eq:Ddiagrams}.
+
+Now \cref{eq:Drels,eq:EandDnewbasis} implies that
+\begin{align*}
+  \ell \dd{\ell}{0} &= (\ell+2)\dd{\ell+1}{0}, \\
+  (\ell+1)\dd{\ell}{-}\dd{\ell}{0} &= (\ell-1)\dd{\ell-1}{0}\dd{\ell}{-}, \\
+  1 &= (2\ell-1)\dd{\ell}{-} - (2\ell+3)\dd{\ell+1}{-} - (\dd{\ell}{0})^2,\\
+  \dd{\ell_0}{-} &= 0,
+\end{align*}
+for $\ell\in\Set{\ell_0,\ell_0+1,\dotsc}$ except in the second equation where we also demand that $\ell>\ell_0$. We see that
+\begin{align*}
+  \dd{\ell+1}{0} = \dfrac{\ell}{\ell+2}\dd{\ell}{0}.
+\end{align*}
+So if $\ell_0=0$ choosing a constant $c$ such that
+\begin{align*}
+  \dd{\ell_0}{0} = \dfrac{c}{\ell_0(\ell_0+1)},
+\end{align*}
+we see inductively that if
+\begin{align}\label{eq:dl0}
+  \dd{\ell}{0} = \dfrac{c}{\ell(\ell+1)},
+\end{align}
+then
+\begin{align*}
+  \dd{\ell+1}{0} &= \dfrac{\ell}{\ell+2}\dd{\ell}{0} = \dfrac{\ell}{\ell+2}\dfrac{c}{\ell(\ell+1)} \\
+  &= \dfrac{c}{(\ell+1)(\ell+2)}.
+\end{align*}
+Thus if $\ell_0\neq 0$ \cref{eq:dl0} holds true in general for some constant $c$. 
+
 
 %%% Local Variables:
 %%% mode: latex
