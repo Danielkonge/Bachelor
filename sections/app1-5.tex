@@ -16,7 +16,7 @@ for $\xi\in R_{\ell,m}$ by using \cref{eq:F_3action} and the definition of how w
           &\phantom{{}={}}{} + \sqrt{(\ell+1)^2-m^2}\sqrt{((\ell+1)+m+1)((\ell+1)-m)} E_+D_+ \xi \\
           &= \sqrt{(\ell+m+1)(\ell-m)}\Bigl( \sqrt{\ell^2-(m+1)^2} D_-E_+ \xi - (m+1) D_0E_+ \xi \\*
           &\phantom{{}={}\sqrt{(\ell+m+1)(\ell-m)}()}{} - \sqrt{(\ell+1)^2-(m+1)^2} D_+E_+ \xi \Bigr) \\*
-          &\phantom{{}={}}{} - \sqrt{\ell^2-m^2} \sqrt{(\ell+ml)(\ell-m-1)} D_-E_+ \xi \\*
+          &\phantom{{}={}}{} - \sqrt{\ell^2-m^2} \sqrt{(\ell+m)(\ell-m-1)} D_-E_+ \xi \\*
           &\phantom{{}={}}{} + m \sqrt{(\ell+m+1)(\ell-m)}D_0E_+ \xi \\*
           &\phantom{{}={}}{} + \sqrt{(\ell+1)^2-m^2}\sqrt{(\ell+m+2)(\ell-m+1)} D_+E_+ \xi \\
           &= \Bigl( \sqrt{(\ell+m+1)(\ell-m)(\ell^2-(m+1)^2)} \\*
@@ -25,7 +25,7 @@ for $\xi\in R_{\ell,m}$ by using \cref{eq:F_3action} and the definition of how w
           &\phantom{{}={}}{} + \Bigl( \sqrt{((\ell+1)^2-m^2)(\ell+m+2)(\ell-m+1)} \\*
           &\phantom{{}={}()}{} - \sqrt{(\ell+m+1)(\ell-m)((\ell+1)^2-(m+1)^2)}\Bigr)D_+E_+\xi
 \end{align*}
-for $\xi\in R_{\ell,m}$ and $-\ell+1 \leq m < \ell-1$.  By pure algebraic manipulation note that \todo{I have checked this in Mathematica, but I would prefer not to write this out, although I can do it later if necessary}
+for $\xi\in R_{\ell,m}$ and $-\ell+1 \leq m < \ell-1$. In the case where $m=-\ell$ the only problem is at the term with $E_+D_-$, but this is not a problem because the term vanishes since there is $\ell+m$ as part of the coefficient, so the formula also holds true in this case. In case $m=\ell-1$ the only problem is at the term with $D_-E_+$, but here we have $\ell^2-(m+1)^2$ as part of the coefficient, so this term also vanishes, and the formula also hold true in this case. Finally in case $m=\ell$ the terms with $D_-E_+$, $D_0E_+$, $D_+E_+$, $E_+D_-$, and $E_+D_0$ all cause problems, but again all of these terms vanish, so the formula still holds true in this case. Now by pure algebraic manipulation note that \todo{I have checked this in Mathematica, but I would prefer not to write this out, although I can do it later if necessary}
 \begin{align*}
   &\sqrt{(\ell+m+1)(\ell-m)(\ell^2-(m+1)^2)} - \sqrt{(l^2-m^2)(l+m)(l-m-1)} \\
   &= \sqrt{(\ell-m)(\ell-m-1)}
@@ -41,7 +41,7 @@ so we get that
   F_+ \xi &= \sqrt{(\ell-m)(\ell-m-1)} D_-E_+ \xi - \sqrt{(\ell+m+1)(\ell-m)} D_0E_+\xi \\*
   &\phantom{{}={}}{} - \sqrt{(\ell+m+1)(\ell+m+2)} D_+E_+\xi
 \end{align*}
-for $\xi\in R_{\ell,m}$ and $-\ell+1 \leq m < \ell-1$. Note that this formula also holds true for $m\in\Set{-\ell,\ell-1,\ell}$. \todo{Consider this more carefully}
+for $\xi\in R_{\ell,m}$ and $-\ell \leq m \leq \ell$.
 
 Likewise we get that
 \begin{align*}
@@ -63,7 +63,7 @@ Likewise we get that
           &\phantom{{}={}}{} - \Bigl( \sqrt{((\ell+1)^2-m^2)(\ell+m+1)(\ell-m+2)} \\*
           &\phantom{{}={}()}{} - \sqrt{(\ell+m)(\ell-m+1)((\ell+1)^2-(m-1)^2)}\Bigr)D_+E_-\xi
 \end{align*}
-for $\xi\in R_{\ell,m}$ and \todo{Which $m$}. Again note that
+for $\xi\in R_{\ell,m}$ and $-\ell+1 < m\leq \ell-1$. Again note that by the problematic terms vanish in such a way that this formula holds true for all $m$ with $-\ell\leq m\leq \ell$. Also note that
 \begin{align*}
   &\sqrt{(\ell+m)(\ell-m+1)(\ell^2-(m-1)^2)} - \sqrt{(\ell^2-m^2)(\ell+m-1)(\ell-m)} \\*
   &= \sqrt{(\ell+m)(\ell+m-1)}

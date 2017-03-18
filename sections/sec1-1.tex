@@ -51,7 +51,7 @@ for all $i$, $0\leq i\leq n$, and clearly still
 But for $i$, $0<i\leq n$
 \begin{align*}
   H_+w_i &= \dfrac{1}{\sqrt{\binom{n}{i}}}H_+v_i = \dfrac{1}{\sqrt{\binom{n}{i}}}(n-i+1)v_{i-1} \\
-         &= \sqrt{\dfrac{\binom{n}{i-1}}{\binom{n}{i}}}(n-i+1)\dfrac{1}{\sqrt{\binom{n}{i-1}}}v_{i-1} \\
+         &= \sqrt{\dfrac{\binom{n}{i-1}}{\binom{n}{i}}}(n-i+1)\dfrac{1}{\sqrt{\binom{n}{i-1}}}v_{i-1} \\  
   &= \sqrt{\dfrac{i}{n-i+1}}(n-i+1)w_{i-1} = \sqrt{(n-i+1)i}w_{i-1},
 \end{align*}
 and for $i$, $0\leq i<n$
@@ -429,7 +429,7 @@ where $e_m$ is as in the work we did to get \Cref{lem:modulebasis} except for th
   \widetilde D_+(\overline v_k) &= -\dfrac{\overline s_{k+1}}{\sqrt{(\ell+1)(2\ell+1)}}, & \widetilde D_0(\overline v_k) &= \dfrac{\overline t_k}{\sqrt{\ell(\ell+1)}}, & \widetilde D_-(\overline v_k) &= -\dfrac{\overline u_{k-1}}{\sqrt{\ell(2\ell+1)}},
 \end{align*}
 we see that
-\begin{align}\label{eq:Drels}
+\begin{align}\label{eq:Drelstilde}
   \begin{aligned}
     \overline w_1 \otimes e_m &= \overline w_1\otimes\overline v_k \\
     &=\sqrt{(\ell+1)^2-m^2}\dfrac{\overline s_{k+1}}{\sqrt{(\ell+1)(2\ell+1)}} - m\dfrac{\overline t_k}{\sqrt{\ell(\ell+1)}} \\*
@@ -449,7 +449,7 @@ Since we want to describe the maps $F_3$, $F_+$, and $F_-$, we are actually inte
 \begin{align*}
   w_1 = h_-.w_0 = -\tfrac{\sqrt{2}}{2}h_- . f_+ = -\tfrac{\sqrt{2}}{2}[h_-,f_+] = \sqrt{2}f_3.
 \end{align*}
-Likewise we get that $w_2=[h_-,\sqrt{2}f_3]=\sqrt{2}f_-$, so we can take our basis to be $(w_0,w_1,w_2)=(-\tfrac{\sqrt{2}}{2}f_+,\sqrt{2}f_3,\sqrt{2}f_-)$ when thinking of $L_p$ as the $L_k$-module $M(2)$. Normalizing as in \cref{eq:normedbases1}, we get that $(\overline w_0,\overline w_1,\overline w_2)=(-\tfrac{\sqrt{2}}{2}f_+,f_3,\sqrt{2}f_-)$. So by \cref{eq:Drels}, we see that in $L_p\otimes M(2\ell)$
+Likewise we get that $w_2=[h_-,\sqrt{2}f_3]=\sqrt{2}f_-$, so we can take our basis to be $(w_0,w_1,w_2)=(-\tfrac{\sqrt{2}}{2}f_+,\sqrt{2}f_3,\sqrt{2}f_-)$ when thinking of $L_p$ as the $L_k$-module $M(2)$. Normalizing as in \cref{eq:normedbases1}, we get that $(\overline w_0,\overline w_1,\overline w_2)=(-\tfrac{\sqrt{2}}{2}f_+,f_3,\sqrt{2}f_-)$. So by \cref{eq:Drelstilde}, we see that in $L_p\otimes M(2\ell)$
 \begin{align*}
   f_3 \otimes e_m &= \sqrt{\ell^2-m^2}\widetilde D_-(e_m) - m\widetilde D_0(e_m) - \sqrt{(\ell+1)^2-m^2}\widetilde D_+(e_m),
 \end{align*}
@@ -547,11 +547,11 @@ for $\ell\in\Set{\ell_0,\ell_0+1,\dotsc}$ except in the second equation where we
 \begin{align*}
   \dd{\ell+1}{0} = \dfrac{\ell}{\ell+2}\dd{\ell}{0}.
 \end{align*}
-So if $\ell_0=0$ choosing a constant $c$ such that
+So if $\ell_0\neq0$, then for some constant $c$ 
 \begin{align*}
   \dd{\ell_0}{0} = \dfrac{c}{\ell_0(\ell_0+1)},
 \end{align*}
-we see inductively that if
+so we see inductively that if
 \begin{align}\label{eq:dl0}
   \dd{\ell}{0} = \dfrac{c}{\ell(\ell+1)},
 \end{align}
@@ -562,6 +562,21 @@ then
 \end{align*}
 Thus if $\ell_0\neq 0$ \cref{eq:dl0} holds true in general for some constant $c$. 
 
+If on the other hand $\ell_0=0$, then we see that
+\begin{align*}
+  2\dd{\ell_0+1}{0} = 0,
+\end{align*}
+so $\dd{\ell_0+1}{0}=0$, and thus
+\begin{align*}
+  \dd{\ell}{0} = \dfrac{\ell-1}{\ell+1}\dd{\ell-1}{0} = 0
+\end{align*}
+for all $\ell\in\Set{1,2,\dotsc}$. Also in this case have $\dd{0}{0}=c_1$, where $c_1$ is some constant. 
+
+To unify these two cases we set $c=i\ell_0\ell_1$ and $c_1=i\ell_1$ for some constant $\ell_1$ such that
+\begin{align*}
+  \dd{\ell}{0} &= \dfrac{i\ell_0\ell_1}{\ell(\ell+1)}
+\end{align*}
+for $\ell\in\Set{\ell_0,\ell_0+1,\dotsc}$. 
 
 %%% Local Variables:
 %%% mode: latex

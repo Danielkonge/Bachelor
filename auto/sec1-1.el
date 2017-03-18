@@ -29,10 +29,11 @@
     "eq:normedbases2"
     "rem:changeindex"
     "eq:barw_1tensorbarv_k"
-    "eq:Drels"
+    "eq:Drelstilde"
     "rem:baseswithindexchange"
     "eq:F_3action"
     "eq:Factions"
+    "eq:Drels"
     "eq:EandDnewbasis"
     "eq:dl0"))
  :latex)

@@ -3,13 +3,37 @@
  (lambda ()
    (LaTeX-add-labels
     "eq:sl2modbasis"
+    "eq:L_kbasis1"
     "lem:modulebasis"
     "eq:modulerels"
+    "sec:formulae"
     "eq:H3eigen"
     "eq:H+H-"
     "eq:E+andE-"
+    "eq:Ddiagrams"
     "eq:psi"
     "eq:V(2)tensorV(n)"
-    "eq:hontensor"))
+    "eq:hontensor"
+    "eq:s_kbasis"
+    "eq:s_kbasisres"
+    "eq:t_kbasisdef"
+    "eq:t_kbasisres"
+    "eq:u_kbasisdef"
+    "eq:u_kbasisres"
+    "eq:w_1tensorv_k"
+    "eq:special_cases_w_1tensorv_k"
+    "eq:inproddef1"
+    "eq:inproddef2"
+    "eq:inprodres"
+    "eq:normedbases1"
+    "eq:normedbases2"
+    "rem:changeindex"
+    "eq:barw_1tensorbarv_k"
+    "eq:Drels"
+    "rem:baseswithindexchange"
+    "eq:F_3action"
+    "eq:Factions"
+    "eq:EandDnewbasis"
+    "eq:dl0"))
  :latex)
 
