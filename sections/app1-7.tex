@@ -1,0 +1,73 @@
+\section{\texorpdfstring{Finding $\dd{\ell}{-}$}{Finding d\_l\^-}}\label{sec:dl-calc}
+
+We want to find $\dd{\ell}{-}$ in general given that we already know that $\dd{\ell_0}{-}=0$ and
+\begin{align*}
+  (2\ell-1)\dd{\ell}{-} - (2\ell+3)\dd{\ell+1}{-} &= 1 - \dfrac{\ell_0^2\ell_1^2}{\ell^2(\ell+1)^2}.
+\end{align*}
+Multiplying the left side of the above equation by $2\ell+1$ we get
+\begin{align*}
+  (4\ell^2-1)\dd{\ell}{-} - (4\ell^1+2\ell-3)\dd{\ell+1}{-} = (4\ell^2-1)\dd{\ell}{-} - (4(\ell+1)^2-1)\dd{\ell+1}{-}
+\end{align*}
+and multiplying the right side by $2\ell+1$ we get
+\begin{align*}
+  2\ell+1 - \ell_0^2\ell_1^2\dfrac{2\ell+1}{\ell^2(\ell+1)^2} = 2\ell+1 - \ell_0^2\ell_1^2\Bigl( \dfrac{1}{\ell^2} - \dfrac{1}{(\ell+1)^2} \Bigr),
+\end{align*}
+so we see that
+\begin{align}\label{eq:dl-calc}
+  (4\ell^2-1)\dd{\ell}{-} - (4(\ell+1)^2-1)\dd{\ell+1}{-} =  2\ell+1 - \ell_0^2\ell_1^2\Bigl( \dfrac{1}{\ell^2} - \dfrac{1}{(\ell+1)^2} \Bigr).
+\end{align}
+Now we know that $\dd{\ell_0}{-}=0$, so
+\begin{align*}
+  - (4(\ell_0+1)^2-1)\dd{\ell_0+1}{-} &=  2\ell_0+1 - \ell_1^2\Bigl( 1 - \dfrac{\ell_0^2}{(\ell_0+1)^2} \Bigr) \\
+                                      &= (\ell_0+1)^2-\ell_0^2 - \ell_1^2\dfrac{(\ell_0+1)^2-\ell_0^2}{(\ell_0+1)^2} \\
+                                      &= \dfrac{\bigl((\ell_0+1)^2 - \ell_1^2\bigr)\bigl( (\ell_0+1)^2 - \ell_0^2 \bigr)}{(\ell_0+1)^2},
+\end{align*}
+and thus
+\begin{align*}
+  \dd{\ell_0+1}{-} = -\dfrac{\bigl((\ell_0+1)^2 - \ell_1^2\bigr)\bigl( (\ell_0+1)^2 - \ell_0^2 \bigr)}{(\ell_0+1)^2(4(\ell_0+1)^2-1)}.
+\end{align*}
+
+We get inductively that
+\begin{align*}
+  \dd{\ell}{-} = -\dfrac{\bigl(\ell^2 - \ell_1^2\bigr)\bigl( \ell^2 - \ell_0^2 \bigr)}{\ell^2(4\ell^2-1)},
+\end{align*}
+for $\ell>\ell_0$, since we already have the base case, and assuming the equality for $\ell>\ell_0$ we get by \cref{eq:dl-calc} that
+\begin{align*}
+  -(4(\ell+1)^2&-1)\dd{\ell+1}{-} \\
+  &= \dfrac{\bigl(\ell^2 - \ell_1^2\bigr)\bigl( \ell^2 - \ell_0^2 \bigr)}{\ell^2} + 2\ell+1 - \ell_0^2\ell_1^2\Bigl( \dfrac{1}{\ell^2} - \dfrac{1}{(\ell+1)^2} \Bigr) \\
+  &= \dfrac{(\ell+1)^2(\ell^2-\ell_1^2)(\ell^2-\ell_0^2) + \ell^2(\ell+1)^2(2\ell+1) - \ell_0^2\ell_1^2(2\ell+1)}{\ell^2(\ell+1)^2}.
+\end{align*}
+So since
+\begin{align*}
+  (\ell+1)^2&(\ell^2-\ell_1^2)(\ell^2-\ell_0^2) + \ell^2(\ell+1)^2(2\ell+1) - \ell_0^2\ell_1^2(2\ell+1)\\
+  &= \ell^2(\ell^2-\ell_1^2)(\ell^2-\ell_0^2) \\*
+  &\phantom{{}={}}{} + (2\ell+1)\bigl( (\ell^2-\ell_1^2)(\ell^2-\ell_0^2) + \ell^2(\ell+1)^2 - \ell_0^2\ell_1^2 \bigr) \\
+  &= \ell^2(\ell^2-\ell_1^2)(\ell^2-\ell_0^2) \\*
+  &\phantom{{}={}}{} + (2\ell+1)\bigl( \ell^4 - \ell^2\ell_0^2 - \ell^2\ell_1^2+ \ell^2(\ell+1)^2 \bigr) \\
+  &= \ell^2\Bigl((\ell^2-\ell_1^2)(\ell^2-\ell_0^2)\\*
+  &\phantom{{}={}\ell^2()}{} + (2\ell+1)\bigl( \ell^2 - \ell_0^2 - \ell_1^2+(\ell+1)^2 \bigr) \Bigr) \\  
+\end{align*}
+and
+\begin{align*}
+  \bigl((\ell+1)^2-\ell_1^2\bigr)\bigl( (\ell+1)^2 - \ell_0^2\bigr) &= \bigl(\ell^2-\ell_1^2+2\ell+1 \bigr)\bigl( \ell^2-\ell_0^2 + 2\ell+1 \bigr) \\
+                                                                    &= (\ell^2-\ell_1^2)(\ell^2-\ell_0^2) \\*
+                                                                    &\phantom{{}={}}{} + (2\ell+1)\bigl( (\ell^2-\ell_0^2+2\ell+1) +  (\ell^2-\ell_1^2)  \bigr) \\
+                                                                    &= (\ell^2-\ell_1^2)(\ell^2-\ell_0^2) \\*
+                                                                    &\phantom{{}={}}{} + (2\ell+1)\bigl( (\ell+1)^2 -\ell_0^2 + \ell^2-\ell_1^2  \bigr),
+\end{align*}
+we see that
+\begin{align*}
+  -(4(\ell+1)^2-1)\dd{\ell+1}{-} = \dfrac{\bigl((\ell+1)^2-\ell_1^2\bigr)\bigl((\ell+1)^2-\ell_0^2\bigr)}{(\ell+1)^2},
+\end{align*}
+and thus indeed
+\begin{align*}
+  \dd{\ell+1}{-} = - \dfrac{\bigl((\ell+1)^2-\ell_1^2\bigr)\bigl((\ell+1)^2-\ell_0^2\bigr)}{(\ell+1)^2(4(\ell+1)^2-1)}.
+\end{align*}
+
+
+
+
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: "../main"
+%%% End:

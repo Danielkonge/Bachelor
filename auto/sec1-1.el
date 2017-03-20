@@ -4,6 +4,7 @@
    (LaTeX-add-labels
     "eq:sl2modbasis"
     "eq:L_kbasis1"
+    "inprodstart"
     "lem:modulebasis"
     "eq:modulerels"
     "sec:formulae"
@@ -35,6 +36,11 @@
     "eq:Factions"
     "eq:Drels"
     "eq:EandDnewbasis"
-    "eq:dl0"))
+    "eq:drelations"
+    "eq:dl0"
+    "eq:dl0res"
+    "dl-res"
+    "eq:infdimactions"
+    "eq:infdimds"))
  :latex)
 

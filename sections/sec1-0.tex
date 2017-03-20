@@ -1,16 +1,15 @@
-Let $G$ be a semisimple Lie group and let $G_k$ be its maximal compact subgroup. Denote by $L$ the semisimple Lie algebra of $G$ and denote by $L_k$ the Lie subalgebra corresponding to $G_k$.
-
+Let $L$ be a semisimple Lie algebra and let $L_k$ be a Lie subalgebra.
 \begin{definition}\label{def:HarishChandra}
-  An $L$-module $M$ is a Harish-Chandra module if, regarded as an $L_k$-module, it can be written as a sum
+  An $L$-module $M$ is a Harish-Chandra module for the pair $(L,L_k)$ if, regarded as an $L_k$-module, it can be written as a sum
   \begin{align*}
     M &= \bigoplus_{i} M_i
   \end{align*}
-  of finite dimensional irreducible $L_k$-submodules $M_i$, where for each $M_{i_0}$ only finitely many $L_k$-submodules equivalent to $M_{i_0}$ occur in the decomposition of $M$.
+  of finite dimensional irreducible $L_k$-submodules $M_i$, where for each $M_{i_0}$ only finitely many $L_k$-submodules equivalent to $M_{i_0}$ occur in the decomposition of $M$. If $L$ and $L_k$ are clear from the context we will just call $M$ a Harish-Chandra module.
 
-  A Harish-Chandra module $M$ is indecomposable if it cannot be decomposed into the direct sum of $L$-submodules.
+  A Harish-Chandra module $M$ is indecomposable if it cannot be decomposed into the direct sum of non-zero $L$-submodules.
 \end{definition}
 
-Our goal is to classify all indecomposable Harish-Chandra modules over $\Lie{sl}(2,\C)\times \Lie{sl}(2,\C)$, where we by $\Lie{sl}(2,\C)\times \Lie{sl}(2,\C)$ mean the following:
+Our goal is to classify all indecomposable Harish-Chandra modules over $(L,L_k)$ for $L=\Lie{sl}(2,\C)\times \Lie{sl}(2,\C)$ and $L_k=\Set{(u,u)\given u\in\slc}$, where we by $\Lie{sl}(2,\C)\times \Lie{sl}(2,\C)$ mean the following:
 
 For $L,L'$ Lie algebras over $F$, we consider $L\times L'=L\oplus L'$ as a Lie algebra over $F$ with pointwise addition, multiplication given by $\alpha(a,b)=(\alpha a,\alpha b)$ for $\alpha\in F,a\in L,b\in L'$, and with Lie bracket $[(a_1,b_1),(a_2,b_2)]=([a_1,a_2],[b_1,b_2])$ for $a_1,a_2\in L,b_1,b_2\in L'$.
 
@@ -19,7 +18,9 @@ For $L,L'$ Lie algebras over $F$, we consider $L\times L'=L\oplus L'$ as a Lie a
   \begin{align*}
     (\slc\times 0) \oplus (0\times\slc) &= \slpr,
   \end{align*}
-  so $\Lie{sl}(2,\C)\times \Lie{sl}(2,\C)$ is semisimple. Hence it makes sense to talk about Harish-Chandra modules over $\Lie{sl}(2,\C)\times \Lie{sl}(2,\C)$.
+  so $\Lie{sl}(2,\C)\times \Lie{sl}(2,\C)$ is semisimple. 
+
+  Now if we take $L=\slpr$ and $L_k=\Set{(u,u)\given u\in\slc}$ as a Lie subalgebra, it makes sense to talk about Harish-Chandra modules over $(L,L_k)$. Here $L_k$ is clearly a Lie subalgebra since it is a subspace and the Lie bracket on $\slpr$ preserves $L_k$ by the definition of the Lie bracket on a product. 
 \end{remark}
 
 We fix the following as a standard basis for $\Lie{sl}(2,F)$:
@@ -77,20 +78,15 @@ we get the following commutation relations between these basis elements:
   Note that these are the same relations as for the complexification of the Lie algebra $L$ of the proper Lorentz group in \cite[5]{indecompReprOfLorGr}, so $L$ is isomorphic to $\slpr$. This explains the equivalence of the work in this paper and the work in \cite{classifOfIndec,catOfHarChaMod,indecompReprOfLorGr}.
 \end{remark}
 
-Now let $L=\slpr$ and denote by $L_k$ the Lie subalgebra of $L$ with basis $h_+,h_-,h_3$. One can show that this corresponds to a maximal compact subgroup in the way described in \cref{def:HarishChandra}, but that is beyond what we will do in this paper. Note that the above commutation relations gives us that 
+Now let $L=\slpr$ and $L_k=\Set{(u,u)\given u\in\slc}$. Note that $L_k$ is the Lie subalgebra of $L$ with basis $h_+,h_-,h_3$, and that the above commutation relations gives us that 
 \begin{align*}
   [h_+,h_-] &= 2h_3, & [2h_3,h_+] &= 2h_+, & [2h_3,h_-] &= -2h_-
 \end{align*}
 Comparing with \cref{eq:sl2rels} we see that we have an isomorphism
 \begin{align}
-  \begin{split}
-    L_k &\to \slc \\ \label{eq:sl2iso}
-    h_+ &\mapsto x  \\
-    h_- &\mapsto y \\
-    2h_3 &\mapsto h,
-  \end{split}
+  \slc\to L_k,\qquad u\mapsto (u,u), \label{eq:sl2iso}
 \end{align}
-so we can use $\slc$-theory when we want to describe $L_k$-modules.
+or more explicitly $x\mapsto h_+$, $h_-\mapsto y$, and $h\mapsto 2h_3$, so we can use $\slc$-theory when we want to describe $L_k$-modules.
 
 %%% Local Variables:
 %%% mode: latex
