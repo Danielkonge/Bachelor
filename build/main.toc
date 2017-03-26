@@ -21,9 +21,11 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {1.2}Decomposition of modules into indecomposables}{20}{section.1.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\chapternumberline {2}Linear relations}{21}{chapter.2}
+\contentsline {subsection}{\numberline {1.2.1}Laplace operators}{20}{subsection.1.2.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{Bibliography}{23}{section*.10}
+\contentsline {chapter}{\chapternumberline {2}Linear relations}{25}{chapter.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{Bibliography}{27}{section*.13}
 \defcounter {refsection}{0}\relax 
 \contentsline {appendix}{\chapternumberline {A}Calculations}{A.1}{appendix.A}
 \defcounter {refsection}{0}\relax 
