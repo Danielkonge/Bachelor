@@ -1,0 +1,73 @@
+\section{\texorpdfstring{Finding $\Delta_1 \xi$ and $\Delta_2 \xi$}{Finding Delta\_1 xi and Delta\_2 xi}}\label{sec:Deltacalc}
+
+We have
+\begin{align*}
+  \Delta_1 &\coloneqq \tfrac{1}{2}(H_-F_++F_-H_+) + H_3F_3 + F_3 \\
+  \Delta_2 &\coloneqq H_-H_+ - F_-F_+ + H_3^2 - F_3^2 + 2H_3
+\end{align*}
+as in \cref{eq:Deltasdef}, and we want to find $\Delta_1\xi$ and $\Delta_2 \xi$ for $\xi\in R_{\ell,m}$. By \cref{eq:H3eigen,eq:H+H-,eq:Factions} we see that 
+\begin{align*}
+  &  \Delta_1 \xi \\ 
+  &= \tfrac{1}{2}H_-F_+\xi+\tfrac{1}{2}F_-H_+\xi + H_3F_3\xi + F_3\xi \\
+  &= \tfrac{1}{2}\sqrt{(\ell-m)(\ell-m-1)}H_-D_-E_+\xi \\*
+  &\phantom{{}={}}{} - \tfrac{1}{2}\sqrt{(\ell-m)((\ell+m+1))}H_-D_0E_+\xi \\*
+  &\phantom{{}={}}{} + \tfrac{1}{2}\sqrt{(\ell+m+1)(\ell+m+2)}H_-E_+D_+\xi \\*
+  &\phantom{{}={}}{} + \tfrac{1}{2}\sqrt{(\ell+m+1)(\ell-m)}F_-E_+\xi \\*
+  &\phantom{{}={}}{} + \sqrt{\ell^2-m^2} H_3D_-\xi - m H_3D_0\xi - \sqrt{(\ell+1)^2-m^2}H_3D_+\xi \\*
+  &\phantom{{}={}}{} + \sqrt{\ell^2-m^2} D_-\xi - m D_0\xi - \sqrt{(\ell+1)^2-m^2}D_+\xi \\
+  &= \tfrac{1}{2}\sqrt{(\ell-m)(\ell-m-1)} \\*
+  &\phantom{{}={}\tfrac{1}{2}} \cdot\sqrt{((\ell-1)+(m+1))((\ell-1)-(m+1)+1)} E_-D_-E_+\xi \\*
+  &\phantom{{}={}}{} - \tfrac{1}{2}\sqrt{(\ell-m)((\ell+m+1))}\sqrt{(\ell+(m+1))(\ell-(m+1)+1)}E_-D_0E_+\xi \\*
+  &\phantom{{}={}}{} + \tfrac{1}{2}\sqrt{(\ell+m+1)(\ell+m+2)}\\*
+  &\phantom{{}={}+\tfrac{1}{2}} \cdot \sqrt{((\ell+1)+(m+1))((\ell+1)-(m+1)+1)}E_-E_+D_+\xi \\*
+  &\phantom{{}={}}{} + \tfrac{1}{2}\sqrt{(\ell+m+1)(\ell-m)}\Bigl(-\sqrt{(\ell+(m+1))(\ell+(m+1)-1)}D_-E_-E_+\xi \\*
+  &\phantom{{}={}()}{} - \sqrt{(\ell+(m+1))(\ell-(m+1)+1)}D_0E_-E_+\xi \\*
+  &\phantom{{}={}()}{} - \sqrt{(\ell-(m+1)+1)(\ell-(m+1)+2)}E_-D_+E_+\xi \Bigr) \\*
+  &\phantom{{}={}}{} + \sqrt{\ell^2-m^2} mD_-\xi - m \cdot m D_0\xi - \sqrt{(\ell+1)^2-m^2}mD_+\xi \\*
+  &\phantom{{}={}}{} + \sqrt{\ell^2-m^2} D_-\xi - m D_0\xi - \sqrt{(\ell+1)^2-m^2}D_+\xi \\
+  &= \tfrac{1}{2}(\ell-m-1)\sqrt{\ell^2-m^2} D_-\xi - \tfrac{1}{2}(\ell-m)((\ell+m+1))D_0\xi \\*
+  &\phantom{{}={}}{} + \tfrac{1}{2}(\ell+m+2)\sqrt{(\ell+1)^2-m^2}D_+\xi \\*
+  &\phantom{{}={}}{} + \tfrac{1}{2}\sqrt{(\ell+m+1)(\ell-m)}\Bigl(-\sqrt{(\ell+m+1)(\ell+m)}D_-\xi \\*
+  &\phantom{{}={}()}{} - \sqrt{(\ell+m+1)(\ell-m)}D_0\xi - \sqrt{(\ell-m)(\ell-m+1)}D_+\xi \Bigr) \\*
+  &\phantom{{}={}}{} + \sqrt{\ell^2-m^2} mD_-\xi - m^2 D_0\xi - \sqrt{(\ell+1)^2-m^2}mD_+\xi \\*
+  &\phantom{{}={}}{} + \sqrt{\ell^2-m^2} D_-\xi - m D_0\xi - \sqrt{(\ell+1)^2-m^2}D_+\xi \\
+  &= \tfrac{1}{2}(\ell-m-1)\sqrt{\ell^2-m^2} D_-\xi - \tfrac{1}{2}(\ell-m)(\ell+m+1)D_0\xi \\*
+  &\phantom{{}={}}{} + \tfrac{1}{2}(\ell+m+2)\sqrt{(\ell+1)^2-m^2}D_+\xi  - \tfrac{1}{2}(\ell+m+1)\sqrt{\ell^2-m^2}D_-\xi \\*
+  &\phantom{{}={}}{}  - \tfrac{1}{2}(\ell+m+1)(\ell-m)D_0\xi  - \tfrac{1}{2}(\ell-m)\sqrt{(\ell+1)^2-m^2}D_+\xi \\*
+  &\phantom{{}={}}{} + \sqrt{\ell^2-m^2} mD_-\xi - m^2 D_0\xi - \sqrt{(\ell+1)^2-m^2}mD_+\xi \\*
+  &\phantom{{}={}}{} + \sqrt{\ell^2-m^2} D_-\xi - m D_0\xi - \sqrt{(\ell+1)^2-m^2}D_+\xi \\
+  &= \Bigl( \tfrac{1}{2}(\ell-m-1) - \tfrac{1}{2}(\ell+m+1) + m + 1 \Bigr)\sqrt{\ell^2-m^2}D_- \xi \\*
+  &\phantom{{}={}}{} + \Bigl( -\tfrac{1}{2}(\ell-m)(\ell+m+1) - \tfrac{1}{2}(\ell+m+1)(\ell-m) - m^2 - m  \Bigr)D_0 \xi \\*
+  &\phantom{{}={}}{} + \Bigl( \tfrac{1}{2}(\ell+m+2) - \tfrac{1}{2}(\ell-m) - m - 1  \Bigr)\sqrt{(\ell+1)^2-m^2}D_+ \xi \\
+  &= 0 + (-\ell^2-\ell+m^2+m-m^2-m)D_0\xi + 0 \\
+  &= -\ell(\ell+1)D_0\xi
+\end{align*}
+for $\xi\in R_{\ell,m}$, where $-\ell+1\leq m\leq \ell-1$. Now as in \Cref{sec:Factions}, we note that the coefficients causing problems in the edge cases vanish, so we get the above equality for all $m$, and the formula is independent of $m$, we see that we actually have
+\begin{align*}
+  \Delta_1 \xi = -\ell(\ell+1)D_0 \xi
+\end{align*}
+for all $\xi\in R_\ell$.
+
+Similar calculations show that
+\begin{align*}
+  \Delta_2 \xi = (\ell^2-1)\xi - (\ell+1)^2D_0^2 \xi + (4\ell^2-1)D_+D_-\xi
+\end{align*}
+for all $\xi \in R_\ell$.
+
+Additionally by \cref{eq:Drels} we have that $\xi= (2\ell-1)D_+D_- \xi - (2\ell+3)D_-D_+\xi - D_0^2\xi$, so we get that
+\begin{align*}
+  (4\ell^2-1)D_+D_-\xi &= (2\ell+1)(2\ell-1)D_+D_-\xi \\
+                       &= (2\ell+1)\xi + (2\ell+1)(2\ell+3)D_-D_+\xi + (2\ell+1)D_0^2\xi \\
+                       &= (2\ell+1)\xi + (4(\ell+1)^2-1)D_-D_+\xi + (2\ell+1)D_0^2\xi \\
+\end{align*}
+for $\xi\in R_\ell$ since $(2\ell+1)(2\ell+3)=(2(\ell+1)-1)(2(\ell+1)+1)=4(\ell+1)^2-1$, and therefore also
+\begin{align*}
+  \Delta_2 \xi &= (\ell^2-1)\xi - (\ell+1)^2D_0^2 \xi + (2\ell+1)\xi + (4(\ell+1)^2-1)D_-D_+\xi + (2\ell+1)D_0^2\xi \\
+  &= \bigl((\ell+1)^2-1\bigr)\xi  + \ell^2D_0^2\xi + \bigl(4(\ell+1)^2-1\bigr)D_-D_+\xi
+\end{align*}
+for $\xi\in R_\ell$. 
+
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: "../main"
+%%% End:

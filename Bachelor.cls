@@ -65,7 +65,7 @@
 
 \preto\appendix{%
   \cleardoublepage
-  \renewcommand{\thepage}{\thechapter.\arabic{page}}%
+  \renewcommand{\thepage}{\thechapter-\arabic{page}}%
   \preto\chapter{\cleardoublepage\setcounter{page}{1}}%
 }
 

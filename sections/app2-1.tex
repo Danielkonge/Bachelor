@@ -1,0 +1,81 @@
+\section{\texorpdfstring{$Z(U(L_1\times L_2))\simeq Z(U(L_1))\otimes Z(U(L_2))$}{Z(U(L\_1 x L\_2)) is isomorphic to Z(U(L\_1)) tensor Z(U(L\_2))}}\label{sec:centeriso}
+
+Let $L=L_1\times L_2$ be a product of two Lie algebras, and let $\iota_1\colon L_1\to U(L_1)$, $\iota_2\colon L_2\to U(L_2)$, and $\iota\colon L\to U(L)$ be the canonical homomorphisms of Lie algebras, we get from the universal property of universal enveloping algebras. We want to show first that $U(L)\simeq U(L_1)\otimes U(L_2)$.
+
+Consider the map
+\begin{align*}
+  \rho\colon L &\to U(L_1)\otimes U(L_2), & (u_1,u_2)&\mapsto \iota_1(u_1)\otimes 1 + 1\otimes \iota_2(u_2),
+\end{align*}
+which is a homomorphisms of Lie algebras since it is clearly linear and
+\begin{align*}
+  [\rho(u_1,u_2),\rho(v_1,v_2)] &= [u_1\otimes 1 + 1\otimes u_2, v_1\otimes 1 + 1\otimes v_2] \\
+                                &= (u_1\otimes 1+1\otimes u_2)(v_1\otimes 1 + 1\otimes v_2) \\*
+                                &\phantom{{}={}}{} - (v_1\otimes 1 + 1\otimes v_2)(u_1\otimes 1 + 1\otimes u_2) \\
+                                &= u_1v_1\otimes 1 + u_1\otimes v_2 + v_1\otimes u_2 + 1\otimes u_2v_2 \\*
+                                &\phantom{{}={}}{} - v_1u_1\otimes 1 - v_1\otimes u_2 - u_1\otimes v_2 - 1\otimes v_2u_2 \\
+                                &= (u_1v_1-v_1u_1)\otimes 1 + 1\otimes (u_2v_2-v_2u_2) \\
+                                &= [u_1,v_1]\otimes 1 + 1\otimes [u_2,v_2] \\
+                                &= \rho([u_1,v_1],[u_2,v_2]) \\
+                                &= \rho([(u_1,u_2),(v_1,v_2)])
+\end{align*}
+for $(u_1,u_2),(v_1,v_2)\in L$ by the definition of the tensor product of an algebra. Thus by the universal property of $(U(L),\iota)$ we get a unique homomorphisms of associative algebras $\varphi\colon U(L)\to U(L_1)\otimes U(L_2)$ such that the following diagram commutes:
+\[
+  \begin{tikzcd}
+    L \ar[r,"\iota"]\ar[dr,"\rho",swap] & U(L)\ar[d,dashed,"\varphi"] \\
+    & U(L_1)\otimes U(L_2)
+  \end{tikzcd}
+\]
+Now let $i_1\colon L_1\to L$ be the inclusion of $L_1$ into $L$ given by $u\mapsto (u,0)$ for $u\in L_1$. By the definition of the bracket on $L=L_1\times L_2$ it is easy to see that $i_1$ is a Lie algebra homomorphism, and thus the map $\iota\circ i_1\colon L_1\to L\to U(L)$ is also a Lie algebra homomorphism. Hence by the universal property of $(U(L_1),\iota_1)$ we get a unique homomorphism of associative algebras $\psi_1\colon U(L_1)\to U(L)$ such that the following diagram commutes:
+\[
+  \begin{tikzcd}
+    L_1 \ar[r,"\iota_1"]\ar[dr,"\iota\circ i_1",swap] & U(L_1)\ar[d,dashed,"\psi_1"] \\
+    & U(L)
+  \end{tikzcd}
+\]
+Likewise we get a unique homomorphism of associative algebras $\psi_2\colon U(L_2)\to U(L)$ such that $\iota\circ i_2 = \psi_1\circ \iota_2$. Now since $[(u_1,0),(0,u_2)]=([u_1,0],[0,u_2])=0$ for $u_1\in L_1$ and $u_2\in L_2$, we see that
+\begin{align*}
+  0 &= \iota([(u_1,0),(0,u_2)]) = [\iota i_1(u_1),\iota i_2(u_2)] = [\psi_1 \iota_1(u_1),\psi_2 \iota_2(u_2)] \\
+  &= \psi_1\iota_1(u_1)\psi_2\iota_2(u_2) - \psi_2\iota_2(u_2)\psi_1\iota_1(u_1).
+\end{align*}
+Thus $\psi_1\iota_1(u_1)\psi_2\iota_2(u_2)=\psi_2\iota_2(u_2)\psi_1\iota_1(u_1)$ for all $u_1\in L_1$ and $u_2\in L_2$. Hence since the $\iota_j(u_j)$ for $u_j\in L_j$ generate $U(L_j)$ by the PBW theorem for $j=1,2$, cf.\ \cite[p.~E-7]{jantzen}, we get that $\psi_1(u_1)\psi_2(u_2)=\psi_2(u_2)\psi_1(u_1)$ for all $u_1\in U(L_1)$ and $u_2\in U(L_2)$. Therefore the map
+\begin{align}\label{eq:U(L)iso}
+  \psi\colon U(L_1)\otimes U(L_2)&\to U(L), & u_1\otimes u_2\mapsto \psi_1(u_1)\psi_2(u_2),
+\end{align}
+is a homomorphism of associative algebras since
+\begin{align*}
+  \psi((u_1\otimes u_2)(v_1\otimes v_2)) &= \psi(u_1v_1\otimes v_1v_2) = \psi_1(u_1v_1)\psi_2(u_2v_2)\\
+                                        &= \psi_1(u_1)\psi_1(v_1)\psi_2(u_2)\psi_2(v_2)\\
+                                        &= \psi_1(u_1)\psi_2(u_2)\psi_1(v_1)\psi_2(v_2)\\
+                                        &= \psi(u_1\otimes u_2)\psi(v_1\otimes v_2).
+\end{align*}
+
+Note now that
+\begin{align*}
+  \psi\varphi\iota(u_1,u_2) &= \psi\rho(u_1,u_2) = \psi(\iota_1(u_1)\otimes 1 + 1\otimes \iota_2(u_2)) \\
+                              &= \psi_1\iota_1(u_1)\psi_2(1) + \psi_1(1)\psi_2\iota_2(u_2) \\
+                            &= \iota(u_1,0) + \iota(0,u_2) = \iota(u_1,u_2)
+\end{align*}
+for all $(u_1,u_2)\in L$, so by the PBW theorem as above we get that $\psi\varphi=\id_{U(L)}$. Likewise
+\begin{align*}
+  \varphi\psi(\iota_1(u_1)\otimes 1 + 1\otimes \iota_2(u_2)) &= \varphi(\psi_1\iota_1(u_1)\psi_2(1) + \psi_1(1)\psi_2\iota_2(u_2)) \\
+                                                             &= \varphi(\iota(u_1,0)+ \iota(0,u_2)) = \varphi\iota(u_1,u_2)\\
+                                                             &= \rho(u_1,u_2) = \iota(u_1)\otimes 1 + 1\otimes \iota_2(u_2)
+\end{align*}
+for all $u_1\in L_1$ and $u_2\in L_2$. Now by the PBW theorem the $\iota_1(u_1)$ for $u_1\in L_1$ generate $U(L_1)$ and the $\iota_2(u_2)$ for $u_2\in L_2$ generate $U(L_2)$, so we see that the $\iota_1(u_1)\otimes 1+1\otimes\iota_2(u_2)$ for $u_1\in L_1$ and $u_2\in L_2$ generate $U(L_1)\otimes U(L_2)$ and thus $\varphi\psi=\id_{U(L_1)\otimes U(L_2)}$. Hence we see that $\varphi$ and $\psi$ are isomorphisms between $U(L)$ and $U(L_1)\otimes U(L_2)$, so indeed $U(L)\simeq U(L_1)\otimes U(L_2)$.
+
+Note that the above also gives us an isomorphism $Z(U(L))\simeq Z(U(L_1)\otimes U(L_2))$. Now we want to show that we also have that $Z(U(L_1)\otimes U(L_2))= Z(U(L_1))\otimes Z(U(L_2))$ such that when describing $Z(U(L))$ we can instead describe $Z(U(L_1))\otimes Z(U(L_2))$. For $z_1\otimes z_2\in Z(U(L_1))\otimes Z(U(L_2))$ we get that
+\begin{align*}
+  (z_1\otimes z_2)(u_1\otimes u_2) &= z_1u_1\otimes z_2u_2 = u_1z_1\otimes u_2z_2 = (u_1\otimes u_2)(z_1\otimes z_2)
+\end{align*}
+for all $u_1\otimes u_2\in U(L_1)\otimes U(L_2)$, so we have the inclusion $Z(U(L_1))\otimes Z(U(L_2))\subseteq Z(U(L_1)\otimes U(L_2))$.
+
+To get the other inclusion let $z=\sum_i u_i\otimes v_i \in Z(U(L_1)\otimes U(L_2))$. By combining terms with linearly dependent $v_i$'s, we can assume that the $v_i$'s in the sum are linearly independent. Now for $u\otimes 1\in U(L_1)\otimes U(L_2)$ we have that $z(u\otimes 1)=(u\otimes 1)z$, so 
+\begin{align*}
+  0 = z(u\otimes 1) - (u\otimes 1)z = \sum_i (u_iu - uu_i)\otimes v_i.
+\end{align*}
+Thus since the $v_i$'s are linearly independent, we must have that $u_iu-uu_i=0$ for all $i$, i.e.\ $u_i\in Z(U(L_1))$ for all $i$. Likewise we get that $v_i\in Z(U(L_2))$ for all $i$, and hence $z=\sum_i u_i\otimes v_i \in Z(U(L_1))\otimes Z(U(L_2))$. Therefore we get the inclusion $Z(U(L_1)\otimes U(L_2))\subseteq Z(U(L_1))\otimes Z(U(L_2))$, and thus indeed we have the equality $Z(U(L_1)\otimes U(L_2))=Z(U(L_1))\otimes Z(U(L_2))$. So altogether we have an isomorphism $Z(U(L))\simeq Z(U(L_1))\otimes Z(U(L_2))$.
+
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: "../main"
+%%% End:

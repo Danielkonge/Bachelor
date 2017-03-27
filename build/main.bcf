@@ -2046,12 +2046,12 @@
   </bcf:bibdata>
   <bcf:section number="0">
     <bcf:citekey order="0">*</bcf:citekey>
-    <bcf:citekey order="1">jantzen</bcf:citekey>
-    <bcf:citekey order="2">humphrey</bcf:citekey>
-    <bcf:citekey order="3">indecompReprOfLorGr</bcf:citekey>
-    <bcf:citekey order="4">classifOfIndec</bcf:citekey>
-    <bcf:citekey order="4">catOfHarChaMod</bcf:citekey>
+    <bcf:citekey order="1">indecompReprOfLorGr</bcf:citekey>
+    <bcf:citekey order="2">jantzen</bcf:citekey>
+    <bcf:citekey order="3">humphrey</bcf:citekey>
     <bcf:citekey order="4">indecompReprOfLorGr</bcf:citekey>
+    <bcf:citekey order="5">classifOfIndec</bcf:citekey>
+    <bcf:citekey order="5">catOfHarChaMod</bcf:citekey>
     <bcf:citekey order="5">indecompReprOfLorGr</bcf:citekey>
     <bcf:citekey order="6">jantzen</bcf:citekey>
     <bcf:citekey order="7">humphrey</bcf:citekey>
