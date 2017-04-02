@@ -500,7 +500,7 @@ We claim now that the formulae \cref{eq:Factions} for the linear operators $F_+$
 \end{align}
 for $\xi\in R_{\ell,m}$. \todo{I haven't shown this properly yet --- I guess it should follow from looking at the relations but the calculations are very long, so I skipped it for now}
 
-\subsection{\texorpdfstring{Simple Harish-Chandra modules for the pair $(L,L_k)$}{Simple Harish-Chandra modules for the pair (L,L\_k)}}
+\subsection{\texorpdfstring{Simple Harish-Chandra modules for the pair $(L,L_k)$}{Simple Harish-Chandra modules for the pair (L,L\_k)}}\label{sec:simplemodules}
 
 We want to classify the simple Harish-Chandra modules for the pair $(L,L_k)$ for later use. Before most of the work we need some basic results.
 
@@ -580,7 +580,7 @@ so $\dd{\ell_0+1}{0}=0$, and thus
 \end{align*}
 for all $\ell\in\Set{1,2,\dotsc}$. Also in this case have $\dd{0}{0}=c_1$, where $c_1$ is some constant. 
 
-To unify these two cases we set $c=i\ell_0\ell_1$ and $c_1=i\ell_1$ for some real constant $\ell_1$ such that
+To unify these two cases we set $c=i\ell_0\ell_1$ and $c_1=i\ell_1$ for some real constant $\ell_1$ such that\todo{This should be for complex $\ell_1$ because of how I want to use it later, but this is a problem by the next comment}
 \begin{align}\label{eq:dl0res}
   \dd{\ell}{0} = \dfrac{i\ell_0\ell_1}{\ell(\ell+1)}
 \end{align}
@@ -594,7 +594,7 @@ and a simple calculation, cf.\ \Cref{sec:dl-calc}, yields that
 \end{align}
 for $\ell>\ell_0$.
 
-Since we showed in the beginning of this subsection that the kernel of $D_-$ is $R_{\ell_0}$, we must have that $\dd{\ell}{-}\neq 0$ for all $\ell>\ell_0$. Thus $\ell^2-\ell_1^2\neq 0$ for $\ell>\ell_0$, so $\abs{\ell_1}-\ell_0$ cannot be a positive integer, because if that was the case then $\abs{\ell_1}>\ell_0$ and $\abs{\ell_1}= \ell_0+(\abs{\ell_1}-\ell_0) \in \Set{\ell_0,\ell_0+1,\dotsc}$, but $\abs{\ell_1}^2-\ell_1^2=0$ since $\ell_1\in\R$. 
+Since we showed in the beginning of this subsection that the kernel of $D_-$ is $R_{\ell_0}$, we must have that $\dd{\ell}{-}\neq 0$ for all $\ell>\ell_0$. Thus $\ell^2-\ell_1^2\neq 0$ for $\ell>\ell_0$, so $\abs{\ell_1}-\ell_0$ cannot be a positive integer, because if that was the case then $\abs{\ell_1}= \ell_0+(\abs{\ell_1}-\ell_0) \in \Set{\ell_0+1,\ell_0+2,\dotsc}$, but $\abs{\ell_1}^2-\ell_1^2=0$ since $\ell_1\in\R$.\todo{How to do this if $\ell_1$ is complex}
 
 Hence altogether by \cref{eq:E+andE-,eq:Factions} in the basis $\Set{\xi_{\ell,m}}$ the operators $H_+$, $H_-$, $H_3$, $F_+$, $F_-$, and $F_3$ are given by the formulae
 \begin{align}\label{eq:infdimactions}

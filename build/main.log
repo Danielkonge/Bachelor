@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2017.2.23)  27 MAR 2017 02:26
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2017.2.23)  3 APR 2017 00:54
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1699,154 +1699,6 @@ LaTeX Font Info:    Overwriting math alphabet `\mathscr' in version `bold'
 (Font)                  U/BOONDOX-scro/m/n --> U/BOONDOX-scro/b/n on input line
  470.
 ))
-(/usr/local/texlive/2015/texmf-dist/tex/latex/kantlipsum/kantlipsum.sty
-(/usr/local/texlive/2015/texmf-dist/tex/latex/l3kernel/expl3.sty
-Package: expl3 2015/10/14 v6210 L3 programming layer (loader) 
-
-(/usr/local/texlive/2015/texmf-dist/tex/latex/l3kernel/expl3-code.tex
-Package: expl3 2015/10/14 v6210 L3 programming layer (code) 
-L3 Module: l3bootstrap 2015/09/30 v6139 L3 Bootstrap code
-L3 Module: l3names 2015/10/10 v6209 L3 Namespace for primitives
-L3 Module: l3basics 2015/09/22 v6033 L3 Basic definitions
-L3 Module: l3expan 2015/09/10 v5983 L3 Argument expansion
-L3 Module: l3tl 2015/09/29 v6121 L3 Token lists
-L3 Module: l3str 2015/09/20 v6021 L3 Strings
-L3 Module: l3seq 2015/08/05 v5777 L3 Sequences and stacks
-L3 Module: l3int 2015/09/25 v6089 L3 Integers
-\c_max_int=\count431
-\l_tmpa_int=\count432
-\l_tmpb_int=\count433
-\g_tmpa_int=\count434
-\g_tmpb_int=\count435
-L3 Module: l3quark 2015/08/17 v5855 L3 Quarks
-L3 Module: l3prg 2015/10/09 v6208 L3 Control structures
-\g__prg_map_int=\count436
-L3 Module: l3clist 2015/09/02 v5901 L3 Comma separated lists
-L3 Module: l3token 2015/09/28 v6114 L3 Experimental token manipulation
-L3 Module: l3prop 2015/08/05 v5777 L3 Property lists
-L3 Module: l3msg 2015/09/28 v6113 L3 Messages
-L3 Module: l3file 2015/09/23 v6037 L3 File and I/O operations
-\l_iow_line_count_int=\count437
-\l__iow_target_count_int=\count438
-\l__iow_current_line_int=\count439
-\l__iow_current_word_int=\count440
-\l__iow_current_indentation_int=\count441
-L3 Module: l3skip 2015/09/25 v6089 L3 Dimensions and skips
-\c_zero_dim=\dimen299
-\c_max_dim=\dimen300
-\l_tmpa_dim=\dimen301
-\l_tmpb_dim=\dimen302
-\g_tmpa_dim=\dimen303
-\g_tmpb_dim=\dimen304
-\c_zero_skip=\skip278
-\c_max_skip=\skip279
-\l_tmpa_skip=\skip280
-\l_tmpb_skip=\skip281
-\g_tmpa_skip=\skip282
-\g_tmpb_skip=\skip283
-\c_zero_muskip=\muskip12
-\c_max_muskip=\muskip13
-\l_tmpa_muskip=\muskip14
-\l_tmpb_muskip=\muskip15
-\g_tmpa_muskip=\muskip16
-\g_tmpb_muskip=\muskip17
-L3 Module: l3keys 2015/09/23 v6037 L3 Key-value interfaces
-\g__keyval_level_int=\count442
-\l_keys_choice_int=\count443
-L3 Module: l3fp 2015/08/25 v5890 L3 Floating points
-\c__fp_leading_shift_int=\count444
-\c__fp_middle_shift_int=\count445
-\c__fp_trailing_shift_int=\count446
-\c__fp_big_leading_shift_int=\count447
-\c__fp_big_middle_shift_int=\count448
-\c__fp_big_trailing_shift_int=\count449
-\c__fp_Bigg_leading_shift_int=\count450
-\c__fp_Bigg_middle_shift_int=\count451
-\c__fp_Bigg_trailing_shift_int=\count452
-L3 Module: l3box 2015/08/09 v5822 L3 Experimental boxes
-\c_empty_box=\box44
-\l_tmpa_box=\box45
-\l_tmpb_box=\box46
-\g_tmpa_box=\box47
-\g_tmpb_box=\box48
-L3 Module: l3coffins 2015/08/06 v5789 L3 Coffin code layer
-\l__coffin_internal_box=\box49
-\l__coffin_internal_dim=\dimen305
-\l__coffin_offset_x_dim=\dimen306
-\l__coffin_offset_y_dim=\dimen307
-\l__coffin_x_dim=\dimen308
-\l__coffin_y_dim=\dimen309
-\l__coffin_x_prime_dim=\dimen310
-\l__coffin_y_prime_dim=\dimen311
-\c_empty_coffin=\box50
-\l__coffin_aligned_coffin=\box51
-\l__coffin_aligned_internal_coffin=\box52
-\l_tmpa_coffin=\box53
-\l_tmpb_coffin=\box54
-\l__coffin_display_coffin=\box55
-\l__coffin_display_coord_coffin=\box56
-\l__coffin_display_pole_coffin=\box57
-\l__coffin_display_offset_dim=\dimen312
-\l__coffin_display_x_dim=\dimen313
-\l__coffin_display_y_dim=\dimen314
-L3 Module: l3color 2014/08/23 v5354 L3 Experimental color support
-L3 Module: l3candidates 2015/10/09 v6208 L3 Experimental additions to l3kernel
-\l__box_top_dim=\dimen315
-\l__box_bottom_dim=\dimen316
-\l__box_left_dim=\dimen317
-\l__box_right_dim=\dimen318
-\l__box_top_new_dim=\dimen319
-\l__box_bottom_new_dim=\dimen320
-\l__box_left_new_dim=\dimen321
-\l__box_right_new_dim=\dimen322
-\l__box_internal_box=\box58
-\l__coffin_bounding_shift_dim=\dimen323
-\l__coffin_left_corner_dim=\dimen324
-\l__coffin_right_corner_dim=\dimen325
-\l__coffin_bottom_corner_dim=\dimen326
-\l__coffin_top_corner_dim=\dimen327
-\l__coffin_scaled_total_height_dim=\dimen328
-\l__coffin_scaled_width_dim=\dimen329
-L3 Module: l3sys 2015/09/25 v6087 L3 Experimental system/runtime functions
-L3 Module: l3luatex 2015/09/10 v5983 L3 Experimental LuaTeX-specific functions
-)
-(/usr/local/texlive/2015/texmf-dist/tex/latex/l3kernel/l3unicode-data.def
-File: l3unicode-data.def 2015/07/20 v5676 L3 Unicode data
-)
-(/usr/local/texlive/2015/texmf-dist/tex/latex/l3kernel/l3pdfmode.def
-File: l3pdfmode.def 2015/09/10 v5983 L3 Experimental driver: PDF mode
-\l__driver_color_stack_int=\count453
-))
-Package: kantlipsum 2012/10/14 v0.6 Dummy text in Kantian style
-
-(/usr/local/texlive/2015/texmf-dist/tex/latex/l3packages/xparse/xparse.sty
-Package: xparse 2015/10/14 v6210 L3 Experimental document command parser
-\l__xparse_current_arg_int=\count454
-\l__xparse_m_args_int=\count455
-\l__xparse_mandatory_args_int=\count456
-\l__xparse_processor_int=\count457
-\l__xparse_v_nesting_int=\count458
-)
-\l_kgl_start_int=\count459
-\l_kgl_end_int=\count460
-.................................................
-. LaTeX info: "xparse/define-command"
-. 
-. Defining command \kant with sig. 's>{\SplitArgument {1}{-}}O{1-7}' on line
-. 86.
-.................................................
-.................................................
-. LaTeX info: "xparse/define-command"
-. 
-. Defining command \kantdef with sig. 'mm' on line 101.
-.................................................
-.................................................
-. kantlipsum info: "how-many"
-. 
-. The package provides paragraphs 1 to 164. Values outside this range will be
-. ignored.
-.................................................
-)
 Package csquotes Info: Checking for multilingual support...
 Package csquotes Info: ... found 'babel' package.
 Package biblatex Info: Trying to load language 'english'...
@@ -1864,33 +1716,33 @@ File: danish.lbx 2016/03/03 v3.3 biblatex localization (PK/JW/AB)
 (build/main.aux)
 \openout1 = `main.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 13.
-LaTeX Font Info:    ... okay on input line 13.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 13.
-LaTeX Font Info:    ... okay on input line 13.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 13.
-LaTeX Font Info:    ... okay on input line 13.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 13.
-LaTeX Font Info:    ... okay on input line 13.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 13.
-LaTeX Font Info:    ... okay on input line 13.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 13.
-LaTeX Font Info:    ... okay on input line 13.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 13.
-LaTeX Font Info:    ... okay on input line 13.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 11.
+LaTeX Font Info:    ... okay on input line 11.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 11.
+LaTeX Font Info:    ... okay on input line 11.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 11.
+LaTeX Font Info:    ... okay on input line 11.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 11.
+LaTeX Font Info:    ... okay on input line 11.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 11.
+LaTeX Font Info:    ... okay on input line 11.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 11.
+LaTeX Font Info:    ... okay on input line 11.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 11.
+LaTeX Font Info:    ... okay on input line 11.
 
 (/usr/local/texlive/2015/texmf-dist/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count461
-\scratchdimen=\dimen330
-\scratchbox=\box59
-\nofMPsegments=\count462
-\nofMParguments=\count463
+\scratchcounter=\count431
+\scratchdimen=\dimen299
+\scratchbox=\box44
+\nofMPsegments=\count432
+\nofMParguments=\count433
 \everyMPshowfont=\toks65
-\MPscratchCnt=\count464
-\MPscratchDim=\dimen331
-\MPnumerator=\count465
-\makeMPintoPDFobject=\count466
+\MPscratchCnt=\count434
+\MPscratchDim=\dimen300
+\MPnumerator=\count435
+\makeMPintoPDFobject=\count436
 \everyMPtoPDFconversion=\toks66
 ) (/usr/local/texlive/2015/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
 Package: epstopdf-base 2010/02/09 v2.5 Base part for package epstopdf
@@ -1907,7 +1759,7 @@ G,.JBIG2,.JB2,.eps]
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
-LaTeX Info: Redefining \microtypecontext on input line 13.
+LaTeX Info: Redefining \microtypecontext on input line 11.
 Package microtype Info: Generating PDF output.
 Package microtype Info: Character protrusion enabled (level 2).
 Package microtype Info: Using default protrusion set `alltext'.
@@ -1931,10 +1783,10 @@ Package biblatex Info: Automatic encoding selection.
 Package biblatex Info: Trying to load bibliographic data...
 Package biblatex Info: ... file 'main.bbl' found.
  (build/main.bbl)
-Package biblatex Info: Reference section=0 on input line 13.
-Package biblatex Info: Reference segment=0 on input line 13.
-\AtBeginShipoutBox=\box60
-Package hyperref Info: Link coloring OFF on input line 13.
+Package biblatex Info: Reference section=0 on input line 11.
+Package biblatex Info: Reference segment=0 on input line 11.
+\AtBeginShipoutBox=\box45
+Package hyperref Info: Link coloring OFF on input line 11.
 
 (/usr/local/texlive/2015/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
@@ -1942,20 +1794,20 @@ Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
 (/usr/local/texlive/2015/texmf-dist/tex/generic/oberdiek/gettitlestring.sty
 Package: gettitlestring 2010/12/03 v1.4 Cleanup title references (HO)
 )
-\c@section@level=\count467
+\c@section@level=\count437
 LaTeX Info: Redefining \Ref on input line 513.
 )
 Redoing nameref's sectioning
 Redoing nameref's label
-LaTeX Info: Redefining \nameref on input line 13.
-LaTeX Info: Redefining \ref on input line 13.
-LaTeX Info: Redefining \pageref on input line 13.
-LaTeX Info: Redefining \nameref on input line 13.
+LaTeX Info: Redefining \nameref on input line 11.
+LaTeX Info: Redefining \ref on input line 11.
+LaTeX Info: Redefining \pageref on input line 11.
+LaTeX Info: Redefining \nameref on input line 11.
 (build/main.out) (build/main.out)
 \@outlinefile=\write6
 \openout6 = `main.out'.
 
-LaTeX Info: Redefining \Ref on input line 13.
+LaTeX Info: Redefining \Ref on input line 11.
  (./sections/titlepage.tex
 Package hyperref Info: Option `pageanchor' set `false' on input line 1.
  [1
@@ -1992,38 +1844,33 @@ File: ueuf.fd 2013/01/14 v3.01 Euler Fraktur
 File: mt-euf.cfg 2006/07/03 v1.1 microtype config. file: AMS Euler Fraktur (RS)
 
 )
-Overfull \hbox (2.99171pt too wide) detected at line 32
+Overfull \hbox (2.99171pt too wide) detected at line 34
  \T1/cmr/bx/n/10.95 A-1
  []
 
 
-Overfull \hbox (0.35928pt too wide) detected at line 34
+Overfull \hbox (0.35928pt too wide) detected at line 36
  \T1/cmr/m/n/10.95 A-1
  []
 
 
-Overfull \hbox (0.35928pt too wide) detected at line 36
+Overfull \hbox (0.35928pt too wide) detected at line 38
  \T1/cmr/m/n/10.95 A-4
  []
 
 
-Overfull \hbox (0.35928pt too wide) detected at line 38
+Overfull \hbox (0.35928pt too wide) detected at line 40
  \T1/cmr/m/n/10.95 A-6
  []
 
 
-Overfull \hbox (0.35928pt too wide) detected at line 40
+Overfull \hbox (0.35928pt too wide) detected at line 42
  \T1/cmr/m/n/10.95 A-7
  []
 
 
-Overfull \hbox (0.35928pt too wide) detected at line 42
+Overfull \hbox (0.35928pt too wide) detected at line 44
  \T1/cmr/m/n/10.95 A-8
- []
-
-
-Overfull \hbox (5.80322pt too wide) detected at line 44
- \T1/cmr/m/n/10.95 A-11
  []
 
 
@@ -2033,11 +1880,16 @@ Overfull \hbox (5.80322pt too wide) detected at line 46
 
 
 Overfull \hbox (5.80322pt too wide) detected at line 48
+ \T1/cmr/m/n/10.95 A-11
+ []
+
+
+Overfull \hbox (5.80322pt too wide) detected at line 50
  \T1/cmr/m/n/10.95 A-13
  []
 
 
-Overfull \hbox (2.44005pt too wide) detected at line 50
+Overfull \hbox (2.44005pt too wide) detected at line 52
  \T1/cmr/bx/n/10.95 B-1
  []
 
@@ -2079,18 +1931,35 @@ line 64.
  [22]
 Package hyperref Info: bookmark level for unknown proposition defaults to 0 on 
 input line 94.
- [23]) [24] [25
+ [23] [24] [25])
+(./sections/sec1-3.tex [26] [27] [28]
+Overfull \hbox (5.2458pt too wide) in paragraph at lines 86--87
+[]\T1/cmr/m/n/10.95 (-20) Now take an iso-mor-phism $\OML/cmm/m/it/10.95 E[] []
+ [] R[] \OMS/cmsy/m/n/10.95 ! \OML/cmm/m/it/10.95 R[]$ \T1/cmr/m/n/10.95 (-20) 
+for $\OML/cmm/m/it/10.95 m \OMS/cmsy/m/n/10.95 6\OT1/cmr/m/n/10.95 (-20) = \OML
+/cmm/m/it/10.95 `$ \T1/cmr/m/n/10.95 (-20) and put $\OML/cmm/m/it/10.95 E[] [] 
+[] R[] \OMS/cmsy/m/n/10.95 !
+ []
 
-] [26
 
-] [27] [28
+Overfull \hbox (42.76172pt too wide) in paragraph at lines 118--118
+[] 
+ []
 
-]
-(./sections/app1-0.tex) (./sections/app1-1.tex [1
+[29]
+Package hyperref Info: bookmark level for unknown corollary defaults to 0 on in
+put line 125.
+) [30] [31
+
+] [32
+
+] [33] [34
+
+] (./sections/app1-0.tex) (./sections/app1-1.tex
+[1
 
 
-] [2]) (./sections/app1-2.tex
-[3]
+] [2]) (./sections/app1-2.tex [3]
 Underfull \vbox (badness 5245) has occurred while \output is active []
 
  [4]
@@ -2136,19 +2005,19 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 72.
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 72.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 72.
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: EFE75FECEA7C1F611B26419679FE0CBA;1816.
+(rerunfilecheck)             Checksum: C6565743E4EC91A2CEE2CAB2E8FED7F8;1917.
 Package logreq Info: Writing requests to 'main.run.xml'.
 \openout1 = `main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 42008 strings out of 493036
- 803397 string characters out of 6134590
- 1449515 words of memory out of 5000000
- 44572 multiletter control sequences out of 15000+600000
- 52434 words of font info for 239 fonts, out of 8000000 for 9000
+ 35352 strings out of 493036
+ 665598 string characters out of 6134590
+ 1175118 words of memory out of 5000000
+ 37889 multiletter control sequences out of 15000+600000
+ 52899 words of font info for 244 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 75i,21n,86p,10384b,1767s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 75i,21n,86p,1285b,1763s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2015/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}
 </usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb><
 /usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></
@@ -2187,10 +2056,10 @@ c/cm-super/sfrm1440.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/
 cm-super/sfrm2074.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/cm
 -super/sfrm2488.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/cm-s
 uper/sfti1095.pfb>
-Output written on build/main.pdf (51 pages, 610695 bytes).
+Output written on build/main.pdf (57 pages, 644896 bytes).
 PDF statistics:
- 759 PDF objects out of 1000 (max. 8388607)
- 662 compressed objects within 7 object streams
- 152 named destinations out of 1000 (max. 500000)
- 36541 words of extra memory for PDF output out of 42996 (max. 10000000)
+ 846 PDF objects out of 1000 (max. 8388607)
+ 742 compressed objects within 8 object streams
+ 187 named destinations out of 1000 (max. 500000)
+ 36549 words of extra memory for PDF output out of 42996 (max. 10000000)
 

@@ -35,6 +35,7 @@
     "eq:F_3action"
     "eq:Factions"
     "eq:Drels"
+    "sec:simplemodules"
     "eq:EandDnewbasis"
     "eq:drelations"
     "eq:dl0"

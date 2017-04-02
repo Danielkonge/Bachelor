@@ -2,11 +2,15 @@
  "sec1-2"
  (lambda ()
    (LaTeX-add-labels
+    "eq:DeltasaU(L)def"
     "eq:Deltasdef"
     "eq:Deltas"
     "eq:altDelta2"
     "lem:R_lmDeltainvariant"
     "lem:commuteDeltas"
-    "eq:eigenvaluesformulae"))
+    "prop:indecomposabledecomposition"
+    "eq:eigenvaluesformulae"
+    "eq:Deltastemp"
+    "prop:eigenvaluesforDs"))
  :latex)
 

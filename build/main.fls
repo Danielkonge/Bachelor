@@ -296,18 +296,6 @@ INPUT /usr/local/texlive/2015/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libr
 INPUT /usr/local/texlive/2015/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarybabel.code.tex
 INPUT /usr/local/texlive/2015/texmf-dist/tex/latex/mathalfa/mathalfa.sty
 INPUT /usr/local/texlive/2015/texmf-dist/tex/latex/mathalfa/mathalfa.sty
-INPUT /usr/local/texlive/2015/texmf-dist/tex/latex/kantlipsum/kantlipsum.sty
-INPUT /usr/local/texlive/2015/texmf-dist/tex/latex/kantlipsum/kantlipsum.sty
-INPUT /usr/local/texlive/2015/texmf-dist/tex/latex/l3kernel/expl3.sty
-INPUT /usr/local/texlive/2015/texmf-dist/tex/latex/l3kernel/expl3.sty
-INPUT /usr/local/texlive/2015/texmf-dist/tex/latex/l3kernel/expl3-code.tex
-INPUT /usr/local/texlive/2015/texmf-dist/tex/latex/l3kernel/expl3-code.tex
-INPUT /usr/local/texlive/2015/texmf-dist/tex/latex/l3kernel/l3unicode-data.def
-INPUT /usr/local/texlive/2015/texmf-dist/tex/latex/l3kernel/l3unicode-data.def
-INPUT /usr/local/texlive/2015/texmf-dist/tex/latex/l3kernel/l3pdfmode.def
-INPUT /usr/local/texlive/2015/texmf-dist/tex/latex/l3kernel/l3pdfmode.def
-INPUT /usr/local/texlive/2015/texmf-dist/tex/latex/l3packages/xparse/xparse.sty
-INPUT /usr/local/texlive/2015/texmf-dist/tex/latex/l3packages/xparse/xparse.sty
 INPUT /usr/local/texlive/2015/texmf-dist/tex/latex/biblatex/lbx/english.lbx
 INPUT /usr/local/texlive/2015/texmf-dist/tex/latex/biblatex/lbx/english.lbx
 INPUT /usr/local/texlive/2015/texmf-dist/tex/latex/biblatex/lbx/danish.lbx
@@ -490,6 +478,8 @@ INPUT /usr/local/texlive/2015/texmf-dist/fonts/tfm/public/cm/cmmib10.tfm
 INPUT /usr/local/texlive/2015/texmf-dist/fonts/tfm/public/cm/cmbsy10.tfm
 INPUT sections/sec1-2.tex
 INPUT sections/sec1-2.tex
+INPUT sections/sec1-3.tex
+INPUT sections/sec1-3.tex
 INPUT sections/app1-0.tex
 INPUT sections/app1-0.tex
 INPUT sections/app1-1.tex

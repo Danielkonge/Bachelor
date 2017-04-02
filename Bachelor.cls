@@ -304,6 +304,7 @@ sorting=ynt]{biblatex}
 \newcommand{\Lie}[1]{\mathfrak{#1}}
 
 \DeclareMathOperator{\End}{End}
+\DeclareMathOperator{\Hom}{Hom}
 \DeclareMathOperator{\Der}{Der}
 
 \renewcommand\Re{\operatorname{Re}} %Reel del af komplekst tal

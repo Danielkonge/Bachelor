@@ -17,7 +17,7 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsubsection}{Infinite dimensional simple modules}{18}{section*.7}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{Finite dimensional simple modules}{20}{section*.8}
+\contentsline {subsubsection}{Finite dimensional simple modules}{20}{section*.10}
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {1.2}Decomposition of modules into indecomposables}{20}{section.1.2}
 \defcounter {refsection}{0}\relax 
@@ -25,9 +25,11 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {1.2.2}Properties of the Laplace operators in indecomposable modules}{23}{subsection.1.2.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\chapternumberline {2}Linear relations}{25}{chapter.2}
+\contentsline {section}{\numberline {1.3}The non-singular category $C(\lambda _1,\lambda _2)$}{26}{section.1.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{Bibliography}{27}{section*.13}
+\contentsline {chapter}{\chapternumberline {2}Linear relations}{31}{chapter.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{Bibliography}{33}{section*.19}
 \defcounter {refsection}{0}\relax 
 \contentsline {appendix}{\chapternumberline {A}Calculations}{A-1}{appendix.A}
 \defcounter {refsection}{0}\relax 

@@ -7,6 +7,7 @@
     "sections/sec1-0"
     "sections/sec1-1"
     "sections/sec1-2"
+    "sections/sec1-3"
     "sections/app1-0"
     "sections/app1-1"
     "sections/app1-2"
@@ -17,8 +18,7 @@
     "sections/app1-7"
     "sections/app1-8"
     "sections/app2-0"
-    "sections/app2-1"
-    "kantlipsum")
+    "sections/app2-1")
    (LaTeX-add-labels
     "cha:first"
     "cha:second"))
