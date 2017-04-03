@@ -11,6 +11,8 @@
     "prop:indecomposabledecomposition"
     "eq:eigenvaluesformulae"
     "eq:Deltastemp"
-    "prop:eigenvaluesforDs"))
+    "prop:eigenvaluesforDs"
+    "eq:dformulaeonR_l"
+    "prop:modulehom"))
  :latex)
 

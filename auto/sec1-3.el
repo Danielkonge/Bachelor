@@ -6,6 +6,8 @@
     "lem:Disos"
     "lem:nonsingsimilar"
     "lem:Deltarelnonsing"
-    "eq:Deltarelinnonsing"))
+    "eq:Deltarelinnonsing"
+    "thm:objectscor"
+    "eq:tempgammalm"))
  :latex)
 

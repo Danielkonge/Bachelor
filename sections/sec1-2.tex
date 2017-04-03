@@ -91,12 +91,12 @@ Additionally we are ready to prove the Lemma:
 Now we are finally ready to begin considering the properties of $\Delta_1$ and $\Delta_2$ in indecomposable Harish-Chandra modules, which will end up being an important part of our characterization of indecomposable Harish-Chandra modules for the pair $(L,L_k)$.
 
 \begin{proposition}
-  A Harish-Chandra module $M$ for the pair $(L,L_k)$ is decomposable into the direct sum of a countable number of indecomposable modules. On each indecomposable module the Laplace operators $\Delta_1$ and $\Delta_2$ have each one eigenvalue, $\lambda_1$ and $\lambda_2$ respectively.
+  A Harish-Chandra module $M$ for the pair $(L,L_k)$ is decomposable into the direct sum of a countable number of indecomposable modules such that on each indecomposable module the Laplace operators $\Delta_1$ and $\Delta_2$ have each one eigenvalue, $\lambda_1$ and $\lambda_2$ respectively.
 \end{proposition}
 \begin{proof}
   Since each of the subspaces $R_{\ell,m}$ is invariant under $\Delta_1$ and $\Delta_2$ by \Cref{lem:R_lmDeltainvariant} and since these operators commute with each other, we get that $R_{\ell,m}$ can be written as a direct sum of subspaces $R_{\ell,m}(\lambda_1^{i},\lambda_2^{i})$ on each of which each of the operators $\Delta_1$ and $\Delta_2$ has one eigenvalue $\lambda_1^{i}$ and $\lambda_2^{i}$ respectively. Note that here the index set of $i$ is finite since $R_{\ell,m}$ is finite dimensional.
 
-  Consider now fixed $\lambda_1$ and $\lambda_2$ and the set $S$ of those $(\ell,m)$ for which there exists subspaces $R_{\ell,m}(\lambda_1^{i},\lambda_2^{i})$ with $\lambda_1=\lambda_1^{i}$ and $\lambda_2=\lambda_2^{i}$. Denote by $M(\lambda_1,\lambda_2)$ the subspace of $M$ with $M(\lambda_1,\lambda_2)=\bigoplus_{(\ell,m)\in S} R_{\ell,m}(\lambda_1,\lambda_2)$ such that in $M(\lambda_1,\lambda_2)$ each of the operators $\Delta_1$ and $\Delta_2$ has one eigenvalue, $\lambda_1$ and $\lambda_2$ respectively. We want to show that $M(\lambda_1,\lambda_2)$ is a submodule of $M$, i.e.\ that it is invariant under $H_+$, $H_-$, $H_3$, $F_+$, $F_-$, and $F_3$, but this is clearly the case since $M(\lambda_1,\lambda_2)$ is invariant under $E_+$, $E_-$, $D_+$, $D_-$, and $D_0$ because $\Delta_1$ and $\Delta_2$ commute with these operators by \Cref{lem:commuteDeltas}. Finally note that the number of $M(\lambda_1,\lambda_2)$ in the decomposition of $M$ is countable since the number of $R_{\ell,m}$ is countable and the number of $R_{\ell,m}(\lambda_1^{i},\lambda_2^{i})$ in a given $R_{\ell,m}$ is finite, and note that $M(\lambda_1,\lambda_2)$ is indecomposable since \todo{Why indecomposable}
+  Consider now fixed $\lambda_1$ and $\lambda_2$ and the set $S$ of those $(\ell,m)$ for which there exists subspaces $R_{\ell,m}(\lambda_1^{i},\lambda_2^{i})$ with $\lambda_1=\lambda_1^{i}$ and $\lambda_2=\lambda_2^{i}$. Denote by $M(\lambda_1,\lambda_2)$ the subspace of $M$ with $M(\lambda_1,\lambda_2)=\bigoplus_{(\ell,m)\in S} R_{\ell,m}(\lambda_1,\lambda_2)$ such that in $M(\lambda_1,\lambda_2)$ each of the operators $\Delta_1$ and $\Delta_2$ has one eigenvalue, $\lambda_1$ and $\lambda_2$ respectively. We want to show that $M(\lambda_1,\lambda_2)$ is a submodule of $M$, i.e.\ that it is invariant under $H_+$, $H_-$, $H_3$, $F_+$, $F_-$, and $F_3$, but this is clearly the case since $M(\lambda_1,\lambda_2)$ is invariant under $E_+$, $E_-$, $D_+$, $D_-$, and $D_0$ because $\Delta_1$ and $\Delta_2$ commute with these operators by \Cref{lem:commuteDeltas}. Finally note that the number of $M(\lambda_1,\lambda_2)$ in the decomposition of $M$ is countable since the number of $R_{\ell,m}$ is countable and the number of $R_{\ell,m}(\lambda_1^{i},\lambda_2^{i})$ in a given $R_{\ell,m}$ is finite, so decomposing each $M(\lambda_1,\lambda_2)$ we get the result.
 \end{proof}
 
 \begin{proposition}\label{prop:indecomposabledecomposition}
@@ -115,8 +115,8 @@ Now we are finally ready to begin considering the properties of $\Delta_1$ and $
   \end{align}
   for $\xi\in R_{\ell_0}$. Now the subspace $R_{\ell_0}$ is invariant under $D_0$, so we can find an eigenvector $\xi_0$ for $D_0$ such that $D_0\xi_0 = \mu\xi_0$ for some $\mu\in\C$. Thus we see that
   \begin{align*}
-    \Delta_1 \xi &= -\ell_0(\ell_0+1)\mu\xi_0 \\
-    \Delta_2 \xi &= (\ell_0^2-1)\xi - (\ell_0+1)\mu^2\xi,
+    \Delta_1 \xi_0 &= -\ell_0(\ell_0+1)\mu\xi_0 \\
+    \Delta_2 \xi_0 &= (\ell_0^2-1)\xi_0 - (\ell_0+1)\mu^2\xi_0,
   \end{align*}
   so we get eigenvalues $\lambda_1$ and $\lambda_2$ of $\Delta_1$ and $\Delta_2$ with
   \begin{align*}
@@ -140,8 +140,8 @@ Note that all such eigenvalues $\lambda_1$ and $\lambda_2$ for $\Delta_1$ and $\
 for $\xi_{\ell,m}\in R_{\ell,m}$, where $\ell_0\geq 0$ is an integral or half-integral number and $\ell_1$ is a complex number such that we can construct $N$ such that $\ell_0$ and $\ell_1$ are as we want.\todo{I have only showed the case with $\ell_1$ some real number, see earlier comments}
 
 \begin{proposition}\label{prop:eigenvaluesforDs}
-  Let $M$ be a Harish-Chandra module in which the Laplace operators $\Delta_1$ and $\Delta_2$ have only one eigenvalue $\lambda_1$ and $\lambda_2$ respectively. Then on each subspace $R_\ell$ the operators $D_+D_-$, $D_-D_+$, and $D_0$ have only one eigenvalue $\dd{\ell}{-}$, $\dd{\ell}{+}$, and $\dd{\ell}{+}$ respectively. Here the numbers $\dd{\ell}{-}$, $\dd{\ell}{+}$, and $\dd{\ell}{+}$ are expressed in terms of $\ell_0$ and $\ell_1$ in the following way:
-  \begin{align}
+  Let $M$ be a Harish-Chandra module in which the Laplace operators $\Delta_1$ and $\Delta_2$ have only one eigenvalue $\lambda_1$ and $\lambda_2$ respectively. Then on each subspace $R_\ell$ the operators $D_+D_-$, $D_-D_+$, and $D_0$ have only one eigenvalue $\dd{\ell}{-}$, $\dd{\ell}{+}$, and $\dd{\ell}{0}$ respectively. Here the numbers $\dd{\ell}{-}$, $\dd{\ell}{+}$, and $\dd{\ell}{0}$ are expressed in terms of $\ell_0$ and $\ell_1$ in the following way:
+  \begin{align}\label{eq:dformulaeonR_l}
     \begin{aligned}
       \dd{0}{-} &= \dd{1/2}{-}=0, \\
       \dd{\ell}{-} &= \dfrac{(\ell^2-\ell_0^2)(\ell_1^2-\ell^2)}{(4\ell^2-1)\ell^2} && \mbox{if } \ell\neq 0,\tfrac{1}{2}, \\
@@ -150,7 +150,7 @@ for $\xi_{\ell,m}\in R_{\ell,m}$, where $\ell_0\geq 0$ is an integral or half-in
       \dd{\ell}{0} &= \dfrac{i\ell_0\ell_1}{\ell(\ell+1)} && \mbox{if }\ell\neq 0.
     \end{aligned}
   \end{align}
-\end{proposition}\todo{I might want to change the result slightly. What happens if $R_{\ell+1}=0$, then we should have $\dd{\ell}{+}=0$, I either need to change the result or go back through the paper and correct some things and argue that this will not happen/will not matter}
+\end{proposition}\todo{I might want to change the result slightly. I need to say that we cannot have $R_{\ell+1}=0$ so that $\dd{\ell}{+}=0$ --- I either need to change the result or go back through the paper and correct some things and argue that this will not happen/will not matter}
 \begin{proof}
   By \cref{eq:Deltas} we see that
   \begin{align*}
@@ -173,7 +173,7 @@ for $\xi_{\ell,m}\in R_{\ell,m}$, where $\ell_0\geq 0$ is an integral or half-in
 
 Now denote by $C_s(\lambda_1,\lambda_2)$ for $s=1$ or $s=\tfrac{1}{2}$ the set of all Harish-Chandra modules for the pair $(L,L_k)$ in which the Laplace operators have the eigenvalues $\lambda_1$ and $\lambda_2$, and in which if $s=1$ every $M\in C_1(\lambda_1,\lambda_2)$ has only integral numbers as indices in the decomposition $M=\bigoplus_\ell R_\ell$, and if $s=\tfrac{1}{2}$ every $M\in C_{1/2}(\lambda_1,\lambda_2)$ has only half-integral numbers as indices in the decomposition $M=\bigoplus_\ell R_\ell$. 
 
-\begin{proposition}
+\begin{proposition}\label{prop:modulehom}
   Let $M\in C_s(\lambda_1,\lambda_2)$, $M'\in C_{s'}(\lambda_1',\lambda_2')$, where $(s,\lambda_1,\lambda_2)\neq (s',\lambda_1',\lambda_2')$. Then $\Hom_L(M,M')=0$.
 \end{proposition}
 \begin{proof}
