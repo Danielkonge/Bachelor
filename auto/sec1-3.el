@@ -7,6 +7,7 @@
     "lem:nonsingsimilar"
     "lem:Deltarelnonsing"
     "eq:Deltarelinnonsing"
+    "eq:deltatempcalc"
     "thm:objectscor"
     "eq:tempgammalm"))
  :latex)

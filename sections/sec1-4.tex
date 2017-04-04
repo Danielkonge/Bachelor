@@ -1,0 +1,96 @@
+\section{\texorpdfstring{The singular category $C(\lambda_1,\lambda_2)$}{The singular category C(lambda\_1,lambda\_2)}}
+
+Now we want to describe the singular category $C(\lambda_1,\lambda_2)$, i.e.\ Harish-Chandra modules for the pair $(L,L_k)$ with $\ell_1-\ell_0$ an integer. The description of such modules turns out to be quite a bit more complicated than in the non-singular case, where a finite dimensional vector space $P$ and a nilpotent linear map $a\colon P\to P$ describes the module.
+
+We define at first a category $S_0$ as follows. The objects $\widetilde{A}$ of $S_0$ are finite dimensional vector spaces $P_1$ and $P_2$ with four linear maps
+\begin{align}
+  d_+ \colon P_1\to P_2, && d_- \colon P_2\to P_1, && \delta_1\colon P_1\to 0 && \delta_2\colon P_2\to P_2
+\end{align}
+that satisfy the conditions
+\begin{align}
+  \begin{aligned}
+    d_-\delta_2 = \delta_2d_+ = 0, \\
+    \delta_2 \text{ and } d_+d_- \text{ are nilpotent.}
+  \end{aligned}
+\end{align}
+The morphisms $\gamma\colon \widetilde{A}\to \widetilde{A}'$ of $S_0$ are pairs of linear maps $\gamma=(\gamma_1,\gamma_2)$ with $\gamma_1\colon P_1\to P_1'$ and $\gamma_2\colon P_2\to P_2'$ such that the diagram
+\[
+  \begin{tikzcd}
+    P_1 \ar[d,"\gamma_1"] \ar[r,"d_+"] & P_2 \ar[d,"\gamma_2"] \ar[r,"\delta_2"] & P_2 \ar[d,"\gamma_2"] \ar[r,"d_-"] & P_1 \ar[d,"\gamma_1"] \\
+    P_1' \ar[r,"d_+'"] & P_2' \ar[r,"\delta_2'"] & P_2' \ar[r,"d_-'"] & P_1'
+  \end{tikzcd}
+\]
+commutes. Similarly to the singular case we now want to prove that the singular category $C(\lambda_1,\lambda_2)$ is equivalent to the category $S_0$, but before we can do that we need some lemmas.
+
+\begin{lemma}
+  In a singular module $M\in C(\lambda_1,\lambda_2)$ all the subspaces $R_{\ell,m}$ for $\ell_0\leq \ell\leq \abs{\ell_1}-1$ and all $m$ where it makes sense have the same dimension. The subspaces $R_{\ell,m}$ for $\ell\geq \abs{\ell_1}$ and all $m$ where it makes sense also have the same dimension. Furthermore the linear maps
+  \begin{align*}
+    D_+&\colon R_{\ell,m}\to R_{\ell+1,m} && \text{for }\ell\neq \abs{\ell_1}-1,\\
+    D_-&\colon R_{\ell,m}\to R_{\ell-1,m} && \text{for }\ell\neq\ell_0,\abs{\ell_1}
+  \end{align*}
+  are isomorphisms.
+\end{lemma}
+\begin{proof}
+  By \cref{eq:dformulaeonR_l}, we have that the eigenvalues $\dd{\ell}{-}$ and $\dd{\ell}{+}$ for $D_+D_-$ and $D_-D_+$ on $R_{\ell,m}$ are 
+  \begin{align*}
+    \dd{\ell}{+} &= \dfrac{((\ell+1)^2-\ell_0^2)(\ell_1^2-(\ell+1)^2)}{(4(\ell+1)^2-1)(\ell+1)^2}, & \dd{\ell}{-} &= \dfrac{(\ell^2-\ell_0^2)(\ell_1^2-\ell^2)}{(4\ell^2-1)\ell^2}
+  \end{align*}
+  for $\ell\neq \ell_0$ in the case of $\dd{\ell}{-}$, where $\dd{\ell_0}{-}=0$. Since $M$ is singular $\ell_1$ is real because $\ell_1-\ell_0$ is an integer and $\ell_0$ is real, and since $\abs{\ell_1}-\ell_0$ is a positive integer, \todo{Why positive?} we get that $\dd{\ell}{+}=0$ only for $\ell=\abs{\ell_1}-1=\ell_0+(\abs{\ell_1}-\ell_0)-1\in \Set{\ell_0,\ell_0+1,\dotsc}$ and $\dd{\ell}{-}=0$ only for $\ell=\ell_0$ and $\ell=\abs{\ell_1}=\ell_0+(\abs{\ell_1}-\ell_0)\in \Set{\ell_0+1,\ell_0+2,\dotsc}$. Hence the maps
+  \begin{align*}
+    D_-D_+&\colon R_{\ell,m}\to R_{\ell,m} && \text{for }\ell\neq \abs{\ell_1}-1,\\
+    D_+D_-&\colon R_{\ell,m}\to R_{\ell,m} && \text{for }\ell\neq \ell_0,\abs{\ell_1} \text{ and }m\neq \pm \ell
+  \end{align*}
+  have diagonals without zeros in their Schur decomposition, so they are invertible, and thus the maps
+  \begin{align*}
+    D_+&\colon R_{\ell,m}\to R_{\ell,m} && \text{for }\ell\neq \abs{\ell_1}-1,\\
+    D_-&\colon R_{\ell,m}\to R_{\ell,m} && \text{for }\ell\neq \ell_0,\abs{\ell_1} \text{ and }m\neq \pm \ell
+  \end{align*}
+  are injective. Since $E_+$ and $E_-$ are isomorphisms we already have that $R_{\ell,m}$ and $R_{\ell,m'}$ have the same dimension as we have already seen a few times, and therefore the above implies that the subspaces $R_{\ell,m}$ for $\ell=\ell_0,\dotsc,\abs{\ell_1}-1$ and $m$ where it makes sense all have the same dimension, and that the subspaces $R_{\ell,m}$ for $\ell\geq \abs{\ell_1}$ and $m$ where it makes sense all have the same dimension.
+\end{proof}
+
+Since $E_+$, $E_-$, $D_+$, and $D_-$ commute with $\Delta_1$ and $\Delta_2$ by \Cref{lem:commuteDeltas}, we get by the same method as in the proof of \Cref{lem:nonsingsimilar} that:
+
+\begin{lemma}\label{lem:singmodDeltasimilar}
+  In a singular module $M\in C(\lambda_1,\lambda_2)$ all the operators $(\Delta_i)_{\ell,m}$ with $\ell_0\leq \ell\leq \abs{\ell_1}-1$ are similar to $(\Delta_i)_{\ell_0,m_0}$ via the same matrix for $i=1,2$, and the corresponding operators $(\Delta_i)_{\ell,m}$ with $\ell\geq \abs{\ell_1}$ are similar to $(\Delta_i)_{\abs{\ell_1},m_0}$ via the same matrix for $i=1,2$.
+\end{lemma}
+
+\begin{lemma}\label{lem:Deltarelsing}
+  Define in the singular module $M\in C(\lambda_1,\lambda_2)$ a linear operator $\delta$ by
+  \begin{align}
+    \delta = \dfrac{1}{\ell_0^2-\ell_1^2}\Bigl( \Delta_2 + \dfrac{\Delta_1^2}{\ell_0^2} - (\ell_0^2-1)\id \Bigr)
+  \end{align}
+  for $\ell_0\neq 0$. Then on the subspaces $R_{\ell,m}$ for which $\ell_0\leq \ell\leq \abs{\ell_1}-1$ the operator $\delta$ is zero, and on the remaining subspaces $R_{\ell,m}$ $\delta$ is nilpotent.
+\end{lemma}
+\begin{proof}
+  That $\delta=0$ on the subspaces $R_{\ell,m}$ for which $\ell_0\leq \ell\leq \abs{\ell_1}-1$ follows by \Cref{lem:singmodDeltasimilar} and the same argument as in the proof of \Cref{lem:Deltarelnonsing}. And since $\Delta_1$ and $\Delta_2$ only have one eigenvalues $\lambda_1=-i\ell_0\ell1$ and $\lambda_2=\ell_0^2+\ell_1^2-1$ respectively we see that $\delta$ only has the eigenvalues
+  \begin{align*}
+    &\dfrac{1}{\ell_0^2-\ell_1^2}\Bigl( \lambda_2 + \dfrac{\lambda_1^2}{\ell_0^2} - (\ell_0^2-1)\id \Bigr) \\
+    &=\dfrac{1}{\ell_0^2-\ell_1^2}\Bigl( \ell_0^2+\ell_1^2-1 - \ell_1^2 - (\ell_0^2-1)\id \Bigr) \\
+    &=0,
+  \end{align*}
+  so in the Schur decomposition of $\delta$ the diagonal is only zeros and hence $\delta$ is nilpotent in general which gives the result.
+\end{proof}
+
+\begin{remark}
+  Comparing \Cref{lem:Deltarelsing} with \Cref{lem:Deltarelnonsing}, we see that this property of $\delta$ is one of the key differences between the singular and non-singular cases.
+\end{remark}
+
+We thus want to understand the map $\delta$ better for which we will need the lemma:
+
+\begin{lemma}
+  We have that
+  \begin{align}
+    \begin{aligned}
+      \delta D_+ \xi &= 0 && \text{for }\xi\in R_{\abs{\ell_1}-1,m},\\
+      D_-\delta \xi &= 0 && \text{for }\xi\in R_{\abs{\ell_1},m}.
+    \end{aligned}
+  \end{align}
+\end{lemma}
+\begin{proof}
+  The operator $\delta$ is a linear combination of $\Delta_1^2$, $\Delta_2$, and $\id$, so it commutes with $D_+$ and $D_-$. Hence since $\delta=0$ on $R_{\abs{\ell_1}-1,m}$ by \Cref{lem:Deltarelsing} $\delta D_+ \xi = D_+\delta \xi = 0$ for $\xi\in R_{\abs{\ell_1}-1,m}$ and $D_-\delta \xi = \delta D_-\xi = 0$ for $\xi \in R_{\abs{\ell_1},m}$ since then $D_-\xi\in R_{\abs{\ell_1}-1,m}$.
+\end{proof}
+
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: "../main"
+%%% End:

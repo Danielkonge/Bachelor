@@ -8,6 +8,7 @@
     "sections/sec1-1"
     "sections/sec1-2"
     "sections/sec1-3"
+    "sections/sec1-4"
     "sections/app1-0"
     "sections/app1-1"
     "sections/app1-2"
