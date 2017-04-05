@@ -9,6 +9,7 @@
     "eq:Deltarelinnonsing"
     "eq:deltatempcalc"
     "thm:objectscor"
+    "thm:nonsingcateq"
     "eq:tempgammalm"))
  :latex)
 

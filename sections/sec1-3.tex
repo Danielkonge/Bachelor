@@ -98,7 +98,7 @@ for $\xi\in R_{\ell_0,m_0}=P$. Denote now by $\widetilde{A}$ the pair $(P,a)$ co
       R_{\ell,m}\ar[u,"E_+"] \ar[r,"D_+",swap] & R_{\ell+1,m}\ar[u,"E_+",swap]
     \end{tikzcd}
   \]
-  commutes for $-\ell\leq m<\ell$. Now we only need to construct linear maps $D_0$ and $D_-$ on $M$ satisfying properties as we have seen earlier, but to do this we will first define linear maps $\Delta_1$ and $\Delta_2$ corresponding to the Laplace operators.
+  commutes for $-\ell\leq m<\ell$, i.e.\ $(D_+)_{\ell,m+1}=(E_+)_{\ell,m+1}^{-1} (D_+)_{\ell,m} (E_+)_{\ell+1,m}$. Now we only need to construct linear maps $D_0$ and $D_-$ on $M$ satisfying properties as we have seen earlier, but to do this we will first define linear maps $\Delta_1$ and $\Delta_2$ corresponding to the Laplace operators.
 
   On $R_{\ell_0,m_0}$ set 
   \begin{align}
@@ -143,7 +143,7 @@ Now let $S$ be the category with objects pairs $A=(P,a)$, where $P$ is a finite 
 \]
 commutes. We have already shown that there is a correspondence between non-singular modules $M\in C(\lambda_1,\lambda_2)$ and pairs $A=(P,a)\in S$, and now we want to show that this correspondence is functorial.
 
-\begin{theorem}
+\begin{theorem}\label{thm:nonsingcateq}
   The non-singular category $C(\lambda_1,\lambda_2)$ is equivalent to the category $S$.
 \end{theorem}
 \begin{proof}

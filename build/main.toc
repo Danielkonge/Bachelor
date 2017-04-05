@@ -29,9 +29,9 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {1.4}The singular category $C(\lambda _1,\lambda _2)$}{33}{section.1.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\chapternumberline {2}Linear relations}{37}{chapter.2}
+\contentsline {chapter}{\chapternumberline {2}Linear relations}{39}{chapter.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{Bibliography}{39}{section*.24}
+\contentsline {chapter}{Bibliography}{41}{section*.25}
 \defcounter {refsection}{0}\relax 
 \contentsline {appendix}{\chapternumberline {A}Calculations}{A-1}{appendix.A}
 \defcounter {refsection}{0}\relax 
