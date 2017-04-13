@@ -383,19 +383,21 @@ Then we can also consider $V(2)\otimes V(n)$ an inner product space with inner p
 \begin{align}\label{eq:inproddef2}
   \inner{w\otimes v}{w'\otimes v'} = \inner{w}{w'}\cdot\inner{v}{v'}
 \end{align}\todo{Maybe write about why this is an inner product}
-for $w,w'\in V(2)$ and $v,v'\in V(n)$. Now by straightforward calculations, cf.\ \Cref{sec:innerproductscalc}, we get that
+for $w,w'\in V(2)$ and $v,v'\in V(n)$. By straightforward calculations, cf.\ \Cref{sec:innerproductscalc}, we get that
 \begin{align}\label{eq:inprodres}
   \inner{s_0}{s_0} = 1, \qquad \inner{t_0}{t_0} = \dfrac{n(n+2)}{2}, \qquad \inner{u_0}{u_0} = \dfrac{n^2(n+1)(n-1)}{4}.
 \end{align}
 
-Now set $\overline w_k = w_k/\norm{w_k}$, $\overline v_k = v_k/\norm{v_k}$, $\overline s_k = s_k/\norm{s_k}$, $\overline t_k = t_k/\norm{t_k}$, and $\overline s_k = s_k/\norm{s_k}$ for all possible $k$, where $\norm{}$ is given by $\norm{v}=\sqrt{\inner{v}{v}}$ as usually in an inner product space. Note that \todo{Show the following equations --- I can show these by long calculations, but I think there is an easier way}
-\begin{align*}
-  \inner{w_k}{w_k} &= \binom{2}{k} \\
-  \inner{v_k}{v_k} &= \binom{n}{k} \\
-  \inner{s_k}{s_k} &= \inner{s_0}{s_0}\binom{n+2}{k} = \binom{n+2}{k} \\
-  \inner{t_k}{t_k} &= \inner{t_0}{t_0}\binom{n}{k} = \dfrac{n(n+2)}{2}\binom{n}{k} \\
-  \inner{u_k}{u_k} &= \inner{u_0}{u_0}\binom{n-2}{k} = \dfrac{n^2(n+1)(n-1)}{4}\binom{n-2}{k}
-\end{align*}
+Now set $\overline w_k = w_k/\norm{w_k}$, $\overline v_k = v_k/\norm{v_k}$, $\overline s_k = s_k/\norm{s_k}$, $\overline t_k = t_k/\norm{t_k}$, and $\overline s_k = s_k/\norm{s_k}$ for all possible $k$, where $\norm{}$ is given by $\norm{v}=\sqrt{\inner{v}{v}}$ as usually in an inner product space. Note, cf.\ \Cref{sec:innerproductscalc}, that
+\begin{align}\label{eq:inprodres2}
+  \begin{aligned}
+    \inner{w_k}{w_k} &= \binom{2}{k} \\
+    \inner{v_k}{v_k} &= \binom{n}{k} \\
+    \inner{s_k}{s_k} &= \inner{s_0}{s_0}\binom{n+2}{k} = \binom{n+2}{k} \\
+    \inner{t_k}{t_k} &= \inner{t_0}{t_0}\binom{n}{k} = \dfrac{n(n+2)}{2}\binom{n}{k} \\
+    \inner{u_k}{u_k} &= \inner{u_0}{u_0}\binom{n-2}{k} = \dfrac{n^2(n+1)(n-1)}{4}\binom{n-2}{k}
+  \end{aligned}
+\end{align}
 for $k$ where it makes sense, so we see that
 \begin{align}\label{eq:normedbases1}
   w_k &= \sqrt{\binom{2}{k}}\overline w_k, & v_k &= \sqrt{\binom{n}{k}}\overline v_k, & s_k &= \sqrt{\binom{n+2}{k}}\overline s_k,
@@ -504,7 +506,7 @@ for $\xi\in R_{\ell,m}$. \todo{I haven't shown this properly yet --- I guess it 
 
 We want to classify the simple Harish-Chandra modules for the pair $(L,L_k)$ for later use. Before most of the work we need some basic results.
 
-Let $M$ be an simple Harish-Chandra module over $L$ and suppose that each non-trivial subspace $R_{\ell,m}$ in $M=\bigoplus_{\ell,m} R_{\ell,m}$ is one dimensional. In this case each $L_k$-module $R_\ell\simeq M(2\ell)$ is simple. We will later show that actually all simple Harish-Chandra modules are of this kind, so we indeed get a classification of the simple Harish-Chandra modules in the following.
+Let $M$ be an simple Harish-Chandra module over $L$ and suppose that each non-trivial subspace $R_{\ell,m}$ in $M=\bigoplus_{\ell,m} R_{\ell,m}$ is one dimensional. In this case each $L_k$-module $R_\ell$ is either isomorphic to the simple module $M(2\ell)$ or $0$. We will later show that actually all simple Harish-Chandra modules are of this kind, so we indeed get a classification of the simple Harish-Chandra modules in the following.
 
 Denote by $\ell_0$ the minimal index $\ell$ in the decomposition $M=\bigoplus_\ell R_\ell$. Note that
 \begin{align*}

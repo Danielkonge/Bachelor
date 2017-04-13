@@ -25,61 +25,70 @@ for $\xi\in R_{\ell,m}$ by using \cref{eq:F_3action} and the definition of how w
           &\phantom{{}={}}{} + \Bigl( \sqrt{((\ell+1)^2-m^2)(\ell+m+2)(\ell-m+1)} \\*
           &\phantom{{}={}()}{} - \sqrt{(\ell+m+1)(\ell-m)((\ell+1)^2-(m+1)^2)}\Bigr)D_+E_+\xi
 \end{align*}
-for $\xi\in R_{\ell,m}$ and $-\ell+1 \leq m < \ell-1$. In the case where $m=-\ell$ the only problem is at the term with $E_+D_-$, but this is not a problem because the term vanishes since there is $\ell+m$ as part of the coefficient, so the formula also holds true in this case. In case $m=\ell-1$ the only problem is at the term with $D_-E_+$, but here we have $\ell^2-(m+1)^2$ as part of the coefficient, so this term also vanishes, and the formula also hold true in this case. Finally in case $m=\ell$ the terms with $D_-E_+$, $D_0E_+$, $D_+E_+$, $E_+D_-$, and $E_+D_0$ all cause problems, but again all of these terms vanish, so the formula still holds true in this case. Now by pure algebraic manipulation note that \todo{I have checked this in Mathematica, but I would prefer not to write this out, although I can do it later if necessary}
+for $\xi\in R_{\ell,m}$ and $-\ell+1 \leq m < \ell-1$. In the case where $m=-\ell$ the only problem is at the term with $E_+D_-$, but this is not a problem because the term vanishes since there is $\ell+m$ as part of the coefficient, so the formula also holds true in this case. In case $m=\ell-1$ the only problem is at the term with $D_-E_+$, but here we have $\ell^2-(m+1)^2$ as part of the coefficient, so this term also vanishes, and the formula also hold true in this case. Finally in case $m=\ell$ the terms with $D_-E_+$, $D_0E_+$, $D_+E_+$, $E_+D_-$, and $E_+D_0$ all cause problems, but again all of these terms vanish, so the formula still holds true in this case. Now by noting that $\ell^2-m^2=(\ell+m)(\ell-m)$ and $\ell^2-(m+1)^2=(\ell+m+1)(\ell-m-1)$, we see that
 \begin{align*}
   &\sqrt{(\ell+m+1)(\ell-m)(\ell^2-(m+1)^2)} - \sqrt{(l^2-m^2)(l+m)(l-m-1)} \\
+  &=\sqrt{(\ell+m+1)(\ell-m)(\ell+m+1)(\ell-m-1)} \\
+  &\phantom{{}={}}{} - \sqrt{(\ell+m)(\ell-m)(\ell+m)(\ell-m-1)} \\
+  &= (\ell+m+1)\sqrt{(\ell-m)(\ell-m-1)} - (\ell+m)\sqrt{(\ell-m)(\ell-m-1)} \\
   &= \sqrt{(\ell-m)(\ell-m-1)}
 \end{align*}
-and
+and similarly
 \begin{align*}
   &\sqrt{((\ell+1)^2-m^2)(\ell+m+2)(\ell-m+1)} \\*
   &\phantom{{}={}}{} - \sqrt{(\ell+m+1)(\ell-m)((\ell+1)^2-(m+1)^2)} \\
-  &= \sqrt{(\ell+m+1)((\ell+m+2))},
+  &= \sqrt{(\ell+m+1)(\ell+m+2)}.
 \end{align*}
-so we get that
+So we get that
 \begin{align*}
   F_+ \xi &= \sqrt{(\ell-m)(\ell-m-1)} D_-E_+ \xi - \sqrt{(\ell+m+1)(\ell-m)} D_0E_+\xi \\*
   &\phantom{{}={}}{} - \sqrt{(\ell+m+1)(\ell+m+2)} D_+E_+\xi
 \end{align*}
 for $\xi\in R_{\ell,m}$ and $-\ell \leq m \leq \ell$.
 
-Likewise we get that
-\begin{align*}
-  F_- \xi &= [H_-,F_3] \xi = H_-F_3 \xi - F_3H_- \xi \\
-          &= \sqrt{\ell^2-m^2} H_-D_- \xi - m H_-D_0 \xi - \sqrt{(\ell+1)^2-m^2} H_-D_+ \xi \\*
-          &\phantom{{}={}}{} - \sqrt{(\ell+m)(\ell-m+1)} F_3 E_-\xi \\
-          &= \sqrt{\ell^2-m^2} \sqrt{((\ell-1)+m)((\ell-1)-m+1)} E_-D_- \\*
-          &\phantom{{}={}}{} - m\sqrt{(\ell+m)(\ell-m+1)} E_-D_0\xi \\*
-          &\phantom{{}={}}{} - \sqrt{(\ell+1)^2-m^2}\sqrt{((\ell+1)+m)((\ell+1)-m+1)} E_-D_+ \\*
-          &\phantom{{}={}}{} - \sqrt{(\ell+m)(\ell-m+1)} \Bigl( \sqrt{\ell^2-(m-1)^2}D_-E_-\xi - (m-1)D_0E_-\xi \\*
-          &\phantom{{}={}}{} - \sqrt{(\ell+1)^2-(m-1)^2} D_+E_-\xi \Bigr) \\
-          &= \sqrt{\ell^2-m^2} \sqrt{(\ell+m-1)(\ell-m)} D_-E_- - m\sqrt{(\ell+m)(\ell-m+1)} D_0E_-\xi \\*
-          &\phantom{{}={}}{} - \sqrt{(\ell+1)^2-m^2}\sqrt{(\ell+m+1)(\ell-m+2)} D_+E_- \\*
-          &\phantom{{}={}}{} - \sqrt{(\ell+m)(\ell-m+1)} \Bigl( \sqrt{\ell^2-(m-1)^2}D_-E_-\xi - (m-1)D_0E_-\xi \\*
-          &\phantom{{}={}}{} - \sqrt{(\ell+1)^2-(m-1)^2} D_+E_-\xi \Bigr) \\
-          &= -\Bigl( \sqrt{(\ell+m)(\ell-m+1)(\ell^2-(m-1)^2)} \\*
-          &\phantom{{}={}()}{} - \sqrt{(\ell^2-m^2)(\ell+m-1)(\ell-m)}  \Bigr)D_-E_-\xi \\*
-          &\phantom{{}={}}{} - \sqrt{(\ell+m)(\ell-m+1)} D_0E_-\xi \\*
-          &\phantom{{}={}}{} - \Bigl( \sqrt{((\ell+1)^2-m^2)(\ell+m+1)(\ell-m+2)} \\*
-          &\phantom{{}={}()}{} - \sqrt{(\ell+m)(\ell-m+1)((\ell+1)^2-(m-1)^2)}\Bigr)D_+E_-\xi
-\end{align*}
-for $\xi\in R_{\ell,m}$ and $-\ell+1 < m\leq \ell-1$. Again note that by the problematic terms vanish in such a way that this formula holds true for all $m$ with $-\ell\leq m\leq \ell$. Also note that
-\begin{align*}
-  &\sqrt{(\ell+m)(\ell-m+1)(\ell^2-(m-1)^2)} - \sqrt{(\ell^2-m^2)(\ell+m-1)(\ell-m)} \\*
-  &= \sqrt{(\ell+m)(\ell+m-1)}
-\end{align*}
-and
-\begin{align*}
-  &\sqrt{((\ell+1)^2-m^2)(\ell+m+1)(\ell-m+2)} \\*
-  &\phantom{{}={}}{} - \sqrt{(\ell+m)(\ell-m+1)((\ell+1)^2-(m-1)^2)} \\*
-  &= \sqrt{(\ell-m+1)(\ell-m+2)},
-\end{align*}
-so we get that
+Similarly we get that
 \begin{align*}
   F_- \xi &= -\sqrt{(\ell+m)(\ell+m-1)} D_-E_- \xi - \sqrt{(\ell+m)(\ell-m+1)} D_0E_- \xi \\*
   &\phantom{{}={}}{} - \sqrt{(\ell-m+1)(\ell-m+2)} D_+E_- \xi
 \end{align*}
-for $\xi\in R_{\ell,m}$. Thus indeed we get \cref{eq:Factions}. 
+for $\xi\in R_{\ell,m}$, and thus indeed we get \cref{eq:Factions}. 
+
+% \begin{align*}
+%   F_- \xi &= [H_-,F_3] \xi = H_-F_3 \xi - F_3H_- \xi \\
+%           &= \sqrt{\ell^2-m^2} H_-D_- \xi - m H_-D_0 \xi - \sqrt{(\ell+1)^2-m^2} H_-D_+ \xi \\*
+%           &\phantom{{}={}}{} - \sqrt{(\ell+m)(\ell-m+1)} F_3 E_-\xi \\
+%           &= \sqrt{\ell^2-m^2} \sqrt{((\ell-1)+m)((\ell-1)-m+1)} E_-D_- \\*
+%           &\phantom{{}={}}{} - m\sqrt{(\ell+m)(\ell-m+1)} E_-D_0\xi \\*
+%           &\phantom{{}={}}{} - \sqrt{(\ell+1)^2-m^2}\sqrt{((\ell+1)+m)((\ell+1)-m+1)} E_-D_+ \\*
+%           &\phantom{{}={}}{} - \sqrt{(\ell+m)(\ell-m+1)} \Bigl( \sqrt{\ell^2-(m-1)^2}D_-E_-\xi - (m-1)D_0E_-\xi \\*
+%           &\phantom{{}={}}{} - \sqrt{(\ell+1)^2-(m-1)^2} D_+E_-\xi \Bigr) \\
+%           &= \sqrt{\ell^2-m^2} \sqrt{(\ell+m-1)(\ell-m)} D_-E_- - m\sqrt{(\ell+m)(\ell-m+1)} D_0E_-\xi \\*
+%           &\phantom{{}={}}{} - \sqrt{(\ell+1)^2-m^2}\sqrt{(\ell+m+1)(\ell-m+2)} D_+E_- \\*
+%           &\phantom{{}={}}{} - \sqrt{(\ell+m)(\ell-m+1)} \Bigl( \sqrt{\ell^2-(m-1)^2}D_-E_-\xi - (m-1)D_0E_-\xi \\*
+%           &\phantom{{}={}}{} - \sqrt{(\ell+1)^2-(m-1)^2} D_+E_-\xi \Bigr) \\
+%           &= -\Bigl( \sqrt{(\ell+m)(\ell-m+1)(\ell^2-(m-1)^2)} \\*
+%           &\phantom{{}={}()}{} - \sqrt{(\ell^2-m^2)(\ell+m-1)(\ell-m)}  \Bigr)D_-E_-\xi \\*
+%           &\phantom{{}={}}{} - \sqrt{(\ell+m)(\ell-m+1)} D_0E_-\xi \\*
+%           &\phantom{{}={}}{} - \Bigl( \sqrt{((\ell+1)^2-m^2)(\ell+m+1)(\ell-m+2)} \\*
+%           &\phantom{{}={}()}{} - \sqrt{(\ell+m)(\ell-m+1)((\ell+1)^2-(m-1)^2)}\Bigr)D_+E_-\xi
+% \end{align*}
+% for $\xi\in R_{\ell,m}$ and $-\ell+1 < m\leq \ell-1$. Again note that by the problematic terms vanish in such a way that this formula holds true for all $m$ with $-\ell\leq m\leq \ell$. Also note that
+% \begin{align*}
+%   &\sqrt{(\ell+m)(\ell-m+1)(\ell^2-(m-1)^2)} - \sqrt{(\ell^2-m^2)(\ell+m-1)(\ell-m)} \\*
+%   &= \sqrt{(\ell+m)(\ell+m-1)}
+% \end{align*}
+% and
+% \begin{align*}
+%   &\sqrt{((\ell+1)^2-m^2)(\ell+m+1)(\ell-m+2)} \\*
+%   &\phantom{{}={}}{} - \sqrt{(\ell+m)(\ell-m+1)((\ell+1)^2-(m-1)^2)} \\*
+%   &= \sqrt{(\ell-m+1)(\ell-m+2)},
+% \end{align*}
+% so we get that
+% \begin{align*}
+%   F_- \xi &= -\sqrt{(\ell+m)(\ell+m-1)} D_-E_- \xi - \sqrt{(\ell+m)(\ell-m+1)} D_0E_- \xi \\*
+%   &\phantom{{}={}}{} - \sqrt{(\ell-m+1)(\ell-m+2)} D_+E_- \xi
+% \end{align*}
+% for $\xi\in R_{\ell,m}$. Thus indeed we get \cref{eq:Factions}. 
 
 %%% Local Variables:
 %%% mode: latex

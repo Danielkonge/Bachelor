@@ -2,6 +2,7 @@
  "app1-3"
  (lambda ()
    (LaTeX-add-labels
-    "sec:innerproductscalc"))
+    "sec:innerproductscalc"
+    "eq:inproperty"))
  :latex)
 

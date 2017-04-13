@@ -1,21 +1,6 @@
 \section{\texorpdfstring{Inner products in $V(2)\otimes V(n)$}{Inner products in V(2) tensor V(n)}}\label{sec:innerproductscalc}
 
-Given $s_0=w_0\otimes v_0$, $t_0=w_0\otimes v_1 - \tfrac{n}{2}w_1\otimes v_0$, and $u_0=w_0\otimes v_2 - \tfrac{n-1}{2}w_1\otimes v_1 + \tfrac{n(n-1)}{2}w_2\otimes v_0$ from \cref{eq:s_kbasisres}, \cref{eq:t_kbasisres}, and \cref{eq:u_kbasisres}, we want to find $\inner{s_0}{s_0}$, $\inner{t_0}{t_0}$, and $\inner{u_0}{u_0}$ using the inner products of \cref{eq:inproddef1} and \cref{eq:inproddef2}. We see that
-\begin{align*}
-  \inner{s_0}{s_0} &= \inner{w_0\otimes v_0}{w_0\otimes v_0} = \inner{w_0}{w_0} \cdot \inner{v_0}{v_0} \\
-  &= \binom{2}{0}\cdot\binom{n}{0} = 1.
-\end{align*}
-Likewise we get that
-\begin{align*}
-  \inner{t_0}{t_0} &= \inner[\Big]{w_0\otimes v_1 - \dfrac{n}{2}w_1\otimes v_0}{w_0\otimes v_1 - \dfrac{n}{2}w_1\otimes v_0} \\
-                   &= \inner{w_0\otimes v_1}{w_0\otimes v_1} - \dfrac{n}{2}\inner{w_0\otimes v_1}{w_1\otimes v_0} - \dfrac{n}{2}\inner{w_1\otimes v_0}{w_0\otimes v_1} \\*
-                   &\phantom{{}={}}{} + \dfrac{n^2}{4}\inner{w_1\otimes v_0}{w_1\otimes v_0} \\
-                   &= \inner{w_0}{w_0}\cdot\inner{v_1}{v_1} - \dfrac{n}{2}\inner{w_0}{w_1}\inner{v_1}{v_0} - \dfrac{n}{2}\inner{w_1}{w_0}\cdot\inner{v_0}{v_1} \\*
-                   &\phantom{{}={}}{} + \dfrac{n^2}{4}\inner{w_1}{w_1}\cdot\inner{v_0}{v_0} \\
-                   &= \binom{2}{0}\cdot\binom{n}{1} - 0 - 0 + \dfrac{n^2}{4}\binom{2}{1}\cdot\binom{n}{0} \\
-                   &= n + \dfrac{n^2}{2} = \dfrac{n(n+2)}{2},
-\end{align*}
-and noting that as above all terms with $\inner{w_i\otimes v_j}{w_k\otimes v_\ell}$ with $i\neq k$ or $j\neq \ell$ vanish since then either $\inner{w_i}{w_k}=0$ or $\inner{v_j}{v_\ell}$, we see that
+Given $s_0=w_0\otimes v_0$, $t_0=w_0\otimes v_1 - \tfrac{n}{2}w_1\otimes v_0$, and $u_0=w_0\otimes v_2 - \tfrac{n-1}{2}w_1\otimes v_1 + \tfrac{n(n-1)}{2}w_2\otimes v_0$ from \cref{eq:s_kbasisres}, \cref{eq:t_kbasisres}, and \cref{eq:u_kbasisres}, we want to find $\inner{s_0}{s_0}$, $\inner{t_0}{t_0}$, and $\inner{u_0}{u_0}$ using the inner products of \cref{eq:inproddef1} and \cref{eq:inproddef2}. Noting that all terms with $\inner{w_i\otimes v_j}{w_k\otimes v_\ell}$ with $i\neq k$ or $j\neq \ell$ vanish since then either $\inner{w_i}{w_k}=0$ or $\inner{v_j}{v_\ell}=0$, we see that
 \begin{align*}
   \inner{u_0}{u_0} &= \Bigl\langle w_0\otimes v_2 - \dfrac{n-1}{2}w_1\otimes v_1 + \dfrac{n(n-1)}{2}w_2\otimes v_0, \\*
                    &\phantom{{}={}\Bigl\langle }{} w_0\otimes v_2 - \dfrac{n-1}{2}w_1\otimes v_1 + \dfrac{n(n-1)}{2}w_2\otimes v_0 \Bigr\rangle \\
@@ -28,7 +13,66 @@ and noting that as above all terms with $\inner{w_i\otimes v_j}{w_k\otimes v_\el
                    &= n(n-1)\dfrac{2+2(n-1)+n(n-1)}{4} \\
                    &= n(n-1)\dfrac{n^2 + n}{4} = \dfrac{n^2(n+1)(n-1)}{4}.
 \end{align*}
-Thus we get exactly the results of \cref{eq:inprodres}. \todo{Need to show $\inner{s_k}{s_k}=\inner{s_0}{s_0}\binom{n+2}{k}$ and more}
+Similarly we get that
+\begin{align*}
+  \inner{s_0}{s_0} = 1
+\end{align*}
+and
+\begin{align*}
+  \inner{t_0}{t_0} = \dfrac{n(n+2)}{2}.
+\end{align*}
+% \begin{align*}
+%   \inner{s_0}{s_0} &= \inner{w_0\otimes v_0}{w_0\otimes v_0} = \inner{w_0}{w_0} \cdot \inner{v_0}{v_0} \\
+%   &= \binom{2}{0}\cdot\binom{n}{0} = 1.
+% \end{align*}
+% Likewise we get that
+% \begin{align*}
+%   \inner{t_0}{t_0} &= \inner[\Big]{w_0\otimes v_1 - \dfrac{n}{2}w_1\otimes v_0}{w_0\otimes v_1 - \dfrac{n}{2}w_1\otimes v_0} \\
+%                    &= \inner{w_0\otimes v_1}{w_0\otimes v_1} - \dfrac{n}{2}\inner{w_0\otimes v_1}{w_1\otimes v_0} - \dfrac{n}{2}\inner{w_1\otimes v_0}{w_0\otimes v_1} \\*
+%                    &\phantom{{}={}}{} + \dfrac{n^2}{4}\inner{w_1\otimes v_0}{w_1\otimes v_0} \\
+%                    &= \inner{w_0}{w_0}\cdot\inner{v_1}{v_1} - \dfrac{n}{2}\inner{w_0}{w_1}\inner{v_1}{v_0} - \dfrac{n}{2}\inner{w_1}{w_0}\cdot\inner{v_0}{v_1} \\*
+%                    &\phantom{{}={}}{} + \dfrac{n^2}{4}\inner{w_1}{w_1}\cdot\inner{v_0}{v_0} \\
+%                    &= \binom{2}{0}\cdot\binom{n}{1} - 0 - 0 + \dfrac{n^2}{4}\binom{2}{1}\cdot\binom{n}{0} \\
+%                    &= n + \dfrac{n^2}{2} = \dfrac{n(n+2)}{2},
+% \end{align*}
+% and noting that as above all terms with $\inner{w_i\otimes v_j}{w_k\otimes v_\ell}$ with $i\neq k$ or $j\neq \ell$ vanish since then either $\inner{w_i}{w_k}=0$ or $\inner{v_j}{v_\ell}$, we see that
+% \begin{align*}
+%   \inner{u_0}{u_0} &= \Bigl\langle w_0\otimes v_2 - \dfrac{n-1}{2}w_1\otimes v_1 + \dfrac{n(n-1)}{2}w_2\otimes v_0, \\*
+%                    &\phantom{{}={}\Bigl\langle }{} w_0\otimes v_2 - \dfrac{n-1}{2}w_1\otimes v_1 + \dfrac{n(n-1)}{2}w_2\otimes v_0 \Bigr\rangle \\
+%                    &= \inner{w_0\otimes v_2}{w_0\otimes v_2} + \dfrac{(n-1)^2}{4}\inner{w_1\otimes v_1}{w_1\otimes v_1} \\*
+%                    &\phantom{{}={}}{} + \dfrac{n^2(n-1)^2}{4}\inner{w_2\otimes v_0}{w_2\otimes v_0} \\
+%                    &= \inner{w_0}{w_0}\cdot\inner{v_2}{v_2} + \dfrac{(n-1)^2}{4}\inner{w_1}{w_1}\cdot\inner{v_1}{v_1} \\*
+%                    &\phantom{{}={}}{} + \dfrac{n^2(n-1)^2}{4}\inner{w_2}{w_2}\cdot\inner{v_0}{v_0} \\
+%                    &= \binom{2}{0}\cdot\binom{n}{2} + \dfrac{(n-1)^2}{4}\binom{2}{1}\binom{n}{1} + \dfrac{n^2(n-1)^2}{4}\binom{2}{2}\cdot\binom{n}{0} \\
+%                    &= \dfrac{n(n-1)}{2} + \dfrac{n(n-1)^2}{2} + \dfrac{n^2(n-1)^2}{4} \\
+%                    &= n(n-1)\dfrac{2+2(n-1)+n(n-1)}{4} \\
+%                    &= n(n-1)\dfrac{n^2 + n}{4} = \dfrac{n^2(n+1)(n-1)}{4}.
+% \end{align*}
+Thus we indeed get \cref{eq:inprodres}.
+
+Now we want to show that we also have \cref{eq:inprodres2}. Working with the basis $(v_0,\dotsc,v_n)$ of $V(n)$ from \cref{eq:slmodbasis} first note that by \cref{eq:inproddef1} $\inner{h.v_j}{v_k}=(n-2j)\delta_{jk}\binom{n}{k}=\inner{v_j}{h.v_k}$. Also for $j\neq k+1$, we have $\inner{x.v_j}{v_k}=0=\inner{v_j}{y.v_k}$, while $\inner{x.v_{k+1}}{v_k}=(n-k)\binom{n}{k}=(k+1)\binom{n}{k+1}=\inner{v_{k+1}}{y.v_k}$, so $\inner{x.v_j}{v_k}=\inner{v_j}{y.v_k}$ for all $j$. By symmetry also $\inner{y.v_j}{v_k}=\inner{v_j}{x.v_k}$, and so for all $v,w\in V(n)$
+\begin{align}\label{eq:inproperty}
+  \inner{X.v}{w} = \inner{v}{X^H.w} \qquad \mbox{for all $X\in\slc$},
+\end{align}
+since $h^H=h$, $x^H=y$, and $y^H=x$ by the definitions in \cref{eq:xhy}. The property of \cref{eq:inproperty} determines the inner product up to a positive factor. To see this note that $h^H=h$, so by linear algebra its eigenvalues are in $\R$ and distinct eigenspaces of $h$ are orthogonal. Therefore since $(v_0,\dotsc,v_n)$ is a basis with eigenvectors of $h$ from distinct eigenspaces the property \cref{eq:inproperty} implies that $\inner{v_k,v_j}=0$ for $j\neq k$. Also the property implies that $\inner{y.v_k,v_{k+1}}=\inner{v_k}{x.v_{k+1}}$, so
+\begin{align*}
+  (k+1)\inner{v_{k+1},v_{k+1}} = \inner{y.v_k}{v_{k+1}} = \inner{v_k}{x.v_{k+1}} = (n-k)\inner{v_k}{v_k},
+\end{align*}
+and inductively we see that $\inner{v_k}{v_k}$ is determined by $\inner{v_0}{v_0}$, so by the above the inner product is determined by $\inner{v_0}{v_0}$. More precisely since 
+\begin{align*}
+  \dfrac{n-k}{k+1}\binom{n}{k} = \binom{n}{k+1}
+\end{align*}
+we get inductively that
+\begin{align*}
+  \inner{v_k}{v_k} = \inner{v_0}{v_0}\binom{n}{k}.
+\end{align*}
+
+Since the inner products of $V(2)$ and $V(n)$ satisfy \cref{eq:inproperty}, it is clear by \cref{eq:inproddef2} that also the inner product of $V(2)\otimes V(n)$ satisfy \cref{eq:inproperty}, and so clearly also the restrictions to the submodules corresponding to either $V(n-2)$, $V(n)$, or $V(n+2)$ also satisfy this property. Therefore as above we get e.g.\
+\begin{align*}
+  \inner{s_k}{s_k} = \inner{s_0}{s_0}\binom{n+2}{k}
+\end{align*}
+by working in $V(n+2)$ instead of $V(n)$. Similarly we get the analogous results for $t_k$ and $u_k$ giving us \cref{eq:inprodres2}. 
+
 %%% Local Variables:
 %%% mode: latex
 %%% TeX-master: "../main"

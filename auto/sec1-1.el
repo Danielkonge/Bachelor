@@ -26,6 +26,7 @@
     "eq:inproddef1"
     "eq:inproddef2"
     "eq:inprodres"
+    "eq:inprodres2"
     "eq:normedbases1"
     "eq:normedbases2"
     "rem:changeindex"
