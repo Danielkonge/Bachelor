@@ -6,30 +6,57 @@ Now we want to continue our work using our knowledge of the classification of si
 
 Let $U(L)$ be the universal enveloping algebra of $L$, cf.\ \cite[Appendix~E]{jantzen}. We know, cf.\ \cite[p.~E-9]{jantzen}, that $M$ is an $L$-module if and only if it is an $U(L)$-module, so we can describe $L$-modules by describing $U(L)$-modules. To do this we will first need to have an explicit description of the center $Z(U(L))$ of $U(L)$. We will begin this description by first noting that $Z(U(\slpr))\simeq Z(U(\slc))\otimes Z(U(\slc))$, which follows from the fact that $Z(U(L_1\times L_2))\simeq Z(U(L_1))\otimes Z(U(L_2))$ for Lie algebras $L_1$ and $L_2$ in general cf.\ \Cref{sec:centeriso}.
 
-We have seen in Exercise~11 in the Lie algebra course \todo{Maybe write the argument in an appendix or find better reference} that $Z(U(\slc))$ is the algebra of polynomials in $C=h^2+2h+4yx$, i.e.\ $Z(U(L))=\C[C]$. Thus we see that $Z(U(\slc))\otimes Z(U(\slc))$ is the algebra of polynomials in $C\otimes 1$ and $1\otimes C$, or equivalently the algebra of polynomials in $C\otimes 1 - 1\otimes C$ and $C\otimes 1 + 1\otimes C$. Translating back to $Z(U(L))$ with the isomorphism $\psi$ from \cref{eq:U(L)iso}, noting that actually we have used the notation $\iota_1(C)=C$ in $U(L_1)$ and $\iota_2(C)=C$ in $U(L_2)$ above, we see that
-\begin{align*}
-  \psi(\iota_1(C)\otimes 1 - 1\otimes \iota_2(C)) &= \psi_1\iota_1(C)\psi_2(1) - \psi_1(1)\psi_2\iota_2(C) \\
-  &= \iota(C,0) - \iota(0,C) = \iota(C,-C).
-\end{align*}
-Now we will again use the notation $\iota(u,v)=(u,v)$ in $U(L)$ for $(u,v)\in L$ and likewise with $\iota_1$ and $\iota_2$, so the above says that $\psi(C\otimes 1-1\otimes C)=(C,-C)$. Likewise we get that $\psi(C\otimes 1+1\otimes C)=(C,C)$, so we want to describe $(C,-C)=(h^2+2h+4yx,-h^2-2h-4yx)$ and $(C,C)=(h^2+2h+4yx,h^2+2h+4yx)$ in terms of our basis $h_+,h_-,h_3,f_+,f_-,f_3$. We note that
+We have seen in Exercise~11 in the Lie algebra course \todo{Maybe write the argument in an appendix or find better reference} that $Z(U(\slc))$ is the algebra of polynomials in $C=h^2+2h+4yx$, i.e.\ $Z(U(\slc))=\C[C]$. Thus we see that $Z(U(\slc))\otimes Z(U(\slc))$ is the algebra of polynomials in $C\otimes 1$ and $1\otimes C$, or equivalently the algebra of polynomials in $C\otimes 1 - 1\otimes C$ and $C\otimes 1 + 1\otimes C$. So we want to describe $C\otimes 1 - 1\otimes C$ and $C\otimes 1 + 1\otimes C$ in terms of our basis $h_+,h_-,h_3,f_+,f_-,f_3$. We note that $(u,u')\in L=\slpr$ in $U(L)=U(\slpr)$ is identified with $u\otimes 1 + 1\otimes u'$ in $U(\slc)\otimes U(\slc)$, so 
 \begin{align*}
   &\tfrac{1}{2}(h_-f_++f_-h_+)+h_3f_3+f_3\\
-  &= \tfrac{1}{2}\bigl( (y,y)(ix,-ix) + (iy,-iy)(x,x) \bigr) + \tfrac{1}{4}(h,h)(ih,-ih) + \tfrac{1}{2}(ih,-ih) \\
-  &= \tfrac{1}{2}(2iyx,-2iyx) + \tfrac{1}{4}(ih^2,-ih^2) + \tfrac{1}{2}(ih,-ih) \\
-  &= \tfrac{i}{4}(h^2+4yx+2h,-h^2-4yx-2h) \\
-  &= \tfrac{i}{4}(C,-C)
+  &= \tfrac{1}{2}\bigl( (y\otimes 1 + 1\otimes y)(ix\otimes 1 - 1\otimes ix) + (iy\otimes 1 - 1\otimes iy)(x\otimes 1 + 1\otimes x) \bigr) \\
+  &\phantom{{}={}}{} + \tfrac{1}{4}(h\otimes 1+ 1\otimes h)(ih\otimes 1- 1\otimes ih) + \tfrac{1}{2}(ih\otimes 1- 1\otimes ih) \\
+  &= \tfrac{1}{2}\bigl( iyx\otimes 1 - iy\otimes x + ix\otimes y - i\otimes yx + iyx\otimes 1 + iy\otimes x - ix\otimes y - i\otimes yx \bigr) \\
+  &\phantom{{}={}}{} + \tfrac{1}{4}(ih^2\otimes 1 - ih\otimes h + ih\otimes h - i\otimes h^2) + \tfrac{1}{2}(ih\otimes 1- 1\otimes ih) \\
+  &= \tfrac{1}{2}\bigl( 2iyx\otimes 1 - 2i\otimes yx \bigr) + \tfrac{1}{4}(ih^2\otimes 1 - i\otimes h^2) + \tfrac{1}{2}(ih\otimes 1- i\otimes h) \\
+  &= iyx\otimes 1 + \tfrac{1}{4}ih^2\otimes 1 + \tfrac{1}{2}ih\otimes 1 - i\otimes yx - \tfrac{1}{4}i\otimes h^2 - \tfrac{1}{2}i\otimes h \\
+  &= \tfrac{i}{4}(h^2+2h+yx)\otimes 1 - \tfrac{i}{4}1\otimes (h^2+2h+yx) \\
+  &= \tfrac{i}{4}(C\otimes 1 - 1\otimes C),
 \end{align*}
-and
-\begin{align*}
-  &h_-h_+ - f_-f_+ + h_3^2 - f_3^2 + 2h_3 \\
-  &= (y,y)(x,x) - (iy,-iy)(ix,-ix) + \tfrac{1}{4}(h,h)^2 - \tfrac{1}{4}(ih,-ih)^2 + (h,h) \\
-  &= (yx,yx) + (yx,yx) + \tfrac{1}{4}(h^2,h^2) + \tfrac{1}{4}(h^2,h^2) + (h,h) \\
-  &= \tfrac{1}{2}(h^2+2h+4yx,h^2+2h+4yx) \\
-  &= \tfrac{1}{2}(C,C).
-\end{align*}
-Thus since the constants don't matter when we look at the algebra of polynomials in $(C,-C)$ and $(C,C)$, we see that setting
+and likewise $h_-h_+ - f_-f_+ + h_3^2 - f_3^2 + 2h_3 = \tfrac{1}{2}(C\otimes 1 + 1\otimes C)$.
+
+% Translating back to $Z(U(L))$ with the isomorphism $\psi$ from \cref{eq:U(L)iso}, we see that
+% \begin{align*}
+%   \psi(C\otimes 1 - 1\otimes C) &= \psi_1(C)\psi_2(1) - \psi_1(1)\psi_2(C) \\
+%   &= (C,0) - (0,C) = (C,-C)
+% \end{align*}
+% since
+% \begin{align*}
+%   \psi_1(C)\psi_2(1) &= \psi_1(C)(1,1)\\
+%                &=\psi_1(\iota_1(h)^2+2\iota_1(h)+4\iota_1(y)\iota_1(x)) \\
+%          &=\psi_1\iota_1(h)^2+2\psi_1\iota_1(h)+4\psi_1\iota_1(y)\psi_1\iota_1(x) \\
+%          &= \iota i_1(h)^2+2\iota i_1(h)+4\iota i_1(y)\iota i_1(x) \\
+%          &= \iota(h,0)^2 + 2\iota(h,0) + 4\iota(y,0)\iota(x,0) \\
+%          &= (C,0)
+% \end{align*}
+% and likewise $\psi_1(1)\psi_2(C)=(0,C)$. Similarly we get that $\psi(C\otimes 1+1\otimes C)=(C,C)$, so we want to describe $(C,-C)=(h^2+2h+4yx,-h^2-2h-4yx)$ and $(C,C)=(h^2+2h+4yx,h^2+2h+4yx)$ in terms of our basis $h_+,h_-,h_3,f_+,f_-,f_3$. We note that
+% \begin{align*}
+%   &\tfrac{1}{2}(h_-f_++f_-h_+)+h_3f_3+f_3\\
+%   &= \tfrac{1}{2}\bigl( (y,y)(ix,-ix) + (iy,-iy)(x,x) \bigr) + \tfrac{1}{4}(h,h)(ih,-ih) + \tfrac{1}{2}(ih,-ih) \\
+%   &= \tfrac{1}{2}(2iyx,-2iyx) + \tfrac{1}{4}(ih^2,-ih^2) + \tfrac{1}{2}(ih,-ih) \\
+%   &= \tfrac{i}{4}(h^2+4yx+2h,-h^2-4yx-2h) \\
+%   &= \tfrac{i}{4}(C,-C)
+% \end{align*}
+% and
+% \begin{align*}
+%   &h_-h_+ - f_-f_+ + h_3^2 - f_3^2 + 2h_3 \\
+%   &= (y,y)(x,x) - (iy,-iy)(ix,-ix) + \tfrac{1}{4}(h,h)^2 - \tfrac{1}{4}(ih,-ih)^2 + (h,h) \\
+%   &= (yx,yx) + (yx,yx) + \tfrac{1}{4}(h^2,h^2) + \tfrac{1}{4}(h^2,h^2) + (h,h) \\
+%   &= \tfrac{1}{2}(h^2+2h+4yx,h^2+2h+4yx) \\
+%   &= \tfrac{1}{2}(C,C).
+% \end{align*}
+Thus since the constants don't matter when we look at the algebra of polynomials in $C\otimes 1 - 1\otimes C$ and $C\otimes 1 + 1\otimes C$, we see that setting
 \begin{align}\label{eq:DeltasaU(L)def}
-  \Delta_1 &= \tfrac{1}{2}(h_-f_++f_-h_+)+h_3f_3+f_3, & \Delta_2 &= h_-h_+ - f_-f_+ + h_3^2 - f_3^2 + 2h_3,
+  \begin{aligned}
+  \Delta_1 &= \tfrac{1}{2}(h_-f_++f_-h_+)+h_3f_3+f_3, \\
+  \Delta_2 &= h_-h_+ - f_-f_+ + h_3^2 - f_3^2 + 2h_3,
+\end{aligned}
+
 \end{align}
 we have that $Z(U(L))$ is the algebra of polynomials in $\Delta_1$ and $\Delta_2$. Thus in term of the corresponding linear operators on a Harish-Chandra module $M$ for the pair $(L,L_k)$, we define linear operators
 \begin{align}\label{eq:Deltasdef}
