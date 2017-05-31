@@ -19,9 +19,9 @@
     "sections/app1-7"
     "sections/app1-8"
     "sections/app2-0"
-    "sections/app2-1")
+    "sections/app2-1"
+    "sections/app2-2")
    (LaTeX-add-labels
-    "cha:first"
-    "cha:second"))
+    "cha:first"))
  :latex)
 

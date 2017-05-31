@@ -506,6 +506,8 @@ INPUT sections/app2-0.tex
 INPUT sections/app2-0.tex
 INPUT sections/app2-1.tex
 INPUT sections/app2-1.tex
+INPUT sections/app2-2.tex
+INPUT sections/app2-2.tex
 OUTPUT build/main.thm
 OUTPUT build/main.toc
 INPUT build/main.aux

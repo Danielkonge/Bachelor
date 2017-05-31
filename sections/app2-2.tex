@@ -1,0 +1,13 @@
+\section{Determining a linear map from its square and eigenvalue}
+
+Let $A\colon V\to V$ be a linear operator on a finite dimensional vector space $V$ over $\C$, and assume that $A$ only has one eigenvalu, $\lambda$. We claim then that $A$ is uniquely determined by $A^2$ and $\lambda$. To see this first note that
+\begin{align*}
+  \ker(A-\lambda \id_V)^r = \ker(A^2-\lambda^2\id_V)^r
+\end{align*}
+for all integers $r>0$. This is the case since $(A^2-\lambda^2\id_V)^r = (A+\lambda\id_V)^r(A-\lambda\id_V)^r$, and since $A+\lambda\id_V$ is bijective for $\lambda\neq 0$ because $\det(A+\lambda\id_V)$ cannot be $0$ since $-\lambda$ is not an eigenvalue of $A$. \todo{What about $\lambda=0$?}
+
+
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: "../main"
+%%% End:

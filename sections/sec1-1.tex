@@ -139,7 +139,7 @@ Hence we have linear operators $H_+H_-,H_-H_+\colon R_{\ell,m}\to R_{\ell,m}$, a
 \end{align}
 Note that this also covers the cases $m=\ell$ and $m=-\ell$. 
 
-Now we define $E_+ \colon R_{\ell,m}\to R_{\ell,m+1}$ and $E_- \colon R_{\ell,m}\to R_{\ell,m-1}$ to be the linear maps satisfying \todo{Define $E_+$ and $E_-$ more generally}
+Now we define $E_+ \colon R_{\ell,m}\to R_{\ell,m+1}$ and $E_- \colon R_{\ell,m}\to R_{\ell,m-1}$ to be the linear maps satisfying 
 \begin{align}
   \begin{split} \label{eq:E+andE-}
     H_+ \xi &=
@@ -159,7 +159,12 @@ for $\xi\in R_{\ell,m}$. Comparing \cref{eq:E+andE-} and \cref{eq:H+H-} we see t
   E_+E_-\xi &= \xi && \mbox{if }m\neq-\ell \\
   E_-E_+\xi &= \xi && \mbox{if }m\neq\ell.
 \end{align*}
-Thus $E_+\colon R_{\ell,m}\to R_{\ell,m+1}$ and $E_-\colon R_{\ell,m+1}\to R_{\ell,m}$ are isomorphisms for $m\neq\ell$ and they are each others inverse. 
+Thus $E_+\colon R_{\ell,m}\to R_{\ell,m+1}$ and $E_-\colon R_{\ell,m+1}\to R_{\ell,m}$ are isomorphisms for $m\neq\ell$ and they are each others inverse.
+\begin{remark}\label{rem:Edef}
+  Note that the above definitions make sense more generally on $L_k$-modules $M$ with a direct sum decomposition $\bigoplus_\ell R_\ell$ such that each $R_\ell$ is a finite direct sum of simple $L_k$-modules isomorphic to $M(2\ell)$, i.e.\ we do not need the additional structure from $L$-modules.
+
+  In particular note that on the $L_k$-module $M(2\ell)$ with basis $(e_{-\ell},e_{-\ell+1},\dotsc,e_{\ell-1},e_\ell)$ as in \Cref{lem:modulebasis}, we have that $E_+ e_m = e_{m+1}$ for $m\neq\ell$ and $E_- e_m = e_{m-1}$ for $m\neq -\ell$.
+\end{remark}
 
 Now note that $H_+$, $H_-$, and $H_3$ are completely determined by \cref{eq:H3eigen} and \cref{eq:E+andE-}, so we just need to find maps to determine $F_+$, $F_-$, and $F_3$ now, while making sure that we get commutation relations as in \cref{eq:lierels}.
 
@@ -202,7 +207,7 @@ In general given two $L$-modules $V$ and $W$, we consider the tensor product $V\
 \end{align*}
 for $x\in L$ and $v\otimes w\in V\otimes W$, cf.\ \cite[26]{humphrey}.
 
-Now we are interested in the $L_k$-module $L_p\otimes M$, where $M$ is a Harish-Chandra $L$-module as before. Specifically we will show that the linear map
+Now we are interested in the $L_k$-module $L_p\otimes M$, where $M$ is a Harish-Chandra $L$-module (and thus an $L_k$-module) as before. Specifically we will show that the linear map
 \begin{align}
   \begin{split} \label{eq:psi}
     \psi \colon L_p\otimes M &\to M \\
@@ -379,10 +384,10 @@ Now consider $V(2)$ and $V(n)$ as inner product spaces over $\C$ with inner prod
 \begin{align}\label{eq:inproddef1}
   \inner{w_k}{w_j} = \delta_{jk} \binom{2}{k} \qquad \mbox{and} \qquad \inner{v_k}{v_j} = \delta_{jk}\binom{n}{k}.
 \end{align}
-Then we can also consider $V(2)\otimes V(n)$ an inner product space with inner product given by
+Then we can clearly also consider $V(2)\otimes V(n)$ an inner product space with inner product given by
 \begin{align}\label{eq:inproddef2}
   \inner{w\otimes v}{w'\otimes v'} = \inner{w}{w'}\cdot\inner{v}{v'}
-\end{align}\todo{Maybe write about why this is an inner product}
+\end{align}
 for $w,w'\in V(2)$ and $v,v'\in V(n)$. By straightforward calculations, cf.\ \Cref{sec:innerproductscalc}, we get that
 \begin{align}\label{eq:inprodres}
   \inner{s_0}{s_0} = 1, \qquad \inner{t_0}{t_0} = \dfrac{n(n+2)}{2}, \qquad \inner{u_0}{u_0} = \dfrac{n^2(n+1)(n-1)}{4}.
@@ -453,7 +458,7 @@ Getting back to the problem at the end of \Cref{sec:formulae}, we want to give t
 \end{align*}
 and each $M(2\ell)^{i}$ has a basis $(e_{-\ell}^{i},e_{-\ell+1}^{i},\dotsc,e_{\ell-1}^{i},e_{\ell}^{i})$ with $H_3e_m^{i} = m e_m^{i}$ for all $m$, we have that $R_{\ell,m}$ has basis $(e_m^1,e_m^2,\dotsc,e_m^r)$ by definition. So when describing the maps $D_0$, $D_+$, and $D_-$, we just need to describe what the maps should do to each $e_m^{i}$. We already know that $E_+e_m^{i}=e_{m+1}^{i}$ and $E_-e_m^{i}=e_{m-1}^{i}$ where it makes sense, so if the maps $D_0$, $D_+$, and $D_-$ do not depend on $m$ or $i$, we get the commutative diagrams of \cref{eq:Ddiagrams}, thus we want to describe what each map does to $M(2\ell)$ in general, so we will stop writing the superscripts.
 
-Since we want to describe the maps $F_3$, $F_+$, and $F_-$, we are actually interested in the actions of $L_p$, so by using $\psi$ of \cref{eq:psi} and the considerations at the end of \Cref{sec:formulae}, we can start out by describing $M(2)\otimes M(2\ell)$, i.e.\ we can use the description of $V(2)\otimes V(n)$ from above. Note that we have already seen that $L_p\simeq M(2)$ as $L_k$-modules, but we would like to better understand how the basis $(f_+,f_3,f_-)$ of $L_p$ corresponds to the basis $(w_0,w_1,w_2)$ of $M(2)$ as in \cref{eq:L_kbasis1}. In the basis $(w_0,w_1,w_2)$ we have that $h_+ . w_0 = 0$ (since this is what corresponds to $x.w_0=0$ in $V(2)$ by \cref{eq:sl2iso}), so by checking \cref{eq:lierels} we see that $w_0$ must correspond to a multiple of $f_3$, but the basis is chosen up to scalar, so we can take $w_0$ to be $-\tfrac{\sqrt{2}}{2}f_3$. Now we get $w_1$ by taking $h_- . w_0$ (corresponding to $y.w_0$ in $V(2)$ by \cref{eq:sl2iso}), thus we get that
+Since we want to describe the maps $F_3$, $F_+$, and $F_-$, we are actually interested in the actions of $L_p$, so by using $\psi$ of \cref{eq:psi} and the considerations at the end of \Cref{sec:formulae}, we can start out by describing the $L_k$-module $M(2)\otimes M(2\ell)$, i.e.\ we can use the description of $V(2)\otimes V(n)$ from above. Note that we have already seen that $L_p\simeq M(2)$ as $L_k$-modules, but we would like to better understand how the basis $(f_+,f_3,f_-)$ of $L_p$ corresponds to the basis $(w_0,w_1,w_2)$ of $M(2)$ as in \cref{eq:L_kbasis1}. In the basis $(w_0,w_1,w_2)$ we have that $h_+ . w_0 = 0$ (since this is what corresponds to $x.w_0=0$ in $V(2)$ by \cref{eq:sl2iso}), so by checking \cref{eq:lierels} we see that $w_0$ must correspond to a multiple of $f_3$, but the basis is chosen up to scalar, so we can take $w_0$ to be $-\tfrac{\sqrt{2}}{2}f_3$. Now we get $w_1$ by taking $h_- . w_0$ (corresponding to $y.w_0$ in $V(2)$ by \cref{eq:sl2iso}), thus we get that
 \begin{align*}
   w_1 = h_-.w_0 = -\tfrac{\sqrt{2}}{2}h_- . f_+ = -\tfrac{\sqrt{2}}{2}[h_-,f_+] = \sqrt{2}f_3.
 \end{align*}
@@ -465,6 +470,7 @@ where $e_m=\overline v_k$ for $k=\ell-m$ and $f_3 = \overline w_1$.
 \begin{remark}\label{rem:baseswithindexchange}
   Note that if we have bases $(e_{-\ell-1}^{(2\ell+2)},e_{-\ell}^{(2\ell+2)},\dotsc,e_{\ell}^{(2\ell+2)},e_{\ell+1}^{(2\ell+2)})$ for $M(2\ell+2)$, $(e_{-\ell}^{(2\ell)},e_{-\ell+1}^{(2\ell)},\dotsc,e_{\ell-1}^{(2\ell)},e_{\ell}^{(2\ell)})$ for $M(2\ell)$, and $(e_{-\ell+1}^{(2\ell-2)},e_{-\ell+2}^{(2\ell-2)},\dotsc,\\ e_{\ell-2}^{(2\ell-2)},e_{\ell-1}^{(2\ell-2)})$ for $M(2\ell-2)$ (if $\ell\geq 1$) as in \Cref{lem:modulebasis}, then as above changing indices with $k=\ell+1-m$ we see that $e_m^{(2\ell+2)}$ corresponds to $\overline s_k$. Likewise changing indices with $k=\ell-m$ we see that $e_m^{(2\ell)}$ corresponds to $\overline t_k$, and with $k=\ell-1-m$ we see that $e_m^{(2\ell-2)}$ corresponds to $\overline u_k$. 
 \end{remark}
+By this remark together with \Cref{rem:Edef}, we see that $E_+ \overline v_k = \overline v_{k-1}$ and $E_+ \overline s_k = \overline s_{k-1}$ where it makes sense, so by the definition of $\widetilde D_+$ it commutes with $E_+$ and $E_-$. Similarly we can see that $\widetilde D_0$ and $\widetilde D_-$ commute with $E_+$ and $E_-$.
 
 Now using $\psi$ from \cref{eq:psi}, we see that
 \begin{align}\label{eq:F_3action}
@@ -478,7 +484,7 @@ So we can take $D_0=\psi\widetilde D_0$, $D_+ = \psi\widetilde D_+$, and $D_- = 
   H_3D_0(\xi) &= h_3 . \psi\widetilde D_0(\xi) = \psi h_3 . \widetilde D_0(\xi) = \psi H_3 \widetilde D_0(\xi) = m\psi \widetilde D_0(\xi) \\
   &= m D_0(\xi),
 \end{align*}
-since $\psi$ is an $L_k$-module homomorphism and by \Cref{rem:baseswithindexchange} we see that $\widetilde D_0(e_m)$ is a scalar multiple of $\overline t_k = \overline t_{\ell-m} = e_m^{(2\ell)}$, and indeed $H_3e_m^{(2\ell)}=me_m^{(2\ell)}$. The same reasoning with $\overline s_{k+1}$ for $D_+$ and $\overline u_{k-1}$ for $D_-$ yields the other two inclusions. Also note that the diagrams of \cref{eq:Ddiagrams} commute by the defintion of $D_0$, $D_+$, and $D_-$, since the maps independent of $m$ and $E_+$ and $E_-$ are isomorphisms. \todo{Write this a little more clearly}
+since $\psi$ is an $L_k$-module homomorphism and by \Cref{rem:baseswithindexchange} we see that $\widetilde D_0(e_m)$ is a scalar multiple of $\overline t_k = \overline t_{\ell-m} = e_m^{(2\ell)}$, and indeed $H_3e_m^{(2\ell)}=me_m^{(2\ell)}$. The same reasoning with $\overline s_{k+1}$ for $D_+$ and $\overline u_{k-1}$ for $D_-$ yields the other two inclusions. Also note that the diagrams of \cref{eq:Ddiagrams} commute by the defintion of $D_0$, $D_+$, and $D_-$, since we have already shown that $\widetilde D_0$, $\widetilde D_+$, and $\widetilde D_-$ commute with $E_+$ and $E_-$ where it makes sense, and $L_k$-module homomorphisms in general commute with $E_+$ and $E_-$, so also $\psi$ commutes with $E_+$ and $E_-$. This is the case since for a $L_k$-module homomorphism $\varphi\colon M\to M'$ with decompositions $M=\bigoplus_{\ell,m} R_{\ell,m}$ and $M'=\bigoplus_{\ell,m} R_{\ell,m}'$, we have first that $\varphi(R_\ell)\subset R_\ell'$ and then $\varphi(R_{\ell,m}) \subset R_{\ell,m}'$ --- for more details see \todo{Add reference}.
 
 Now simple calculations, cf.\ \Cref{sec:Factions}, gives us that
 \begin{align}\label{eq:Factions}

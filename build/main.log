@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2017.2.23)  22 MAY 2017 23:11
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2017.2.23)  31 MAY 2017 03:41
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1844,33 +1844,38 @@ File: ueuf.fd 2013/01/14 v3.01 Euler Fraktur
 File: mt-euf.cfg 2006/07/03 v1.1 microtype config. file: AMS Euler Fraktur (RS)
 
 )
-Overfull \hbox (2.99171pt too wide) detected at line 36
+Overfull \hbox (2.99171pt too wide) detected at line 34
  \T1/cmr/bx/n/10.95 A-1
  []
 
 
-Overfull \hbox (0.35928pt too wide) detected at line 38
+Overfull \hbox (0.35928pt too wide) detected at line 36
  \T1/cmr/m/n/10.95 A-1
  []
 
 
-Overfull \hbox (0.35928pt too wide) detected at line 40
+Overfull \hbox (0.35928pt too wide) detected at line 38
  \T1/cmr/m/n/10.95 A-4
  []
 
 
-Overfull \hbox (0.35928pt too wide) detected at line 42
+Overfull \hbox (0.35928pt too wide) detected at line 40
  \T1/cmr/m/n/10.95 A-6
  []
 
 
-Overfull \hbox (0.35928pt too wide) detected at line 44
+Overfull \hbox (0.35928pt too wide) detected at line 42
  \T1/cmr/m/n/10.95 A-8
  []
 
 
-Overfull \hbox (0.35928pt too wide) detected at line 46
+Overfull \hbox (0.35928pt too wide) detected at line 44
  \T1/cmr/m/n/10.95 A-9
+ []
+
+
+Overfull \hbox (5.80322pt too wide) detected at line 46
+ \T1/cmr/m/n/10.95 A-11
  []
 
 
@@ -1880,16 +1885,11 @@ Overfull \hbox (5.80322pt too wide) detected at line 48
 
 
 Overfull \hbox (5.80322pt too wide) detected at line 50
- \T1/cmr/m/n/10.95 A-11
- []
-
-
-Overfull \hbox (5.80322pt too wide) detected at line 52
  \T1/cmr/m/n/10.95 A-12
  []
 
 
-Overfull \hbox (2.44005pt too wide) detected at line 54
+Overfull \hbox (2.44005pt too wide) detected at line 52
  \T1/cmr/bx/n/10.95 B-1
  []
 
@@ -1912,20 +1912,28 @@ Overfull \hbox (7.51918pt too wide) in paragraph at lines 114--115
 la-tions as in []eq. (1.3)[],
  []
 
-[5]
+[5] [6]
+Overfull \hbox (29.53105pt too wide) in paragraph at lines 166--167
+[]\T1/cmr/m/n/10.95 (-20) In par-tic-u-lar note that on the $\OML/cmm/m/it/10.9
+5 L[]$\T1/cmr/m/n/10.95 (-20) -module $\OML/cmm/m/it/10.95 M\OT1/cmr/m/n/10.95 
+(-20) (2\OML/cmm/m/it/10.95 `\OT1/cmr/m/n/10.95 (-20) )$ \T1/cmr/m/n/10.95 (-20
+) with ba-sis $\OT1/cmr/m/n/10.95 (-20) (\OML/cmm/m/it/10.95 e[]; e[]; [] ; e[]
+; e[]\OT1/cmr/m/n/10.95 (-20) )$
+ []
+
 Package hyperref Info: bookmark level for unknown todo defaults to 0 on input l
-ine 142.
- [6] [7] [8] [9] [10] [11] [12] [13]
-Overfull \hbox (13.07152pt too wide) in paragraph at lines 438--438
+ine 173.
+[7] [8] [9] [10] [11] [12] [13]
+Overfull \hbox (13.07152pt too wide) in paragraph at lines 443--443
 [] 
  []
 
-[14] [15] [16] [17] [18]
-Overfull \hbox (4.06685pt too wide) in paragraph at lines 613--613
+[14] [15] [16] [17] [18] [19]
+Overfull \hbox (4.06685pt too wide) in paragraph at lines 619--619
 [] 
  []
 
-[19]) (./sections/sec1-2.tex [20]
+) (./sections/sec1-2.tex [20]
 Overfull \hbox (0.32324pt too wide) in paragraph at lines 20--20
 [] 
  []
@@ -1939,7 +1947,7 @@ input line 120.
  [23] [24] [25]) (./sections/sec1-3.tex [26] [27]
 Package hyperref Info: bookmark level for unknown theorem defaults to 0 on inpu
 t line 80.
-
+ [28]
 Overfull \hbox (5.2458pt too wide) in paragraph at lines 94--95
 []\T1/cmr/m/n/10.95 (-20) Now take an iso-mor-phism $\OML/cmm/m/it/10.95 E[] []
  [] R[] \OMS/cmsy/m/n/10.95 ! \OML/cmm/m/it/10.95 R[]$ \T1/cmr/m/n/10.95 (-20) 
@@ -1948,21 +1956,19 @@ for $\OML/cmm/m/it/10.95 m \OMS/cmsy/m/n/10.95 6\OT1/cmr/m/n/10.95 (-20) = \OML
 [] R[] \OMS/cmsy/m/n/10.95 !
  []
 
-[28] [29]
+[29]
 Package hyperref Info: bookmark level for unknown corollary defaults to 0 on in
 put line 134.
- [30] [31] [32]) (./sections/sec1-4.tex [33] [34] [35] [36]) [37]
-[38
+ [30] [31] [32]) (./sections/sec1-4.tex [33] [34] [35] [36]) [37] [38
 
-] [39] [40
+]
+[39] [40
 
-] [41] [42
-
-] (./sections/app1-0.tex) (./sections/app1-1.tex
-[1
+] (./sections/app1-0.tex) (./sections/app1-1.tex [1
 
 
-] [2]) (./sections/app1-2.tex [3]
+] [2])
+(./sections/app1-2.tex [3]
 Underfull \vbox (badness 5245) has occurred while \output is active []
 
  [4]
@@ -1997,21 +2003,21 @@ Overfull \hbox (23.10579pt too wide) in paragraph at lines 67--67
 
 
 ] [2])
+(./sections/app2-2.tex [3])
 \tf@thm=\write7
 \openout7 = `main.thm'.
 
- [3]
+ [4]
 \tf@toc=\write8
 \openout8 = `main.toc'.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 74.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 74.
-
-(build/main.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 74.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 74.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 76.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 76.
+ (build/main.aux)
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 76.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 76.
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 9BE5B13D31D763D527697629A0379DB3;2014.
+(rerunfilecheck)             Checksum: F0C51AAB6E6BD9BACC3E9D16AF6A0692;2065.
 
 
 LaTeX Warning: There were undefined references.
@@ -2021,13 +2027,13 @@ Package logreq Info: Writing requests to 'main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 35667 strings out of 493036
- 671910 string characters out of 6134590
- 1183390 words of memory out of 5000000
- 38138 multiletter control sequences out of 15000+600000
- 55456 words of font info for 258 fonts, out of 8000000 for 9000
+ 35660 strings out of 493036
+ 671784 string characters out of 6134590
+ 1180346 words of memory out of 5000000
+ 38133 multiletter control sequences out of 15000+600000
+ 55284 words of font info for 256 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 75i,21n,86p,1516b,1843s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 75i,21n,86p,1516b,1850s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2015/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}
 </usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb><
 /usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></
@@ -2066,10 +2072,10 @@ c/cm-super/sfrm1440.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/
 cm-super/sfrm2074.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/cm
 -super/sfrm2488.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/cm-s
 uper/sfti1095.pfb>
-Output written on build/main.pdf (63 pages, 686861 bytes).
+Output written on build/main.pdf (62 pages, 689907 bytes).
 PDF statistics:
- 957 PDF objects out of 1000 (max. 8388607)
- 844 compressed objects within 9 object streams
- 224 named destinations out of 1000 (max. 500000)
+ 953 PDF objects out of 1000 (max. 8388607)
+ 841 compressed objects within 9 object streams
+ 223 named destinations out of 1000 (max. 500000)
  37581 words of extra memory for PDF output out of 42996 (max. 10000000)
 

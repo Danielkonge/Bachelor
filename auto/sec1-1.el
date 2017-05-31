@@ -11,6 +11,7 @@
     "eq:H3eigen"
     "eq:H+H-"
     "eq:E+andE-"
+    "rem:Edef"
     "eq:Ddiagrams"
     "eq:psi"
     "eq:V(2)tensorV(n)"

@@ -14,7 +14,7 @@ and
 \begin{align*}
   \det(a-t\id) = \det\Bigl( D_0 - \Bigl(t+\dfrac{i\ell_1}{\ell_0+1}\id \Bigr) \Bigr),
 \end{align*}
-so the only eigenvalue of $a$ on $R_\ell$ is zero, and thus $a$ is clearly nilpotent by looking at the Schur decomposition.
+so the only eigenvalue of $a$ on $R_\ell$ is zero, and thus $a$ is clearly nilpotent by Cayley-Hamilton Theorem.
 
 We want to show that the module $M$ is completely determined by the finite dimensional vector space $R_{\ell_0,m_0}$ and the linear map $a\colon R_{\ell_0,m_0}\to R_{\ell_0,m_0}$ when $C(\lambda_1,\lambda_2)$ is non-singular. To do this we first need some lemmas.
 
@@ -36,7 +36,7 @@ We want to show that the module $M$ is completely determined by the finite dimen
 
   Assume that $\ell_1^2-\ell^2=0$ for some $\ell=\ell_0+k$, where $k$ is a non-negative integer. Since $\ell_1-\ell_0$ is not an integer, we also have that $\ell_1-(\ell_0+k)$ is not an integer and hence not equal to zero, so we must have that $\ell_1+\ell_0+k=0$ since $\ell_1^2-\ell^2=(\ell_1-\ell)(\ell_1+\ell)$. But this would imply that $\ell_1=-\ell_0-k$ and hence $\ell_1-\ell_0=-2\ell_0-k$ is an integer, which is a contradiction with the non-singularity of $M$.
 
-  Thus we see that $\ell_1^2-\ell^2$ is non-zero for all $\ell\in \Set{\ell_0,\ell_0+1,\dotsc}$, and therefore the eigenvalues $\dd{\ell}{+}$ and $\dd{\ell}{-}$ are different from zero for all $\ell$ except $\ell_0$ in the case of $\dd{\ell}{-}$. Hence the maps $D_+D_-\colon R_{\ell,m}\to R_{\ell,m}$ for $\ell\neq\ell_0$ and $D_-D_+\colon R_{\ell,m}\to R_{\ell,m}$ have diagonals without zeros in the Schur decomposition, so they are invertible. Therefore $D_-\colon R_{\ell+1,m}\to R_{\ell,m}$ and $D_+\colon R_{\ell,m}\to R_{\ell+1,m}$ are injective, and thus the $\dim R_{\ell,m} = \dim R_{\ell+1,m}$, which again implies that $D_-$ and $D_+$ as above are actually isomorphisms.
+  Thus we see that $\ell_1^2-\ell^2$ is non-zero for all $\ell\in \Set{\ell_0,\ell_0+1,\dotsc}$, and therefore the eigenvalues $\dd{\ell}{+}$ and $\dd{\ell}{-}$ are different from zero for all $\ell$ except $\ell_0$ in the case of $\dd{\ell}{-}$. Hence the maps $D_+D_-\colon R_{\ell,m}\to R_{\ell,m}$ for $\ell\neq\ell_0$ and $D_-D_+\colon R_{\ell,m}\to R_{\ell,m}$ have diagonals without zeros in the Schur decomposition, so they are invertible. Therefore $D_-\colon R_{\ell+1,m}\to R_{\ell,m}$ and $D_+\colon R_{\ell,m}\to R_{\ell+1,m}$ are injective, and thus $\dim R_{\ell,m} = \dim R_{\ell+1,m}$, which again implies that $D_-$ and $D_+$ as above are actually isomorphisms.
 \end{proof}
 
 \begin{lemma}\label{lem:nonsingsimilar}
