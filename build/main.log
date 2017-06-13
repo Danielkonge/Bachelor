@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2017.2.23)  1 JUN 2017 02:20
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2017.2.23)  14 JUN 2017 01:37
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1880,12 +1880,12 @@ Overfull \hbox (5.80322pt too wide) detected at line 46
 
 
 Overfull \hbox (5.80322pt too wide) detected at line 48
- \T1/cmr/m/n/10.95 A-11
+ \T1/cmr/m/n/10.95 A-13
  []
 
 
 Overfull \hbox (5.80322pt too wide) detected at line 50
- \T1/cmr/m/n/10.95 A-12
+ \T1/cmr/m/n/10.95 A-14
  []
 
 
@@ -1913,7 +1913,7 @@ la-tions as in []eq. (1.3)[],
  []
 
 [5] [6]
-Overfull \hbox (29.53105pt too wide) in paragraph at lines 166--167
+Overfull \hbox (29.53105pt too wide) in paragraph at lines 160--161
 []\T1/cmr/m/n/10.95 (-20) In par-tic-u-lar note that on the $\OML/cmm/m/it/10.9
 5 L[]$\T1/cmr/m/n/10.95 (-20) -module $\OML/cmm/m/it/10.95 M\OT1/cmr/m/n/10.95 
 (-20) (2\OML/cmm/m/it/10.95 `\OT1/cmr/m/n/10.95 (-20) )$ \T1/cmr/m/n/10.95 (-20
@@ -1922,32 +1922,27 @@ Overfull \hbox (29.53105pt too wide) in paragraph at lines 166--167
  []
 
 Package hyperref Info: bookmark level for unknown todo defaults to 0 on input l
-ine 173.
+ine 167.
 [7] [8] [9] [10] [11] [12] [13]
-Overfull \hbox (13.07152pt too wide) in paragraph at lines 443--443
+Overfull \hbox (13.07152pt too wide) in paragraph at lines 437--437
 [] 
  []
 
-[14] [15] [16] [17] [18] [19]
-Overfull \hbox (4.06685pt too wide) in paragraph at lines 619--619
-[] 
- []
-
-) (./sections/sec1-2.tex [20]
+[14] [15] [16] [17] [18] [19] [20] [21]) (./sections/sec1-2.tex
 Overfull \hbox (0.32324pt too wide) in paragraph at lines 20--20
 [] 
  []
 
-[21]
+[22]
 Package hyperref Info: bookmark level for unknown proof defaults to 0 on input 
 line 90.
- [22]
+ [23]
 Package hyperref Info: bookmark level for unknown proposition defaults to 0 on 
 input line 120.
- [23] [24] [25]) (./sections/sec1-3.tex [26] [27]
+ [24] [25] [26] [27]) (./sections/sec1-3.tex [28] [29]
 Package hyperref Info: bookmark level for unknown theorem defaults to 0 on inpu
 t line 80.
- [28]
+
 Overfull \hbox (5.2458pt too wide) in paragraph at lines 94--95
 []\T1/cmr/m/n/10.95 (-20) Now take an iso-mor-phism $\OML/cmm/m/it/10.95 E[] []
  [] R[] \OMS/cmsy/m/n/10.95 ! \OML/cmm/m/it/10.95 R[]$ \T1/cmr/m/n/10.95 (-20) 
@@ -1956,13 +1951,13 @@ for $\OML/cmm/m/it/10.95 m \OMS/cmsy/m/n/10.95 6\OT1/cmr/m/n/10.95 (-20) = \OML
 [] R[] \OMS/cmsy/m/n/10.95 !
  []
 
-[29]
+[30]
 Package hyperref Info: bookmark level for unknown corollary defaults to 0 on in
 put line 134.
- [30] [31] [32]) (./sections/sec1-4.tex [33] [34] [35] [36]) [37] [38
+ [31] [32] [33]) (./sections/sec1-4.tex [34] [35] [36] [37]) [38] [39
 
 ]
-[39] [40
+[40
 
 ] (./sections/app1-0.tex) (./sections/app1-1.tex [1
 
@@ -1980,21 +1975,30 @@ Underfull \vbox (badness 1442) has occurred while \output is active []
 Underfull \vbox (badness 4805) has occurred while \output is active []
 
  [9])
-(./sections/app1-6.tex [10]) (./sections/app1-7.tex
+(./sections/app1-6.tex [10]
+Overfull \hbox (25.63278pt too wide) in paragraph at lines 33--34
+[]\T1/cmr/m/n/10.95 (-20) Note that for $\OML/cmm/m/it/10.95 ^^X \OMS/cmsy/m/n/
+10.95 2 \OML/cmm/m/it/10.95 R[]$ \T1/cmr/m/n/10.95 (-20) with $\OML/cmm/m/it/10
+.95 ` \OMS/cmsy/m/n/10.95 6\OT1/cmr/m/n/10.95 (-20) = 0$ \T1/cmr/m/n/10.95 (-20
+) we have that $\OML/cmm/m/it/10.95 F[]^^X \OT1/cmr/m/n/10.95 (-20) = []\OML/cm
+m/m/it/10.95 E[]D[]^^X \OMS/cmsy/m/n/10.95 2
+ []
+
+[11] [12]) (./sections/app1-7.tex
 
 Package hyperref Warning: Composite letter `\textasciicircum+-'
 (hyperref)                not defined in PD1 encoding,
 (hyperref)                removing `\textasciicircum' on input line 1.
 
-[11]) (./sections/app1-8.tex [12]
+[13]) (./sections/app1-8.tex [14]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [13]
+ [15]
 Overfull \hbox (23.10579pt too wide) in paragraph at lines 67--67
 [] 
  []
 
-) [14] (./sections/app2-0.tex) (./sections/app2-1.tex [1
+) [16] (./sections/app2-0.tex) (./sections/app2-1.tex [1
 
 
 ] [2])
@@ -2012,19 +2016,19 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 76.
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 76.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 76.
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: F0C51AAB6E6BD9BACC3E9D16AF6A0692;2065.
+(rerunfilecheck)             Checksum: 96DF06E13BA0B201AD6CE6958DDD3E2A;2065.
 Package logreq Info: Writing requests to 'main.run.xml'.
 \openout1 = `main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 35651 strings out of 493036
- 671573 string characters out of 6134590
- 1180203 words of memory out of 5000000
- 38125 multiletter control sequences out of 15000+600000
- 55284 words of font info for 256 fonts, out of 8000000 for 9000
+ 35614 strings out of 493036
+ 670642 string characters out of 6134590
+ 1174546 words of memory out of 5000000
+ 38092 multiletter control sequences out of 15000+600000
+ 55163 words of font info for 255 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 75i,21n,86p,1516b,1850s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 75i,21n,86p,1516b,1853s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2015/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}
 </usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb><
 /usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></
@@ -2063,10 +2067,10 @@ c/cm-super/sfrm1440.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/
 cm-super/sfrm2074.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/cm
 -super/sfrm2488.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/cm-s
 uper/sfti1095.pfb>
-Output written on build/main.pdf (62 pages, 692639 bytes).
+Output written on build/main.pdf (64 pages, 705238 bytes).
 PDF statistics:
- 952 PDF objects out of 1000 (max. 8388607)
- 840 compressed objects within 9 object streams
- 222 named destinations out of 1000 (max. 500000)
+ 959 PDF objects out of 1000 (max. 8388607)
+ 845 compressed objects within 9 object streams
+ 220 named destinations out of 1000 (max. 500000)
  37581 words of extra memory for PDF output out of 42996 (max. 10000000)
 

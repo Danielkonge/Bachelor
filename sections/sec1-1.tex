@@ -141,18 +141,12 @@ Note that this also covers the cases $m=\ell$ and $m=-\ell$.
 
 Now we define $E_+ \colon R_{\ell,m}\to R_{\ell,m+1}$ and $E_- \colon R_{\ell,m}\to R_{\ell,m-1}$ to be the linear maps satisfying 
 \begin{align}
-  \begin{split} \label{eq:E+andE-}
-    H_+ \xi &=
-    \begin{dcases*}
-      \sqrt{(\ell+m+1)(\ell-m)}E_+\xi & if $m\neq \ell$ \\
-      0 & if $m=\ell$,
-    \end{dcases*} \\
-    H_- \xi &=
-    \begin{dcases*}
-      \sqrt{(\ell+m)(\ell-m+1)}E_-\xi & if $m\neq -\ell$ \\
-      0 & if $m=\ell$
-    \end{dcases*}
-  \end{split}
+  \begin{aligned} \label{eq:E+andE-}
+    H_+ \xi &= \sqrt{(\ell+m+1)(\ell-m)}E_+\xi && \mbox{if } m\neq \ell, \\
+    E_+ \xi &= 0 && \mbox{if } m=\ell, \\
+    H_- \xi &= \sqrt{(\ell+m)(\ell-m+1)}E_-\xi && \mbox{if } m\neq -\ell, \\
+    E_-\xi &= 0 && \mbox{if } m=\ell,
+  \end{aligned}
 \end{align}
 for $\xi\in R_{\ell,m}$. Comparing \cref{eq:E+andE-} and \cref{eq:H+H-} we see that
 \begin{align*}
@@ -202,9 +196,9 @@ so we see that $f_+,f_-\in V$, and thus also $[h_+,\tfrac{1}{2}f_-]=f_3\in V$, s
 so since either $a\neq 0$ or $b\neq 0$, we see that $f_3\in V$, and thus also $[h_+,-f_3]=f_+\in V$ and $[h_-,f_3]=f_-\in V$, so $V=L_p$. Hence $L_p$ is indeed a simple $L_k$-module. Now since $L_p$ is a simple finite dimensional $L_k$-module of dimension 3, we have that $L_p\simeq M(2)$ as $L_k$-modules.
 
 In general given two $L$-modules $V$ and $W$, we consider the tensor product $V\otimes W$ over $\C$ of the underlying vector spaces as an $L$-module via the action
-\begin{align*}
+\begin{align}\label{eq:tensoraction}
   x.(v\otimes w) &= x.v\otimes w + v\otimes x.w,
-\end{align*}
+\end{align}
 for $x\in L$ and $v\otimes w\in V\otimes W$, cf.\ \cite[26]{humphrey}.
 
 Now we are interested in the $L_k$-module $L_p\otimes M$, where $M$ is a Harish-Chandra $L$-module (and thus an $L_k$-module) as before. Specifically we will show that the linear map
@@ -486,11 +480,15 @@ So we can take $D_0=\psi\widetilde D_0$, $D_+ = \psi\widetilde D_+$, and $D_- = 
 \end{align*}
 since $\psi$ is an $L_k$-module homomorphism and by \Cref{rem:baseswithindexchange} we see that $\widetilde D_0(e_m)$ is a scalar multiple of $\overline t_k = \overline t_{\ell-m} = e_m^{(2\ell)}$, and indeed $H_3e_m^{(2\ell)}=me_m^{(2\ell)}$. The same reasoning with $\overline s_{k+1}$ for $D_+$ and $\overline u_{k-1}$ for $D_-$ yields the other two inclusions. Also note that the diagrams of \cref{eq:Ddiagrams} commute by the defintion of $D_0$, $D_+$, and $D_-$, since we have already shown that $\widetilde D_0$, $\widetilde D_+$, and $\widetilde D_-$ commute with $E_+$ and $E_-$ where it makes sense, and $L_k$-module homomorphisms in general commute with $E_+$ and $E_-$, so also $\psi$ commutes with $E_+$ and $E_-$. This is the case since for a $L_k$-module homomorphism $\varphi\colon M\to M'$ with decompositions $M=\bigoplus_{\ell,m} R_{\ell,m}$ and $M'=\bigoplus_{\ell,m} R_{\ell,m}'$, we have first that $\varphi(R_\ell)\subset R_\ell'$ and then $\varphi(R_{\ell,m}) \subset R_{\ell,m}'$ --- for more details see \todo{Add reference}.
 
+\begin{remark}
+  Note that $D_0$ is not defined at $R_{0,0}$, but $D_0$ is defined on $R_{\ell,0}$ by using the relation $E_+D_0=E_+D_0$ repeatedly. Also note that $D_-$ is not defined at $R_{\ell,\pm \ell}$. 
+\end{remark}
+
 Now simple calculations, cf.\ \Cref{sec:Factions}, gives us that
 \begin{align}\label{eq:Factions}
   \begin{aligned}
     F_3 \xi &= \sqrt{\ell^2-m^2} D_-\xi - m D_0\xi - \sqrt{(\ell+1)^2-m^2}D_+\xi, \\
-    F_+ \xi &= \sqrt{(\ell-m)(\ell-m-1)}D_-E_+\xi - \sqrt{(\ell-m)((\ell+m+1))}D_0E_+\xi \\*
+    F_+ \xi &= \sqrt{(\ell-m)(\ell-m-1)}D_-E_+\xi - \sqrt{(\ell-m)(\ell+m+1)}D_0E_+\xi \\*
     &\phantom{{}={}}{} + \sqrt{(\ell+m+1)(\ell+m+2)}E_+D_+\xi, \\
     F_- \xi &= -\sqrt{(\ell+m)(\ell+m-1)}D_-E_-\xi - \sqrt{(\ell+m)(\ell-m+1)}D_0E_-\xi \\*
     &\phantom{{}={}}{} - \sqrt{(\ell-m+1)(\ell-m+2)}E_-D_+\xi
@@ -506,13 +504,21 @@ We claim now that the formulae \cref{eq:Factions} for the linear operators $F_+$
     \xi &= (2\ell-1)D_+D_- \xi - (2\ell+3)D_-D_+\xi - D_0^2\xi
   \end{aligned}
 \end{align}
-for $\xi\in R_{\ell,m}$. \todo{I haven't shown this properly yet --- I guess it should follow from looking at the relations but the calculations are very long, so I skipped it for now}
+for $\xi\in R_{\ell,m}$, $\ell\neq 0$ except in the first line were $\ell=0$ is allowed. Here the term $D_+D_-$ should be replaced with $E_+D_+D_-E_-$ for $\xi\in R_{\ell,\ell}$ and $E_-D_+D_-E_+$ for $\xi \in R_{\ell,-\ell}$. 
 
 \subsection{\texorpdfstring{Simple Harish-Chandra modules for the pair $(L,L_k)$}{Simple Harish-Chandra modules for the pair (L,L\_k)}}\label{sec:simplemodules}
 
 We want to classify the simple Harish-Chandra modules for the pair $(L,L_k)$ for later use. Before most of the work we need some basic results.
 
-Let $M$ be an simple Harish-Chandra module over $L$ and suppose that each non-trivial subspace $R_{\ell,m}$ in $M=\bigoplus_{\ell,m} R_{\ell,m}$ is one dimensional. In this case each $L_k$-module $R_\ell$ is either isomorphic to the simple module $M(2\ell)$ or $0$. We will later show that actually all simple Harish-Chandra modules are of this kind, so we indeed get a classification of the simple Harish-Chandra modules in the following.
+Let $M$ be an simple Harish-Chandra module over $L$ and suppose that each non-trivial subspace $R_{\ell,m}$ in $M=\bigoplus_{\ell,m} R_{\ell,m}$ is one dimensional. In this case each $L_k$-module $R_\ell$ is either isomorphic to the simple module $M(2\ell)$ or $0$. We claim that actually all simple Harish-Chandra modules are of this kind, so we indeed get a classification of the simple Harish-Chandra modules in the following.
+
+To see this assume that $V\subset R_\ell$ is a simple $L_k$-submodule in $M$, i.e.\ $V\simeq M(2\ell)$, and put
+\begin{align*}
+  \overline{D_+V} = D_+(V) + E_+(D_+(V)) + E_-(D_+(V)).
+\end{align*}
+We claim that $\overline{D_+V}$ is either a simple $L_k$-submodule or $0$. This is clear since by construction if $\overline{D_+V}$ is non-zero, it sits inside an $L_k$-submodule isomorphic to $M(2\ell+2)$, and here we have the weight $m$ elements for $m\in\Set{-\ell,-\ell+1,\dotsc,\ell-1,\ell}$ sitting in $D_+(V)$, the $-\ell-1$ weight elements in $E_-(D_+(V))$, and the $\ell+1$ elements in $E_+(D_+(V))$, so $\overline{D_+V}\simeq M(2\ell+2)$. Now if $D_0(V)\subset V$ then \cref{eq:Drels} imply that $D_0(\overline{D_+V})\subset \overline{D_+V}$ since $E_+$ and $E_-$ commute with $D_0$. Likewise if $D_+D_-(V)\subset V$ we get that $D_-(\overline{D_+V})\subset V$ and $D_+D_-(\overline{D_+V}) \subset \overline{D_+V}$.
+
+Now consider an eigenvector $v\in R_{\ell_0,\ell_0}$ of $D_0$ (or of $\Delta_2$ in case $\ell_0=0$), and let $V_{\ell_0}$ be the subspace spanned by all $(E_-)^rv$. This is clearly a simple $L_k$-module isomorphic to $M(2\ell_0)$ (up to constants on the terms it is exactly the construction of $M(2\ell_0)$). Inductively define $V_\ell = \overline{D_+V_{\ell-1}}$ for all $\ell>\ell_0$. Then $\bigoplus_{\ell\geq \ell_0} V_\ell$ is an $L$-submodule of $M$ since by definition it is invariant under $D_+$, $E_+$, and $E_-$, and by \cref{eq:Drels} $D_0(V_{\ell_0})\subset V_{\ell_0}$ and $D_+D_-(V_{\ell_0})\subset V_{\ell_0}$ so $\bigoplus_{\ell\geq \ell_0} V_\ell$ is also invariant under $D_0$ and $D_-$ by the above. Hence if $M$ is simple, we get that $M=\bigoplus_{\ell\geq \ell_0} V_\ell$, and thus indeed each non-trivial subspace $R_{\ell,m}$ in $M$ is one dimensional.
 
 Denote by $\ell_0$ the minimal index $\ell$ in the decomposition $M=\bigoplus_\ell R_\ell$. Note that
 \begin{align*}
@@ -588,7 +594,7 @@ so $\dd{\ell_0+1}{0}=0$, and thus
 \end{align*}
 for all $\ell\in\Set{1,2,\dotsc}$. Also in this case have $\dd{0}{0}=c_1$, where $c_1$ is some constant. 
 
-To unify these two cases we set $c=i\ell_0\ell_1$ and $c_1=i\ell_1$ for some real constant $\ell_1$ such that\todo{This should be for complex $\ell_1$ because of how I want to use it later, but this is a problem by the next comment}
+To unify these two cases we set $c=i\ell_0\ell_1$ and $c_1=i\ell_1$ for some complex constant $\ell_1$ such that
 \begin{align}\label{eq:dl0res}
   \dd{\ell}{0} = \dfrac{i\ell_0\ell_1}{\ell(\ell+1)}
 \end{align}
@@ -602,7 +608,7 @@ and a simple calculation, cf.\ \Cref{sec:dl-calc}, yields that
 \end{align}
 for $\ell>\ell_0$.
 
-Since we showed in the beginning of this subsection that the kernel of $D_-$ is $R_{\ell_0}$, we must have that $\dd{\ell}{-}\neq 0$ for all $\ell>\ell_0$. Thus $\ell^2-\ell_1^2\neq 0$ for $\ell>\ell_0$, so $\abs{\ell_1}-\ell_0$ cannot be a positive integer, because if that was the case then $\abs{\ell_1}= \ell_0+(\abs{\ell_1}-\ell_0) \in \Set{\ell_0+1,\ell_0+2,\dotsc}$, but $\abs{\ell_1}^2-\ell_1^2=0$ since $\ell_1\in\R$.\todo{How to do this if $\ell_1$ is complex}
+Since we showed in the beginning of this subsection that the kernel of $D_-$ is $R_{\ell_0}$, we must have that $\dd{\ell}{-}\neq 0$ for all $\ell>\ell_0$. Thus $\ell^2-\ell_1^2\neq 0$ for $\ell>\ell_0$, so $\abs{\ell_1}-\ell_0$ cannot be a positive integer if $\ell_1$ is real, because if that was the case then $\abs{\ell_1}= \ell_0+(\abs{\ell_1}-\ell_0) \in \Set{\ell_0+1,\ell_0+2,\dotsc}$, but $\abs{\ell_1}^2-\ell_1^2=0$ since $\ell_1\in\R$.
 
 Hence altogether by \cref{eq:E+andE-,eq:Factions} in the basis $\Set{\xi_{\ell,m}}$ the operators $H_+$, $H_-$, $H_3$, $F_+$, $F_-$, and $F_3$ are given by the formulae
 \begin{align}\label{eq:infdimactions}
@@ -611,7 +617,7 @@ Hence altogether by \cref{eq:E+andE-,eq:Factions} in the basis $\Set{\xi_{\ell,m
     H_+\xi_{\ell,m} &= \sqrt{(\ell+m+1)(\ell-m)} \xi_{\ell,m+1}, \\
     H_-\xi_{\ell,m} &= \sqrt{(\ell+m)(\ell-m+1)} \xi_{\ell,m-1}, \\
     F_3\xi_{\ell,m} &= \sqrt{\ell^2-m^2} \dd{\ell}{-}\xi_{\ell-1,m} - m \dd{\ell}{0}\xi_{\ell,m} - \sqrt{(\ell+1)^2-m^2}\dd{\ell}{+}\xi_{\ell+1,m}, \\
-    F_+\xi_{\ell,m} &= \sqrt{(\ell-m)(\ell-m-1)}\dd{\ell}{-}\xi_{\ell-1,m+1} - \sqrt{(\ell-m)((\ell+m+1))}\dd{\ell}{0}\xi_{\ell,m+1} \\*
+    F_+\xi_{\ell,m} &= \sqrt{(\ell-m)(\ell-m-1)}\dd{\ell}{-}\xi_{\ell-1,m+1} - \sqrt{(\ell-m)(\ell+m+1)}\dd{\ell}{0}\xi_{\ell,m+1} \\*
     &\phantom{{}={}}{} + \sqrt{(\ell+m+1)(\ell+m+2)} \dd{\ell}{+}\xi_{\ell+1,m+1}, \\
     F_-\xi_{\ell,m} &= -\sqrt{(\ell+m)(\ell+m-1)}\xi_{\ell-1,m-1} - \sqrt{(\ell+m)(\ell-m+1)}\xi_{\ell,m-1} \\*
     &\phantom{{}={}}{} - \sqrt{(\ell-m+1)(\ell-m+2)}\xi_{\ell+1,m-1},
@@ -621,11 +627,21 @@ where
 \begin{align}\label{eq:infdimds}
   \dd{\ell}{0} &= \dfrac{i\ell_0\ell_1}{\ell(\ell+1)}, & \dd{\ell}{-} &= -\dfrac{\bigl(\ell^2 - \ell_1^2\bigr)\bigl( \ell^2 - \ell_0^2 \bigr)}{\ell^2(4\ell^2-1)}, & \dd{\ell}{+} &= 1,
 \end{align}
-for $\ell\in\Set{\ell_0,\ell_0+1,\dotsc}$, and where $\ell_1$ is a real number such that $\abs{\ell_1}-\ell_0$ is not a positive integer. Here we use the convention that $\xi_{\ell',m'}=0$ for pairs $\ell',m'$ where there is no such basis element.
+for $\ell\in\Set{\ell_0,\ell_0+1,\dotsc}$, and where $\ell_1$ is a complex number such that $\abs{\ell_1}-\ell_0$ is not a positive integer if $\ell_1$ is real. Here we use the convention that $\xi_{\ell',m'}=0$ for pairs $\ell',m'$ where there is no such basis element.
 
 \subsubsection{Finite dimensional simple modules}
 
-Assume that $M$ is a Harish-Chandra module of the above kind and that $M$ is finite dimensional, i.e.\ $M=\bigoplus_{\ell,m} R_{\ell,m}$ where $R_{\ell,m}$ are one dimensional subspaces for $\ell_0\leq \ell < \abs{\ell_1}$. Here $\ell_1$ is some real number such that $\abs{\ell_1}\geq \ell_0$ and $\abs{\ell_1}-\ell_0$ is integral. We can choose a basis $\Set{\xi_{\ell,m}}$ as in the infinite dimensional case and we still get the formulae \cref{eq:infdimactions,eq:infdimds} describing the actions of $H_+$, $H_-$, $H_3$, $F_+$, $F_-$, and $F_3$, though now in this basis we only consider $\ell\in\Set{\ell_0,\ell_0+1,\dotsc,\abs{\ell_1}-1}$. \todo{Maybe describe a little more.}
+Assume that $M$ is a Harish-Chandra module of the above kind and that $M$ is finite dimensional, i.e.\ $M=\bigoplus_{\ell,m} R_{\ell,m}$ where $R_{\ell,m}$ are one dimensional subspaces for $\ell_0\leq \ell < \abs{\ell_1}$. Here $\ell_1$ is some real number such that $\abs{\ell_1}\geq \ell_0$ and $\abs{\ell_1}-\ell_0$ is integral. We can choose a basis $\Set{\xi_{\ell,m}}$ as in the infinite dimensional case and by similar considerations we still get the formulae \cref{eq:infdimactions,eq:infdimds} describing the actions of $H_+$, $H_-$, $H_3$, $F_+$, $F_-$, and $F_3$, though now in this basis we only consider $\ell\in\Set{\ell_0,\ell_0+1,\dotsc,\abs{\ell_1}-1}$. 
+
+Here it is worth noting that we can actually describe the modules accurately using some algebraic results which we will not show in this paper. Firstly note that we know that all finite dimensional $\slc$-modules are the $V(n)$ we have described earlier, and from this it can be shown that all finite dimensional $\slpr$-modules are of the form $V(n)\otimes V(m)$, where the action of $\slpr$ on $V(n)\otimes V(m)$ is given by
+\begin{align*}
+  (x,y).v_1\otimes v_2 = (x.v_1)\otimes v_2 + v_1\otimes (y.v_2).
+\end{align*}
+Note that considering $V(n)\otimes V(m)$ as $\slc$-modules via the diagonal map $\slc\to\slpr$, $u\mapsto (u,u)$, we get the standard action of $\slc$ on $V(n)\otimes V(m)$ as described in \cref{eq:tensoraction}, and now Clebsch-Gordan's formula implies that
+\begin{align*}
+  V(n)\otimes V(m) \simeq \bigoplus_{i=0}^{\min(n,m)} V(n+m-2i).
+\end{align*}
+Note that the last term of the direct sum if $V(\abs{n-m})$. Thus translating to the language of $L$ and $L_k$-modules, we have that all finite dimensional $L$-modules are of the form $\bigoplus_{i=0}^{\min(2r,2s)} M(2r+2s-2i)$ where $r,s\in \tfrac{1}{2}\Z_{\geq0}$. Here we see that $\ell_0 = \abs{r-s}$ and $\abs{\ell_1}-1=r+s$. 
 
 %%% Local Variables:
 %%% mode: latex

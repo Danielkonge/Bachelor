@@ -1,51 +1,79 @@
 \section{\texorpdfstring{Relations for $D_0$, $D_+$, $D_-$}{Relations for D\_0,D\_+,D\_-}}
 
 We want to show that the formulae \cref{eq:Factions} for the linear operators $F_+$, $F_-$, and $F_3$ together with the formulae \cref{eq:H3eigen,eq:E+andE-} for $H_+$, $H_-$, and $H_3$ define a representation of $L$, i.e. they satisfy the commutation relations of \cref{eq:lierels}, if and only if $D_0$, $D_+$, and $D_-$ satisfy \cref{eq:Drels}.
-By \cref{eq:lierels,eq:E+andE-} ...\todo{Write calculations here}
-% \begin{align*}
-%   2F_3 \xi &= [H_+,F_-]\xi = H_+F_- \xi - F_-H_+ \xi \\
-%            &= -\sqrt{(\ell+m)(\ell+m-1)} H_+D_-E_- \xi - \sqrt{(\ell+m)(\ell-m+1)} H_+D_0E_- \xi \\*
-%            &\phantom{{}={}}{} - \sqrt{(\ell-m+1)(\ell-m+2)} H_+D_+E_- \xi \\*
-%            &\phantom{{}={}}{} - \sqrt{(\ell+m+1)(\ell-m)}F_-E_+\xi \\
-%            &= -\sqrt{(\ell+m)(\ell+m-1)}\sqrt{((\ell-1)+(m-1)+1)((\ell-1)-(m-1))} E_+D_-E_- \xi \\*
-%            &\phantom{{}={}}{} - \sqrt{(\ell+m)(\ell-m+1)} \sqrt{(\ell+(m-1)+1)(\ell-(m-1))} E_+D_0E_- \xi \\*
-%            &\phantom{{}={}}{} - \sqrt{(\ell-m+1)(\ell-m+2)}\sqrt{((\ell+1)+(m-1)+1)((\ell+1)-(m-1))} E_+D_+E_- \xi \\*
-%            &\phantom{{}={}}{} + \sqrt{(\ell+m+1)(\ell-m)} \Bigl( \sqrt{(\ell+(m+1))(\ell+(m+1)-1)}D_-E_-E_+\xi \\*
-%            &\phantom{{}={}()}{} + \sqrt{(\ell+(m+1))(\ell-(m+1)+1)}D_0E_-E_+\xi \\*
-%            &\phantom{{}={}()}{} + \sqrt{(\ell-(m+1)+1)(\ell-(m+1)+2)} E_-D_+E_+ \xi \Bigr) \\
-%            &= -\sqrt{(\ell+m)(\ell+m-1)}\sqrt{(\ell+m-1)(\ell-m)} E_+E_-D_- \xi \\*
-%            &\phantom{{}={}}{} - \sqrt{(\ell+m)(\ell-m+1)} \sqrt{(\ell+m)(\ell-m+1)} E_+E_-D_0 \xi \\*
-%            &\phantom{{}={}}{} - \sqrt{(\ell-m+1)(\ell-m+2)}\sqrt{(\ell+m+1)(\ell-m+2)} E_+E_-D_+ \xi \\*
-%            &\phantom{{}={}}{} + \sqrt{(\ell+m+1)(\ell-m)} \Bigl( \sqrt{(\ell+m+1)(\ell+m)}D_-E_-E_+\xi \\*
-%            &\phantom{{}={}()}{} + \sqrt{(\ell+m+1)(\ell-m)}D_0E_-E_+\xi \\*
-%            &\phantom{{}={}()}{} + \sqrt{(\ell-m)(\ell-m+1)} E_-E_+D_+ \xi \Bigr) \\
-%            &= -(\ell+m-1)\sqrt{\ell^2-m^2} D_- \xi \\*
-%            &\phantom{{}={}}{} - (\ell+m)(\ell-m+1) D_0 \xi \\*
-%            &\phantom{{}={}}{} - (\ell-m+2)\sqrt{(\ell+1)^2-m^2} D_+ \xi \\*
-%            &\phantom{{}={}}{} + (\ell+m+1)\sqrt{\ell^2-m^2}D_-\xi \\*
-%            &\phantom{{}={}}{} + (\ell+m+1)(\ell-m)D_0\xi \\*
-%            &\phantom{{}={}}{} + (\ell-m)\sqrt{(\ell+1)^2-m^2} D_+ \xi \\
-%            &= 2\sqrt{\ell^2-m^2}D_-\xi - 2m D_0\xi -2\sqrt{(\ell+1)^2-m^2}D_+\xi
-% \end{align*}\todo{Remove this, do it with F relations only instead.}
-% \begin{align*}
-%   [F_+,F_3]\xi &= F_+F_3\xi - F_3F_+\xi \\
-%                &= \sqrt{\ell^2-m^2}F_+D_-\xi - m F_+D_0\xi - \sqrt{(\ell+1)^2-m^2}F_+D_+\xi \\*
-%                &\phantom{{}={}}{} -\sqrt{(\ell-m)(\ell-m-1)}F_3D_-E_+\xi \\*
-%                &\phantom{{}={}}{}+ \sqrt{(\ell-m)(\ell+m+1)}F_3D_0E_+\xi \\*
-%                &\phantom{{}={}}{} - \sqrt{(\ell+m+1)(\ell+m+2)}F_3D_+E_+ \xi \\
-%                &= \sqrt{\ell^2-m^2} \Bigl( \sqrt{((\ell-1)-m)((\ell-1)-m-1)}D_-E_+D_-\xi \\*
-%                &\phantom{{}={}\sqrt{\ell^2-m^2}()}{} - \sqrt{((\ell-1)-m)((\ell-1)+m+1)} D_0E_+D_- \xi \\*
-%                &\phantom{{}={}\sqrt{\ell^2-m^2}()}{} + \sqrt{((\ell-1)+m+1)((\ell-1)+m+2)} D_+E_+D_- \xi \Bigr) \\*
-%                &\phantom{{}={}}{} -m\Bigl( \sqrt{(\ell-m)(\ell-m-1)}D_-E_+D_0\xi \\*
-%                &\phantom{{}={}-m()}{} - \sqrt{(\ell-m)(\ell+m+1)} D_0E_+D_0 \xi \\*
-%                &\phantom{{}={}-m()}{} + \sqrt{(\ell+m+1)(\ell+m+2)} D_+E_+D_0 \xi \Bigr) \\*
-%                &\phantom{{}={}}{} -\sqrt{(\ell+1)^2-m^2}\Bigl( \sqrt{((\ell-1)-m)((\ell-1)-m-1)}D_-E_+D_+\xi \\*
-%                &\phantom{{}={}-\sqrt{(\ell+1)^2-m^2}()}{} - \sqrt{((\ell+1)-m)((\ell+1)+m+1)} D_0E_+D_+ \xi \\*
-%                &\phantom{{}={}-\sqrt{(\ell+1)^2-m^2}()}{} + \sqrt{((\ell+1)+m+1)((\ell+1)+m+2)} D_+E_+D_+ \xi \Bigr) \\*
-%                &\phantom{{}={}}{} - \sqrt{(\ell-m)(\ell-m-1)}\sqrt{((\ell-1)^2-(m+1)^2)}D_-D_-E_+\xi \\*
-%                &\phantom{{}={}}{} + \sqrt{(\ell-m)(\ell+m+1)}\sqrt{(\ell^2-(m+1)^2)}D_-D_0E_+\xi
-% \end{align*}
 
+We claim that all commutators containing $H$'s already satisfy the relations. We already have by construction that all relations with only $H$'s satisfy the relations, so we just need to check the relations for commutators with one $F$ and one $H$. We will here check that $[H_-,F_+] = -2F_3$ as we want, and then we just note that the rest follow by similar considerations.
+
+By \cref{eq:Factions,eq:H+H-} first note that for $\xi\in R_{\ell,\ell}$ with $\ell\neq 0$ we have that $F_+\xi = \sqrt{(2\ell+1)(2\ell+2)}E_+D_+\xi\in R_{\ell+1,\ell+1}$, so
+\begin{align*}
+  H_-F_+ \xi &= \sqrt{(2\ell+2)\cdot 1}\sqrt{(2\ell+1)(2\ell+2)}E_-E_+D_+\xi \\
+           &= 2(\ell+1)\sqrt{2\ell+1}D_+\xi \\
+           &= 2\ell\sqrt{2\ell+1}D_+\xi + 2\sqrt{2\ell+1}D_+\xi,
+\end{align*}
+while $H_-\xi = \sqrt{2\ell}E_-\xi \in R_{\ell,\ell-1}$, so
+\begin{align*}
+  F_+H_- \xi &= -\sqrt{1\cdot2\ell}\sqrt{2\ell}D_0E_+E_-\xi + \sqrt{2\ell(2\ell+1)}\sqrt{2\ell}E_+D_+E_-\xi \\
+           &= -2\ell D_0 \xi + 2\ell\sqrt{2\ell+1}E_+E_-D_+\xi \\
+           &= -2\ell D_0 \xi + 2\ell\sqrt{2\ell+1} D_+ \xi. \\
+\end{align*}
+Therefore we get that
+\begin{align*}
+  [H_-,F_+] \xi &= H_-F_+ \xi - F_+H_- \xi \\
+  &= 2\ell D_0\xi + 2\sqrt{2\ell+1}D_+\xi.
+\end{align*}
+Also
+\begin{align*}
+  -2F_3 \xi &= 2\ell D_0\xi + 2\sqrt{(\ell+1)^2-\ell^2} D_+\xi \\
+  &= 2\ell D_0\xi + 2\sqrt{2\ell+1} D_+\xi,
+\end{align*}
+and thus indeed $[H_-,F_+]\xi = -F_3\xi$ for $\xi\in R_{\ell,\ell}$. Since $D_0$ and $D_+$ commute with $E_-$ for $m\neq -\ell$ this also gives the result for all $\xi\in R_{\ell,m}$, $m\in\Set{-\ell,-\ell+1,\dotsc,\ell-1,\ell}$, by applying the isomorphism $E_-^{\ell-m}\colon R_{\ell,\ell} \to R_{\ell,m}$.
+
+Now we claim that $\ell D_+D_0\xi = (\ell+2)D_0D_+\xi$ corresponds to the relation $[F_+,F_3]=F_+$, while $(\ell+1)D_-D_0\xi = (\ell-1)D_0D_-\xi$ corresponds to the relation $[F_-,F_3]=-H_-$, and $\xi=(2\ell-1)D_+D_- \xi - (2\ell+3)D_-D_+ \xi - D_0^2 \xi$ corresponds to the relation $[F_+,F_-]=-2H_3$. Here will only show the last claim and note that the others are similar (although a little simpler), and that the first and second cliam can be shown first without assuming the third.
+
+Note that for $\xi\in R_{\ell,\ell}$ with $\ell\neq 0$ we have that $F_+\xi = \sqrt{(2\ell+1)(2\ell+2)}E_+D_+\xi \in R_{\ell+1,\ell+1}$, so
+\begin{align*}
+  F_-F_+ \xi &= -\sqrt{(2\ell+2)(2\ell+1)}\sqrt{(2\ell+1)(2\ell+2)} D_-E_-E_+D_+ \xi \\*
+           &\phantom{{}={}}{} - \sqrt{2\ell+2}\sqrt{(2\ell+1)(2\ell+2)} D_0E_-E_+D_+ \xi \\*
+           &\phantom{{}={}}{} - \sqrt{2}\sqrt{(2\ell+1)(2\ell+2)}E_-D_+E_+D_+ \xi \\
+           &= -(2\ell+1)(2\ell+2) D_-D_+ \xi - (2\ell+2)\sqrt{2\ell+1} D_0D_+ \xi \\*
+           &\phantom{{}={}}{} - 2\sqrt{(2\ell+1)(\ell+1)} E_+E_-D_+D_+ \xi \\
+           &= -(2\ell+1)(2\ell+2) D_-D_+ \xi - (2\ell+2)\sqrt{2\ell+1} D_0D_+ \xi \\*
+           &\phantom{{}={}}{} - 2\sqrt{(2\ell+1)(\ell+1)} D_+D_+ \xi.
+\end{align*}
+Likewise we have that
+\begin{align*}
+  F_- \xi &= -\sqrt{2\ell(2\ell-1)}D_-E_- \xi - \sqrt{2\ell}D_0E_-\xi - \sqrt{2}E_-D_+\xi,
+\end{align*}
+where $D_-E_-\xi \in R_{\ell-1,\ell-1}$, $D_0E_-\xi \in R_{\ell,\ell-1}$, and $E_-D_+\xi \in R_{\ell+1,\ell-1}$, so
+\begin{align*}
+  F_+F_- \xi &= -\sqrt{(2\ell-1)2\ell}\sqrt{2\ell(2\ell-1)}E_+D_+D_-E_- \xi \\*
+           &\phantom{{}={}}{} + \sqrt{2\ell}\sqrt{2\ell}D_0E_+D_0E_- \xi - \sqrt{2\ell(2\ell+1)}\sqrt{2\ell}E_+D_+D_0E_-\xi \\*
+           &\phantom{{}={}}{} - \sqrt{2}\sqrt{2}D_-E_+E_-D_+ \xi + \sqrt{2(2\ell+1)}\sqrt{2}D_0E_+E_-D_+ \xi \\*
+           &\phantom{{}={}}{} - \sqrt{(2\ell+1)(2\ell+2)}\sqrt{2} E_+D_+E_-D_+ \xi \\
+           &= -2\ell(2\ell-1) E_+D_+D_-E_- \xi + 2\ell D_0^2 \xi - 2\ell\sqrt{2\ell+1}D_+D_0 \xi \\*
+           &\phantom{{}={}}{} - 2 D_-D_+\xi + 2\sqrt{2\ell+1}D_0D_+ - 2\sqrt{(2\ell+1)(\ell+1)} D_+^2 \xi.
+\end{align*}
+Hence we get that
+\begin{align*}
+  [F_+,F_-]\xi &= F_+F_-\xi - F_-F_+ \xi \\
+             &= -2\ell(2\ell-1) E_+D_+D_-E_- \xi + 2\ell D_0^2 \xi - 2\ell\sqrt{2\ell+1}D_+D_0 \xi \\*
+             &\phantom{{}={}}{} - \bigl(2-(2\ell+1)(2\ell+2)\bigr) D_-D_+\xi + (2+(2\ell+2))\sqrt{2\ell+1}D_0D_+ \\
+             &= -2\ell(2\ell-1) E_+D_+D_-E_- \xi + 2\ell D_0^2 \xi - 2\ell\sqrt{2\ell+1}D_+D_0 \xi \\*
+             &\phantom{{}={}}{} + 2\ell(2\ell+3) D_-D_+\xi + 2(\ell+2)\sqrt{2\ell+1}D_0D_+\xi \\
+             &= -2\ell(2\ell-1) E_+D_+D_-E_- \xi + 2\ell D_0^2 \xi \\*
+             &\phantom{{}={}}{} + 2\sqrt{2\ell+1}\bigl((\ell+2)D_0D_+\xi -\ell D_+D_0 \xi \bigr) \\*
+             &\phantom{{}={}}{} + 2\ell(2\ell+3) D_-D_+\xi + 2(\ell+2)\sqrt{2\ell+1}D_0D_+\xi \\
+             &= -2\ell(2\ell-1) E_+D_+D_-E_- \xi + 2\ell D_0^2 \xi + 2\ell(2\ell+3) D_-D_+\xi,
+\end{align*}
+since $2-(2\ell+1)(2\ell+2)=2-4\ell^2-6\ell-2=-4\ell^2-6\ell=-2\ell(2\ell+3)$ and $(\ell+2)D_0D_+ \xi = \ell D_+D_0 \xi$. Also
+\begin{align*}
+  -2H_3 \xi &= -2\ell \xi,
+\end{align*}
+so dividing by $-2\ell$ (noting that $\ell\neq 0$) we see that $[F_+,F_-]\xi = -2H_3 \xi$ for $\xi \in R_{\ell,\ell}$ if and only if
+\begin{align*}
+  \xi = (2\ell-1)E_+D_+D_-E_- \xi - (2\ell+3)D_-D_+ \xi - D_0^2 \xi.
+\end{align*}
+Here we note that for $\xi \in R_{\ell,m}$, $m\neq\pm \ell$, the term $E_+D_+D_-E_-\xi$ simplifies to $D_+D_-\xi$, while for $m=-\ell$ it becomes $E_-D_+D_-E_+\xi$. \todo{How to expand --- also further up.}
 
 %%% Local Variables:
 %%% mode: latex

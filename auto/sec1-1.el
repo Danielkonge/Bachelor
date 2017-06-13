@@ -13,6 +13,7 @@
     "eq:E+andE-"
     "rem:Edef"
     "eq:Ddiagrams"
+    "eq:tensoraction"
     "eq:psi"
     "eq:V(2)tensorV(n)"
     "eq:hontensor"
