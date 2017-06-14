@@ -102,7 +102,7 @@ for $\xi\in R_{\ell_0,m_0}=P$. Denote now by $\widetilde{A}$ the pair $(P,a)$ co
 
   On $R_{\ell_0,m_0}$ set 
   \begin{align}
-    \begin{aligned}
+    \begin{aligned}\label{eq:DeltasRell0m0}
       \Delta_1 \xi &= -\ell_0(\ell_0+1)D_0\xi \\
       &= -\ell_0(\ell_0+1)a\xi - i\ell_1\ell_0\xi, \\
       \Delta_2 \xi &= (\ell_0^2-1)\xi - (\ell_0+1)^2D_0^2\xi \\
@@ -110,21 +110,23 @@ for $\xi\in R_{\ell_0,m_0}=P$. Denote now by $\widetilde{A}$ the pair $(P,a)$ co
       &= (\ell_0^2+\ell_1^2-1)\xi - (\ell_0+1)^2\Bigl( a^2\xi + 2\dfrac{i\ell_1}{\ell_0+1}a\xi \Bigr)
     \end{aligned}
   \end{align}
-  for $\xi \in R_{\ell_0,m_0}$. Now note that for arbitrary $R_{\ell,m}$ the linear map given by $J_{\ell,m}=(E_+)^{m-m_0}(D_+)^{\ell-\ell_0}$ for $m\geq m_0$ and $J_{\ell,m}=(E_-)^{m_0-m}(D_+)^{\ell-\ell_0}$ for $m<m_0$ is a composition of isomorphisms and hence an isomorphism, so we can define 
+  for $\xi \in R_{\ell_0,m_0}$. Now note that for arbitrary $R_{\ell,m}$ the linear map given by $J_{\ell,m}=(E_+)^{m-m_0}(D_+)^{\ell-\ell_0}$, where $(E_+)^- = E_-$, is a composition of isomorphisms and hence an isomorphism, so we can define 
   \begin{align*}
     (\Delta_i)_{\ell,m}\xi = J_{\ell,m}(\Delta_i)_{\ell_0,m_0} (J_{\ell,m})^{-1}
   \end{align*}
   for $\xi\in R_{\ell,m}$ and $i=1,2$. Thus we have defined $\Delta_1$ and $\Delta_2$ on all of $M$.
   
   Now define $D_0\colon R_{\ell,m}\to R_{\ell,m}$ by 
-  \begin{align*}
+  \begin{align}\label{eq:D0fromDelta1}
     D_0\xi = -\dfrac{1}{\ell(\ell+1)}\Delta_1 \xi
-  \end{align*}
-  for $\xi\in R_{\ell,m}$,\todo{Add $\ell=0$ case} and $D_+D_-\colon R_{\ell,m}\to R_{\ell,m}$ by 
-  \begin{align*}
-    D_+D_-\xi &= \dfrac{1}{4\ell^2-1}(\Delta_2\xi - (\ell^2-1)\xi + (\ell+1)^2D_0^2\xi) \\
-    &= \dfrac{1}{4\ell^2-1}\Bigl(\Delta_2\xi - (\ell^2-1)\xi + \dfrac{\Delta_1^2}{\ell^2}\xi\Bigr)
-  \end{align*}
+  \end{align}
+  for $\xi\in R_{\ell,m}$, $\ell\neq 0$, and $D_+D_-\colon R_{\ell,m}\to R_{\ell,m}$ by 
+  \begin{align}
+    \begin{aligned}\label{eq:D+D-fromDeltas}
+      D_+D_-\xi &= \dfrac{1}{4\ell^2-1}(\Delta_2\xi - (\ell^2-1)\xi + (\ell+1)^2D_0^2\xi) \\
+      &= \dfrac{1}{4\ell^2-1}\Bigl(\Delta_2\xi - (\ell^2-1)\xi + \dfrac{\Delta_1^2}{\ell^2}\xi\Bigr)
+    \end{aligned}
+  \end{align}
   for $\xi \in R_{\ell,m}$, $\ell\neq \ell_0$, which we can do since $D_+$ is an isomorphism. Using this we define $D_-\colon R_{\ell,m}\to R_{\ell-1,m}$ to be the map $(D_+)^{-1}(D_+D_-)$ for $\ell\neq \ell_0$, and equal to zero for $\ell=\ell_0$. 
 
   Now the maps $E_+$, $E_-$, $D_0$, $D_+$, and $D_-$ constructed above satisfy the relations of \Cref{sec:formulae}, \todo{Write this more explicitely} so the operators $F_+$, $F_-$, $F_3$, $H_+$, $H_-$, and $H_3$ constructed from these maps as in \cref{eq:H3eigen,eq:E+andE-,eq:Drels} gives $M$ an $L$-module structure. Finally we get $P=R_{\ell_0,m_0}$ and \cref{eq:adef} by construction, and we note that $M$ is non-singular since the pair $(\lambda_1,\lambda_2)$ with the corresponding $\ell_0$ and $\ell_1$ is non-singular by assumption.
@@ -147,7 +149,7 @@ commutes. We have already shown that there is a correspondence between non-singu
   The non-singular category $C(\lambda_1,\lambda_2)$ is equivalent to the category $S$.
 \end{theorem}
 \begin{proof}
-  By \Cref{thm:objectscor} we have a correspondence between objects $M\in C(\lambda_1,\lambda_2)$ and the objects $A\in S$, so we just need to establish a correspondence between the morphisms. Let $\Gamma\colon M\to M'$ be a morphism between the two modules $M,M'\in C(\lambda_1,\lambda_2)$. We have already seen in the proof of \Cref{prop:modulehom} that $\Gamma R_\ell\subset R_\ell'$ since $\Gamma$ commutes with $H_3$, and since $\Gamma$ also commutes with $H_+$ and $H_-$, we get that $\Gamma R_{\ell,m}\subset R_{\ell,m}'$. Thus $\Gamma$ is the direct sum of morphisms $\gamma_{\ell,m}\colon R_{\ell,m}\to R_{\ell,m}'$, so choosing indices $\ell_0$ and $m_0$ we get a morphism $\gamma\coloneqq \gamma_{\ell_0,m_0}\colon R_{\ell_0,m_0}\to R_{\ell_0',m_0'}$. Here $\gamma$ gives a morphism in $S$ from $\widetilde{A}=(R_{\ell_0,m_0},a)$ to $\widetilde{A}'=(R_{\ell_0,m_0}',a')$. To see this it is enough to show that $D_0'\gamma = \gamma D_0$, which is true for $\ell_0\neq0$ since by the proof of \Cref{prop:modulehom} $\Delta_1'\Gamma=\Gamma\Delta_1$, so for $\ell\neq 0$ also $D_0'\Gamma=\Gamma D_0$ on $R_\ell$ because $\Delta_1=-\ell(\ell+1)D_0$ on $R_\ell$ and $\Delta_1'=-\ell(\ell+1)D_0'$ on $R_\ell'$, and therefore specifically $D_0' \gamma = \gamma D_0$. On the other hand for $\ell_0=0$ we know that...\todo{What about $\ell_0=0$} Hence $\gamma\colon \widetilde{A}\to \widetilde{A}'$ is indeed a morphism in $S$.
+  By \Cref{thm:objectscor} we have a correspondence between objects $M\in C(\lambda_1,\lambda_2)$ and the objects $A\in S$, so we just need to establish a correspondence between the morphisms. Let $\Gamma\colon M\to M'$ be a morphism between the two modules $M,M'\in C(\lambda_1,\lambda_2)$. We have already seen in the proof of \Cref{prop:modulehom} that $\Gamma R_\ell\subset R_\ell'$ since $\Gamma$ commutes with $H_3$, and since $\Gamma$ also commutes with $H_+$ and $H_-$, we get that $\Gamma R_{\ell,m}\subset R_{\ell,m}'$. Thus $\Gamma$ is the direct sum of morphisms $\gamma_{\ell,m}\colon R_{\ell,m}\to R_{\ell,m}'$, so choosing indices $\ell_0$ and $m_0$ we get a morphism $\gamma\coloneqq \gamma_{\ell_0,m_0}\colon R_{\ell_0,m_0}\to R_{\ell_0',m_0'}$. Here $\gamma$ gives a morphism in $S$ from $\widetilde{A}=(R_{\ell_0,m_0},a)$ to $\widetilde{A}'=(R_{\ell_0,m_0}',a')$. To see this it is enough to show that $D_0'\gamma = \gamma D_0$, which is true for $\ell_0\neq0$\footnote{Recall that $D_0$ is not defined on $R_{0,0}$, so this is what we want to check.} since by the proof of \Cref{prop:modulehom} $\Delta_1'\Gamma=\Gamma\Delta_1$, so for $\ell\neq 0$ also $D_0'\Gamma=\Gamma D_0$ on $R_\ell$ because $\Delta_1=-\ell(\ell+1)D_0$ on $R_\ell$ and $\Delta_1'=-\ell(\ell+1)D_0'$ on $R_\ell'$, and therefore specifically $D_0' \gamma = \gamma D_0$. Hence $\gamma\colon \widetilde{A}\to \widetilde{A}'$ is indeed a morphism in $S$.
 
   Now suppose conversely that we are given a morphism $\gamma\colon A\to A'$ in $S$, i.e.\ a linear map $\gamma\colon P\to P'$ such that $\gamma a=a'\gamma$. Construct modules $M$ and $M'$ with $R_{\ell_0,m_0}=0$ and $R_{\ell_0,m_0}'=P'$ as in the proof of \Cref{thm:objectscor}, then we have linear map $\gamma\colon R_{\ell_0,m_0}\to R_{\ell_0,m_0}'$ such that $\gamma a=a'\gamma$, which implies that $\gamma D_0=D_0'\gamma$ since $D_0=a+\tfrac{i\ell_1}{\ell_0+1}\id$. From this we will construct linear maps $\gamma_{\ell,m}\colon R_{\ell,m}\to R_{\ell,m}'$ by noting that $J_{\ell,m}=E_+^{m-m_0}D_+^{\ell-\ell_0}\colon R_{\ell_0,m_0}\to R_{\ell,m}$ is an isomorphism for $\ell$ and $m$ where it makes sense, so we get linear maps
   \begin{align}\label{eq:tempgammalm}
@@ -190,7 +192,7 @@ Here it follows from linear algebra that the indecomposable objects $A\in S$ are
 Finally to end our description of the non-singular Harish-Chandra modules, we will give the explicit form of $E_+$, $E_-$, $D_+$, $D_-$, and $D_0$ in a non-singular Harish-Chandra module $M\in C(\lambda_1,\lambda_2)$. Here we denote by $[E_+]_{\ell,m}$ the matrix representation of the map $E_+\colon R_{\ell,m}\to R_{\ell,m+1}$ in a given basis, by $[E_-]_{\ell,m}$ the matrix representation of the map $E_-\colon R_{\ell,m}\to R_{\ell,m-1}$ in a given basis, and so on.
 
 \begin{theorem}
-  Let $M\in C(\lambda_1,\lambda_2)$ be a non-singular indecomposable Harish-Chandra module for the pair $(L,L_k)$. Then all the subspaces $R_{\ell,m}$, $\ell=\ell_0,\ell_0+1,\dotsc$, have the same dimension, and bases can be chosen in them such that $[E_+]_{\ell,m}$ for $\ell\neq m$, $[E_-]_{\ell,m}$ for $m\neq -\ell$, and $[D_+]_{\ell,m}$ are identity matrices. Furthermore the matrices $[D_0]_{\ell,m}$ and $[D_-]_{\ell,m}$ can be expressed in terms of the matrix
+  Let $M\in C(\lambda_1,\lambda_2)$ be a non-singular indecomposable Harish-Chandra module for the pair $(L,L_k)$. Then all the subspaces $R_{\ell,m}$, $\ell=\ell_0,\ell_0+1,\dotsc$, have the same dimension, and bases can be chosen in them such that $[E_+]_{\ell,m}$ for $m\neq\ell$, $[E_-]_{\ell,m}$ for $m\neq -\ell$, and $[D_+]_{\ell,m}$ are identity matrices. Furthermore the matrices $[D_0]_{\ell,m}$ and $[D_-]_{\ell,m}$ can be expressed in terms of the matrix
   \begin{align*}
     [a_0] =
     \begin{pmatrix}
@@ -209,14 +211,39 @@ Finally to end our description of the non-singular Harish-Chandra modules, we wi
   where $[\id]$ is the identity matrix of the same dimension as $[a_0]$. 
 \end{theorem}
 \begin{proof}
-  By \Cref{lem:Disos} $D_+\colon R_{\ell,m}\to R_{\ell+1,m}$ is an isomorphism for all $\ell\geq \ell_0$, and likewise $E_+\colon R_{\ell,m}\to R_{\ell,m+1}$ is an isomorphism for all $m\neq \ell$, so indeed all subspaces $R_{\ell,m}$ have the same dimension. Now since $E_+\colon R_{\ell,m}\to R_{\ell,m+1}$ and $E_-\colon R_{\ell,m+1}\to R_{\ell,m}$ for $m\neq \ell$ are isomorphisms inverse to each other and $D_+\colon R_{\ell,m}\to R_{\ell+1,m}$ is an isomorphism such that $E_+D_+=D_+E_+$ on $R_{\ell,m}$ for $m\neq \ell$ and $E_-D_+=D_+E_-$ on $R_{\ell,m}$ for $m\neq -\ell$, we can choose bases for $R_{\ell,m}$ such that $[E_+]_{\ell,m}$ for $\ell\neq m$, $[E_-]_{\ell,m}$ for $m\neq-\ell$, and $[D_+]_{\ell,m}$ all are identity matrices.
-
-  From now on we will work in the bases from above. By \Cref{lem:commuteDeltas} $E_+$, $E_-$, and $D_+$ commute with $\Delta_i$, $i=1,2$, so $[\Delta_i]_{\ell,m}$ is independent of $\ell$ and $m$, so we can focus on $R_{\ell_0,m_0}$, where we have
+  We follow the proof of \Cref{thm:objectscor}. First take $[D_0]$ to be the linear transformation
   \begin{align*}
-    \Delta_1 \xi &= -\ell_0(\ell_0+1)D_0\xi, \\
-    \Delta_2 \xi &= (\ell_0^2-1)\xi - (\ell_0+1)D_0^2\xi
+    [D_0]\xi = [a_0]\xi + \dfrac{i\ell_1}{\ell_0+1}[\id]\xi
   \end{align*}
-  for $\xi \in R_{\ell_0,m_0}$ by \cref{eq:Deltastemp}. Also by \cref{eq:dformulaeonR_l} we get that... \todo{Finish this later --- try to use Theorem~1.19 more. Start with the pair $(R_{\ell_0,m_0},a)$ and choose $E_+$, $E_-$, $D_+$ after choosing basis where $a$ has matrix representation $[a_0]$}
+  for $\xi\in R_{\ell_0,m_0}$. Now following the construction in \Cref{thm:objectscor}, we get that all the subspaces $R_{\ell,m}$ have the same dimension, and we can find bases of $R_{\ell,m}$ such that $[E_+]_{\ell,m}$ for $m\neq\ell$, $[E_-]_{\ell,m}$ for $m\neq -\ell$, and $[D_+]_{\ell,m}$ are identity matrices. By \Cref{lem:commuteDeltas} $E_+$, $E_-$, and $D_+$ commute with $\Delta_i$, $i=1,2$, so $[\Delta_i]_{\ell,m}$ is independent of $\ell$ and $m$, so we can focus on $R_{\ell_0,m_0}$, where \cref{eq:DeltasRell0m0} gives us that
+  \begin{align*}
+    [\Delta_1]_{\ell_0,m_0} \xi &= -\ell_0(\ell_0+1)[a_0]\xi - i\ell_1\ell_0[\id]\xi, \\
+    [\Delta_2]_{\ell_0,m_0} \xi &= (\ell_0^2+\ell_1^2-1)[\id]\xi - (\ell_0+1)^2\Bigl( [a_0]^2\xi + 2\dfrac{i\ell_1}{\ell_0+1}[a_0]\xi \Bigr) \\
+    &= (\ell_0^2+\ell_1^2-1)[\id]\xi - 2i\ell_1(\ell_0+1)[a_0]\xi - (\ell_0+1)^2[a_0]^2\xi,
+  \end{align*}
+  for $\xi \in R_{\ell_0,m_0}$. Thus we get that
+  \begin{align*}
+    [\Delta_1]_{\ell,m} &= -\ell_0(\ell_0+1)[a_0] - i\ell_1\ell_0[\id], \\
+    [\Delta_2]_{\ell,m} &= (\ell_0^2+\ell_1^2-1)[\id] - 2i\ell_1(\ell_0+1)[a_0] - (\ell_0+1)^2[a_0]^2,
+  \end{align*}
+  since $[\Delta_i]_{\ell,m}$ is independent of $\ell$ and $m$. Continuing as in \Cref{thm:objectscor}, we get by \cref{eq:D0fromDelta1,eq:D+D-fromDeltas} that
+  \begin{align*}
+    [D_0]_{\ell,m} &= - \dfrac{1}{\ell(\ell+1)}[\Delta_1]_{\ell,m} \\
+                &= \dfrac{\ell_0(\ell_0+1)}{\ell(\ell+1)}[a_0] + \dfrac{i\ell_1\ell_0}{\ell(\ell+1)}[\id], \\
+    [D_+D_-]_{\ell,m} &= \dfrac{1}{4\ell^2-1}\Bigl( [\Delta_2]_{\ell,m} - (\ell^2-1)[\id] + \dfrac{[\Delta_1]_{\ell,m}^2}{\ell^2} \Bigr) \\
+                &= \dfrac{1}{(4\ell^2-1)\ell^2} \Bigl( (\ell_0^2+\ell_1^2-1)\ell^2[\id] - 2i\ell_1(\ell_0+1)\ell^2[a_0] \\*
+                &\phantom{{}={}}{} - (\ell_0+1)^2\ell^2[a_0]^2 - (\ell^2-1)\ell^2[\id] + \ell_0^2(\ell_0+1)^2[a_0]^2  \\*
+    &\phantom{{}={}}{} - \ell_1^2\ell_0^2[\id] + 2i\ell_0^2(\ell_0+1)\ell_1[a_0]  \Bigr) \\
+    &= \dfrac{\ell_0^2-\ell^2}{(4\ell^2-1)\ell^2}\Bigl( (\ell^2-\ell_1^2)[\id] + 2i\ell_1(\ell_0+1)[a_0] + (\ell_0+1)^2[a_0]^2  \Bigr)
+  \end{align*}
+  since
+  \begin{align*}
+    (\ell_0^2+\ell_1^2-1)\ell^2 - (\ell^2-1)\ell^2 - \ell_1^2\ell_0^2 &= -\ell^4 + \ell_0^2\ell^2 + \ell_1^2\ell^2  - \ell_1^2\ell_0^2 \\
+                                                 &= (\ell_0^2-\ell^2)(\ell^2-\ell_1^2), \\
+    -2i\ell_1(\ell_0+1)\ell^2 + 2i\ell_0^2(\ell_0+1)\ell_1 &= (\ell_0^2-\ell^2)2i\ell_1(\ell_0+1), \\
+    -(\ell_0+1)^2\ell^2 + \ell_0^2(\ell_0+1)^2 &= (\ell_0^2-\ell^2)(\ell_0+1)^2.
+  \end{align*}
+  Now since $[D_+]_{\ell,m}$ was just the identity matrix, we see that $[D_-]_{\ell,m}$ has the same expression as $[D_+D_-]_{\ell,m}$ and thus we get the theorem. 
 \end{proof}
 
 %%% Local Variables:

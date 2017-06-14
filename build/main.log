@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2017.2.23)  14 JUN 2017 01:37
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2017.2.23)  14 JUN 2017 17:24
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1953,11 +1953,11 @@ for $\OML/cmm/m/it/10.95 m \OMS/cmsy/m/n/10.95 6\OT1/cmr/m/n/10.95 (-20) = \OML
 
 [30]
 Package hyperref Info: bookmark level for unknown corollary defaults to 0 on in
-put line 134.
- [31] [32] [33]) (./sections/sec1-4.tex [34] [35] [36] [37]) [38] [39
+put line 136.
+ [31] [32] [33] [34]) (./sections/sec1-4.tex [35] [36] [37] [38] [39])
+[40] [41
 
-]
-[40
+] [42
 
 ] (./sections/app1-0.tex) (./sections/app1-1.tex [1
 
@@ -2016,19 +2016,19 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 76.
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 76.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 76.
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 96DF06E13BA0B201AD6CE6958DDD3E2A;2065.
+(rerunfilecheck)             Checksum: FE46884F08A77A5F8A1637C8630443E5;2065.
 Package logreq Info: Writing requests to 'main.run.xml'.
 \openout1 = `main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 35614 strings out of 493036
- 670642 string characters out of 6134590
- 1174546 words of memory out of 5000000
- 38092 multiletter control sequences out of 15000+600000
- 55163 words of font info for 255 fonts, out of 8000000 for 9000
+ 35601 strings out of 493036
+ 670217 string characters out of 6134590
+ 1171731 words of memory out of 5000000
+ 38075 multiletter control sequences out of 15000+600000
+ 55284 words of font info for 256 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 75i,21n,86p,1516b,1853s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 75i,21n,86p,1509b,1773s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2015/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}
 </usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb><
 /usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></
@@ -2067,10 +2067,10 @@ c/cm-super/sfrm1440.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/
 cm-super/sfrm2074.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/cm
 -super/sfrm2488.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/cm-s
 uper/sfti1095.pfb>
-Output written on build/main.pdf (64 pages, 705238 bytes).
+Output written on build/main.pdf (66 pages, 728542 bytes).
 PDF statistics:
- 959 PDF objects out of 1000 (max. 8388607)
- 845 compressed objects within 9 object streams
- 220 named destinations out of 1000 (max. 500000)
+ 976 PDF objects out of 1000 (max. 8388607)
+ 860 compressed objects within 9 object streams
+ 222 named destinations out of 1000 (max. 500000)
  37581 words of extra memory for PDF output out of 42996 (max. 10000000)
 

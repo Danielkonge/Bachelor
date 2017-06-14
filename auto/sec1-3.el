@@ -9,6 +9,9 @@
     "eq:Deltarelinnonsing"
     "eq:deltatempcalc"
     "thm:objectscor"
+    "eq:DeltasRell0m0"
+    "eq:D0fromDelta1"
+    "eq:D+D-fromDeltas"
     "thm:nonsingcateq"
     "eq:tempgammalm"))
  :latex)
