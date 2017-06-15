@@ -4,7 +4,7 @@ We want to show that the formulae \cref{eq:Factions} for the linear operators $F
 
 We claim that all commutators containing $H$'s already satisfy the relations. We already have by construction that all relations with only $H$'s satisfy the relations, so we just need to check the relations for commutators with one $F$ and one $H$. We will here check that $[H_-,F_+] = -2F_3$ as we want, and then we just note that the rest follow by similar considerations.
 
-By \cref{eq:Factions,eq:H+H-} first note that for $\xi\in R_{\ell,\ell}$ with $\ell\neq 0$ we have that $F_+\xi = \sqrt{(2\ell+1)(2\ell+2)}E_+D_+\xi\in R_{\ell+1,\ell+1}$, so
+To simplify the otherwise very long calculations, we will only check the equility on $R_{\ell,\ell}$ and just note that similar calculations show the result on general $R_{\ell,m}$. By \cref{eq:Factions,eq:H+H-} first note that for $\xi\in R_{\ell,\ell}$ with $\ell\neq 0$ we have that $F_+\xi = \sqrt{(2\ell+1)(2\ell+2)}E_+D_+\xi\in R_{\ell+1,\ell+1}$, so
 \begin{align*}
   H_-F_+ \xi &= \sqrt{(2\ell+2)\cdot 1}\sqrt{(2\ell+1)(2\ell+2)}E_-E_+D_+\xi \\
            &= 2(\ell+1)\sqrt{2\ell+1}D_+\xi \\
@@ -26,11 +26,11 @@ Also
   -2F_3 \xi &= 2\ell D_0\xi + 2\sqrt{(\ell+1)^2-\ell^2} D_+\xi \\
   &= 2\ell D_0\xi + 2\sqrt{2\ell+1} D_+\xi,
 \end{align*}
-and thus indeed $[H_-,F_+]\xi = -F_3\xi$ for $\xi\in R_{\ell,\ell}$. Since $D_0$ and $D_+$ commute with $E_-$ for $m\neq -\ell$ this also gives the result for all $\xi\in R_{\ell,m}$, $m\in\Set{-\ell,-\ell+1,\dotsc,\ell-1,\ell}$, by applying the isomorphism $E_-^{\ell-m}\colon R_{\ell,\ell} \to R_{\ell,m}$.
+and thus indeed $[H_-,F_+]\xi = -F_3\xi$ for $\xi\in R_{\ell,\ell}$. 
 
 Now we claim that $\ell D_+D_0\xi = (\ell+2)D_0D_+\xi$ corresponds to the relation $[F_+,F_3]=F_+$, while $(\ell+1)D_-D_0\xi = (\ell-1)D_0D_-\xi$ corresponds to the relation $[F_-,F_3]=-H_-$, and $\xi=(2\ell-1)D_+D_- \xi - (2\ell+3)D_-D_+ \xi - D_0^2 \xi$ corresponds to the relation $[F_+,F_-]=-2H_3$. Here will only show the last claim and note that the others are similar (although a little simpler), and that the first and second cliam can be shown first without assuming the third.
 
-Note that for $\xi\in R_{\ell,\ell}$ with $\ell\neq 0$ we have that $F_+\xi = \sqrt{(2\ell+1)(2\ell+2)}E_+D_+\xi \in R_{\ell+1,\ell+1}$, so
+Again to simplify the otherwise very long calculation, we will only check the result on $R_{\ell,\ell}$. Note that for $\xi\in R_{\ell,\ell}$ with $\ell\neq 0$ we have that $F_+\xi = \sqrt{(2\ell+1)(2\ell+2)}E_+D_+\xi \in R_{\ell+1,\ell+1}$, so
 \begin{align*}
   F_-F_+ \xi &= -\sqrt{(2\ell+2)(2\ell+1)}\sqrt{(2\ell+1)(2\ell+2)} D_-E_-E_+D_+ \xi \\*
            &\phantom{{}={}}{} - \sqrt{2\ell+2}\sqrt{(2\ell+1)(2\ell+2)} D_0E_-E_+D_+ \xi \\*
@@ -73,7 +73,7 @@ so dividing by $-2\ell$ (noting that $\ell\neq 0$) we see that $[F_+,F_-]\xi = -
 \begin{align*}
   \xi = (2\ell-1)E_+D_+D_-E_- \xi - (2\ell+3)D_-D_+ \xi - D_0^2 \xi.
 \end{align*}
-Here we note that for $\xi \in R_{\ell,m}$, $m\neq\pm \ell$, the term $E_+D_+D_-E_-\xi$ simplifies to $D_+D_-\xi$, while for $m=-\ell$ it becomes $E_-D_+D_-E_+\xi$. \todo{How to expand --- also further up.}
+Here we note that for $\xi \in R_{\ell,m}$, $m\neq\pm \ell$, the term $E_+D_+D_-E_-\xi$ simplifies to $D_+D_-\xi$, while for $m=-\ell$ it becomes $E_-D_+D_-E_+\xi$. 
 
 %%% Local Variables:
 %%% mode: latex

@@ -33,27 +33,19 @@ We get inductively that
 \end{align*}
 for $\ell>\ell_0$, since we already have the base case, and assuming the equality for $\ell>\ell_0$ we get by \cref{eq:dl-calc} that
 \begin{align*}
-  -(4(\ell+1)^2&-1)\dd{\ell+1}{-} \\
+  -(4(\ell+&1)^2-1)\dd{\ell+1}{-} \\
   &= \dfrac{\bigl(\ell^2 - \ell_1^2\bigr)\bigl( \ell^2 - \ell_0^2 \bigr)}{\ell^2} + 2\ell+1 - \ell_0^2\ell_1^2\Bigl( \dfrac{1}{\ell^2} - \dfrac{1}{(\ell+1)^2} \Bigr) \\
   &= \dfrac{(\ell+1)^2(\ell^2-\ell_1^2)(\ell^2-\ell_0^2) + \ell^2(\ell+1)^2(2\ell+1) - \ell_0^2\ell_1^2(2\ell+1)}{\ell^2(\ell+1)^2}.
 \end{align*}
-So since
+So since simple algebraic manipulation (easily done in e.g.\ Mathematica) show that
 \begin{align*}
-  (\ell+1)^2&(\ell^2-\ell_1^2)(\ell^2-\ell_0^2) + \ell^2(\ell+1)^2(2\ell+1) - \ell_0^2\ell_1^2(2\ell+1)\\
-  &= \ell^2(\ell^2-\ell_1^2)(\ell^2-\ell_0^2) \\*
-  &\phantom{{}={}}{} + (2\ell+1)\bigl( (\ell^2-\ell_1^2)(\ell^2-\ell_0^2) + \ell^2(\ell+1)^2 - \ell_0^2\ell_1^2 \bigr) \\
-  &= \ell^2(\ell^2-\ell_1^2)(\ell^2-\ell_0^2) \\*
-  &\phantom{{}={}}{} + (2\ell+1)\bigl( \ell^4 - \ell^2\ell_0^2 - \ell^2\ell_1^2+ \ell^2(\ell+1)^2 \bigr) \\
-  &= \ell^2\Bigl((\ell^2-\ell_1^2)(\ell^2-\ell_0^2)\\*
-  &\phantom{{}={}\ell^2()}{} + (2\ell+1)\bigl( \ell^2 - \ell_0^2 - \ell_1^2+(\ell+1)^2 \bigr) \Bigr) \\  
+  &(\ell+1)^2(\ell^2-\ell_1^2)(\ell^2-\ell_0^2) + \ell^2(\ell+1)^2(2\ell+1) - \ell_0^2\ell_1^2(2\ell+1)\\
+  &= \ell^2\Bigl((\ell^2-\ell_1^2)(\ell^2-\ell_0^2)+ (2\ell+1)\bigl( \ell^2 - \ell_0^2 - \ell_1^2+(\ell+1)^2 \bigr) \Bigr) \\  
 \end{align*}
 and
 \begin{align*}
-  \bigl((\ell+1)^2-\ell_1^2\bigr)\bigl( (\ell+1)^2 - \ell_0^2\bigr) &= \bigl(\ell^2-\ell_1^2+2\ell+1 \bigr)\bigl( \ell^2-\ell_0^2 + 2\ell+1 \bigr) \\
-                                                                    &= (\ell^2-\ell_1^2)(\ell^2-\ell_0^2) \\*
-                                                                    &\phantom{{}={}}{} + (2\ell+1)\bigl( (\ell^2-\ell_0^2+2\ell+1) +  (\ell^2-\ell_1^2)  \bigr) \\
-                                                                    &= (\ell^2-\ell_1^2)(\ell^2-\ell_0^2) \\*
-                                                                    &\phantom{{}={}}{} + (2\ell+1)\bigl( (\ell+1)^2 -\ell_0^2 + \ell^2-\ell_1^2  \bigr),
+  &\bigl((\ell+1)^2-\ell_1^2\bigr)\bigl( (\ell+1)^2 - \ell_0^2\bigr) \\
+  &= (\ell^2-\ell_1^2)(\ell^2-\ell_0^2) + (2\ell+1)\bigl( (\ell+1)^2 -\ell_0^2 + \ell^2-\ell_1^2  \bigr),
 \end{align*}
 we see that
 \begin{align*}

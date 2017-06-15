@@ -54,7 +54,7 @@ Now we want to show that we also have \cref{eq:inprodres2}. Working with the bas
 \begin{align}\label{eq:inproperty}
   \inner{X.v}{w} = \inner{v}{X^H.w} \qquad \mbox{for all $X\in\slc$},
 \end{align}
-since $h^H=h$, $x^H=y$, and $y^H=x$ by the definitions in \cref{eq:xhy}. The property of \cref{eq:inproperty} determines the inner product up to a positive factor. To see this note that $h^H=h$, so by linear algebra its eigenvalues are in $\R$ and distinct eigenspaces of $h$ are orthogonal. Therefore since $(v_0,\dotsc,v_n)$ is a basis with eigenvectors of $h$ from distinct eigenspaces the property \cref{eq:inproperty} implies that $\inner{v_k,v_j}=0$ for $j\neq k$. Also the property implies that $\inner{y.v_k,v_{k+1}}=\inner{v_k}{x.v_{k+1}}$, so
+since $h^H=h$, $x^H=y$, and $y^H=x$ by the definitions in \cref{eq:xhy}. The property of \cref{eq:inproperty} determines the inner product up to a positive factor. To see this note that $h^H=h$, so by linear algebra its eigenvalues are in $\R$ and distinct eigenspaces of $h$ are orthogonal. Therefore since $(v_0,\dotsc,v_n)$ is a basis with eigenvectors of $h$ from distinct eigenspaces the property \cref{eq:inproperty} implies that $\inner{v_k}{v_j}=0$ for $j\neq k$. Also the property implies that $\inner{y.v_k}{v_{k+1}}=\inner{v_k}{x.v_{k+1}}$, so
 \begin{align*}
   (k+1)\inner{v_{k+1},v_{k+1}} = \inner{y.v_k}{v_{k+1}} = \inner{v_k}{x.v_{k+1}} = (n-k)\inner{v_k}{v_k},
 \end{align*}

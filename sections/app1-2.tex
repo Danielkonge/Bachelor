@@ -31,43 +31,16 @@ Using the bases $(s_k \mid 0\leq k\leq n+2)$ of \cref{eq:s_kbasisres}, $(t_k \mi
     }
     {n(n+1)(n+2)}w_2\otimes v_{k-1}.
 \end{align*}
-Now we note that
+Now straightforward algebraic manipulation (easily done in e.g.\ Mathematica) shows that 
 \begin{align*}
-  (n+1-k)n&-(n-2k)(n+1)-k(n+2) \\
-          &= n\Bigl( (n+1-k)-(n-2k)-k \Bigr)-(n-2k)-2k \\
-          &= n-(n-2k)-2k = 0,
+  (n+1-k)n-(n-2k)(n+1)-k(n+2) &= 0, \\
+  (k+1)n+(n-2k)(n+1)-(n-k)(n+2) &= 0,
 \end{align*}
 and
 \begin{align*}
-  (k+1)n&+(n-2k)(n+1)-(n-k)(n+2) \\
-        &= n\Bigl( (k+1)+(n-2k) - (n-k) \Bigr) + (n-2k) - 2(n-k)\\
-  &= n + n-2k -2n+2k = 0,
-\end{align*}
-while
-\begin{align*}
-  &2(k+1)(n+1-k)n + (n-2k)(n-2k)(n+1)+2k(n-k)(n+2) \\
-  &= n\Bigl( 2(k+1)(n+1-k) + (n-2k)(n+1) + 2k(n-k) \Bigr) \\*
-  &\phantom{{}={}}{} - 2k(n-2k)(n+1) + 4k(n-k) \\
-  &= n\Bigl( 2(k+1)(n+1-k) + (n-2k)(n+1) + 2k(n-k) \Bigr) \\*
-  &\phantom{{}={}}{} - 2kn(n-2k) - 2k(n-2k) + 4k(n-k) \\
-  &= n\Bigl( 2(k+1)(n+1-k) + (n-2k)(n+1) + 2k(n-k) \Bigr) \\*
-  &\phantom{{}={}}{} - 2kn(n-2k) + 2kn \\
-  &= n\Bigl( 2(k+1)(n+1-k) + (n-2k)(n+1) + 2k(n-k) - 2k(n-2k) \\*
-  &\phantom{{}={}n\Bigl()}{} + 2k \Bigr),
-\end{align*}
-where
-\begin{align*}
-  &2(k+1)(n+1-k) + (n-2k)(n+1) + 2k(n-k) - 2k(n-2k) + 2k \\
-  &= (n+1)\Bigl( 2(k+1) + (n-2k) \Bigr) - 2k(k+1) \\*
-  &\phantom{{}={}}{} + 2k\Bigl( (n-k) - (n-2k) + 1\Bigr) \\
-  &= (n+1)(n+2) - 2k(k+1) + 2k(k+1) \\
-  &= (n+1)(n+2),
-\end{align*}
-so
-\begin{align*}
   &2(k+1)(n+1-k)n + (n-2k)(n-2k)(n+1)+2k(n-k)(n+2) \\
   &= n(n+1)(n+2).
-\end{align*} \todo{I will probably remove some of this and just say that algebraic manipulation shows that ...}
+\end{align*}
 Thus we see that
 \begin{align*}
   &\dfrac{2(k+1)(n+1-k)}{(n+1)(n+2)}s_{k+1} - \dfrac{2(n-2k)}{n(n+2)}t_k - \dfrac{4}{n(n+1)}u_{k-1}\\

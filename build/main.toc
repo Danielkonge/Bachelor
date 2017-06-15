@@ -29,7 +29,7 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {1.4}The singular category $C(\lambda _1,\lambda _2)$}{36}{section.1.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{Bibliography}{43}{section*.6}
+\contentsline {chapter}{Bibliography}{45}{section*.5}
 \defcounter {refsection}{0}\relax 
 \contentsline {appendix}{\chapternumberline {A}Calculations}{A-1}{appendix.A}
 \defcounter {refsection}{0}\relax 
@@ -37,17 +37,17 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {A.2}Finding $w_1\otimes v_k$}{A-4}{section.A.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {A.3}Inner products in $V(2)\otimes V(n)$}{A-6}{section.A.3}
+\contentsline {section}{\numberline {A.3}Inner products in $V(2)\otimes V(n)$}{A-5}{section.A.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {A.4}Finding $\overline w_1\otimes \overline v_k$}{A-8}{section.A.4}
+\contentsline {section}{\numberline {A.4}Finding $\overline w_1\otimes \overline v_k$}{A-7}{section.A.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {A.5}$F_3,F_+,F_-$ in terms of $E_+,E_-,D_0,D_+,D_-$}{A-9}{section.A.5}
+\contentsline {section}{\numberline {A.5}$F_3,F_+,F_-$ in terms of $E_+,E_-,D_0,D_+,D_-$}{A-8}{section.A.5}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {A.6}Relations for $D_0$, $D_+$, $D_-$}{A-11}{section.A.6}
+\contentsline {section}{\numberline {A.6}Relations for $D_0$, $D_+$, $D_-$}{A-10}{section.A.6}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {A.7}Finding $d_{\ell }^{\tmspace +\thinmuskip {.1667em}-}$}{A-13}{section.A.7}
+\contentsline {section}{\numberline {A.7}Finding $d_{\ell }^{\tmspace +\thinmuskip {.1667em}-}$}{A-12}{section.A.7}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {A.8}Finding $\Delta _1 \xi $ and $\Delta _2 \xi $}{A-14}{section.A.8}
+\contentsline {section}{\numberline {A.8}Finding $\Delta _1 \xi $ and $\Delta _2 \xi $}{A-13}{section.A.8}
 \defcounter {refsection}{0}\relax 
 \contentsline {appendix}{\chapternumberline {B}Auxiliary results}{B-1}{appendix.B}
 \defcounter {refsection}{0}\relax 
