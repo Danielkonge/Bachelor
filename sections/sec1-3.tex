@@ -1,6 +1,6 @@
 \section{\texorpdfstring{The non-singular category $C(\lambda_1,\lambda_2)$}{The non-singular category C(lambda\_1,lambda\_2)}}
 
-Let $M\in C(\lambda_1,\lambda_2)$ be an $L$-module, where $(\lambda_1,\lambda_2)$ is a non-singular pair, i.e.\ $\ell_1-\ell_0$ is not an integer. We now want to that this module $M$ is completely determined by a finite dimensional vector space and a nilpotent map $a$ on this vector space, where an isomorphism of the modules is equivalent to similarity of the linear maps $a$.
+Let $M\in C(\lambda_1,\lambda_2)$ be an $L$-module, where $(\lambda_1,\lambda_2)$ is a non-singular pair, i.e.\ $\ell_1-\ell_0$ is not an integer. We now want to that this module $M$ is completely determined by a finite dimensional vector space and a nilpotent map $a$ on this vector space, where an isomorphism of the modules is equivalent to similarity of the linear map $a$.
 
 Define on the finite dimensional linear subspace $R_{\ell_0,m_0}$ for some $m_0\in \Set{-\ell_0,-\ell_0+1,\dotsc,\ell_0-1,\ell_0}$ a linear map $a\colon R_{\ell_0,m_0}\to R_{\ell_0,m_0}$ by
 \begin{align}\label{eq:adef}
@@ -12,7 +12,7 @@ for $\xi\in R_{\ell_0,m_0}$. This map is nilpotent since by \Cref{prop:eigenvalu
 \end{align*}
 and
 \begin{align*}
-  \det(a-t\id) = \det\Bigl( D_0 - \Bigl(t+\dfrac{i\ell_1}{\ell_0+1}\id \Bigr) \Bigr),
+  \det(a-t\id) = \det\Bigl( D_0 - \Bigl(t+\dfrac{i\ell_1}{\ell_0+1} \Bigr)\id \Bigr),
 \end{align*}
 so the only eigenvalue of $a$ on $R_\ell$ is zero, and thus $a$ is clearly nilpotent by Cayley-Hamilton Theorem.
 
@@ -45,7 +45,7 @@ We want to show that the module $M$ is completely determined by the finite dimen
 \begin{proof}
   Recall that the maps $E_+\colon R_{\ell_0,m} \to R_{\ell_0,m+1}$ for $-\ell_0\leq m<\ell_0$ and $E_-\colon R_{\ell_0,m} \to R_{\ell_0,m-1}$ for $-\ell_0<m\leq \ell_0$ are isomorphisms, and the Laplace operators $\Delta_1$ and $\Delta_2$ commute with these maps by \Cref{lem:commuteDeltas}, so $(\Delta_i)_{\ell_0,m}$ is similar to $(\Delta_i)_{\ell_0,m_0}$ for each $m$ and $i=1,2$.
 
-  Likewise the $D_+\colon R_{\ell,m}\to R_{\ell+1,m}$ are also isomorphisms for all $\ell$ and commute with both $\Delta_1$ and $\Delta_2$, so the map $(\Delta_i)_{\ell_0+1,m}$ is similar to $(\Delta_i)_{\ell_0,m}$, and inductively $(\Delta_i)_{\ell,m}$ is similar to $(\Delta_i)_{\ell_0,m}$ for all $\ell\in \Set{\ell_0,\ell_0+1,\dotsc}$. Hence indeed $(\Delta_i)_{\ell,m}$ is similar to $(\Delta_i)_{\ell_0,m_0}$.
+  Likewise the $D_+\colon R_{\ell,m}\to R_{\ell+1,m}$ are also isomorphisms for all $\ell$ and commute with both $\Delta_1$ and $\Delta_2$, so the map $(\Delta_i)_{\ell_0+1,m}$ is similar to $(\Delta_i)_{\ell_0,m}$, and inductively $(\Delta_i)_{\ell,m}$ is similar to $(\Delta_i)_{\ell_0,m}$ for all $\ell\in \Set{\ell_0,\ell_0+1,\dotsc}$. Hence indeed $(\Delta_i)_{\ell,m}$ is similar to $(\Delta_i)_{\ell_0,m_0}$, $i=1,2$, and by construction it is clearly by the same matrix for $i=1,2$.
 \end{proof}
 
 \begin{lemma}\label{lem:Deltarelnonsing}
@@ -71,10 +71,10 @@ We want to show that the module $M$ is completely determined by the finite dimen
   Note that \Cref{lem:Disos,lem:nonsingsimilar,lem:Deltarelnonsing} are not true in the singular case.
 \end{remark}
 
-We have seen above that to each non-singular module $M\in C(\lambda_1,\lambda_2)$ there corresponds a finite dimensional vector space $P=R_{\ell_0,m_0}$ and a nilpotent linear map $a\colon P\to P$ given by
-\begin{align*}
+We have seen above that to each non-singular module $M\in C(\lambda_1,\lambda_2)$ there is a corresponding finite dimensional vector space $P=R_{\ell_0,m_0}$ and a nilpotent linear map $a\colon P\to P$ given by
+\begin{align}\label{eq:adef}
   a\xi = \Bigl( D_0 - \dfrac{i\ell_1}{\ell_0+1}\id\Bigr) \xi
-\end{align*}
+\end{align}
 for $\xi\in R_{\ell_0,m_0}=P$. Denote now by $\widetilde{A}$ the pair $(P,a)$ consisting of a finite dimensional vector space $P$ and a nilpotent mapping $a\colon P\to P$.
 
 \begin{theorem}\label{thm:objectscor}
@@ -98,7 +98,7 @@ for $\xi\in R_{\ell_0,m_0}=P$. Denote now by $\widetilde{A}$ the pair $(P,a)$ co
       R_{\ell,m}\ar[u,"E_+"] \ar[r,"D_+",swap] & R_{\ell+1,m}\ar[u,"E_+",swap]
     \end{tikzcd}
   \]
-  commutes for $-\ell\leq m<\ell$, i.e.\ $(D_+)_{\ell,m+1}=(E_+)_{\ell,m+1}^{-1} (D_+)_{\ell,m} (E_+)_{\ell+1,m}$. Now we only need to construct linear maps $D_0$ and $D_-$ on $M$ satisfying properties as we have seen earlier, but to do this we will first define linear maps $\Delta_1$ and $\Delta_2$ corresponding to the Laplace operators.
+  commutes for $-\ell\leq m<\ell$, i.e.\ $(D_+)_{\ell,m+1}=(E_+)_{\ell+1,m} (D_+)_{\ell,m} (E_+)_{\ell,m}^{-1}$, where $(E_+)_{\ell,m}^{-1}=(E_-)_{\ell,m+1}$. Now we only need to construct linear maps $D_0$ and $D_-$ on $M$ satisfying properties as we have seen earlier, but to do this we will first define linear maps $\Delta_1$ and $\Delta_2$ corresponding to the Laplace operators.
 
   On $R_{\ell_0,m_0}$ set 
   \begin{align}
@@ -110,9 +110,9 @@ for $\xi\in R_{\ell_0,m_0}=P$. Denote now by $\widetilde{A}$ the pair $(P,a)$ co
       &= (\ell_0^2+\ell_1^2-1)\xi - (\ell_0+1)^2\Bigl( a^2\xi + 2\dfrac{i\ell_1}{\ell_0+1}a\xi \Bigr)
     \end{aligned}
   \end{align}
-  for $\xi \in R_{\ell_0,m_0}$. Now note that for arbitrary $R_{\ell,m}$ the linear map given by $J_{\ell,m}=(E_+)^{m-m_0}(D_+)^{\ell-\ell_0}$, where $(E_+)^- = E_-$, is a composition of isomorphisms and hence an isomorphism, so we can define 
+  for $\xi \in R_{\ell_0,m_0}$. Now note that for arbitrary $R_{\ell,m}$ the linear map given by $J_{\ell,m}=(E_+)^{m-m_0}(D_+)^{\ell-\ell_0}\colon R_{\ell_0,m_0} \to R_{\ell,m}$, where $(E_+)^{-1} = E_-$, is a composition of isomorphisms and hence an isomorphism, so we can define 
   \begin{align*}
-    (\Delta_i)_{\ell,m}\xi = J_{\ell,m}(\Delta_i)_{\ell_0,m_0} (J_{\ell,m})^{-1}
+    (\Delta_i)_{\ell,m}\xi = J_{\ell,m}(\Delta_i)_{\ell_0,m_0} (J_{\ell,m})^{-1}\xi
   \end{align*}
   for $\xi\in R_{\ell,m}$ and $i=1,2$. Thus we have defined $\Delta_1$ and $\Delta_2$ on all of $M$.
   
@@ -129,12 +129,22 @@ for $\xi\in R_{\ell_0,m_0}=P$. Denote now by $\widetilde{A}$ the pair $(P,a)$ co
   \end{align}
   for $\xi \in R_{\ell,m}$, $\ell\neq \ell_0$, which we can do since $D_+$ is an isomorphism. Using this we define $D_-\colon R_{\ell,m}\to R_{\ell-1,m}$ to be the map $(D_+)^{-1}(D_+D_-)$ for $\ell\neq \ell_0$, and equal to zero for $\ell=\ell_0$. 
 
-  Now the maps $E_+$, $E_-$, $D_0$, $D_+$, and $D_-$ constructed above satisfy the relations of \Cref{sec:formulae}, \todo{Write this more explicitely} so the operators $F_+$, $F_-$, $F_3$, $H_+$, $H_-$, and $H_3$ constructed from these maps as in \cref{eq:H3eigen,eq:E+andE-,eq:Drels} gives $M$ an $L$-module structure. Finally we get $P=R_{\ell_0,m_0}$ and \cref{eq:adef} by construction, and we note that $M$ is non-singular since the pair $(\lambda_1,\lambda_2)$ with the corresponding $\ell_0$ and $\ell_1$ is non-singular by assumption.
+  Now the maps $E_+$, $E_-$, $D_0$, $D_+$, and $D_-$ constructed above are maps as in \Cref{sec:formulae} (by construction the $E$'s and $D$'s commute and satisfy the other properties we want), so the operators $F_+$, $F_-$, $F_3$, $H_+$, $H_-$, and $H_3$ constructed from these maps as in \cref{eq:H3eigen,eq:E+andE-,eq:Factions} gives $M$ an $L$-module structure if the equations of \cref{eq:Drels} hold. We see that for $\ell\neq 0$
+\begin{align*}
+  \ell(D_+)_{\ell,m}(D_0)_{\ell,m} &= -\dfrac{\ell}{\ell(\ell+1)} (D_+)_{\ell,m}(\Delta_1)_{\ell,m} \\
+                          &= - \dfrac{1}{\ell+1} (\Delta_1)_{\ell+1,m} (D_+)_{\ell,m} \\
+                          &= - (\ell+2)\dfrac{1}{(\ell+1)(\ell+2)} (\Delta_1)_{\ell+1,m} (D_+)_{\ell,m} \\
+                          &= (\ell+2)(D_0)_{\ell+1,m}(D_+)_{\ell,m},
+\end{align*}
+which gives us the first equation, and the rest can be checked similarly, so we get an $L$-module structure on $M$.
+
+  Finally we get $P=R_{\ell_0,m_0}$ and \cref{eq:adef} by construction, and we note that $M$ is non-singular since the pair $(\lambda_1,\lambda_2)$ with the corresponding $\ell_0$ and $\ell_1$ is non-singular by assumption.
 \end{proof}
 
+Looking at the construction of the $L$-module $M$ above, we get the following corollary:
 \begin{corollary}
-  For modules $M$ and $M'$ from the non-singular category $C(\lambda_1,\lambda_2)$ to be equivalent it is necessary and sufficient that the subspaces $R_{\ell_0,m_0}$ and $R_{\ell_0,m_0}'$ in these modules have the same dimension, and that their maps $D_0\colon R_{\ell_0,m_0}\to R_{\ell_0,m_0}$ and $D_0'\colon R_{\ell_0,m_0}$ are similar. 
-\end{corollary}\todo{Write a little before this}
+  For modules $M$ and $M'$ from the non-singular category $C(\lambda_1,\lambda_2)$ to be equivalent it is necessary and sufficient that the subspaces $R_{\ell_0,m_0}$ and $R_{\ell_0,m_0}'$ in these modules have the same dimension, and that their maps $D_0\colon R_{\ell_0,m_0}\to R_{\ell_0,m_0}$ and $D_0'\colon R_{\ell_0,m_0}'\to R_{\ell_0,m_0}'$ are similar. 
+\end{corollary}
 
 Now let $S$ be the category with objects pairs $A=(P,a)$, where $P$ is a finite dimensional vector space (over $\C$) and $a\colon P\to P$ is a nilpotent linear transformation, and with morphisms $\gamma\colon A\to A'$ given by linear maps $\gamma\colon P\to P'$ such that
 \[
@@ -143,15 +153,15 @@ Now let $S$ be the category with objects pairs $A=(P,a)$, where $P$ is a finite 
     P' \ar[r,"a'",swap] & P'
   \end{tikzcd}
 \]
-commutes. We have already shown that there is a correspondence between non-singular modules $M\in C(\lambda_1,\lambda_2)$ and pairs $A=(P,a)\in S$, and now we want to show that this correspondence is functorial.
+commutes. We have already shown that there is a correspondence between non-singular modules $M\in C(\lambda_1,\lambda_2)$ and pairs $A=(P,a)\in S$, and now we want to show that this correspondence is functorial and actually gives an equivalence of categories.
 
 \begin{theorem}\label{thm:nonsingcateq}
   The non-singular category $C(\lambda_1,\lambda_2)$ is equivalent to the category $S$.
 \end{theorem}
 \begin{proof}
-  By \Cref{thm:objectscor} we have a correspondence between objects $M\in C(\lambda_1,\lambda_2)$ and the objects $A\in S$, so we just need to establish a correspondence between the morphisms. Let $\Gamma\colon M\to M'$ be a morphism between the two modules $M,M'\in C(\lambda_1,\lambda_2)$. We have already seen in the proof of \Cref{prop:modulehom} that $\Gamma R_\ell\subset R_\ell'$ since $\Gamma$ commutes with $H_3$, and since $\Gamma$ also commutes with $H_+$ and $H_-$, we get that $\Gamma R_{\ell,m}\subset R_{\ell,m}'$. Thus $\Gamma$ is the direct sum of morphisms $\gamma_{\ell,m}\colon R_{\ell,m}\to R_{\ell,m}'$, so choosing indices $\ell_0$ and $m_0$ we get a morphism $\gamma\coloneqq \gamma_{\ell_0,m_0}\colon R_{\ell_0,m_0}\to R_{\ell_0',m_0'}$. Here $\gamma$ gives a morphism in $S$ from $\widetilde{A}=(R_{\ell_0,m_0},a)$ to $\widetilde{A}'=(R_{\ell_0,m_0}',a')$. To see this it is enough to show that $D_0'\gamma = \gamma D_0$, which is true for $\ell_0\neq0$\footnote{Recall that $D_0$ is not defined on $R_{0,0}$, so this is what we want to check.} since by the proof of \Cref{prop:modulehom} $\Delta_1'\Gamma=\Gamma\Delta_1$, so for $\ell\neq 0$ also $D_0'\Gamma=\Gamma D_0$ on $R_\ell$ because $\Delta_1=-\ell(\ell+1)D_0$ on $R_\ell$ and $\Delta_1'=-\ell(\ell+1)D_0'$ on $R_\ell'$, and therefore specifically $D_0' \gamma = \gamma D_0$. Hence $\gamma\colon \widetilde{A}\to \widetilde{A}'$ is indeed a morphism in $S$.
+  By \Cref{thm:objectscor} we have a correspondence between objects $M\in C(\lambda_1,\lambda_2)$ and the objects $A\in S$, so we just need to establish a correspondence between the morphisms. Let $\Gamma\colon M\to M'$ be a morphism between the two modules $M,M'\in C(\lambda_1,\lambda_2)$. We have already seen in the proof of \Cref{prop:modulehom} that $\Gamma R_\ell\subset R_\ell'$ since $\Gamma$ commutes with $H_3$, and this furthermore implies that $\Gamma R_{\ell,m}\subset R_{\ell,m}'$ since $\Gamma$ must map vectors of weight $m$ to either $0$ or vectors of weight $m$. Thus $\Gamma$ is the direct sum of morphisms $\gamma_{\ell,m}\colon R_{\ell,m}\to R_{\ell,m}'$, so choosing indices $\ell_0$ and $m_0$ we get a morphism $\gamma\coloneqq \gamma_{\ell_0,m_0}\colon R_{\ell_0,m_0}\to R_{\ell_0',m_0'}$. Here $\gamma$ gives a morphism in $S$ from $\widetilde{A}=(R_{\ell_0,m_0},a)$ to $\widetilde{A}'=(R_{\ell_0,m_0}',a')$. To see this by \cref{eq:adef} it is enough to show that $D_0'\gamma = \gamma D_0$, which is true for $\ell_0\neq0$\footnote{Recall that $D_0$ is not defined on $R_{0,0}$, so this is what we want to check.} since by the proof of \Cref{prop:modulehom} $\Delta_1'\Gamma=\Gamma\Delta_1$, so for $\ell\neq 0$ also $D_0'\Gamma=\Gamma D_0$ on $R_\ell$ because $\Delta_1=-\ell(\ell+1)D_0$ on $R_\ell$ and $\Delta_1'=-\ell(\ell+1)D_0'$ on $R_\ell'$, and therefore specifically $D_0' \gamma = \gamma D_0$. Hence $\gamma\colon \widetilde{A}\to \widetilde{A}'$ is indeed a morphism in $S$.
 
-  Now suppose conversely that we are given a morphism $\gamma\colon A\to A'$ in $S$, i.e.\ a linear map $\gamma\colon P\to P'$ such that $\gamma a=a'\gamma$. Construct modules $M$ and $M'$ with $R_{\ell_0,m_0}=0$ and $R_{\ell_0,m_0}'=P'$ as in the proof of \Cref{thm:objectscor}, then we have linear map $\gamma\colon R_{\ell_0,m_0}\to R_{\ell_0,m_0}'$ such that $\gamma a=a'\gamma$, which implies that $\gamma D_0=D_0'\gamma$ since $D_0=a+\tfrac{i\ell_1}{\ell_0+1}\id$. From this we will construct linear maps $\gamma_{\ell,m}\colon R_{\ell,m}\to R_{\ell,m}'$ by noting that $J_{\ell,m}=E_+^{m-m_0}D_+^{\ell-\ell_0}\colon R_{\ell_0,m_0}\to R_{\ell,m}$ is an isomorphism for $\ell$ and $m$ where it makes sense, so we get linear maps
+  Now suppose conversely that we are given a morphism $\gamma\colon A\to A'$ in $S$, i.e.\ a linear map $\gamma\colon P\to P'$ such that $\gamma a=a'\gamma$. Construct modules $M$ and $M'$ with $R_{\ell_0,m_0}=P$ and $R_{\ell_0,m_0}'=P'$ as in the proof of \Cref{thm:objectscor}, then we have a linear map $\gamma\colon R_{\ell_0,m_0}\to R_{\ell_0,m_0}'$ such that $\gamma a=a'\gamma$, which implies that $\gamma D_0=D_0'\gamma$ since $D_0=a+\tfrac{i\ell_1}{\ell_0+1}\id$. From this we will construct linear maps $\gamma_{\ell,m}\colon R_{\ell,m}\to R_{\ell,m}'$ by noting that $J_{\ell,m}=E_+^{m-m_0}D_+^{\ell-\ell_0}\colon R_{\ell_0,m_0}\to R_{\ell,m}$ is an isomorphism for $\ell$ and $m$ where it makes sense, so we get linear maps
   \begin{align}\label{eq:tempgammalm}
     \gamma_{\ell,m} = J_{\ell,m}' \gamma J_{\ell,m}^{-1},
   \end{align}
@@ -172,11 +182,11 @@ commutes. We have already shown that there is a correspondence between non-singu
     (D_0')_{\ell,m}\gamma_{\ell,m} = \gamma_{\ell,m}(D_0)_{\ell,m},\\
     (D_+'D_-')_{\ell,m}\gamma_{\ell,m} = \gamma_{\ell,m} (D_+D_-)_{\ell,m}.
   \end{align*}
-  Also noting that since $E_+$ and $D_+$ commute we have that $E_+J_{\ell,m}=J_{\ell,m}E_+=J_{\ell,m+1}$ and $D_+J_{\ell,m}=J_{\ell,m}D_+=J_{\ell+1,m}$, so
+  Also noting that since $E_+$ and $D_+$ commute where it makes sense, we have that $E_+J_{\ell,m}=J_{\ell,m}E_+=J_{\ell,m+1}$ and $D_+J_{\ell,m}=J_{\ell,m}D_+=J_{\ell+1,m}$, so
   \begin{align*}
     \gamma_{\ell,m} E_+ &= J_{\ell,m}' \gamma J_{\ell,m}^{-1} E_+ = E_+'J_{\ell,m-1}' \gamma J_{\ell,m-1}^{-1} = E_+'\gamma_{\ell,m-1},
   \end{align*}
-  and likewise $\gamma_{\ell,m}D_+ = D_+'\gamma_{\ell-1,m}$ where it makes sense. Thus $\Gamma$ commutes with $D_+$ and $D_+D_-$, so by \Cref{lem:Disos} $\Gamma$ also commutes with $D_-$, and likewise since $E_-$ is the inverse of $E_+$ or zero, we get that $\Gamma$ commutes with $E_+$. Hence $\Gamma$ commutes with $E_+$, $E_-$, $D_0$, $D_+$, and $D_-$, so it commutes with $H_+$, $H_-$, $H_3$, $F_+$, $F_-$, and $F_3$, i.e.\ it is a morphism of $L$-modules. \todo{Maybe write a little more clearly why this is an equivalence of categories}
+  and likewise $\gamma_{\ell,m}D_+ = D_+'\gamma_{\ell-1,m}$ where it makes sense. Thus $\Gamma$ commutes with $D_+$ and $D_+D_-$, so by \Cref{lem:Disos} $\Gamma$ also commutes with $D_-$, and likewise since $E_-$ is the inverse of $E_+$ or zero, we get that $\Gamma$ commutes with $E_-$. Hence $\Gamma$ commutes with $E_+$, $E_-$, $D_0$, $D_+$, and $D_-$, so it commutes with $H_+$, $H_-$, $H_3$, $F_+$, $F_-$, and $F_3$, i.e.\ it is a morphism of $L$-modules.
 \end{proof}
 
 \begin{corollary}

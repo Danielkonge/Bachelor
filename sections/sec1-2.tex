@@ -1,12 +1,12 @@
 \section{Decomposition of modules into indecomposables}
 
-Now we want to continue our work using our knowledge of the classification of simple Harish-Chandra modules for the pair $(L,L_k)$ to begin our classification of indecomposable Harish-Chandra modules for the pair $(L,L_k)$. To do this we will first need to some work with Laplace operators.
+Now we want to continue our work using our knowledge of the classification of simple Harish-Chandra modules for the pair $(L,L_k)$ to begin our classification of indecomposable Harish-Chandra modules for the pair $(L,L_k)$. To do this we will first need to do some work with Laplace operators.
 
 \subsection{Laplace operators}
 
 Let $U(L)$ be the universal enveloping algebra of $L$, cf.\ \cite[Appendix~E]{jantzen}. We know, cf.\ \cite[p.~E-9]{jantzen}, that $M$ is an $L$-module if and only if it is an $U(L)$-module, so we can describe $L$-modules by describing $U(L)$-modules. To do this we will first need to have an explicit description of the center $Z(U(L))$ of $U(L)$. We will begin this description by first noting that $Z(U(\slpr))\simeq Z(U(\slc))\otimes Z(U(\slc))$, which follows from the fact that $Z(U(L_1\times L_2))\simeq Z(U(L_1))\otimes Z(U(L_2))$ for Lie algebras $L_1$ and $L_2$ in general cf.\ \Cref{sec:centeriso}.
 
-We have seen in Exercise~11 in the Lie algebra course \todo{Maybe write the argument in an appendix or find better reference} that $Z(U(\slc))$ is the algebra of polynomials in $C=h^2+2h+4yx$, i.e.\ $Z(U(\slc))=\C[C]$. Thus we see that $Z(U(\slc))\otimes Z(U(\slc))$ is the algebra of polynomials in $C\otimes 1$ and $1\otimes C$, or equivalently the algebra of polynomials in $C\otimes 1 - 1\otimes C$ and $C\otimes 1 + 1\otimes C$. So we want to describe $C\otimes 1 - 1\otimes C$ and $C\otimes 1 + 1\otimes C$ in terms of our basis $h_+,h_-,h_3,f_+,f_-,f_3$. We note that $(u,u')\in L=\slpr$ in $U(L)=U(\slpr)$ is identified with $u\otimes 1 + 1\otimes u'$ in $U(\slc)\otimes U(\slc)$, so 
+It is a result in Lie algebra that $Z(U(\slc))$ is the algebra of polynomials in $C=h^2+2h+4yx$, i.e.\ $Z(U(\slc))=\C[C]$ (we saw this in Exercise~11 in the Lie algebra course). Thus we see that $Z(U(\slc))\otimes Z(U(\slc))$ is the algebra of polynomials in $C\otimes 1$ and $1\otimes C$, or equivalently the algebra of polynomials in $C\otimes 1 - 1\otimes C$ and $C\otimes 1 + 1\otimes C$. So we want to describe $C\otimes 1 - 1\otimes C$ and $C\otimes 1 + 1\otimes C$ in terms of our basis $h_+,h_-,h_3,f_+,f_-,f_3$. We note that $(u,u')\in L=\slpr$ in $U(L)=U(\slpr)$ is identified with $u\otimes 1 + 1\otimes u'$ in $U(\slc)\otimes U(\slc)$, so 
 \begin{align*}
   &\tfrac{1}{2}(h_-f_++f_-h_+)+h_3f_3+f_3\\
   &= \tfrac{1}{2}\bigl( (y\otimes 1 + 1\otimes y)(ix\otimes 1 - 1\otimes ix) + (iy\otimes 1 - 1\otimes iy)(x\otimes 1 + 1\otimes x) \bigr) \\
@@ -71,7 +71,7 @@ which are called Laplace operators. Note that by \cref{eq:H3eigen,eq:H+H-,eq:Fac
     \Delta_2 \xi &= (\ell^2-1)\xi - (\ell+1)^2D_0^2\xi + (4\ell^2-1)D_+D_-\xi
   \end{aligned}                 
 \end{align}
-for $\xi\in R_\ell$. Here as in the relations for the $D$'s earlier, we replace $D_+D_-$ with $E_+D_+D_-E_-$ for $\xi \in R_{\ell,\ell}$ and $E_-D_+D_-E_+$ for $\xi\in R_{\ell,-\ell}$. Alternatively by \cref{eq:Drels}, cf.\ \Cref{sec:Deltacalc}, we also get that
+for $\xi\in R_\ell$, $\ell\neq 0$. Here as in the relations for the $D$'s earlier, we replace $D_+D_-$ with $E_+D_+D_-E_-$ for $\xi \in R_{\ell,\ell}$ and $E_-D_+D_-E_+$ for $\xi\in R_{\ell,-\ell}$. Alternatively by \cref{eq:Drels}, cf.\ \Cref{sec:Deltacalc}, we also get that
 \begin{align}\label{eq:altDelta2}
   \Delta_2 \xi = \bigl((\ell+1)^2-1\bigr)\xi  + \ell^2D_0^2\xi + \bigl(4(\ell+1)^2-1\bigr)D_-D_+\xi
 \end{align}
@@ -139,7 +139,7 @@ Now we are finally ready to begin considering the properties of $\Delta_1$ and $
       \Delta_2 \xi &= (\ell_0^2-1)\xi - (\ell_0+1)D_0^2\xi
     \end{aligned}
   \end{align}
-  for $\xi\in R_{\ell_0}$. Now the subspace $R_{\ell_0}$ is invariant under $D_0$, so we can find an eigenvector $\xi_0$ for $D_0$ such that $D_0\xi_0 = \mu\xi_0$ for some $\mu\in\C$. Thus we see that
+  for $\xi\in R_{\ell_0}$. Now if $\ell_0\neq 0$ the subspace $R_{\ell_0}$ is invariant under $D_0$, so we can find an eigenvector $\xi_0$ for $D_0$ such that $D_0\xi_0 = \mu\xi_0$ for some $\mu\in\C$. Thus we see that
   \begin{align*}
     \Delta_1 \xi_0 &= -\ell_0(\ell_0+1)\mu\xi_0 \\
     \Delta_2 \xi_0 &= (\ell_0^2-1)\xi_0 - (\ell_0+1)\mu^2\xi_0,
@@ -152,7 +152,7 @@ Now we are finally ready to begin considering the properties of $\Delta_1$ and $
   \begin{align*}
     \lambda_1 &= -i\ell_0\ell_1, & \lambda_2 &= \ell_0^2 + \ell_1^2 - 1.
   \end{align*}
-  Now by assumption each of $\Delta_1$ and $\Delta_2$ has only one eigenvalue on $M$, and thus these eigenvalues are expressed in terms of the $\ell_0$ and $\ell_1$ as in \cref{eq:eigenvaluesformulae}. 
+  Now by assumption each of $\Delta_1$ and $\Delta_2$ has only one eigenvalue on $M$, and thus these eigenvalues are expressed in terms of the $\ell_0$ and $\ell_1$ as in \cref{eq:eigenvaluesformulae}. Also if $\ell_0=0$ it is clear that we can still find a complex number $\ell_1$ such that the above equations are satisfied.
 \end{proof}
 
 Note that all such eigenvalues $\lambda_1$ and $\lambda_2$ for $\Delta_1$ and $\Delta_2$ are possible, since in the case of finite dimensional simple modules $N$ as in \Cref{sec:simplemodules} we have by \cref{eq:infdimds,eq:Deltas} that
@@ -163,7 +163,7 @@ Note that all such eigenvalues $\lambda_1$ and $\lambda_2$ for $\Delta_1$ and $\
                         &= (\ell^2-1)\xi_{\ell,m} - (\ell^2-\ell_0^2-\ell_1^2)\xi_{\ell,m} \\*
                         &= (\ell_0^2+\ell_1^2-1)\xi_{\ell,m},
 \end{align*}
-for $\xi_{\ell,m}\in R_{\ell,m}$, where $\ell_0\geq 0$ is an integral or half-integral number and $\ell_1$ is a complex number such that we can construct $N$ such that $\ell_0$ and $\ell_1$ are as we want.
+for $\xi_{\ell,m}\in R_{\ell,m}$, where $\ell_0\geq 0$ is an integral or half-integral number and $\ell_1$ is a complex number. Here we can construct $N$ such that $\ell_0$ and $\ell_1$ are as we want.
 
 \begin{proposition}\label{prop:eigenvaluesforDs}
   Let $M$ be a Harish-Chandra module in which the Laplace operators $\Delta_1$ and $\Delta_2$ have only one eigenvalue $\lambda_1$ and $\lambda_2$ respectively. Then on each subspace $R_\ell$ the operators $D_+D_-$, $D_-D_+$, and $D_0$ have only one eigenvalue $\dd{\ell}{-}$, $\dd{\ell}{+}$, and $\dd{\ell}{0}$ respectively. Here the numbers $\dd{\ell}{-}$, $\dd{\ell}{+}$, and $\dd{\ell}{0}$ are expressed in terms of $\ell_0$ and $\ell_1$ in the following way:
@@ -176,7 +176,7 @@ for $\xi_{\ell,m}\in R_{\ell,m}$, where $\ell_0\geq 0$ is an integral or half-in
       \dd{\ell}{0} &= \dfrac{i\ell_0\ell_1}{\ell(\ell+1)} && \mbox{if }\ell\neq 0.
     \end{aligned}
   \end{align}
-\end{proposition}\todo{I might want to change the result slightly. I need to say that we if have $R_{\ell+1}=0$ so that $\dd{\ell}{+}=0$ then $\ell+1=\abs{\ell_1}$ and $\ell_1$ is real --- I either need to change the result or go back through the paper and correct some things and argue that this will not happen/will not matter}
+\end{proposition}
 \begin{proof}
   By \cref{eq:Deltas} we see that
   \begin{align*}
@@ -208,6 +208,8 @@ Now denote by $C_s(\lambda_1,\lambda_2)$ for $s=1$ or $s=\tfrac{1}{2}$ the set o
   Denoting by $\Delta_i$ the Laplace operators in $M$ and by $\Delta_i'$ the Laplace operators in $M'$, we also have that $\Delta_i' \gamma = \gamma \Delta_i$ for $i=1,2$, since in both cases $\Delta_i$ and $\Delta_i'$ correspond to the actions in $U(L)$ of \cref{eq:DeltasaU(L)def} and $\gamma\in\Hom_L(M,M')=\Hom_{U(L)}(M,M')$. Now since $\gamma\neq 0$ we get that $\gamma R_\ell \subset R_\ell'$ implies that $s=s'$ and $\Delta_i'\gamma=\gamma\Delta_i$ implies that $\lambda_i=\lambda_i'$ for $i=1,2$, but this is a contradiction since $(s,\lambda_1,\lambda_2)\neq (s',\lambda_1',\lambda_2')$. Hence we must have that $\gamma=0$, and thus indeed $\Hom_L(M,M')=0$. 
 \end{proof}
 
+This implies that the study of the category of Harish-Chandra modules for the pair $(L,L_k)$ can be reduced to the study of the category $C_s(\lambda_1,\lambda_2)$ of modules in which the Laplace operators have exactly one eigenvalue.
+
 \begin{remark}
   From now on in places where the index $s$ is not important, we will simply denote $C_s(\lambda_1,\lambda_2)$ by $C(\lambda_1,\lambda_2)$. 
 \end{remark}
@@ -216,7 +218,7 @@ Now denote by $C_s(\lambda_1,\lambda_2)$ for $s=1$ or $s=\tfrac{1}{2}$ the set o
   The category of modules $C(\lambda_1,\lambda_2)$ is called singular if the numbers $\ell_0$ and $\ell_1$ constructed from $\lambda_1$ and $\lambda_2$ as in \cref{eq:eigenvaluesformulae} are such that $\ell_1-\ell_0$ is an integer. Otherwise it is called non-singular.
 \end{definition}
 
-We will see that the study of the non-singular categories $C(\lambda_1,\lambda_2)$ is simpler than that of the singular ones, and we are now ready to begin our description of the category of the singular categories $C(\lambda_1,\lambda_2)$ which will be important to our classification of indecomposable Harish-Chandra modules. 
+We will see that the study of the non-singular categories $C(\lambda_1,\lambda_2)$ is simpler than that of the singular ones, and we are now ready to begin our description of the category of the singular categories $C(\lambda_1,\lambda_2)$. 
 
 %%% Local Variables:
 %%% mode: latex

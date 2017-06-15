@@ -6,6 +6,8 @@
     "lem:singmodDeltasimilar"
     "lem:Deltarelsing"
     "rem:D+D-nilpotent"
-    "lem:deltaDszero"))
+    "lem:deltaDszero"
+    "cor:singindec"
+    "eq:taileqs"))
  :latex)
 

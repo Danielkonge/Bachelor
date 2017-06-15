@@ -38,6 +38,7 @@
     "eq:F_3action"
     "eq:Factions"
     "eq:Drels"
+    "lem:mapscondition"
     "sec:simplemodules"
     "eq:EandDnewbasis"
     "eq:drelations"

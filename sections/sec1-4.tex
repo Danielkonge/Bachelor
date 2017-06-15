@@ -9,11 +9,11 @@ We define at first a category $S_0$ as follows. The objects $\widetilde{A}$ of $
 that satisfy the conditions
 \begin{align}
   \begin{aligned}
-    d_-\delta_2 = \delta_2d_+ = 0, \\
-    \delta_2 \text{ and } d_+d_- \text{ are nilpotent.}
+    &d_-\delta_2 = \delta_2d_+ = 0, \\
+    &\delta_2 \text{ and } d_+d_- \text{ are nilpotent.}
   \end{aligned}
 \end{align}
-The morphisms $\gamma\colon \widetilde{A}\to \widetilde{A}'$ of $S_0$ are pairs of linear maps $\gamma=(\gamma_1,\gamma_2)$ with $\gamma_1\colon P_1\to P_1'$ and $\gamma_2\colon P_2\to P_2'$ such that the diagram
+The morphisms $\gamma\colon \widetilde{A}\to \widetilde{A}'$ in $S_0$ are pairs of linear maps $\gamma=(\gamma_1,\gamma_2)$ with $\gamma_1\colon P_1\to P_1'$ and $\gamma_2\colon P_2\to P_2'$ such that the diagram
 \begin{equation}\label{eq:S0diagram}
   \begin{tikzcd}
     P_1 \ar[d,"\gamma_1"] \ar[r,"d_+"] & P_2 \ar[d,"\gamma_2"] \ar[r,"\delta_2"] & P_2 \ar[d,"\gamma_2"] \ar[r,"d_-"] & P_1 \ar[d,"\gamma_1"] \\
@@ -51,7 +51,7 @@ commutes. Similarly to the non-singular case we now want to prove that the singu
 Since $E_+$, $E_-$, $D_+$, and $D_-$ commute with $\Delta_1$ and $\Delta_2$ by \Cref{lem:commuteDeltas}, we get by the same method as in the proof of \Cref{lem:nonsingsimilar} that:
 
 \begin{lemma}\label{lem:singmodDeltasimilar}
-  In a singular module $M\in C(\lambda_1,\lambda_2)$ all the operators $(\Delta_i)_{\ell,m}$ with $\ell_0\leq \ell\leq \abs{\ell_1}-1$ are similar to $(\Delta_i)_{\ell_0,m_0}$ via the same matrix for $i=1,2$, and the corresponding operators $(\Delta_i)_{\ell,m}$ with $\ell\geq \abs{\ell_1}$ are similar to $(\Delta_i)_{\abs{\ell_1},m_0}$ via the same matrix for $i=1,2$.
+  In a singular module $M\in C(\lambda_1,\lambda_2)$ all the operators $(\Delta_i)_{\ell,m}$ with $\ell_0\leq \ell\leq \abs{\ell_1}-1$ are similar to $(\Delta_i)_{\ell_0,m_0}$ via the same matrix for $i=1,2$, and the operators $(\Delta_i)_{\ell,m}$ with $\ell\geq \abs{\ell_1}$ are similar to $(\Delta_i)_{\abs{\ell_1},m_0}$ via the same matrix for $i=1,2$.
 \end{lemma}
 
 \begin{lemma}\label{lem:Deltarelsing}
@@ -64,7 +64,7 @@ Since $E_+$, $E_-$, $D_+$, and $D_-$ commute with $\Delta_1$ and $\Delta_2$ by \
 \begin{proof}
   That $\delta=0$ on the subspaces $R_{\ell,m}$ for which $\ell_0\leq \ell\leq \abs{\ell_1}-1$ follows by \Cref{lem:singmodDeltasimilar} and the same argument as in the proof of \Cref{lem:Deltarelnonsing}. And since $\Delta_1$ and $\Delta_2$ only have one eigenvalues $\lambda_1=-i\ell_0\ell1$ and $\lambda_2=\ell_0^2+\ell_1^2-1$ respectively we see that $\delta$ only has the eigenvalues
   \begin{align*}
-    \dfrac{1}{\ell_0^2-\ell_1^2}\Bigl( \lambda_2 + \dfrac{\lambda_1^2}{\ell_0^2} - (\ell_0^2-1)\id \Bigr) &=\dfrac{1}{\ell_0^2-\ell_1^2}\Bigl( \ell_0^2+\ell_1^2-1 - \ell_1^2 - (\ell_0^2-1)\id \Bigr) \\
+    \dfrac{1}{\ell_0^2-\ell_1^2}\Bigl( \lambda_2 + \dfrac{\lambda_1^2}{\ell_0^2} - (\ell_0^2-1) \Bigr) &=\dfrac{1}{\ell_0^2-\ell_1^2}\Bigl( \ell_0^2+\ell_1^2-1 - \ell_1^2 - (\ell_0^2-1) \Bigr) \\
     &=0,
   \end{align*}
   so by Cayley-Hamilton Theorem $\delta$ is nilpotent in general which gives the result.
@@ -109,18 +109,18 @@ for some $m_0$ where it makes sense. Writing $P_1=R_{\abs{\ell_1}-1,m_0}$ and $P
 
 Likewise from a morphism $\Gamma\colon M\to M'$ for $M,M'\in C(\lambda_1,\lambda_2)$ we get a corresponding morphism $\gamma=(\gamma_1,\gamma_2)$ from $\widetilde{A}$ to $\widetilde{A}'$. As in the proof of \Cref{thm:nonsingcateq} we have that $\Gamma R_{\ell,m} \subset R_{\ell,m}'$ for all $\ell$ and $m$ where it makes sense, so setting $\gamma_1=(\Gamma)_{\abs{\ell_1}-1,m_0}\colon P_1\to P_1'$ and $\gamma_2 = (\Gamma)_{\abs{\ell_1},m_0}\colon P_2\to P_2'$, we want to show that $\gamma=(\gamma_1,\gamma_2)$ gives a morphism in $S_0$. \todo{Show that the diagram \cref{eq:S0diagram} commutes}
 
-Now we want to show that to each object $\widetilde{A}=(P_1,P_2,d_+,d_-,\delta_1,\delta_2)\in S_0$ there is a corresponding module singular module $M\in C(\lambda_1,\lambda_2)$ with $\lambda_1=-i\ell_0\ell_1$ and $\lambda_2=\ell_0^2+\ell_1^2-1$. Let such an $\widetilde{A}$ be given, then we want to construct $M$. First choose an $m_0$ such that it makes sense to write $R_{\abs{\ell_1}-1,m_0}$ and put $R_{\abs{\ell_1}-1,m}=P_1$ and $R_{\abs{\ell_1},m_0}=P_2$, and define
+Now we want to show that to each object $\widetilde{A}=(P_1,P_2,d_+,d_-,\delta_1,\delta_2)\in S_0$ there is a corresponding singular module $M\in C(\lambda_1,\lambda_2)$ with $\lambda_1=-i\ell_0\ell_1$ and $\lambda_2=\ell_0^2+\ell_1^2-1$. Let such an $\widetilde{A}$ be given, then we want to construct $M$. First choose an $m_0$ such that it makes sense to write $R_{\abs{\ell_1}-1,m_0}$ and put $R_{\abs{\ell_1}-1,m_0}=P_1$ and $R_{\abs{\ell_1},m_0}=P_2$, and define
 \begin{align*}
-  D_+\coloneqq d_+\colon R_{\abs{\ell_1}-1,m}&\to R_{\abs{\ell_1},m_0}, & D_-\coloneqq d_-\colon R_{\abs{\ell_1},m_0} &\to R_{\abs{\ell_1}-1,m_0}.
+  D_+\coloneqq d_+\colon R_{\abs{\ell_1}-1,m_0}&\to R_{\abs{\ell_1},m_0}, & D_-\coloneqq d_-\colon R_{\abs{\ell_1},m_0} &\to R_{\abs{\ell_1}-1,m_0}.
 \end{align*}
-Consider the space $M=\bigoplus_{\ell,m}R_{\ell,m}$ for $\ell=\ell_0,\ell_0+1,\dotsc,\abs{\ell_1}+1,\abs{\ell_1},\dotsc$ and $m$ where it makes sense, where $\dim R_{\ell,m}=\dim R_{\abs{\ell_1}-1,m}=\dim P_1$ for all $\ell\leq \abs{\ell_1}-1$, and $\dim R_{\ell,m}=\dim R_{\abs{\ell_1},m}=\dim P_2$ for all $\ell\geq \abs{\ell_1}$. We want to construct the maps $E_+$, $E_-$, $D_+$, $D_-$, and $D_0$. First take $E_+\colon R_{\ell,m}\to R_{\ell,m+1}$ to be any isomorphism and $E_+\colon R_{\ell,\ell}\to 0$, and then take $E_-\colon R_{\ell,m}\to R_{\ell,m-1}$ for $m\neq -\ell$ to be the inverse isomorphism of the corresponding $E_+$ and take $E_-\colon R_{\ell,-\ell}\to 0$. Likewise take $D_+\colon R_{\ell,m_0}\to R_{\ell+1,m_0}$ for $\ell\neq \abs{\ell_1}-1$ to be any isomorphism, and for $\ell=\abs{\ell_1}-1$ we already have defined $D_+$ on $R_{\abs{\ell_1}-1,m_0}$. We expand to all $R_{\ell,m}$ and $R_{\abs{\ell_1}-1,m}$ by using $E_+$ either on the left or on the right such that
+Consider the space $M=\bigoplus_{\ell,m}R_{\ell,m}$ for $\ell=\ell_0,\ell_0+1,\dotsc,\abs{\ell_1}-1,\abs{\ell_1},\dotsc$ and $m$ where it makes sense, where $\dim R_{\ell,m}=\dim R_{\abs{\ell_1}-1,m}=\dim P_1$ for all $\ell\leq \abs{\ell_1}-1$, and $\dim R_{\ell,m}=\dim R_{\abs{\ell_1},m}=\dim P_2$ for all $\ell\geq \abs{\ell_1}$. We want to construct the maps $E_+$, $E_-$, $D_+$, $D_-$, and $D_0$. First take $E_+\colon R_{\ell,m}\to R_{\ell,m+1}$ to be any isomorphism for $m\neq \ell$ and $E_+\colon R_{\ell,\ell}\to 0$, and then take $E_-\colon R_{\ell,m}\to R_{\ell,m-1}$ for $m\neq -\ell$ to be the inverse isomorphism of the corresponding $E_+$ and take $E_-\colon R_{\ell,-\ell}\to 0$. Likewise take $D_+\colon R_{\ell,m_0}\to R_{\ell+1,m_0}$ for $\ell\neq \abs{\ell_1}-1$ to be any isomorphism, and for $\ell=\abs{\ell_1}-1$ we already have defined $D_+$ on $R_{\abs{\ell_1}-1,m_0}$. We expand to all $R_{\ell,m}$ and $R_{\abs{\ell_1}-1,m}$ by using $E_+$ either on the left or on the right such that
 \[
   \begin{tikzcd}
     R_{\ell,m+1} \ar[r,"D_+"] & R_{\ell+1,m+1} \\
     R_{\ell,m}\ar[u,"E_+"] \ar[r,"D_+",swap] & R_{\ell+1,m}\ar[u,"E_+",swap]
   \end{tikzcd}
 \]
-commutes for $-\ell\leq m<\ell$, i.e.\ $(D_+)_{\ell,m+1}=(E_+)_{\ell,m+1}^{-1} (D_+)_{\ell,m} (E_+)_{\ell+1,m}$. 
+commutes for $-\ell\leq m<\ell$, i.e.\ $(D_+)_{\ell,m+1}=(E_+)_{\ell+1,m} (D_+)_{\ell,m} (E_+)_{\ell,m}^{-1}$. 
 
 Now before constructing $D_0$ and $D_-$ we want to construct $\Delta_1$ and $\Delta_2$. Since $D_-$ and $\delta=\delta_2$ are defined on $R_{\abs{\ell_1},m_0}$, we can define
 \begin{align*}
@@ -151,7 +151,7 @@ for $i=1,2$, such that we have expanded $\Delta_1$ and $\Delta_2$ to all $R_{\el
 \end{align*}
 Since $(D_+)_{\ell,m}$ is an isomorphism for all $\ell\geq \abs{\ell_1}$, we get that this determines $(D_-)_{\ell,m}$ for $\ell\geq \abs{\ell_1}+1$, and we already have $(D_-)_{\abs{\ell_1},m}$ given.
 
-Similarly we can find $D_0$ and $D_-$ for $\ell_0\leq \ell <\abs{\ell_1}$, and thus we get the linear maps $E_+$, $E_-$, $D_+$, $D_-$, and $D_0$ defined everywhere where it makes sense, and actually we get by our standard construction operators $H_+$, $H_-$, $H_3$, $F_+$, $F_-$, and $F_3$, which gives a representation, i.e. we indeed get a singular module $M\in C(\lambda_1,\lambda_2)$ for each object $\widetilde{A}=(P_1,P_2,d_+,d_-,\delta_1,\delta_2)\in S_0$. To see this we need only check that the equations of \cref{eq:Drels} hold. We see that for $\ell\neq 0$
+Similarly we can find $D_0$ and $D_-$ for $\ell_0\leq \ell <\abs{\ell_1}$, and thus we get the linear maps $E_+$, $E_-$, $D_+$, $D_-$, and $D_0$ defined everywhere where it makes sense, and actually we get by our standard construction operators $H_+$, $H_-$, $H_3$, $F_+$, $F_-$, and $F_3$, which gives a representation, i.e. we indeed get a singular module $M\in C(\lambda_1,\lambda_2)$ for each object $\widetilde{A}=(P_1,P_2,d_+,d_-,\delta_1,\delta_2)\in S_0$. To see this we need only check that the equations of \cref{eq:Drels} hold. As in \Cref{thm:objectscor} we see that for $\ell\neq 0$
 \begin{align*}
   \ell(D_+)_{\ell,m}(D_0)_{\ell,m} &= -\dfrac{\ell}{\ell(\ell+1)} (D_+)_{\ell,m}(\Delta_1)_{\ell,m} \\
                           &= - \dfrac{1}{\ell+1} (\Delta_1)_{\ell+1,m} (D_+)_{\ell,m} \\
@@ -163,6 +163,43 @@ which gives us the first equation, and the rest can be checked similarly. Additi
   The singular category $C(\lambda_1,\lambda_2)$ is equivalent to the category $S_0$. 
 \end{theorem}
 
+\begin{corollary}\label{cor:singindec}
+  An indecomposable module $M$ in the singular category $C(\lambda_1,\lambda_2)$ corresponds to an indecomposable object $A$ in the category $S_0$.
+\end{corollary}
+
+Now we have reduced the problem of characterizing the singular indecomposable modules to a problem of linear algebra, or more precisely to working with linear relations, which is beyond the scope of this paper --- for the details of this see \cite{indecompReprOfLorGr} Chapter II. However we will now give the resulting description:
+
+We divide the indecomposable objects of $S_0$ into two types that we call open or closed. A simple type of open object $A$ from which we build general open objects is called a strand, and it has the following properties: $P_1$ has a basis $(e_1,\dotsc,e_n)$ and $P_2$ has a basis $(f_0,f_1,\dotsc,f_n,f_1',f_2',\dotsc,f_m')$ such that the operators $d_+$, $d_-$, and $\delta$ satisfy
+\begin{align*}
+  d_-f_i &= e_{i+1} \quad (i<n), & d_-f_n &= 0, & d_-f_i' &= 0, & d_+e_i &= f_i, \\
+  \delta f_i &= 0 \quad (i>0), & \delta f_0 &= f_1', & \delta f_i' &= f_{i+1}' \quad (i<m), & \delta f_m' &= 0.
+\end{align*}
+Here $f_n$ and $f_m'$ are called tail vectors in the strand, and the two numbers $(n,m)$ are invariants of a strand.
+
+An open object is composed of strands and is given by the set of numbers $(s,n_1,m_1,n_2,m_2,\dotsc,n_k,m_k)$, where $s\in \Set{0,1}$,  $n_1\geq 0$, $n_i>0$ for $i\neq 1$, $m_i>0$ for $i\neq k$, $m_k\geq -1$. Here the $i$'th pair $(n_i,m_i)$ corresponds to the $i$'th strand, and the tail vectors of these strands must satisfy
+\begin{align}\label{eq:taileqs}
+  f_{m_1}' = f_{n_2}, \quad f_{m_2}' = f_{n_3}, \quad \dotsc \quad f_{m_{k-1}}' = f_{n_k}.
+\end{align}
+Given this one can show the following proposition:
+\begin{proposition}
+  Let $A$ and $A'$ be two open indecomposable objects in $S_0$ which are given respectively by $(s,n_1,m_1,\dotsc,n_k,m_k)$ and $(s',n_1',m_1'\dotsc,\\ n_k',m_k')$. Then $A$ and $A'$ are equivalent if and only if $s=s'$, $n_i=n_i'$, and $m_i=m_i'$ for all $i$.
+\end{proposition}
+
+A simple closed object is obtained from one open object with $s=0$, $n_1>0$, $m_k>0$, and $f_{n_1}$ and $f_{m_k}'$ non-zero. Here $f_{n_1}$ is called the starting vector and $f_{m_k}'$ the terminating vector of the open object. The closed simple object is defined simply by adding the relation $f_{m_k}'=\mu f_{n_1}$ to the relations of \cref{eq:taileqs}, where $\mu$ is some complex number. Thus in the simple case a closed object is given by numbers $(n_1,m_1,\dotsc,n_k,m_k,\mu)$, where $n_i,m_i>0$ and $\mu\in\C$.
+
+In general a closed object is given by numbers $(n_1,m_1,\dotsc,n_k,m_k,\mu,N)$, where $n_i,m_i,N>0$ are integers and $\mu\in\C$, and it is made from $N$ open objects given by $(0,n_1,m_1,\dotsc,n_k,m_k)$ for the same $n_i$ and $m_i$ as above. If we denote for $j=1,\dotsc,N$ the starting object of the $j$'th open object by $f_j$ and the terminating object by $f_j'$, then the closed object is given by adding the relations 
+\begin{align*}
+  f_1' = \mu f_1, \qquad f_i' = \mu f_i + f_{i-1} \mbox{ for }i=2,3,\dotsc,N.
+\end{align*}
+Given this one can as in the open case show the following proposition:
+\begin{proposition}
+  Let $A$ and $A'$ be two closed indecomposable objects in $S_0$ which are given respectively by $(n_1,m_1,\dotsc,n_k,m_k,\mu,N)$ and $(n_1',m_1',\dotsc,n_k',m_k',\mu',N')$. Then $A$ and $A'$ are equivalent if and only if $\mu=\mu'$, $N=N'$, and the sequence $\Set{n_i',m_i'}$ is a cyclic permutation of the sequence $\Set{n_i,m_i}$. 
+\end{proposition}
+
+Now since all indecomposable objects in $S_0$ are either open or closed, this gives a complete description of the indecomposables of $S_0$, and thus by \Cref{cor:singindec} a description of the indecomposables of singular Harish-Chandra modules in $C(\lambda_1,\lambda_2)$. Altogether we end up with the theorem:
+\begin{theorem}
+  Let $M$ be an indecomposable Harish-Chandra module for the pair $(L,L_k)$ belonging to the singular category $C(\lambda_1,\lambda_2)$. Then either M can be described by some integers $(s,n_1,m_1,n_2,m_2,\dotsc,n_k,m_k)$ or by some integers and a complex number $\mu$ $(n_1,m_1,\dotsc,n_k,m_k,\mu,N)$, and two such modules $M$ and $M'$ are equivalent if and only if $\lambda_1=\lambda_1'$, $\lambda_2=\lambda_2'$, $\mu=\mu'$ (in the case with $\mu$ in the description), and all the corresponding integers agree.  
+\end{theorem}
 
 %%% Local Variables:
 %%% mode: latex

@@ -111,7 +111,7 @@ Thus we get the following Lemma:
 
 \subsection{Formulae for the operators \texorpdfstring{$H_+,H_-,H_3,F_+,F_-,F_3$}{H\_+,H\_-,H\_3,F\_+,F\_-,F\_3}}\label{sec:formulae}
 
-Let $M$ be a Harish-Chandra $L$-module. Then we have linear operators $H_+, H_-, H_3, F_+, F_-, F_3\colon M\to M$ satisfying commutation relations as in \cref{eq:lierels}, and we want to give expressions for these in terms of other linear operators $E_+,E_-,D_+,D_-,D_0\colon M\to M$. 
+Let $M$ be a Harish-Chandra $L$-module. Then we have linear operators $H_+, H_-, H_3, F_+, F_-, F_3\colon M\to M$ given by the corresponding actions of $L$ satisfying commutation relations as in \cref{eq:lierels}, and we want to give expressions for these in terms of other linear operators $E_+,E_-,D_+,D_-,D_0\colon M\to M$. 
 
 We will denote by $R_\ell$ a finite dimensional $L$-module which is a (finite) direct sum of $L_k$-modules $M(2\ell)$ for the same number $\ell\in\tfrac{1}{2}\Z_{\geq 0}$. Then $M$ is a direct sum of the subspaces $R_\ell$ since $M$ is Harish-Chandra, and from \Cref{lem:modulebasis} we know that $R_\ell$ can be written as the direct sum of subspaces $R_{\ell,m}$, where $R_{\ell,m}$ are eigenspaces for $H_3$ such that
 \begin{align} \label{eq:H3eigen}
@@ -157,14 +157,14 @@ Thus $E_+\colon R_{\ell,m}\to R_{\ell,m+1}$ and $E_-\colon R_{\ell,m+1}\to R_{\e
 \begin{remark}\label{rem:Edef}
   Note that the above definitions make sense more generally on $L_k$-modules $M$ with a direct sum decomposition $\bigoplus_\ell R_\ell$ such that each $R_\ell$ is a finite direct sum of simple $L_k$-modules isomorphic to $M(2\ell)$, i.e.\ we do not need the additional structure from $L$-modules.
 
-  In particular note that on the $L_k$-module $M(2\ell)$ with basis $(e_{-\ell},e_{-\ell+1},\dotsc,e_{\ell-1},e_\ell)$ as in \Cref{lem:modulebasis}, we have that $E_+ e_m = e_{m+1}$ for $m\neq\ell$ and $E_- e_m = e_{m-1}$ for $m\neq -\ell$.
+  In particular note that on the $L_k$-module $M(2\ell)$ with basis $(e_{-\ell},e_{-\ell+1},\dotsc,\\ e_{\ell-1},e_\ell)$ as in \Cref{lem:modulebasis}, we have that $E_+ e_m = e_{m+1}$ for $m\neq\ell$ and $E_- e_m = e_{m-1}$ for $m\neq -\ell$.
 \end{remark}
 
 Now note that $H_+$, $H_-$, and $H_3$ are completely determined by \cref{eq:H3eigen} and \cref{eq:E+andE-}, so we just need to find maps to determine $F_+$, $F_-$, and $F_3$ now, while making sure that we get commutation relations as in \cref{eq:lierels}.
 
 We already have that $L_k=\Span_\C(h_+,h_-,h_3)$, but now we will also consider $L_p=\Span_\C(f_+,f_-,f_3)$. We will show shortly that $u.R_\ell \subset R_{\ell-1}\oplus R_\ell \oplus R_{\ell+1}$ for all $u\in L_p$. This implies that there are maps $D_-^{u}\colon R_\ell\to R_{\ell-1}$, $D_0^{u}\colon R_\ell\to R_\ell$, and $D_+^{u}\colon R_\ell\to R_{\ell+1}$ such that $u.v=D_-^{u}(v)+D_0^{u}(v)+D_+^{u}(v)$ for all $u\in L_p$ and $v\in R_\ell$. In the following we will find maps $D_-$, $D_0$, and $D_+$ independent of $u$ such that we can express $D_-^{u}$, $D_0^{u}$, and $D_+^{u}$ in terms of these and the maps $E_-$ and $E_+$ from above, thus we will also be able to express $F_+$, $F_-$, and $F_3$ in terms of $D_-$, $D_0$, $D_+$, $E_-$, and $E_+$. To be more precise we will find maps $D_-$, $D_0$, and $D_+$ such that we can express $F_3$ in terms of just these (and multiplication by some constant), and then we can get $F_+$ and $F_-$ by the commutation relations. 
 
-For reasons that will be clearer later, we want the maps $D_0$ and $D_+$ to be defined on $M=\bigoplus_{\ell,m} R_{\ell,m}$ and $D_-$ defined on the direct sum without the summands $R_{\ell,\ell}$ and $R_{\ell,-\ell}$ to be such that $D_0 R_{\ell,m}\subset R_{\ell,m}$, $D_+ R_{\ell,m} \subset R_{\ell+1,m}$, and $D_- R_{\ell,m} \subset R_{\ell-1,m}$ and the diagrams\todo{Maybe move this to later}
+For reasons that will be clearer later, we want the maps $D_+$ to be defined on $M=\bigoplus_{\ell,m} R_{\ell,m}$, $D_0$ defined on the direct sum without the $R_{0,0}$ summand (if there is one), and $D_-$ defined on the direct sum without the summands $R_{\ell,\ell}$ and $R_{\ell,-\ell}$ to be such that $D_0 R_{\ell,m}\subset R_{\ell,m}$, $D_+ R_{\ell,m} \subset R_{\ell+1,m}$, and $D_- R_{\ell,m} \subset R_{\ell-1,m}$ and the diagrams
 \begin{center}
   \begin{equation}\label{eq:Ddiagrams}
     \begin{tikzcd}[baseline=(current bounding box.center)]
@@ -195,11 +195,11 @@ so we see that $f_+,f_-\in V$, and thus also $[h_+,\tfrac{1}{2}f_-]=f_3\in V$, s
 \end{align*}
 so since either $a\neq 0$ or $b\neq 0$, we see that $f_3\in V$, and thus also $[h_+,-f_3]=f_+\in V$ and $[h_-,f_3]=f_-\in V$, so $V=L_p$. Hence $L_p$ is indeed a simple $L_k$-module. Now since $L_p$ is a simple finite dimensional $L_k$-module of dimension 3, we have that $L_p\simeq M(2)$ as $L_k$-modules.
 
-In general given two $L$-modules $V$ and $W$, we consider the tensor product $V\otimes W$ over $\C$ of the underlying vector spaces as an $L$-module via the action
+In general given a Lie algebra $L_1$ and two $L_1$-modules $V$ and $W$, we consider the tensor product $V\otimes W$ over $\C$ of the underlying vector spaces as an $L_1$-module via the action
 \begin{align}\label{eq:tensoraction}
   x.(v\otimes w) &= x.v\otimes w + v\otimes x.w,
 \end{align}
-for $x\in L$ and $v\otimes w\in V\otimes W$, cf.\ \cite[26]{humphrey}.
+for $x\in L_1$ and $v\otimes w\in V\otimes W$, cf.\ \cite[26]{humphrey}.
 
 Now we are interested in the $L_k$-module $L_p\otimes M$, where $M$ is a Harish-Chandra $L$-module (and thus an $L_k$-module) as before. Specifically we will show that the linear map
 \begin{align}
@@ -231,7 +231,7 @@ as $L_k$-modules, and since $R_\ell$ is direct sum of finitely many copies of $M
 as $L_k$-modules, since $L_p\simeq M(2)$. Here the superscripts are just indices for the different $M(2\ell)$. Thus we want to describe the $L_k$-modules $M(2)\otimes M(2\ell)$, which we will do by first describing the $\slc$-modules $V(2)\otimes V(2\ell)$ and then translating back to a solution to our problem.
 
 \subsection{\texorpdfstring{Describing $V(2)\otimes V(n)$}{Describing V(2) tensor product V(n)}}
-Let $2\ell=n\in\N$. We want to show that
+Let $2\ell=n\in\N$. We want to show that for $\slc$-modules we have that
 \begin{align}\label{eq:V(2)tensorV(n)}
   V(2)\otimes V(n) &\simeq
                      \begin{dcases*}
@@ -269,7 +269,7 @@ Now since $e(\lambda)*e(\mu)=e(\lambda+\mu)$ in general cf.\ \cite[93]{jantzen},
                          &= \ch_{V(n-2)} + \ch_{V(n)} + \sum_{i=0}^{n+2} e(n+2-2i) \\
   &= \ch_{V(n-2)} + \ch_{V(n)} + \ch_{V(n+2)} = \ch_{V(n-2)\oplus V(n)\oplus V(n+2)},
 \end{align*}
-where the first equality follows from the fact that $\ch_{V\otimes W}=\ch_V * \ch_W$ in general, cf.\ \cite[125]{humphrey}. Thus since two $L$-modules $V$ and $V'$ are isomorphic if and only if $\ch_V=\ch_{V'}$, cf.\ \cite[90]{jantzen}, we see that $V(2)\otimes V(n) \simeq V(n-2)\oplus V(n)\oplus V(n+2)$ if $n\geq 2$.
+where the first equality follows from the fact that $\ch_{V\otimes W}=\ch_V * \ch_W$ in general, cf.\ \cite[125]{humphrey}. Thus since two $\slc$-modules $V$ and $V'$ are isomorphic if and only if $\ch_V=\ch_{V'}$, cf.\ \cite[90]{jantzen}, we see that $V(2)\otimes V(n) \simeq V(n-2)\oplus V(n)\oplus V(n+2)$ if $n\geq 2$.
 
 Likewise we see that
 \begin{align*}
@@ -378,7 +378,7 @@ Now consider $V(2)$ and $V(n)$ as inner product spaces over $\C$ with inner prod
 \begin{align}\label{eq:inproddef1}
   \inner{w_k}{w_j} = \delta_{jk} \binom{2}{k} \qquad \mbox{and} \qquad \inner{v_k}{v_j} = \delta_{jk}\binom{n}{k}.
 \end{align}
-Then we can clearly also consider $V(2)\otimes V(n)$ an inner product space with inner product given by
+Then we can consider $V(2)\otimes V(n)$ an inner product space with inner product given by
 \begin{align}\label{eq:inproddef2}
   \inner{w\otimes v}{w'\otimes v'} = \inner{w}{w'}\cdot\inner{v}{v'}
 \end{align}
@@ -417,7 +417,7 @@ and
 By a simple calculation, cf.\ \Cref{sec:barw_1tensorbarv_k}, we get that
 \begin{align}\label{eq:barw_1tensorbarv_k}
   \begin{aligned}
-    \overline w_1 \otimes \overline v_k &= \sqrt{\dfrac{2(k+1)(n+1-k)}{(n+1)(n+2)}}\overline s_{k+1} - \dfrac{(n-2k)}{\sqrt{n(n+2)}}\overline t_k \\*
+    \overline w_1 \otimes \overline v_k &= \sqrt{\dfrac{2(k+1)(n+1-k)}{(n+1)(n+2)}}\overline s_{k+1} - \dfrac{n-2k}{\sqrt{n(n+2)}}\overline t_k \\*
     &\phantom{{}={}}{} - \sqrt{\dfrac{2k(n-k)}{n(n+1)}}\overline u_{k-1}.
   \end{aligned}
 \end{align}
@@ -462,9 +462,9 @@ Likewise we get that $w_2=[h_-,\sqrt{2}f_3]=\sqrt{2}f_-$, so we can take our bas
 \end{align*}
 where $e_m=\overline v_k$ for $k=\ell-m$ and $f_3 = \overline w_1$.
 \begin{remark}\label{rem:baseswithindexchange}
-  Note that if we have bases $(e_{-\ell-1}^{(2\ell+2)},e_{-\ell}^{(2\ell+2)},\dotsc,e_{\ell}^{(2\ell+2)},e_{\ell+1}^{(2\ell+2)})$ for $M(2\ell+2)$, $(e_{-\ell}^{(2\ell)},e_{-\ell+1}^{(2\ell)},\dotsc,e_{\ell-1}^{(2\ell)},e_{\ell}^{(2\ell)})$ for $M(2\ell)$, and $(e_{-\ell+1}^{(2\ell-2)},e_{-\ell+2}^{(2\ell-2)},\dotsc,\\ e_{\ell-2}^{(2\ell-2)},e_{\ell-1}^{(2\ell-2)})$ for $M(2\ell-2)$ (if $\ell\geq 1$) as in \Cref{lem:modulebasis}, then as above changing indices with $k=\ell+1-m$ we see that $e_m^{(2\ell+2)}$ corresponds to $\overline s_k$. Likewise changing indices with $k=\ell-m$ we see that $e_m^{(2\ell)}$ corresponds to $\overline t_k$, and with $k=\ell-1-m$ we see that $e_m^{(2\ell-2)}$ corresponds to $\overline u_k$. 
+  Note that if we have bases $(e_{-\ell-1}^{(2\ell+2)},e_{-\ell}^{(2\ell+2)},\dotsc,e_{\ell}^{(2\ell+2)},e_{\ell+1}^{(2\ell+2)})$ for $M(2\ell+2)$, $(e_{-\ell}^{(2\ell)},e_{-\ell+1}^{(2\ell)},\dotsc,e_{\ell-1}^{(2\ell)},e_{\ell}^{(2\ell)})$ for $M(2\ell)$, and $(e_{-\ell+1}^{(2\ell-2)},e_{-\ell+2}^{(2\ell-2)},\dotsc,\\ e_{\ell-2}^{(2\ell-2)},e_{\ell-1}^{(2\ell-2)})$ for $M(2\ell-2)$ (if $\ell\geq 2$) as in \Cref{lem:modulebasis}, then as above changing indices with $k=\ell+1-m$ we see that $e_m^{(2\ell+2)}$ corresponds to $\overline s_k$. Likewise changing indices with $k=\ell-m$ we see that $e_m^{(2\ell)}$ corresponds to $\overline t_k$, and with $k=\ell-1-m$ we see that $e_m^{(2\ell-2)}$ corresponds to $\overline u_k$. 
 \end{remark}
-By this remark together with \Cref{rem:Edef}, we see that $E_+ \overline v_k = \overline v_{k-1}$ and $E_+ \overline s_k = \overline s_{k-1}$ where it makes sense, so by the definition of $\widetilde D_+$ it commutes with $E_+$ and $E_-$. Similarly we can see that $\widetilde D_0$ and $\widetilde D_-$ commute with $E_+$ and $E_-$.
+By this remark together with \Cref{rem:Edef}, we see that $E_+ \overline v_k = \overline v_{k-1}$ and $E_+ \overline s_k = \overline s_{k-1}$ where it makes sense, so by the definition of $\widetilde D_+$ it commutes with $E_+$ and $E_-$. Similarly we can see that $\widetilde D_0$ and $\widetilde D_-$ commute with $E_+$ and $E_-$. Note that it makes sense to talk about using $E_+$ and $E_-$ here by \Cref{rem:Edef}.
 
 Now using $\psi$ from \cref{eq:psi}, we see that
 \begin{align}\label{eq:F_3action}
@@ -478,10 +478,10 @@ So we can take $D_0=\psi\widetilde D_0$, $D_+ = \psi\widetilde D_+$, and $D_- = 
   H_3D_0(\xi) &= h_3 . \psi\widetilde D_0(\xi) = \psi h_3 . \widetilde D_0(\xi) = \psi H_3 \widetilde D_0(\xi) = m\psi \widetilde D_0(\xi) \\
   &= m D_0(\xi),
 \end{align*}
-since $\psi$ is an $L_k$-module homomorphism and by \Cref{rem:baseswithindexchange} we see that $\widetilde D_0(e_m)$ is a scalar multiple of $\overline t_k = \overline t_{\ell-m} = e_m^{(2\ell)}$, and indeed $H_3e_m^{(2\ell)}=me_m^{(2\ell)}$. The same reasoning with $\overline s_{k+1}$ for $D_+$ and $\overline u_{k-1}$ for $D_-$ yields the other two inclusions. Also note that the diagrams of \cref{eq:Ddiagrams} commute by the defintion of $D_0$, $D_+$, and $D_-$, since we have already shown that $\widetilde D_0$, $\widetilde D_+$, and $\widetilde D_-$ commute with $E_+$ and $E_-$ where it makes sense, and $L_k$-module homomorphisms in general commute with $E_+$ and $E_-$, so also $\psi$ commutes with $E_+$ and $E_-$. This is the case since for a $L_k$-module homomorphism $\varphi\colon M\to M'$ with decompositions $M=\bigoplus_{\ell,m} R_{\ell,m}$ and $M'=\bigoplus_{\ell,m} R_{\ell,m}'$, we have first that $\varphi(R_\ell)\subset R_\ell'$ and then $\varphi(R_{\ell,m}) \subset R_{\ell,m}'$ --- for more details see \todo{Add reference}.
+since $\psi$ is an $L_k$-module homomorphism and by \Cref{rem:baseswithindexchange} we see that $\widetilde D_0(e_m)$ is a scalar multiple of $\overline t_k = \overline t_{\ell-m} = e_m^{(2\ell)}$, and indeed $H_3e_m^{(2\ell)}=me_m^{(2\ell)}$. The same reasoning with $\overline s_{k+1}$ for $D_+$ and $\overline u_{k-1}$ for $D_-$ yields the other two inclusions. Also note that the diagrams of \cref{eq:Ddiagrams} commute by the defintion of $D_0$, $D_+$, and $D_-$, since we have already shown that $\widetilde D_0$, $\widetilde D_+$, and $\widetilde D_-$ commute with $E_+$ and $E_-$ where it makes sense, and $L_k$-module homomorphisms in general commute with $E_+$ and $E_-$, so also $\psi$ commutes with $E_+$ and $E_-$. This is the case since for a $L_k$-module homomorphism $\varphi\colon M\to M'$ with decompositions $M=\bigoplus_{\ell,m} R_{\ell,m}$ and $M'=\bigoplus_{\ell,m} R_{\ell,m}'$, we have first that $\varphi(R_{\ell,m}) \subset R_{\ell,m}'$, which we will show in more detail shortly in \Cref{lem:mapscondition}.
 
 \begin{remark}
-  Note that $D_0$ is not defined at $R_{0,0}$, but $D_0$ is defined on $R_{\ell,0}$ by using the relation $E_+D_0=E_+D_0$ repeatedly. Also note that $D_-$ is not defined at $R_{\ell,\pm \ell}$. 
+  Note that $D_0$ is not defined at $R_{0,0}$, but $D_0$ is defined on $R_{\ell,0}$ by using the relation $E_+D_0=E_+D_0$ repeatedly. Also note that $D_-$ is not defined at $R_{\ell,\pm \ell}$. When we sometimes later use $D_0$ on $R_{0,0}$, it is taken to be given by multiplication by some constant $\dd{0}{0}$, and also we will use the convention that $D_-$ is $0$ on $R_{\ell_0,m}$.
 \end{remark}
 
 Now simple calculations, cf.\ \Cref{sec:Factions}, gives us that
@@ -504,11 +504,15 @@ We claim now that the formulae \cref{eq:Factions} for the linear operators $F_+$
     \xi &= (2\ell-1)D_+D_- \xi - (2\ell+3)D_-D_+\xi - D_0^2\xi
   \end{aligned}
 \end{align}
-for $\xi\in R_{\ell,m}$, $\ell\neq 0$ except in the first line were $\ell=0$ is allowed. Here the term $D_+D_-$ should be replaced with $E_+D_+D_-E_-$ for $\xi\in R_{\ell,\ell}$ and $E_-D_+D_-E_+$ for $\xi \in R_{\ell,-\ell}$. 
+for $\xi\in R_{\ell,m}$, $\ell\neq 0$ except in the first equation. Here the term $D_+D_-$ should be replaced with $E_+D_+D_-E_-$ for $\xi\in R_{\ell,\ell}$ and $E_-D_+D_-E_+$ for $\xi \in R_{\ell,-\ell}$.
+
+\begin{lemma}\label{lem:mapscondition}
+  Maps correspondence
+\end{lemma}
 
 \subsection{\texorpdfstring{Simple Harish-Chandra modules for the pair $(L,L_k)$}{Simple Harish-Chandra modules for the pair (L,L\_k)}}\label{sec:simplemodules}
 
-We want to classify the simple Harish-Chandra modules for the pair $(L,L_k)$ for later use. Before most of the work we need some basic results.
+We are now almost ready to classify the simple Harish-Chandra modules for the pair $(L,L_k)$, but before most of the work we need some basic results.
 
 Let $M$ be an simple Harish-Chandra module over $L$ and suppose that each non-trivial subspace $R_{\ell,m}$ in $M=\bigoplus_{\ell,m} R_{\ell,m}$ is one dimensional. In this case each $L_k$-module $R_\ell$ is either isomorphic to the simple module $M(2\ell)$ or $0$. We claim that actually all simple Harish-Chandra modules are of this kind, so we indeed get a classification of the simple Harish-Chandra modules in the following.
 
@@ -554,7 +558,7 @@ In this basis we get that
     D_- \xi_{\ell_0,m} &= 0,
   \end{aligned}
 \end{align}
-where the first equation comes from the fact that $E_-\colon R_{\ell,m}\to R_{\ell,m-1}$ for $m\neq -\ell$ is the inverse of $E_+\colon R_{\ell,m-1}\to R_{\ell,m}$, while the independence of $m$ in the other equations comes from the commutativity of the diagrams of \cref{eq:Ddiagrams}.
+where the first equation comes from the fact that $E_-\colon R_{\ell,m}\to R_{\ell,m-1}$ for $m\neq -\ell$ is the inverse of $E_+\colon R_{\ell,m-1}\to R_{\ell,m}$, while the independence of $m$ in the other equations comes from the commutativity of the diagrams of \cref{eq:Ddiagrams}. Note that we here unlike normally define $D_0$ on $R_{0,0}$ by multiplication by some constant $\dd{0}{0}$.
 
 Now \cref{eq:Drels,eq:EandDnewbasis} implies that
 \begin{align}\label{eq:drelations}
@@ -565,7 +569,7 @@ Now \cref{eq:Drels,eq:EandDnewbasis} implies that
     \dd{\ell_0}{-} &= 0,
   \end{aligned}
 \end{align}
-for $\ell\in\Set{\ell_0,\ell_0+1,\dotsc}$ except in the second equation where we also demand that $\ell>\ell_0$. We see that
+for $\ell\in\Set{\ell_0,\ell_0+1,\dotsc}$, $\ell\neq 0$ except in the first equation, and in the second equation we also demand that $\ell>\ell_0$. We see that
 \begin{align*}
   \dd{\ell+1}{0} = \dfrac{\ell}{\ell+2}\dd{\ell}{0}.
 \end{align*}
@@ -627,21 +631,21 @@ where
 \begin{align}\label{eq:infdimds}
   \dd{\ell}{0} &= \dfrac{i\ell_0\ell_1}{\ell(\ell+1)}, & \dd{\ell}{-} &= -\dfrac{\bigl(\ell^2 - \ell_1^2\bigr)\bigl( \ell^2 - \ell_0^2 \bigr)}{\ell^2(4\ell^2-1)}, & \dd{\ell}{+} &= 1,
 \end{align}
-for $\ell\in\Set{\ell_0,\ell_0+1,\dotsc}$, and where $\ell_1$ is a complex number such that $\abs{\ell_1}-\ell_0$ is not a positive integer if $\ell_1$ is real. Here we use the convention that $\xi_{\ell',m'}=0$ for pairs $\ell',m'$ where there is no such basis element.
+for $\ell\in\Set{\ell_0,\ell_0+1,\dotsc}$, and where $\ell_1$ is a complex number such that $\abs{\ell_1}-\ell_0$ is not a positive integer if $\ell_1$ is real. Here we use the convention that $\xi_{\ell',m'}=0$ for pairs $\ell',m'$ where there is no such basis element. Also since the formuale of \cref{eq:Drels} hold by definition, we see that given such maps we indeed get a simple $L$-module.
 
 \subsubsection{Finite dimensional simple modules}
 
 Assume that $M$ is a Harish-Chandra module of the above kind and that $M$ is finite dimensional, i.e.\ $M=\bigoplus_{\ell,m} R_{\ell,m}$ where $R_{\ell,m}$ are one dimensional subspaces for $\ell_0\leq \ell < \abs{\ell_1}$. Here $\ell_1$ is some real number such that $\abs{\ell_1}\geq \ell_0$ and $\abs{\ell_1}-\ell_0$ is integral. We can choose a basis $\Set{\xi_{\ell,m}}$ as in the infinite dimensional case and by similar considerations we still get the formulae \cref{eq:infdimactions,eq:infdimds} describing the actions of $H_+$, $H_-$, $H_3$, $F_+$, $F_-$, and $F_3$, though now in this basis we only consider $\ell\in\Set{\ell_0,\ell_0+1,\dotsc,\abs{\ell_1}-1}$. 
 
-Here it is worth noting that we can actually describe the modules accurately using some algebraic results which we will not show in this paper. Firstly note that we know that all finite dimensional $\slc$-modules are the $V(n)$ we have described earlier, and from this it can be shown that all finite dimensional $\slpr$-modules are of the form $V(n)\otimes V(m)$, where the action of $\slpr$ on $V(n)\otimes V(m)$ is given by
+Here it is worth noting that we can actually describe the modules accurately using some algebraic results which we will not show in this paper. Firstly note that we know that all simple finite dimensional $\slc$-modules are the $V(n)$ we have described earlier, and from this it can be shown that all simple finite dimensional $\slpr$-modules are of the form $V(n)\otimes V(m)$, where the action of $\slpr$ on $V(n)\otimes V(m)$ is given by
 \begin{align*}
   (x,y).v_1\otimes v_2 = (x.v_1)\otimes v_2 + v_1\otimes (y.v_2).
 \end{align*}
-Note that considering $V(n)\otimes V(m)$ as $\slc$-modules via the diagonal map $\slc\to\slpr$, $u\mapsto (u,u)$, we get the standard action of $\slc$ on $V(n)\otimes V(m)$ as described in \cref{eq:tensoraction}, and now Clebsch-Gordan's formula implies that
+Note that considering $V(n)\otimes V(m)$ as $\slc$-modules via the diagonal map $\slc\to\slpr$, $u\mapsto (u,u)$, we get the standard action of $\slc$ on $V(n)\otimes V(m)$ as described in \cref{eq:tensoraction}, and now Clebsch-Gordan's formula (which we proved in the special case of $V(2)\otimes V(n)$ earlier) implies that
 \begin{align*}
   V(n)\otimes V(m) \simeq \bigoplus_{i=0}^{\min(n,m)} V(n+m-2i).
 \end{align*}
-Note that the last term of the direct sum if $V(\abs{n-m})$. Thus translating to the language of $L$ and $L_k$-modules, we have that all finite dimensional $L$-modules are of the form $\bigoplus_{i=0}^{\min(2r,2s)} M(2r+2s-2i)$ where $r,s\in \tfrac{1}{2}\Z_{\geq0}$. Here we see that $\ell_0 = \abs{r-s}$ and $\abs{\ell_1}-1=r+s$. 
+Note that the last term of the direct sum if $V(\abs{n-m})$. Thus translating to the language of $L$ and $L_k$-modules, we have that all simple finite dimensional $L$-modules are of the form $\bigoplus_{i=0}^{\min(2r,2s)} M(2r+2s-2i)$ where $r,s\in \tfrac{1}{2}\Z_{\geq0}$. Here we see that $\ell_0 = \abs{r-s}$ and $\abs{\ell_1}-1=r+s$. 
 
 %%% Local Variables:
 %%% mode: latex
